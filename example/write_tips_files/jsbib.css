@@ -1,0 +1,65 @@
+.jsbib {
+}
+
+.jsbib a:hover {
+	text-decoration: underline;
+	color: orange;
+}
+
+.jsbib a, a:visited {
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.jsbib-year {
+	font-size: 100%;
+	padding-bottom: 2em;
+}
+
+.jsbib-group{
+	width: 100%;
+/*	width: 80%;*/
+}
+
+/*
+.jsbib-group:hover{
+	color: #ffffff;
+	background-color: #5e92e9;
+}
+*/
+
+.jsbib-number{
+	float: left;
+	width: 3em;
+}
+
+.jsbib-entry{
+/*	margin-left: 3em;*/
+	margin-bottom: 15px;
+}
+
+.jsbib-authors{
+	text-transform: capitalize;
+}
+
+.jsbib-title{
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.jsbib-links{
+	float: right;
+}
+
+.jsbib-note{
+	font-style: italic;
+}
+
+.jsbib-webnote{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.jsbib-info{
+	font-style: italic;
+}

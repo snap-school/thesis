@@ -1,0 +1,9 @@
+/* Document page-ucl-print pour imprimer page standard UCL */
+
+body, td, th {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11pt;}
+body {color: #525A66; background-color: #FFF; padding: 0; padding: 0;}
+.texte-base {font-size: 11pt; line-height : 16px;}
+.non-imprime {display : none;} 
+.non-affiche {display : block;} 
+.largeur-775 {width : 100%;}
+.composant-ligne1-ppe {margin : 2px; border : 1px solid #444;}

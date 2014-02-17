@@ -1,0 +1,49 @@
+/* Document ucl_page pour page standard UCL */
+/* Couleur dominante variable en 5 variantes: */
+/* #88B3DE, #689CD5, #8BB1DE, #B8CDEA, #E1E9F6 */
+/* Nouvelle couleur fixe texte #434954 */
+/* Ancienne couleur fixe texte #525A66 */
+/* Couleur fixe fond menu #C3D8EF */
+/* Couleur fixe liens menus #006 */
+/* Couleur fixe liens texte #1684EA */
+/* Couleur fixe Reddot #F00 */
+/* Couleur fixe Reddot valeur #434954 */
+/* Couleur fixe Reddot claire #FEE*/
+
+@import url("//www.uclouvain.be/cps/ucl/styles/default/default.css");
+
+/* Couleur dominante variable en 5 variantes: */
+/* #88B3DE, #689CD5, #8BB1DE, #B8CDEA, #E1E9F6 */
+hr {color: #88B3DE; background-color: #88B3DE;}
+.ligne {border-bottom: 1px solid #88B3DE;}
+.fond-couleur-a {background-color: #88B3DE;}
+.fond-couleur-b {background-color: #689CD5;}
+.fond-couleur-c {background-color: #8BB1DE;}
+.fond-couleur-d {background-color: #B8CDEA;}
+.fond-couleur-e {background-color: #E1E9F6;}
+.encadre {border: 1px solid #88B3DE;}
+div.titre2 a:link, div.titre2 a:visited, div.titre2 a:hover {color: #88B3DE;}
+.entree-boite {color: #434954; background-color: #E1E9F6; border-color: #88B3DE;}
+.option2 {color: #88B3DE;}
+a.option2:link, a.option2:visited, a.option2:hover {color: #88B3DE;}
+.menu-titre {background-color: #88B3DE;}
+.menu-titre-cmpl {background-color: #8BB1DE;}
+.menu-ligne-cmpl {background-color: #E1E9F6;}
+.menu-droit-titre {color: #C3D8EF;  border-top: 1px solid #88B3DE;  border-bottom: 1px solid #88B3DE;}
+.menu-outil-ligne {background-color: #E1E9F6;}
+.menu-outil-titre-inerte {background-color: #E1E9F6;}
+.forme-libelle-obligatoire {color: #88B3DE;}
+.forme-champ {background-color: #E1E9F6; border-color: #88B3DE;}
+.forme-champ-obligatoire {color: #88B3DE; background-color: #E1E9F6; border-color: #88B3DE;}
+.forme-textarea {background-color: #E1E9F6; border: 1px solid #88B3DE;}
+.forme-textarea-obligatoire {color: #88B3DE; background-color: #E1E9F6; border-color: #88B3DE;}
+.forme-select {background-color: #E1E9F6; border-color: #88B3DE;}
+.composant {background-color: #F8F8FF; border-color: #B8CDEA;}
+.composant-titre {background-color: #88B3DE;}
+.composant-titre1 {color: #88B3DE; background-color: #FFF; border-bottom: 1px solid #8BB1DE;}
+.composant-titre2 {color: #88B3DE; background-color: #FFF;}
+.composant-titre-inter {color: #88B3DE;border-bottom: 1px solid #8BB1DE;}
+.composant-ligne0 {background-color: #B8CDEA;}
+.composant-ligne1 {background-color: #E1E9F6;}
+.composant-ligne1-ppe {background-color: #E1E9F6;}
+.tooltip-visible {background-color: #E1E9F6; border-color: #88B3DE;}
