@@ -48,19 +48,19 @@
 
 
 
-%\usepackage{wrapfig}
+\usepackage{wrapfig}
 %\includeonly{titlepage}
 %\includeonly{titlepage,content/androidinjava/androidjava}
 %\includeonly{titlepage,content/Intro/abstract,content/Intro/thanks,content/Intro/intro}
 %\includeonly{titlepage,content/Intro/abstract,content/Intro/intro,content/conclusion/futurework,content/conclusion/conclusion}
 %\includeonly{content/cityvisit/cityvisit,content/cityvisit/data}
-\includeonly{content/scopj/scopj}
+%\includeonly{content/scopj/scopj}
 %======================
 %	DOCUMENT
 %======================
 
 \begin{document}
-\dominitoc
+%\dominitoc
 
 
 
@@ -68,19 +68,20 @@
 
 \pagenumbering{arabic}
 
-%\include{content/Intro/abstract}
-%\include{content/Intro/thanks}
-\faketableofcontents
-%\tableofcontents
+\input{content/1-abstract/abstract}
+\input{content/2-acknowledgements/acknow}
+%\faketableofcontents
+\tableofcontents
 
-
-\mainmatter
-%\include{content/Intro/intro}
+\newpage
+%\mainmatter
+\input{content/3-introduction/intro}
 
 %==========================
 %       PART 1
 %==========================
-
+\newpage
+\input{content/4-theory/theory}
 %\include{content/cop/cop}
 %\include{content/androidinjava/androidjava}
 %\include{content/comparisonCOP/comparison}
@@ -90,7 +91,8 @@
 %==========================
 %       PART 2
 %==========================
-
+\newpage
+\input{content/5-solution/solution}
 %\include{content/scopj/scopj}
 %\include{content/scopj/implementation}
 %\include{content/scopj/threading}
@@ -99,7 +101,12 @@
 %==========================
 %       PART 3
 %==========================
-
+\newpage
+\input{content/6-conclusion/conclusion}
+\newpage
+\input{content/7-future_work/furture}
+\newpage
+\input{content/8-reference/reference}
 %\include{content/cityvisit/cityvisit}
 %\include{content/efficiency/efficiency}
 %\include{content/conclusion/futurework}
@@ -114,7 +121,7 @@
 \bibliography{Thesis}
 
 %\printnomenclature
-
+-
 %\cleardoublepage
 
 
