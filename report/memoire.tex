@@ -8,22 +8,25 @@
 
 \usepackage{epstopdf}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
 
 
-
-\newcommand{\fwshort}{SCopJ}
-\newcommand{\fwlong}{Simple Context-Oriented Programming for Java}
+\newcommand{\fwshort}{RSnap}
+\newcommand{\fwlong}{Une plateforme web pour apprendre le "raisonnement informatique" aux jeunes du primaire et secondaire}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\hRule}{\rule{\linewidth}{0.1mm}}
-\def \doctitle {Context-Oriented-Programming for Android in Java}
+\def \doctitle {Une plateforme web pour apprendre le "raisonnement informatique" aux jeunes du primaire et secondaire}
 \def \docsubtitle {}
-\def \doccourssigle{SINF2990}
+\def \doccourssigle{LINGI2990}
 \def \doccourstitle{Master Thesis}
-\def \docauthor {Julian {\sc Janssens}\\\emph{Year :} SINF 22 MS\\\emph{Noma :} 69-64-07-00}
-\def \docprofessor{Kim \textsc{MENS}}
-\def \docassistant{Nicolas \textsc{Cardozo Alvarez}}
+\def \docauthor {Gaetan {\sc Collart}\\\emph{Année :} INFO 22 MS\\\emph{Noma :} 66-20-07-00 \and Simon {\sc Claessens}\\\emph{Année :} INFO 22 MS\\\emph{Noma :} 31-06-07-00}
+\def \docprofessor{Chantal \textsc{Poncin} \and Pierre Schaus}
+%\def \docassistant{Nicolas \textsc{Cardozo Alvarez}}
 
-
+\author{Gaetan {\sc Collart}\\\emph{Année :} INFO 22 MS\\\emph{Noma :} 66-20-07-00 \and Simon {\sc Claessens}\\\emph{Année :} INFO 22 MS\\\emph{Noma :} 31-06-07-00}
+\title{Une plateforme web pour apprendre le "raisonnement informatique" aux jeunes du primaire et secondaire}
 
 \usepackage{mdwlist} %reduce itemize item spacing
 \usepackage{placeins} 
@@ -63,25 +66,23 @@
 %\dominitoc
 
 
-
-\include{titlepage}
+\maketitle
+%\input{titlepage}
 
 \pagenumbering{arabic}
 
-\input{content/1-abstract/abstract}
-\input{content/2-acknowledgements/acknow}
+\include{content/1-abstract/abstract}
+\include{content/2-acknowledgements/acknow}
 %\faketableofcontents
 \tableofcontents
 
-\newpage
 %\mainmatter
-\input{content/3-introduction/intro}
+\include{content/3-introduction/intro}
 
 %==========================
 %       PART 1
 %==========================
-\newpage
-\input{content/4-theory/theory}
+\include{content/4-theory/theory}
 %\include{content/cop/cop}
 %\include{content/androidinjava/androidjava}
 %\include{content/comparisonCOP/comparison}
@@ -91,8 +92,7 @@
 %==========================
 %       PART 2
 %==========================
-\newpage
-\input{content/5-solution/solution}
+\include{content/5-solution/solution}
 %\include{content/scopj/scopj}
 %\include{content/scopj/implementation}
 %\include{content/scopj/threading}
@@ -101,12 +101,9 @@
 %==========================
 %       PART 3
 %==========================
-\newpage
-\input{content/6-conclusion/conclusion}
-\newpage
-\input{content/7-future_work/furture}
-\newpage
-\input{content/8-reference/reference}
+\include{content/6-conclusion/conclusion}
+\include{content/7-future_work/furture}
+\include{content/8-reference/reference}
 %\include{content/cityvisit/cityvisit}
 %\include{content/efficiency/efficiency}
 %\include{content/conclusion/futurework}
@@ -118,10 +115,9 @@
 %\include{content/cityvisit/data}
 
 \bibliographystyle{ThesisStyle}
-\bibliography{Thesis}
+%\bibliography{Thesis}
 
 %\printnomenclature
--
 %\cleardoublepage
 
 
