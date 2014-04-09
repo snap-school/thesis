@@ -1,2 +1,35 @@
 \section{Missions}
-expliquer les missions
+Après des recherche et de l'observation quant à ce qui est la norme dans les autres projet similaire a SNAP BYOB, nous avons décider d'articuler notre approche autour de missions. Il est en effet apparu que c'était la solution qui interressait le plus le publique cible.\\
+
+Une fois le choix de l'approche par mission établi, nous avons défini comment nous allions amener la théorie de la programmation à travers ces missions. Il s'est avéré que dans l'objectif de capter l'attention et l'interet du publique cible, il était nécessaire d'introduire les missions par la présentation d'un objectif final. Après quelque lecture, l'idée de présenter un jeu comme objectif final s'est vite imposée. Notre choix de jeu s'est porté sur le jeux du \texttt{Chat et Chien}. Le principe est très simple et permet l'introduction de plusieurs concepts de programmation interessant tel que la condition, les boucles et également les événements.\\
+
+Nous avons diviser le jeu en trois mission de préparation.: la voiture, l'hélicoptère et \texttt{Soyons courtois}. Dans la suite de cette partie nous allons décrire les missions et faire une analyse des concepts introduits.
+
+\subsection{Voiture}
+Dans cette première mission les participants était mis dans un bolide qui devait atteindre la ligne d'arrivée en restant sur la route. Si la voiture sortait de la route elle explosait, à chaque lancement du scripte la voiture reprenait sa position d'origine.
+
+Cette mission avait pour but que les participants puissent prendre en main l'interface de SNAP BYOB et d'introduire la notion de suite d'instruction. En effet, le fait de devoir prévoir les instructions à l'avance n'est pas un concept facile pour le publique cible. Beaucoup execute une opération et puis cherche a savoir comment continuer appartir de leur nouvelle position. Ici la voiture retournant chaque fois à sont point de départ, nous forcions les participants a réfléchir de manière globale et non une action à l'avance.
+
+\subsection{L'hélicoptère}
+Pour cette mission les participants étaient au commandes d'un hélicoptère. Leur but est de rejoindre la fin de la piste. La piste est une ellipsoïde border d'herbe. Si l'hélicoptère touche l'herbe, il explose et comme pour le précédent, à chaque lancement de scripte l'hélicoptère se repositionnait a sont point de départ. Ceci toujours dans le but de forcer les participants à voire la solution dans son ensemble et non juste a la prochaine étape. En plus l'herbe et de la piste, sur le contour exterieur de la piste est positionner une bande rouge et à l'interieur elle est bleu. Le but est de tournée des qu'une de ces deux couleur est touchée et ce pour évité l'herbe.\\
+
+Les concepts introduit par cette mission sont:
+\begin{enumerate}
+\item Les boucles, particulièrement le \texttt{while}
+\item La gestion des collisions grâce au capteur de couleur.
+\item La division en sous process (un pour avancer, un pour la collision rouge et un pour la bleu)
+\end{enumerate}
+
+\subsection{Soyons courtois}
+Dans cette dernière mission de préparation, les participants se retrouve à diriger un personnage qui croise d'autre personnages. Ces dernier disent bonjour à chaque qu'ils croisent quelqu'un. Le but de la mission est dire bonjour également quand le personnage du participant croise quelqu'un.
+
+Les concepts introduit par cette mission sont:
+\begin{enumerate}
+\item La gestion des collisions grâce au capteur de sprite.
+\item La division en sous process (un pour chaque personne)
+\item Introduction à l'interactivité de l'interface (faire déplacer un personnage)
+\item La gestion des dialogues et affichage de texte.
+\end{enumerate}
+
+
+%analyse mission voiture, cela à permis de prendre en main les entrées des blocs. Au début beaucoup prennent 3 blocs avancer de 10 pas pour faire 30 pas au lieu de changer la valeur du 10 en 30.
