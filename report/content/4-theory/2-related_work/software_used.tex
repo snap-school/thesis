@@ -1,9 +1,9 @@
-\section{Logiciel utilisé}
-\subsection{Snap!}
+\subsection{Logiciel utilisé}
+\subsubsection{Snap!}
 \url{http://snap.berkeley.edu/SnapManual.pdf}
 Cet partie va donner un aperçu de l'application réutilisée dans ce travail, à savoir Snap!. Comme dit précédemment, cette application est réalisée en JavaScript. La présentation de Snap! va se diviser en plusieurs partie. La première expliquera les différents types de blocs et comment ils sont implémentés. L'exécution d'un programme est l'étape suivante. Enfin, il sera présenté comment l'application affiche les différents éléments la constituant.
 
-\subsubsection{Blocs}
+\paragraph{Blocs}
 Il existe plusieurs type de blocs qui constitue un programme Snap!. Sur l'exemple de programme \ref{fig:software_used_script}, les différents type blocs disponible sont présenté.
 \begin{figure}
   \begin{center}
@@ -13,27 +13,27 @@ Il existe plusieurs type de blocs qui constitue un programme Snap!. Sur l'exempl
   \end{center}
 \end{figure}
 
-\paragraph{Commande}
+\subparagraph{Commande}
 Le principal type de bloc est la commande. Ces blocs peuvent être compris comme étant des procédures. En effet, les blocs exécutes une ou plusieurs opérations sur le système en fonction des paramètres passé. Ces différents blocs doivent se baser soit sur une implémentation JavaScript pour les commandes élémentaires, soit être une composition de commandes pour fournir une commande plus complète et/ou abstraite.
 
 Dans l'exemple \ref{fig:software_used_script}, ce sont tout les blocs qui on la forme d'une pièce de puzzle. On peut voir que l'on a une succession de commandes qui crée un script. Les commandes ont plusieurs couleurs suivant la catégorie à laquel elles appartiennent : mouvement, apparence, contrôles, variable\ldots
 
-\paragraph{Reporter}
+\subparagraph{Reporter}
 Les reporters sont des fonctions. En effet, il retourne une valeur. Ils sont toujours utilisé en temps que parametres d'un autre bloc. La plupart des reporter sont des accesseurs à des variables ou à des états du système (position souris, heure \ldots). 
 
 Les reporters sont les blocs de forme arrondie. L'exemple \ref{fig:software_used_script} montre différente utilisation de reporters : somme, valeur aléatoire, position \ldots Tout comme pour les commandes, les reporters peuvent être de différente couleur suivant leur catégorie.
 
-\paragraph{Prédicat}
+\subparagraph{Prédicat}
 Les prédicats sont des reporters qui retourne une valeur booléenne. Ils sont donc utilisé en conjonction avec des commandes demandant une condition.
 
 Les prédicats sont les blocs de forme hexagonale.
 
-\paragraph{Chapeau}
+\subparagraph{Chapeau}
 Les chapeaux sont des commandes spéciales car ils sont le point d'entrée obligatoire d'un script. Ils permettent de démarrer l'exécution d'un script quand un événement se produit.
 
 L'événement qui lancera le script \ref{fig:software_used_script} est donc le démarrage du programme. Celui-ci est symbolisé par un bouton avec drapeau vert.
 
-\subsubsection{Programme}
+\paragraph{Programme}
 Snap! est plus qu'une interface graphique permettant de construire un programme. L'analyse du fonctionnement interne est l'object de cette section.
 
 Un programme est constitué de plusieurs processus. Chaque processus sera exécuté en parallèle grace à un ordonanceur.
@@ -164,7 +164,7 @@ Process.prototype.runStep = function () {
 %     emptySlots        caches the number of empty slots for reification
 % */
 
-\subsubsection{GUI}
+\paragraph{GUI}
 Un autre élément interessant à analyser chez Snap! est sa facon d'afficher quelque chose dans la balise html \texttt{canvas}. Toutes les fonctionnalités de base nécessaire à afficher tout éléments graphiques (text rendering, blinking cursors, entry fields, menus, buttons, sliders, windows and dialog boxes \ldots) de Snap! découle de l'implémentation que l'on retrouve dans \texttt{morphic.js}.
 
 \texttt{morphic.js} fournit les abstractions nécessairent à redessiner des parties de l'interface et pour interagir avec l'utilisateur. Le canvas utilisé possède un \texttt{world}. Ce \texttt{world} est la racine de l'arbre composé de \texttt{morph} et leur sous-\texttt{morph}. Chaque \texttt{morph} peut être déplacé, redimentionné via le code ou les manipulations de l'utilisateurs.
@@ -208,4 +208,4 @@ MyMorph.prototype.drawNew = function() {
 };
 \end{lstlisting}
 
-\subsection{Rails}
+\subsubsection{Rails}
