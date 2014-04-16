@@ -8,8 +8,6 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 
-\usepackage{epstopdf}
-
 \usepackage{listings}
 \usepackage{color}
 \definecolor{lightgray}{rgb}{.9,.9,.9}
@@ -95,7 +93,12 @@
    commentstyle=\color{purple}\ttfamily,
    stringstyle=\color{brown}\ttfamily,
 }
+\usepackage[nomain,acronym,xindy,toc]{glossaries}
+\makeglossary
+\usepackage[xindy]{imakeidx}
+\makeindex
 
+\usepackage{epstopdf}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
@@ -149,7 +152,7 @@
 %======================
 %	DOCUMENT
 %======================
-
+\include{content/9-glossary/glossary}
 \begin{document}
 %\dominitoc
 
@@ -163,6 +166,7 @@
 \include{content/2-acknowledgements/acknow}
 %\faketableofcontents
 \tableofcontents
+
 
 %\mainmatter
 \include{content/3-introduction/intro}
@@ -199,11 +203,13 @@
 
 
 \appendix
-
+\glsaddall
+\printindex
+\printglossaries
 %\include{content/cityvisit/data}
-
-\bibliographystyle{ThesisStyle}
-%\bibliography{Thesis}
+\nocite{*}
+\bibliographystyle{alpha}
+\bibliography{biblio}
 
 %\printnomenclature
 %\cleardoublepage
