@@ -4,7 +4,7 @@
 Cet partie va donner un aperçu de l'application réutilisée dans ce travail, à savoir Snap!. Comme dit précédemment, cette application est réalisée en JavaScript. La présentation de Snap! va se diviser en plusieurs partie. La première expliquera les différents types de blocs et comment ils sont implémentés. L'exécution d'un programme est l'étape suivante. Enfin, il sera présenté comment l'application affiche les différents éléments la constituant.
 
 \paragraph{Blocs}
-Il existe plusieurs type de blocs qui constitue un programme Snap!. Sur l'exemple de programme \ref{fig:software_used_script}, les différents type blocs disponible sont présenté.
+Il existe plusieurs type de blocs qui constitue un programme Snap!. Sur l'exemple de programme \ref{fig:software_used_script}, les différents types blocs disponible sont présentés.
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{content/4-theory/2-related_work/images/script}
@@ -14,17 +14,17 @@ Il existe plusieurs type de blocs qui constitue un programme Snap!. Sur l'exempl
 \end{figure}
 
 \subparagraph{Commande}
-Le principal type de bloc est la commande. Ces blocs peuvent être compris comme étant des procédures. En effet, les blocs exécutes une ou plusieurs opérations sur le système en fonction des paramètres passé. Ces différents blocs doivent se baser soit sur une implémentation JavaScript pour les commandes élémentaires, soit être une composition de commandes pour fournir une commande plus complète et/ou abstraite.
+Le type principal de bloc est \texttt{commande}. Ces blocs peuvent être compris comme étant des procédures. En effet, les blocs exécutes une ou plusieurs opérations sur le système en fonction des paramètres passés. Ces différents blocs doivent se baser soit sur une implémentation JavaScript pour les commandes élémentaires, soit être une composition de commandes pour fournir une commande plus complexe et/ou abstraite.
 
-Dans l'exemple \ref{fig:software_used_script}, ce sont tout les blocs qui on la forme d'une pièce de puzzle. On peut voir que l'on a une succession de commandes qui crée un script. Les commandes ont plusieurs couleurs suivant la catégorie à laquel elles appartiennent : mouvement, apparence, contrôles, variable\ldots
+Dans l'exemple \ref{fig:software_used_script}, ce sont tout les blocs qui on la forme d'une pièce de puzzle. On peut voir que l'on a une succession de commandes qui crée un script. Les commandes ont plusieurs couleurs suivant la catégorie à laquelle elles appartiennent : mouvement, apparence, contrôles, variable, etc\ldots
 
 \subparagraph{Reporter}
-Les reporters sont des fonctions. En effet, il retourne une valeur. Ils sont toujours utilisé en temps que parametres d'un autre bloc. La plupart des reporter sont des accesseurs à des variables ou à des états du système (position souris, heure \ldots). 
+Les reporters sont des fonctions. En effet, ils retournent une valeur. Ils sont toujours utilisés en temps que paramètres d'un autre bloc. La plupart des reporter sont des accesseurs à des variables ou à des états du système (position souris, heure, etc\ldots). 
 
-Les reporters sont les blocs de forme arrondie. L'exemple \ref{fig:software_used_script} montre différente utilisation de reporters : somme, valeur aléatoire, position \ldots Tout comme pour les commandes, les reporters peuvent être de différente couleur suivant leur catégorie.
+Les reporters sont les blocs de forme arrondie. L'exemple \ref{fig:software_used_script} montre différente utilisation de reporters : somme, valeur aléatoire, position \ldots Tout comme pour les commandes, les reporters peuvent être de différentes couleurs suivant leur catégorie.
 
 \subparagraph{Prédicat}
-Les prédicats sont des reporters qui retourne une valeur booléenne. Ils sont donc utilisé en conjonction avec des commandes demandant une condition.
+Les prédicats sont des reporters qui retournent une valeur booléenne. Ils sont donc utilisés en conjonction avec des commandes demandant une condition.
 
 Les prédicats sont les blocs de forme hexagonale.
 
@@ -34,9 +34,9 @@ Les chapeaux sont des commandes spéciales car ils sont le point d'entrée oblig
 L'événement qui lancera le script \ref{fig:software_used_script} est donc le démarrage du programme. Celui-ci est symbolisé par un bouton avec drapeau vert.
 
 \paragraph{Programme}
-Snap! est plus qu'une interface graphique permettant de construire un programme. L'analyse du fonctionnement interne est l'object de cette section.
+Snap! est plus qu'une interface graphique permettant de construire un programme. L'analyse du fonctionnement interne est l'objet de cette section.
 
-Un programme est constitué de plusieurs processus. Chaque processus sera exécuté en parallèle grace à un ordonanceur.
+Un programme est constitué de plusieurs processus. Chaque processus sera exécuté en parallèle grâce à un ordonnanceur.
 
 % /*
 %     A Process is what brings a stack of blocks to life. The process
@@ -84,9 +84,9 @@ Un programme est constitué de plusieurs processus. Chaque processus sera exécu
 %                         and when the process was paused
 % */
 
-Un processus \texttt{Process} représente l'exécution d'un script, une pile de blocs. Il assure le suivit de l'exécution du script : prochain bloc à s'executer, object sur lequel il s'applique (lutin, stage), contexte décrivant l'état courant \ldots
+Un processus \texttt{Process} représente l'exécution d'un script, une pile de blocs. Il assure le suivit de l'exécution du script : prochain bloc à exécuter, objet sur lequel il s'applique (lutin, stage), contexte décrivant l'état courant \ldots
 
-L'ordonanceur \texttt{ThreadManager} appelle sucessivement la fonction \texttt{runStep()} (\ref{lst-runstep}) sur chaque processus. Cette fonction exécute un certain nombre de blocs via \texttt{this.evaluateContext()} de manière atomique. Elle rend la main volontairement à l'ordonanceur quand elle a terminé. Comme il est possible d'écrire soi-même des blocs, \texttt{runStep()} rend aussi la main si trop de temps s'est écoulé depuis le début de l'exécution de cette étape. La convention est que les processus rendent la main à la fin de chaque itération de boucle ou quand une opération relative au temps (attendre xxx secondes) ou synchrone (envoyer à tous xxx et attendre la réponse) est exécutée.
+L'ordonnanceur \texttt{ThreadManager} appelle successivement la fonction \texttt{runStep()} (\ref{lst-runstep}) sur chaque processus. Cette fonction exécute un certain nombre de blocs via \texttt{this.evaluateContext()} de manière atomique. Elle rend la main volontairement à l'ordonnanceur quand elle a fini. Comme il est possible d'écrire soi-même des blocs, \texttt{runStep()} rend aussi la main si trop de temps s'est écoulé depuis le début de l'exécution de cette étape. La convention est que les processus rendent la main à la fin de chaque itération de boucle ou quand une opération relative au temps (attendre xxx secondes) ou synchrone (envoyer à tous xxx et attendre la réponse) est exécutée.
 
 \begin{lstlisting}[caption={Fonction \texttt{runStep()} de \texttt{Process}},label=lst-runstep,language=JavaScript]
 Process.prototype.runStep = function () {
@@ -165,11 +165,11 @@ Process.prototype.runStep = function () {
 % */
 
 \paragraph{GUI}
-Un autre élément interessant à analyser chez Snap! est sa facon d'afficher quelque chose dans la balise html \texttt{canvas}. Toutes les fonctionnalités de base nécessaire à afficher tout éléments graphiques (text rendering, blinking cursors, entry fields, menus, buttons, sliders, windows and dialog boxes \ldots) de Snap! découle de l'implémentation que l'on retrouve dans \texttt{morphic.js}.
+Un autre élément intéressant à analyser chez Snap! est sa façon d'afficher quelque chose dans la balise html \texttt{canvas}. Toutes les fonctionnalités de base nécessaire à afficher tout éléments graphiques (text rendering, blinking cursors, entry fields, menus, buttons, sliders, windows and dialog boxes \ldots) de Snap! découle de l'implémentation que l'on retrouve dans \texttt{morphic.js}.
 
-\texttt{morphic.js} fournit les abstractions nécessairent à redessiner des parties de l'interface et pour interagir avec l'utilisateur. Le canvas utilisé possède un \texttt{world}. Ce \texttt{world} est la racine de l'arbre composé de \texttt{morph} et leur sous-\texttt{morph}. Chaque \texttt{morph} peut être déplacé, redimentionné via le code ou les manipulations de l'utilisateurs.
+\texttt{morphic.js} fournit les abstractions nécessaires à redessiner des parties de l'interface et pour interagir avec l'utilisateur. Le canvas utilisé possède un \texttt{world}. Ce \texttt{world} est la racine de l'arbre composé de \texttt{morph} et leur sous-\texttt{morph}. Chaque \texttt{morph} peut être déplacé, redimensionné via le code ou les manipulations de l'utilisateur.
 
-L'idée principale de \texttt{morphic.js} est de continuellement parcourir tout les éléments du \texttt{world} pour redessiner ceux qui ont été modifié. Le \texttt{world} permet à l'ordonnanceur d'exécuter une étape entre chaque itération. L'exemple \ref{lst-doonecycle} que le monde est rafraichit toutes les 50ms.
+L'idée principale de \texttt{morphic.js} est de continuellement parcourir tout les éléments du \texttt{world} pour redessiner ceux qui ont été modifié. Le \texttt{world} permet à l'ordonnanceur d'exécuter une étape entre chaque itération. L'exemple \ref{lst-doonecycle} que le monde est rafraîchit toutes les 50 millisecondes.
 
 \begin{lstlisting}[caption={Exemple d'utilisation de \texttt{morphic.js}},label=lst-doonecycle,language=HTML5,alsolanguage=JavaScript]
 <!DOCTYPE html>
@@ -197,7 +197,7 @@ L'idée principale de \texttt{morphic.js} est de continuellement parcourir tout 
 </html>
 \end{lstlisting}
 
-La fonction \texttt{drawNew()} sert dessiner un \texttt{morph}. L'exemple \ref{lst-drawnew} montre que cette fonction dessine son objet sur une image stockée dans l'objet. Cette image provient d'un canvas virtuel généré grace à l'image du \texttt{morph} parent.
+La fonction \texttt{drawNew()} sert dessiner un \texttt{morph}. L'exemple \ref{lst-drawnew} montre que cette fonction dessine son objet sur une image stockée dans l'objet. Cette image provient d'un canvas virtuel généré grâce à l'image du \texttt{morph} parent.
 
 \begin{lstlisting}[caption={Modèle pour la fonction \texttt{drawNew()}},label=lst-drawnew,language=JavaScript]
 MyMorph.prototype.drawNew = function() {
