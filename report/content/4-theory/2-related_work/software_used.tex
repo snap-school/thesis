@@ -246,21 +246,23 @@ La philosophie de Rails est d'utiliser des gems pour simplifier l'écriture. Pou
 \end{description}
 
 \paragraph{gem}
-meme rails est un gem
+Ruby fourni de base une manière de partager des extenstions pour des programmes ruby via les gems. Rails est un gem et dépend de nombreux autres notament Active Record présenté plus haut.
 
+La communauté de Rails à écrit de nombreux gems permettant de rajouter facilement des fonctionnalités à une application. Des gems intéressantes seraint les suivantes :
 \begin{description}
-  \item[autority / rolify]
-  \item[paperclip]
-  \item[devise]
+  \item[Paperclip] permet de facilement récupérer et stoquer des fichiers. Paperclip permet donc d'intégrer la gestion de fichier tiers de manière propre dans une classe du modèle. Il fourni notament divers drivers pour stoquer ceux-ci aussi bien en local que sur le cloud d'amazon ou de dropbox.
+  \item[devise] permet de gérer toute la problèmatique de l'autentification des utilisateurs.
+  \item[rolify] permet de donner des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).
+  \item[autority] Permet de gérer les droits des utilisateurs sur les différentes ressources contrôleur.
 \end{description}
 
 \paragraph{test}
-\begin{description}
-  \item[factory girls]
-  \item[cucumber et capybara]
-  \item[RSpec]
-  \item[Travis]
-  \item[Coveralls]
-  \item[codeclimate]
-  \item[Rails Best Practice] 
-\end{description}
+Il existe tout un écosystème autour de Rails pour fournir du code de qualité. TODO faire une suite à l'intro\\
+
+Un outil de test fort apprécié des programmeur Ruby et plus particulièrement Rails est Cucumber. Cucumber permet de réaliser des tests dans un "behavior-driven development" (BDD) style. Ce style de test permet d'une part au client ou chef de projet d'écrire des scénarii décrivant l'utilisation de fonctionnalité du domaine en langague naturel (Gherkin) et d'autre part au programmeur d'implémenter ceux-ci. Ce type de test permet de mettre l'accent sur ce que veux le client.
+
+Dans le cas de Rails, il est intéressant d'utiliser conjointemant à Cucumber Capybara. Capybara permet de controler un navigateur et donc de réaliser des tests à la place d'un utilisateur. Ces tests permettrons donc bien d'assurer que ce que désire l'utilisateur fonctionne correctement.\\
+
+Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. Ce style de testing permet d'effectuer tout les tests sur le code à chaque nouveau commit. Cela permet de connaitre directement si une modification du code source à induit un régression des fonctionnalités.\\
+
+Un autre outils permet de mieux comprendre et respecter le "Rails way" présenté plus tôt. rails\_best\_practices fournis des métriques utiles pour détecter des écarts à philosophie Rails. Cet outil s'utilise en association avec le conseil fournit par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecterait pas les conventions.
