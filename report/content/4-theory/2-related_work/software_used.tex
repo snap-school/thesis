@@ -209,40 +209,40 @@ MyMorph.prototype.drawNew = function() {
 \end{lstlisting}
 
 \subsubsection{Rails}
-Pour permettre de suivre un étudiant et de faire intéragir le professeur dans le dévelopement, un pe platforme web est nécessaire. Ruby on Rails est le framework choisi pour déveloper l'application web. 
+Rails est une plat-forme de développement d'application web basé sur le langage de programmation Ruby. Cette partie présente Rails au travers de sa philosophie, de son architecture et de ses environnements de tests.
 
 \paragraph{Philosophie}
-Rails fait l'assomption qu'il existe une meilleur facon d'aborder la création d'application web. Si le programmeur respect ce "Rails way", il amméliorera sa productivité et écrira moins de code. Par contre si il persiste à utiliser ses anciennes habitudes, il aura beaucoup moins d'amusement à déveloper une application.
+Rails fait l'assomption qu'il existe une meilleur façon d'aborder la création d'application web. Si le programmeur respect ce "Rails way", il améliorera sa productivité et écrira moins de code. D'après Rails, si il persiste à utiliser ses anciennes habitudes, le développeur s'amusera beaucoup moins en développant son application.
 
 Pour atteindre cet objectif, Rails utilise deux principes majeurs :
 \begin{description}
-  \item[convention plutot que configuration] (CoC) Pour permettre au programmeur d'écrire moins de code, Rails permet de n'écrire que ce qui ne correspond pas aux conventions. Rails utilise la métaprogrammation pour fournir les conventions à tous objets.
-  \item[ne vous répétez  pas] (DRY) L'architecture que propose Rails permet de mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et moins bugé.
+  \item[Convention plutôt que configuration] (CoC) Pour permettre au programmeur d'écrire moins de code, Rails permet de n'écrire que ce qui ne correspond pas aux conventions. Rails utilise la méta-programmation pour fournir les conventions à tous les objets;
+  \item[Ne vous répétez  pas] (DRY) L'architecture que propose Rails permet de mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bugs.
 \end{description}
 
 \paragraph{architecture}
-Rails se base sur une architecture Modèle-Vue-Controlleur.
+Rails se base sur une architecture Modèle-Vue-Contrôleur.
 \subparagraph{Modèle} 
 Un modèle est typiquement une classe qui représente une table de la base de données. Une classe du modèle fournit aussi toutes les méthode nécessaire à représenter et modifier l'objet dans le domaine d'application.
 
-La correspondance entre un objet Ruby et la base de données est réalisée grâce à Active Record. Ce module de Rails permet de faire des appels sur des objets Ruby alors que dans d'autres framework, il faudrait utiliser des requètes SQL.
+La correspondance entre un objet Ruby et la base de données est réalisée grâce à Active Record. Ce module de Rails permet de faire des appels sur des objets Ruby alors que dans d'autres framework, il faudrait utiliser des requêtes SQL.
   
-\subparagraph{Controlleur} 
-Le controlleur permet d'accéder à une ressource. Une ressource est un modèle ou toute autre objet plus indirect (enregistrement/login, page d'acceuil\ldots).  
+\subparagraph{Contrôleur} 
+Le contrôleur permet d'accéder à une ressource. Une ressource est un modèle ou tout autre objet plus indirect (enregistrement/login, page d'accueil\ldots).  
 
-Il détermine quel vue doit s'afficher et avec quel paramètre. Le controlleur a donc la tache de vérifier la sécurité et l'intégrité des données fournies par l'utilisateur. Ensuite, il peut intéroger différents modèles et fournir les réponses à la vue adéquate. 
+Il détermine quelle vue doit s'afficher et avec quel paramètre. Le contrôleur a donc la tache de vérifier la sécurité et l'intégrité des données fournies par l'utilisateur. Ensuite, il peut interroger différents modèles et fournir les réponses à la vue adéquate. 
 
-Rails encourage d'avoir des ressources REST. C'est a dire, d'avoir des ressources avec une représentations unique et des actions identique (create, new, edit, update, destroy, show, index). Les actions disponible sur un controlleur sont déterminées via le fichier de configuration des routes.
+Rails encourage d'avoir des ressources REST. C'est a dire, d'avoir des ressources avec une représentations unique et des actions identiques (create, new, edit, update, destroy, show, index). Les actions disponibles sur un contrôleur sont déterminées via le fichier de configuration des routes.
 
 \subparagraph{Vue} 
-Les vues sont ce que les utilisateurs recoivent et voient. Ce sont typiquement des pages html mais aussi des pdf, objet json, fichier\ldots 
+Les vues sont ce que les utilisateurs reçoivent et voient. Ce sont typiquement des pages html mais aussi des pdf, objets json, fichiers, etc\ldots 
 
-La philosophie de Rails est d'utiliser des gems pour simplifier l'écriture. Pour les vues, nous avons notament:
+La philosophie de Rails est d'utiliser des gems pour simplifier l'écriture. Pour les vues, nous avons notamment:
 \begin{description}
-  \item[Haml] un langage fournissant une syntaxe raccourcie du html. Il se base sur l'indentation plutot que sur une syntaxe XML. Haml permet donc de respecter le principe DRY et d'amélioré la lisibilité par code plus court et bien indenté.
-  \item[JQuery] Cette bibliothèque javascript bien connue permet de ne pas réinventer la roue lorsque l'on veut pouvoir ajouter un peu de dynamisme à nos page web.
-  \item[CoffeeScript] Un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire et plus courte et d'ajouter des sucre syntaxique par raport à JavaScript.
-  \item[Bootstrap] un framework CSS qui permet de découpler le fond de la forme de l'affichage d'une page html. Ce framework donne un disign responsive pour tout type d'écran au page qui l'utilise. Il fournit aussi de nombreux composants utiles (boutons, alertes, barre de progression, message d'aide \ldots).
+  \item[Haml] un langage fournissant une syntaxe raccourcie du html. Il se base sur l'indentation plutôt que sur une syntaxe XML. Haml permet donc de respecter le principe DRY et d'amélioré la lisibilité par code plus court et bien indenté;
+  \item[JQuery] Cette bibliothèque javaScript bien connue permet de modifier le document courant facilement, de géré des événements, de crée des annimation, etc\ldots
+  \item[CoffeeScript] Est un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire et plus courte, il permet d'ajouter des sucre syntaxique par rapport à JavaScript;
+  \item[Bootstrap] un framework CSS qui permet de découpler le fond de la forme de l'affichage d'une page html. Ce framework donne un design responsive pour tout type d'écran au page qui l'utilise. Il fournit aussi de nombreux composants utiles (boutons, alertes, barre de progression, message d'aide \ldots).
 \end{description}
 
 \paragraph{gem}
