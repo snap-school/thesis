@@ -1,28 +1,28 @@
 \section{SNAP}
-Comme expliqué précédemment Nous somme parti d'un projet existant, SNAP BYOB, pour l'environnement de programmation. Ce projet a pour but de fournir une interface et un environnement supportant la programmation par bloc. Ce projet ne s'inscrit pas dans le cadre d'un apprentissage scolaire ou guidée. Il a donc fallu adapter le projet pour une utilisation plus scolaire. Nous allons expliquer dans cette partie les différentes adaptations que nous avons apporter au projet d'origine et pourquoi elles sont nécessaire pour remplir nos objectifs.\\
+Comme expliqué précédemment, nous sommes partis d'un projet existant, SNAP BYOB, pour l'environnement de programmation. Ce projet a pour but de fournir une interface et un environnement supportant la programmation par bloc. Ce projet ne s'inscrit pas dans le cadre d'un apprentissage scolaire ou guidé. Il a donc fallu adapter le projet pour une utilisation plus scolaire. Nous allons expliquer dans cette partie les différentes adaptations que nous avons apporté au projet d'origine et pourquoi elles sont nécessaire pour remplir nos objectifs.\\
 
-Dans les adaptations que nous avons du opéré nous retiendront: une simplification de l'interface, des fonctionnalité suplémentaire tel que la sauvegarde sur les serveur du projet courant, une différenciation de rôle pour le professeur par rapport au public cible, un amélioration de la traduction en francais.
+Dans les adaptations que nous avons opérées nous retiendrons : une simplification de l'interface, des fonctionnalités supplémentaires telles que la sauvegarde sur les serveurs du projet courant, une différenciation de rôle pour le professeur par rapport au public cible, une amélioration de la traduction en français.
 
 \subsection{L'interface}
-Comme expliqué pécédemment le projet original n'avait pas de vocation didactique de groupe et avait un publique cible plus large que le notre et plus agé. Dans cette idée il y avait  des menus pour des fonctionnalité de gestion du scheduler et autre. Il est évident que ces fonctionnalité ne sont pas utile pour notre publique. De plus vu l'age de notre public toutes distractions qui peut être évité améliore sensiblement la concentration de ces dernier.
+Comme expliqué précédemment le projet original n'avait pas de vocation didactique de groupe et avait un publique cible plus large que le notre et plus âge. Dans cette idée, il y avait des menus pour des fonctionnalités de gestion du scheduler et autre. Il est évident que ces fonctionnalités ne sont pas utiles pour notre public. De plus vu l'âge de notre public toutes distractions qui peuvent être évitées améliorent sensiblement la concentration de ces derniers.
 
-Dans cet optique nous avons opéré un néttoyage en profondeur de l'interface dans l'optique de laisser uniquement les menu utile. Toute fois comme il sera discuter dans les rôles il était interessant de ne pas simplement les effacer mais bien de les masquer.
+Dans cette optique, nous avons opéré un nettoyage en profondeur de l'interface dans l'optique de laisser uniquement les menus utile. Toute fois comme il sera discuté dans les rôles il était intéressant de ne pas simplement les effacer, mais bien de les masquer.
 
-\subsection{Fonctionnalité suplémentaire}
-Comme nous avons interfacer l'application de programmation avec un site web, nous avons du reimplementer certaines fonctionnalité d'import export.\\
+\subsection{Fonctionnalité supplémentaire}
+Comme nous avons interfacé l'application de programmation avec un site web, nous avons du reimplementer certaine fonctionnalité d'import-export.\\
 
-Nous avions besoin de pouvoir passer le projet à l'ouverture de l'application. Pour cela la majorité des fonctions était déjà présente. La technique utiliser était de passer l'XML contenant le projet dans la barre d'adresse du navigateur. Quelques adaptation on permis de masquer le passage du projet a l'utilisateur.\\
+Nous avions besoin de pouvoir passer le projet à l'ouverture de l'application. Pour cela, la majorité des fonctions était déjà présente. La technique utiliser était de passer l'XML contenant le projet dans la barre d'adresse du navigateur. Quelques adaptations on permis de masquer le passage du projet a l'utilisateur.\\
 
-Dans les fonctions d'export il y avait ici aussi des solution existante mais encore une fois, n'étant pas la priorité des personnes maintenant le projet, ces fonctions étaient peu pratique. Lors d'un export de projet, le fichier xml généré était généré dans une page html. Nous avons repris ces fonctions afin de créer le fichier html dans les temps ensuite de l'envoyer sur le serveur à l'aide d'une requet \texttt{push}
+Dans les fonctions d'export, il y avait ici aussi des solutions existantes, mais encore une fois, n'étant pas la priorité des personnes maintenant le projet, ces fonctions étaient peu pratiques. Lors d'un export de projet, le fichier XML généré était généré dans une page HTML. Nous avons repris ces fonctions afin de créer le fichier HTML dans les temps ensuite de l'envoyer sur le serveur à l'aide d'une requête \texttt{push}
 
-tout les changement de l'interface
+tous les changements de l'interface
 
 bouton d'aide
 
-roles
+rôles
 
 export import
 
-traduction ???
+Traduction ???
 
 aides
