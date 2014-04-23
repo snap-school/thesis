@@ -50,28 +50,22 @@ Comme expliqué au chapitre \ref{SNAP}, le choix du langage de programmation s'e
 
 
 \paragraph{Platforme d'apprentissage}
-Une platforme d'apprentissage nécessite de tenir compte les demandes du terrain. Les écoles veulent pouvoir gérer tout le processus d'apprentissage de leur élèves. Pour ce faire, il faut que la solution :
+La plateforme étant à destination des professeurs la majorité des besoins viennent d'eux. Cette partie va développé les besoins qui ont été pris en compte dans la conception de Rsnap. D'autres tierces entre également en jeu dans l'établissement du cahier des charge de la plateforme. Les enfants ou encore des constats tel que la faible qualité du matériel informatique dans les écoles apportent des contrainte supplémentaire. Les principales besoins pris en compte sont:
 \begin{description}
-  \item[fournir des exercices] capacité de fournir une succession d'exercices aux élèves et la capacité au professeur de les créer et modifier ;
-  \item[suivre un utilisateur] fournir une interface personnalisé suivant que l'utilisateur soit un professeur ou un élève ;
-  \item[stocker les résolutions] permettre aux étudiants d'enregistrer leur solution et aux professeurs de récupérer les travaux des étudiants pour ensuite les corriger ;
-  \item[permettre une interaction professeur/élèves] fournir un moyen d'échange d'informations entre les professeurs et leurs élèves ;
-  \item[être indépendante du matériel] accès à la platforme quelque soit l'ordinateur utilisé ;
-  \item[être fiable et évolutive] possibilité de rajouter des fonctionnalités tout en gardant un stabilité de l'application ;
-  \item[être facile à mettre en place et à maintenir] facilité de mise en oeuvre de la platforme par les écoles.
+  \item[disponibilité des exercices :] fournir une série d'exercices aux élèves et permettre au professeur de les modifier ou d'en créer d'autres ;
+  \item[différencier les utilisateurs :] fournir une interface personnalisé suivant que l'utilisateur soit un professeur ou un élève ;
+  \item[stocker les résolutions :] permettre aux étudiants d'enregistrer leurs solutions et aux professeurs de récupérer ces travaux pour ensuite les corriger ;
+  \item[être indépendante du matériel :] avoir une platforme accessible sur le plus d'ordinateur possible ;
+  \item[être fiable et évolutive :] avoir la possibilité de rajouter des fonctionnalités tout en gardant une stabilité de l'application ;
+  \item[être facile à mettre en place et à maintenir :] pouvoir être déployer facilement dans une école si cette dernière est équiper pour.
 \end{description}
 
-Rails permet de résoudre ces besoins de manière adéquate. En effet comme expliqué précédemment (\ref{rails}), rails permet de créer une rapidement une application web.
+Rails permet de répondre ces besoins de manière élégante. En effet comme expliqué précédemment (\ref{rails}), rails permet de créer rapidement une application web.
 
-Rails fourni une architecture MVC se pliant très bien à la problématique. Le modèle permet de gérer les concepts d'utilisateur, d'exercices et de résolution avec l'utilisation du gem paperclip pour les fichiers attachés.  La possibilité de donner différents droits aux utilisateurs suivant qu'ils sont des étudiants ou des professeurs se fait au niveau des controlleurs avec la participation des gems : devise, rolify et authority. Les vues fournissent l'indépendance au matériel de la platforme car la seule dépendance pour les afficher est un navigateur.
+Rails fourni une architecture MVC convenant très bien à la problématique. Le modèle permet de gérer les concepts d'utilisateur, d'exercices et de résolution. Ceci est encore facilité avec l'utilisation du gem \texttt{paperclip} pour les fichiers attachés.  La possibilité de donner différents droits aux utilisateurs, suivant qu'ils sont des étudiants ou des professeurs se fait au niveau des contrôleurs. Ici encore la participation des gems : devise, rolify et authority facilite le travail. Les vues fournissent l'indépendance par rapport au matériel elles ne nécessite qu'un navigateur pour être afficher.\\
 
-La philosophie de Rails permet donc d'avoir une application qui se développe rapidement avec une architecture forte. Cette caractéristique permet de faire maintenir et évoluer l'application facilement.
+La philosophie de Rails permet donc d'avoir une application qui se développe rapidement avec une architecture forte. Cette caractéristique permet de maintenir et de faire évoluer l'application facilement.
 
-Le fait que la solution soit une platforme web, permet de n'avoir aucune dificulté à la mettre en place car elle est déjà disponible sur intenet. il suffit que les utilisateurs créent leur compte. De plus, l'application étant développé en temps que logiciel libre, les écoles peuvent aussi posséder toute l'infrastructure en interne si elle le désire, avec bien sur une plus difficile mise en place.
+Le fait que la solution soit une platforme web, permet de facilité son utilisation. Il suffit d'un navigateur, une connexion internet et que les utilisateurs créent leur compte. De plus, l'application étant développé en temps que logiciel libre, les écoles peuvent aussi héberger toute l'infrastructure en interne si elle le désire, moyennant les un minimum de connaissance technique.
 
 \paragraph{Intégration du langage à la platforme}
-% 2e partie (technologie) toutes les briques sont déjà dispo pour fournir un apprentissage au enfants, il ne reste qu'a mettre un peu de glue pour tout assembler.
-
-Pour réaliser ces différents objectifs, il est nécessaire de mettre en place un solution technique. Il existe déjà de nombreuses solutions techniques temps au niveau des langages d'apprentissage que au niveau des solutions de création de site web. Pour réaliser la solution technique, il faut donc principalement trouver les projets adéquats et mettre de la colle entre toutes ces briques.
-
-La solution proposée se base sur Snap! et Ruby on Rails pour toutes leurs qualités précitées. 
