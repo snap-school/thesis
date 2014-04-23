@@ -223,7 +223,7 @@ Pour atteindre cet objectif, Rails utilise deux principes majeurs :
   \item[Ne vous répétez  pas] (DRY) L'architecture que propose Rails permet de mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bugs.
 \end{description}
 
-\subsubsection{architecture}
+\subsubsection{Architecture}
 Rails se base sur une architecture Modèle-Vue-Contrôleur.
 \paragraph{Modèle} 
 Un modèle est typiquement une classe qui représente une table de la base de données. Une classe du modèle fournit aussi toutes les méthode nécessaire à représenter et modifier l'objet dans le domaine d'application.
@@ -248,7 +248,7 @@ La philosophie de Rails est d'utiliser des gems pour simplifier l'écriture. Pou
   \item[Bootstrap] un framework CSS qui permet de découpler le fond de la forme de l'affichage d'une page html. Ce framework donne un design responsive pour tout type d'écran au page qui l'utilise. Il fournit aussi de nombreux composants utiles (boutons, alertes, barre de progression, message d'aide \ldots).
 \end{description}
 
-\subsubsection{gem}
+\subsubsection{Gem's}
 Ruby fourni de base une manière de partager des extenstions pour des programmes ruby via les gems. Rails est un gem et dépend de nombreux autres notament Active Record présenté plus haut.
 
 La communauté de Rails à écrit de nombreux gems permettant de rajouter facilement des fonctionnalités à une application. Des gems intéressantes seraint les suivantes :
@@ -259,13 +259,13 @@ La communauté de Rails à écrit de nombreux gems permettant de rajouter facile
   \item[autority] Permet de gérer les droits des utilisateurs sur les différentes ressources contrôleur.
 \end{description}
 
-\subsubsection{test}
-Il existe tout un écosystème autour de Rails pour fournir du code de qualité. TODO faire une suite à l'intro\\
+\subsubsection{Tests}
+Il existe tout un écosystème autour de Rails pour fournir du code de qualité. Cette partie présente quelque outils fort utile et utilisés dans les tests. Ceux-ci sont présenté car ce sont les plus utilisés par la communauté Rails mais ce n'est évidemment pas les seul existant.\\
 
-Un outil de test fort apprécié des programmeur Ruby et plus particulièrement Rails est Cucumber. Cucumber permet de réaliser des tests dans un "behavior-driven development" (BDD) style. Ce style de test permet d'une part au client ou chef de projet d'écrire des scénarii décrivant l'utilisation de fonctionnalité du domaine en langague naturel (Gherkin) et d'autre part au programmeur d'implémenter ceux-ci. Ce type de test permet de mettre l'accent sur ce que veux le client.
+Un outil de test fort apprécié des programmeur Ruby et plus particulièrement Rails est Cucumber. Cucumber permet de réaliser des tests dans un "behavior-driven development" (BDD) style. Ce style de test permet d'une part au client ou chef de projet d'écrire des scénarii décrivant l'utilisation de fonctionnalité du domaine en langage naturel (Gherkin) et d'autre part au programmeur d'implémenter ceux-ci. Ce type de test permet de mettre l'accent sur ce que veux le client.
 
-Dans le cas de Rails, il est intéressant d'utiliser conjointemant à Cucumber Capybara. Capybara permet de controler un navigateur et donc de réaliser des tests à la place d'un utilisateur. Ces tests permettrons donc bien d'assurer que ce que désire l'utilisateur fonctionne correctement.\\
+Dans le cas de Rails, il est intéressant d'utiliser conjointemant à Cucumber, Capybara. Celui-ci permet de contrôler un navigateur et donc de réaliser des tests à la place d'un utilisateur. Ces tests permettrons donc bien d'assurer que ce que désire l'utilisateur fonctionne correctement.\\
 
-Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. Ce style de testing permet d'effectuer tout les tests sur le code à chaque nouveau commit. Cela permet de connaitre directement si une modification du code source à induit un régression des fonctionnalités.\\
+Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. Ceci est possible entre autre grâce à \texttt{Travis CI}. Ce style de tests permet d'effectuer tout les tests sur le code à chaque nouveau \texttt{commit}. Cela permet de connaître directement si une modification du code source à induit une régression des fonctionnalités.\\
 
-Un autre outils permet de mieux comprendre et respecter le "Rails way" présenté plus tôt. rails\_best\_practices fournis des métriques utiles pour détecter des écarts à philosophie Rails. Cet outil s'utilise en association avec le conseil fournit par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecterait pas les conventions.
+Un autre outils permet de mieux comprendre et respecter le "Rails way" présenté plus tôt. Rails\_best\_practices fournis des métriques utiles pour détecter des écarts à philosophie Rails. Cet outil s'utilise en association avec le conseil fournit par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecterait pas les conventions.
