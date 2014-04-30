@@ -188,7 +188,7 @@
     \let\chaptermark\@gobble
     \let\sectionmark\@gobble
     }
-  \if@titlepage
+\if@titlepage
   \newcommand\maketitle{\begin{titlepage}%
   \let\footnotesize\small
   \let\footnoterule\relax

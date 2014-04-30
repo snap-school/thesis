@@ -1,11 +1,10 @@
-\documentclass[a4paper,11pt,twoside]{ThesisStyle}
+\documentclass[a4paper,11pt,twoside,titlepage]{ThesisStyle}
 
-%\include{formatAndDefs}
+\include{formatAndDefs}
+\usepackage[english,frenchb]{babel}
 \usepackage[utf8]{inputenc} % comment out for lualatex/xelatex
 \usepackage[T1]{fontenc}    % comment out for lualatex/xelatex
 \usepackage{titlesec}
-\usepackage{changepage}
-\usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \include{listings}
@@ -14,12 +13,6 @@
 \makeglossary
 \usepackage[xindy]{imakeidx}
 \makeindex
-
-\usepackage{epstopdf}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-
 
 \newcommand{\fwshort}{RSnap}
 \newcommand{\fwlong}{Plateforme web pour accompagner l'apprentissage de la programmation par les 10 - 14 ans}
@@ -31,13 +24,12 @@
 \def \doccourstitle{Master Thesis}
 \def \docauthor {Gaetan {\sc Collart}\\\emph{Année :} INFO 22 MS\\\emph{Noma :} 66-20-07-00 \and Simon {\sc Claessens}\\\emph{Année :} INFO 22 MS\\\emph{Noma :} 31-06-07-00}
 \def \docprofessor{Chantal \textsc{Poncin} \and Pierre Schaus}
-%\def \docassistant{Nicolas \textsc{Cardozo Alvarez}}
 
 \author{Gaetan {\sc Collart}\\\emph{Année :} INFO 22 MS\\\emph{Noma :} 66-20-07-00 \and Simon {\sc Claessens}\\\emph{Année :} INFO 22 MS\\\emph{Noma :} 31-06-07-00}
 \title{Une plateforme web pour apprendre le "raisonnement informatique" aux jeunes du primaire et secondaire}
 
 \usepackage{mdwlist} %reduce itemize item spacing
-\usepackage{placeins} 
+\usepackage{placeins} %De­fines a \FloatBar­rier com­mand, be­yond which floats may not pass
 
 \usepackage[plain]{fancyref}
 \def\fref{\Fref} % treat all \frefs as \Frefs
@@ -55,21 +47,11 @@
 \frefformat{plain}{\fancyreflstlabelprefix}%%
  {\freflstname\fancyrefdefaultspacing#1}
 
-
-
-
-
-\usepackage{wrapfig}
 %\includeonly{titlepage}
-%\includeonly{titlepage,content/androidinjava/androidjava}
-%\includeonly{titlepage,content/Intro/abstract,content/Intro/thanks,content/Intro/intro}
-%\includeonly{titlepage,content/Intro/abstract,content/Intro/intro,content/conclusion/futurework,content/conclusion/conclusion}
-%\includeonly{content/cityvisit/cityvisit,content/cityvisit/data}
-%\includeonly{content/scopj/scopj}
 %======================
 %	DOCUMENT
 %======================
-\include{content/12-glossary/glossary}
+%include{content/12-glossary/glossary}
 \begin{document}
 %\dominitoc
 
