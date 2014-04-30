@@ -7,12 +7,21 @@ Une fois le choix de l'approche par mission choisie, nous avons défini comment 
 Pour introduire les concepts de manière douce, la missions final est introduite par trois missions d'introduction : \texttt{la voiture}, \texttt{l'hélicoptère} et \texttt{Soyons courtois}. Dans la suite de cette partie, nous allons décrire les missions et faire une analyse des concepts introduits.
 
 \subsection{Voiture}
-Dans cette première mission, les participants étaient mis dans un bolide qui devait atteindre la ligne d'arrivée en restant sur la route. Si la voiture sortait de la route, elle explosait, à chaque lancement du scripte la voiture reprenait sa position d'origine.
+Dans cette première mission, voir figure \ref{fig:mission-voiture}, les participants étaient mis dans un bolide qui devait atteindre la ligne d'arrivée en restant sur la route. Si la voiture sortait de la route, elle explosait, à chaque lancement du scripte la voiture reprenait sa position d'origine.
 
 Cette mission avait pour but que les participants puissent prendre en main l'interface de Snap! BYOB et d'introduire la notion de suite d'instruction. En effet, le fait de devoir prévoir les instructions n'est pas un concept facile pour le public cible. Beaucoup exécutent une opération et puis cherche à savoir comment continuer à partir de leur nouvelle position. Ici la voiture retournant chaque fois à sont point de départ, nous forcions les participants a réfléchir de manière globale et non une action à l'avance.
 
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.35]{content/7-solution/1-missions/images/voiture}
+    \caption{Mission de la voiture}
+    \label{fig:mission-voiture}
+  \end{center}
+\end{figure}
+
+
 \subsection{L'hélicoptère}
-Pour cette mission, les participants étaient aux commandes d'un hélicoptère. Leur but est de faire le tour de la piste. La piste est un ellipsoïde border d'herbe. Si l'hélicoptère touche l'herbe, il explose et comme pour le précédent, à chaque lancement de scripte l'hélicoptère se repositionnait à son point de départ. Ceci toujours dans le but de forcer les participants à voir la solution dans son ensemble et non juste a la prochaine étape. En plus, l'herbe et de la piste, sur le contour extérieur de la piste est positionner une bande rouge et à l'intérieur elle est bleu. Le but est de tournée des qu'une de ces deux couleurs est touchée et ce pour évité l'herbe.\\
+Pour cette mission, voir figure \ref{fig:mission-hélicoptère}, les participants étaient aux commandes d'un hélicoptère. Leur but est de faire le tour de la piste. La piste est un ellipsoïde border d'herbe. Si l'hélicoptère touche l'herbe, il explose et comme pour le précédent, à chaque lancement de scripte l'hélicoptère se repositionnait à son point de départ. Ceci toujours dans le but de forcer les participants à voir la solution dans son ensemble et non juste a la prochaine étape. En plus, l'herbe et de la piste, sur le contour extérieur de la piste est positionner une bande rouge et à l'intérieur elle est bleu. Le but est de tournée des qu'une de ces deux couleurs est touchée et ce pour évité l'herbe.\\
 
 Les concepts introduits par cette mission sont :
 \begin{itemize}
@@ -20,9 +29,16 @@ Les concepts introduits par cette mission sont :
 \item la gestion des collisions grâce au capteur de couleur ;
 \item la division en sous process (un pour avancer, un pour la collision rouge et un pour la bleu).
 \end{itemize}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.3]{content/7-solution/1-missions/images/helicoptere}
+    \caption{Mission de l'hélicoptère}
+    \label{fig:mission-hélicoptère}
+  \end{center}
+\end{figure}
 
 \subsection{Soyons courtois}
-Dans cette dernière mission de préparation, les participants se retrouvent à diriger un personnage qui croise d'autres personnages. Ces derniers disent bonjour à chaque qu'ils croisent quelqu'un. Le but de la mission est dire bonjour également quand le personnage du participant croise quelqu'un.
+Dans cette dernière mission de préparation, voir figure \ref{fig:courtois}, les participants se retrouvent à diriger un personnage qui croise d'autres personnages. Ces derniers disent bonjour à chaque qu'ils croisent quelqu'un. Le but de la mission est dire bonjour également quand le personnage du participant croise quelqu'un.
 
 Les concepts introduits par cette mission sont :
 \begin{itemize}
@@ -31,7 +47,13 @@ Les concepts introduits par cette mission sont :
 \item Introduction à l'interactivité de l'interface (faire déplacer un personnage) ;
 \item la gestion des dialogues et affichage de texte.
 \end{itemize}
-
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.3]{content/7-solution/1-missions/images/courtois}
+    \caption{Mission de soyons courtois}
+    \label{fig:courtois}
+  \end{center}
+\end{figure}
 \subsection{Chien et chat}
 Cette mission est la dernière de la série et a pour but de mettre ensemble tous les concepts vu dans les missions de préparations. Dans cette mission les étudiants doivent faire en sorte d'avoir deux personnages et de pouvoir les déplacer séparément à l'aide des touches. Le chien doit courir après le chat. Si celui-ci est touché par le chien il crie et le chien gagne un point.\\
 

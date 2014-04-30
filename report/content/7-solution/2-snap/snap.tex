@@ -4,6 +4,14 @@ Comme expliqué précédemment, nous sommes partis d'un projet existant, Snap! B
 
 Dans les adaptations opérées, nous retiendrons : une simplification de l'interface, la sauvegarde sur les serveurs du projet courant, une différenciation de rôle pour le professeur par rapport au public cible, une amélioration de la traduction en français, le masquage des scripts.
 
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.3]{content/7-solution/2-snap/images/interface}
+    \caption{Délimitation des zones de l'interface Snap!}
+    \label{fig:snap interface}
+  \end{center}
+\end{figure}
+
 \subsection{L'interface}
 \label{interface}
 Comme expliqué précédemment le projet original n'avait pas une vocation didactique de groupe et avait un publique cible plus large que le notre. Dans cette idée, il y avait des menus pour des fonctionnalités de gestion de l'ordonnanceur, option d'affichage, paramètres d'éditions, etc. Il est évident que ces fonctionnalités ne sont pas utiles pour notre public. De plus vu l'âge de notre public toutes distractions qui peuvent être évitées améliorent sensiblement l'attention de ces dernier.
@@ -23,7 +31,7 @@ Ces rôles permettent également la gestion du masquage de script. En effet il e
 \subsection{Masquer les scripts}
 Il a été nécessaire pour la création des missions de cacher des blocs au étudiant. Par exemple la partie de vérification du code de l'étudiant ou encore le code de l'environnement de la mission ne doivent pas apparaître pour les étudiants. 
 
-Une possibilité de cacher des blocs existait déjà dans à partie de gauche de l'interface pour que tout les bloc n'apparaissent pas comme on peut le voir sur la figure \ref{fig:cacher}. Nous avons étendu cette fonction pour pouvoir également cacher des blocs ou des scripts dans la partie d'édition.
+Une possibilité de cacher des blocs existait déjà dans la zone des blocs source (voir l'interface sur la figure \ref{fig:snap interface}) de l'interface pour que tout les bloc n'apparaissent pas comme on peut le voir sur la figure \ref{fig:cacher}. Nous avons étendu cette fonction pour pouvoir également cacher des blocs ou des scripts dans la partie d'édition.
 
 Il a également fallu ajouter cette information dans la sauvegarde du projet. Ceci a été réalisé grâce a la balise \texttt{hidden} dans le XML. Cette balise n'est présente que si le bloc doit être caché pour limiter les ajouts au document de sauvegarde.\\
 
