@@ -193,21 +193,32 @@
   \let\footnotesize\small
   \let\footnoterule\relax
   \let \footnote \thanks
-  \null\vfil
+  \null\vfill
   \vskip 60\p@
   \begin{center}%
-    {\LARGE \@title \par}%
-    \vskip 3em%
+    {\LARGE \doctitle \par}%
+    \vskip .75em%
+    {\Large \docsubtitle \par}%
+    \vskip .75em%
+    {\Large \doccourstitle}{\large ~- \doccourssigle \par}%
+    \vfill
     {\large
      \lineskip .75em%
+     \'Etudiants :\\
       \begin{tabular}[t]{c}%
-        \@author
+        \docauthor
       \end{tabular}\par}%
-      \vskip 1.5em%
+    {\large
+     \lineskip .75em%
+     Promoteurs :\\
+      \begin{tabular}[t]{c}%
+        \docprofessor
+      \end{tabular}\par}%
+      \vfill
     {\large \@date \par}%       % Set date in \large size.
   \end{center}\par
   \@thanks
-  \vfil\null
+  \vfill\null
   \end{titlepage}%
   \setcounter{footnote}{0}%
   \global\let\thanks\relax
