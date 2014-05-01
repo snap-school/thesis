@@ -64,6 +64,24 @@
   transition:,  transition-duration:, transition-property:, transition-timing-function:,
   }
 }
+\lstdefinelanguage{haml}{
+  morestring=[b]',
+  morestring=[b]",
+  sensitive=true,
+  keywordsprefix=\%,
+  alsoletter=\%
+}
+\lstdefinelanguage{Rails}{
+  language=Ruby,
+  sensitive=true,	
+  morestring=[d]/,
+  ndkeywords={
+    %controller
+    params, before_action, before_filter, render, redirect_to,
+    %model
+    scope, where, validates, delegate, belongs_to, has_one, has_many, includes, order},
+  morekeywords={private, public, protected, include}
+}
 \lstset{
   %backgroundcolor=\color{lightgray},
   extendedchars=true,
@@ -78,6 +96,7 @@
   showtabs=false,
   captionpos=b,
   frame=single,
+  frameround=fttt,
   keywordstyle=\color{blue}\bfseries,
   ndkeywordstyle=\color{green}\bfseries,
   identifierstyle=\color{black},
