@@ -1,0 +1,17 @@
+%h1
+  =@title
+
+%table.table.table-striped.table-bordered.table-hover
+  %thead
+    %tr
+      %th Prénom
+      %th Nom
+      %th Email
+      %th
+      %th
+      %th
+  %tbody
+    = render @users
+
+%p
+  = link_to("Créer un utilisateur", new_user_path, :class=>"btn btn-success")

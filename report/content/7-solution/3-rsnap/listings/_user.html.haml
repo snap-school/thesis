@@ -1,0 +1,12 @@
+%tr
+  %td= user.firstname
+  %td= user.lastname
+  %td= user.email
+  %td= link_to "Voir", user, :class=>"btn btn-primary"
+  %td
+    = link_to "Editer", edit_user_path(user),
+              :class=>"btn btn-warning"
+  %td
+    = link_to "Supprimer", user, :method => :delete,
+              :class=>"btn btn-danger" ,
+              :data => { :confirm => "Etes-vous certain ?" }

@@ -1,1 +1,0 @@
-/home/sigo/workspace/snap-school/rsnap/app/models/program.rb
