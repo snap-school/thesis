@@ -16,13 +16,13 @@ Comme expliqué dans la section \ref{Rails}, Rails possède une architecture MVC
 
 \subsubsection{modeles}
 Les différents concepts utiles pour developper l'application sont ceux représenté par les différents modèles. Ceux-ci sont représenté sur la figure \ref{fig:models}.
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=\textwidth]{models_complete}
-    \caption{Modèles de Rsnap}
-    \label{fig:models}
-  \end{center}
-\end{figure}
+%\begin{figure}
+%  \begin{center}
+%    \includegraphics[width=\textwidth]{models_complete}
+%    \caption{Modèles de Rsnap}
+%    \label{fig:models}
+%  \end{center}
+%\end{figure}
 \paragraph{\texttt{User}} L'utilisateur contient les informations nécessaires à l'utiliser (\texttt{firstname}, \texttt{email} \ldots) et les informations pour s'authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). L'utilisateur peut posséder plusieurs roles, programmes et projets.
 \paragraph{\texttt{Role}} Les rôles permettent de donner des attributs à un utilisateur. Ce modèle a été généré automatiquement par Rolify \ref{role}. Dans le cas de Rsnap, Deux rôles ont été créé : \texttt{admin} et \texttt{teacher}. Ces deux rôles sont globaux et donc ne sont pas rattaché à une ressources spécifique.%TODO dans future work: role teacher sur ressource students_group
 
@@ -40,7 +40,7 @@ Les roles seront utiles en conjontion avec les autorités \ref{authority} pour d
 \end{itemize}
 
 Comme c'est visible dans les \texttt{scope}, Active Record permet de faire des requêtes SQL directement en Ruby. 
-\lstinputlisting[language=Rails, firstline=21, caption={Modèle \texttt{Program}}, label=lst:model-program]{content/7-solution/3-rsnap/program.rb}
+%\lstinputlisting[language=Rails, firstline=21, caption={Modèle \texttt{Program}}, label=lst:model-program]{content/7-solution/3-rsnap/program.rb}
 
 \subsubsection{Controlleurs}
 Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:controllers} montre la liste des contrôleurs implémenté pour l'application. La majorité de ceux-ci se rapporte directement à un modèle spécifique. Il existe néanmoins certaines ressources différentes tel que : 
@@ -50,24 +50,24 @@ Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:c
   \item la création d'un programme depuis une mission (\texttt{InitializationMissionController}) ;
   \item les ressources utile à l'affichage de Snap! (\texttt{SnapAssetsController}).
 \end{itemize}
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=\textwidth]{controllers_complete}
-    \caption{Controlleurs de Rsnap}
-    \label{fig:controllers}
-  \end{center}
-\end{figure}
+%\begin{figure}
+%  \begin{center}
+%    \includegraphics[width=\textwidth]{controllers_complete}
+%    \caption{Controlleurs de Rsnap}
+%    \label{fig:controllers}
+%  \end{center}
+%\end{figure}
 
 Comme expliqué dans la section \ref{controller}, les méthodes accessibles sont définie dans \texttt{routes.rb}. Les controlleurs ont des tous des ressources RESTfull excepté \texttt{HomeController}. Ceci est visible dans \texttt{routes.rb} ou en regardant les fonctions publiques disponible dans les controlleurs sur la figure \ref{fig:controllers}.
 
 \paragraph{Exemple}
 L'extrait du controlleur \texttt{MissionsController} \ref{lst:controller-mission} montre l'usage classique d'un controlleur. 
 
-\lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/missions_controller.rb}
+%\lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/missions_controller.rb}
 
 Grâce à la métaprogrammation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes RESTfull, une vérification de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont déportée dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} permet de réaliser une action supplémentaire avant chaque appel de fonction. Ici, excepté pour l'action \texttt{show} et \texttt{index} qui peuvent être publique, il faut que l'utilisateur soit authentifié pour que l'application puisse par après vérifier ses droits.
 
-Dans une méthode du controlleur accessible via les routes, plusieurs actions sont à réaliser :
+Dans une méthode du contrôleur accessible via les routes, plusieurs actions sont à réaliser :
 \begin{enumerate}
   \item Traiter si nécessaire les paramètres fournis. Ceux-ci se trouve dans \lstinline[language=Rails]{param} ;
   \item Assigner les variables d'instance que nécessitera la vue pour s'afficher correctement ;
@@ -77,10 +77,10 @@ Dans une méthode du controlleur accessible via les routes, plusieurs actions so
 \subsubsection{Vue}
 Les vues sont écrite en haml \ref{haml}. L'exemple de code \ref{lst:vue-user-index} avec \ref{lst:vue-user-partial} montre comment est représenté la vue servant à lister tout les utilisateur \ref{fig:vue-users}.
 
-\lstinputlisting[language=haml, caption={Vue \texttt{index} des utilisateurs}, label=lst:vue-user-index]{content/7-solution/3-rsnap/index.html.haml}
+%\lstinputlisting[language=haml, caption={Vue \texttt{index} des utilisateurs}, label=lst:vue-user-index]{content/7-solution/3-rsnap/index.html.haml}
 Le code source \ref{lst:vue-user-index} présente comment sont utilisé les variables d'instance créées par le controlleur. Par exemple, la variable \texttt{@title} sert de titre 1.
 
-\lstinputlisting[language=haml, caption={Vue d'une ligne \texttt{\_user} représentant un utilisateur}, label=lst:vue-user-partial]{content/7-solution/3-rsnap/_user.html.haml}
+%\lstinputlisting[language=haml, caption={Vue d'une ligne \texttt{\_user} représentant un utilisateur}, label=lst:vue-user-partial]{content/7-solution/
 De plus, Rails permet de faire le rendu d'un autre fichier de manière élégante. La ligne 14 du code source \ref{lst:vue-user-index} permet d'exécuter le rendu sur tout les éléments de la collection \texttt{users} grâce au fichier \ref{lst:vue-user-partial}
 
 Les connaisseurs de Bootstrap \ref{bootstrap} auront reconnu l'usage intensif des classes de style qu'il propose. L'adaptativité de cet outil est visible sur la capture d'écran \ref{fig:vue-users}. En effet, le menu supérieur à été minifié car la taille de l'écran était trop petite pour acceuillir le menu en entier.
