@@ -60,10 +60,10 @@ Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:c
 
 Comme expliqué dans la section \ref{controller}, les méthodes accessibles sont définie dans \texttt{routes.rb}. Les controlleurs ont des tous des ressources RESTfull excepté \texttt{HomeController}. Ceci est visible dans \texttt{routes.rb} ou en regardant les fonctions publiques disponible dans les controlleurs sur la figure \ref{fig:controllers}.
 
-\paragraph{Exemple}
+\paragraph{Exemple} 
 L'extrait du controlleur \texttt{MissionsController} \ref{lst:controller-mission} montre l'usage classique d'un controlleur. 
 
-\lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb}
+\lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO verifier les ranges des lignes
 
 Grâce à la métaprogrammation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes RESTfull, une vérification de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont déportée dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} permet de réaliser une action supplémentaire avant chaque appel de fonction. Ici, excepté pour l'action \texttt{show} et \texttt{index} qui peuvent être publique, il faut que l'utilisateur soit authentifié pour que l'application puisse par après vérifier ses droits.
 
@@ -95,3 +95,22 @@ Les connaisseurs de Bootstrap \ref{bootstrap} auront reconnu l'usage intensif de
 
 \subsection{Choix tecniques}
 expliquer les différentes possibilité de stockage(fichier et site) prix, fonctionnalité...
+
+\subsection{Utilisation}
+Pour utiliser la plateforme, il faut tout d'abord s'enregistrer dessus. Ensuite, suivant le profil, différentes actions sont possible. L'utilisateur normal peut uniquement résoudre les missions dans l'ordre proposé par les professeurs. Les professeurs peuvent donc aussi créer des missions.
+
+\paragraph{Choisir mission}
+
+\paragraph{Voir intro mission}
+
+\paragraph{Réaliser mission} voir plus haut dans la description des missions les screeenshot ont deja été montré mais rajouter la vue du menu robot
+
+\paragraph{Projet libre}
+Expliquer que c'est la mm chose que les missions mais sans passer par la case description.
+
+\paragraph{créer mission}
+
+\paragraph{administrer mission étudiant} montrer la vue qui liste tout les programme
+
+\paragraph{ordonancer mission}
+
