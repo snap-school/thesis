@@ -230,9 +230,10 @@ Rails se base sur une architecture Modèle-Vue-Contrôleur. %TODO image MVC
 \paragraph{Modèle} 
 Un modèle est typiquement une classe qui représente une table de la base de données. Une classe du modèle fournit aussi toutes les méthodes nécessaires à représenter et modifier l'objet dans le domaine d'application.
 
-La correspondance entre un objet Ruby et la base de données est réalisée grâce à \textit{Active Record}. Ce module de Rails permet de faire des appels sur des objets Ruby alors que dans d'autres framework, il faudrait utiliser des requêtes \textit{SQL}.
+La correspondance entre un objet Ruby et la base de données est réalisée grâce à \textit{Active Record}. Ce module de Rails permet de faire des appels sur des objets Ruby alors que dans d'autres framework, il faudrait utiliser des requêtes \textit{SQL}. \label{active-record}
   
-\paragraph{Contrôleur} 
+\paragraph{Contrôleur}
+\label{controleur}
 Le contrôleur a pour fonction d'accéder à une ressource. Une ressource est un modèle ou tout autre objet indirect tel que enregistrement, login, page d'accueil\ldots  
 
 Il détermine quelle vue doit s'afficher et avec quels paramètres. Le contrôleur a donc la tâche de vérifier la sécurité et l'intégrité des données fournies par l'utilisateur. Ensuite, il peut interroger différents modèles et fournir les réponses à la vue adéquate.
@@ -244,10 +245,10 @@ Les vues correspondent à ce que les utilisateurs reçoivent et voient. Ce sont 
 
 Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il existe notamment: 
 \begin{description}
-  \item[Haml] Un langage fournissant une syntaxe raccourcie du HTML. Il se base sur l'indentation plutôt que sur une syntaxe XML. Haml permet donc de respecter le principe \texttt{DRY} et d'améliorer la lisibilité par un code source plus court et bien indenté ;
+  \item[Haml] Un langage fournissant une syntaxe raccourcie du HTML. Il se base sur l'indentation plutôt que sur une syntaxe XML. Haml permet donc de respecter le principe \texttt{DRY} et d'améliorer la lisibilité par un code source plus court et bien indenté ; \label{haml}
   \item[JQuery] Cette bibliothèque javaScript bien connue permet de modifier facilement le document courant, de gérer des événements, de créer des animations, etc. ;
   \item[CoffeeScript] Est un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire, plus courte et d'ajouter des sucres syntaxiques par rapport à JavaScript;
-  \item[Bootstrap] Est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilise. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc.
+  \item[Bootstrap] Est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilise. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc. \label{bootstrap}
 \end{description}
 %TODO intégré avec les contrôleurs. Paperclip dans les vues
 \subsubsection{Gem's}
@@ -257,8 +258,8 @@ La communauté de Rails à écrit de nombreux gems permettant de rajouter facile
 \begin{description}
   \item[Paperclip] Permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'amazon ou de dropbox.
   \item[Devise] Gère la problématique de l'authentification des utilisateurs.
-  \item[Rolify] Donne des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).
-  \item[Autority] Gère les droits des utilisateurs sur les différentes ressources \textit{contrôleur}.
+  \item[Rolify] Donne des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
+  \item[Authority] Gère les droits des utilisateurs sur les différentes ressources \textit{contrôleur}. \label{authority}
 \end{description}
 
 \subsubsection{Tests}

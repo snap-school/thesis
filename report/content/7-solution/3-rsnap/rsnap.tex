@@ -12,10 +12,11 @@ présentation de l'interface :
 \end{itemize}
 
 \subsection{Implémentation}
-Comme expliqué dans la section \ref{Rails}, Rails possède une architecture MVC. Cette section va donc se baser sur sur cette architecture pour présenter la solution proposée.
+Comme expliqué en section \ref{rails}, Rails possède une architecture Model-Vue-Controleur (MVC). Cette section va présenter l'application en se basant sur ce modèle d'architecture. La première expliquera donc le modèle, ensuite les contrôleurs seront discutés et enfin les vues seront présentées.
 
 \subsubsection{modeles}
-Les différents concepts utiles pour developper l'application sont ceux représenté par les différents modèles. Ceux-ci sont représenté sur la figure \ref{fig:models}.
+Les différents concepts utiles pour développer l'application sont ceux représentés par les différents modèles. Ceux-ci sont présentés sur la figure \ref{fig:models}.
+
 \begin{figure}
  \begin{center}
    \includegraphics[width=\textwidth]{models_complete}
@@ -23,14 +24,20 @@ Les différents concepts utiles pour developper l'application sont ceux représe
    \label{fig:models}
  \end{center}
 \end{figure}
-\paragraph{\texttt{User}} L'utilisateur contient les informations nécessaires à l'utiliser (\texttt{firstname}, \texttt{email} \ldots) et les informations pour s'authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). L'utilisateur peut posséder plusieurs roles, programmes et projets.
-\paragraph{\texttt{Role}} Les rôles permettent de donner des attributs à un utilisateur. Ce modèle a été généré automatiquement par Rolify \ref{role}. Dans le cas de Rsnap, Deux rôles ont été créé : \texttt{admin} et \texttt{teacher}. Ces deux rôles sont globaux et donc ne sont pas rattaché à une ressources spécifique.%TODO dans future work: role teacher sur ressource students_group
 
-Les roles seront utiles en conjontion avec les autorités \ref{authority} pour donner des droits supplémentaires à ces type d'utilisateurs.
-\paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Un mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. Elle comporte en plus le code source initial de l'exercice. Généralement, celui-ci contient les squelette initial du programme pour l'étudiant et les tests pour vérifier le programme. 
+\paragraph{\texttt{User}} L'utilisateur contient les informations nécessaires à le représenter (\texttt{firstname}, \texttt{email} \ldots) et les informations pour s'authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). L'utilisateur peut posséder plusieurs rôles, programmes et projets.
+
+\paragraph{\texttt{Rôle}} Les rôles permettent de donner des attributs à un utilisateur. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de Rsnap, deux rôles ont été créé : \texttt{admin} et \texttt{teacher}. Ces deux rôles sont globaux et donc ne sont pas rattaché à une ressources spécifique.%TODO dans future work: role teacher sur ressource students_group
+
+Les rôles seront utiles en conjonction avec les autorités \ref{authority} pour donner des droits supplémentaires à ces type d'utilisateurs.
+
+\paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Un mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. Elle comporte en plus le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme. 
+
 \paragraph{\texttt{FileMission}} Les fichiers lié à une mission sont les différentes images que compose la description. %TODO dans furture work : on peut imaginer rajouter la possibiliter de mettre d'autres style de fichier dedans : ex. pdf, slide de cours...
-\paragraph{\texttt{Program}} Les programmes comportent les solutions des étudiants à une mission donnée. Il comporte uniquement le code source de l'étudiant.
-\paragraph{\texttt{Project}} Les projets sont identique à un programme excepté qu'ils ne sont pas lié à une mission. Il comporte donc le nom du projet en plus du code source.
+
+\paragraph{\texttt{Program}} Les programmes comportent la solution d'un étudiant à une mission donnée. Ils comportent uniquement le code source de l'étudiant.
+
+\paragraph{\texttt{Project}} Les projets sont identiques aux programmes excepté qu'ils ne sont pas lié à une mission. Ils comportent donc le nom du projet en plus du code source.
 
 \paragraph{Exemple} \texttt{Program} est un bon exemple de modèle Rails (code source \ref{lst:model-program}). Seul les fonctionnalités que Active Record \ref{active-record} ne sait pas déduire de lui-même sont présentes. Le modèle contient donc uniquement :
 \begin{itemize}
@@ -43,12 +50,12 @@ Comme c'est visible dans les \texttt{scope}, Active Record permet de faire des r
 \lstinputlisting[language=Rails, firstline=21, caption={Modèle \texttt{Program}}, label=lst:model-program]{content/7-solution/3-rsnap/listings/program.rb}
 
 \subsubsection{Controlleurs}
-Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:controllers} montre la liste des contrôleurs implémenté pour l'application. La majorité de ceux-ci se rapporte directement à un modèle spécifique. Il existe néanmoins certaines ressources différentes tel que : 
+Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:controllers} montre la liste des contrôleurs implémentés pour l'application. La majorité de ceux-ci se rapporte directement à un modèle spécifique. Il existe néanmoins certaines ressources différentes tel que : 
 \begin{itemize}
   \item les pages statiques (\texttt{HomeController}) ;
   \item l'ordonnancement des missions (\texttt{SortMissionsController}) ; 
   \item la création d'un programme depuis une mission (\texttt{InitializationMissionController}) ;
-  \item les ressources utile à l'affichage de Snap! (\texttt{SnapAssetsController}).
+  \item les ressources utiles à l'affichage de Snap! (\texttt{SnapAssetsController}).
 \end{itemize}
 \begin{figure}
  \begin{center}
@@ -58,14 +65,14 @@ Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:c
  \end{center}
 \end{figure}
 
-Comme expliqué dans la section \ref{controller}, les méthodes accessibles sont définie dans \texttt{routes.rb}. Les controlleurs ont des tous des ressources RESTfull excepté \texttt{HomeController}. Ceci est visible dans \texttt{routes.rb} ou en regardant les fonctions publiques disponible dans les controlleurs sur la figure \ref{fig:controllers}.
+Comme expliqué dans la section \ref{controleur}, les méthodes accessibles sont définie dans \texttt{routes.rb}. Les contrôleurs ont des tous des ressources RESTfull excepté \texttt{HomeController}. Ceci est visible dans \texttt{routes.rb} ou en regardant les fonctions publiques disponible dans les contrôleurs sur la figure \ref{fig:controllers}.
 
-\paragraph{Exemple} 
-L'extrait du controlleur \texttt{MissionsController} \ref{lst:controller-mission} montre l'usage classique d'un controlleur. 
+\paragraph{Exemple}
+L'extrait du contrôleur \texttt{MissionsController} \ref{lst:controller-mission} montre l'usage classique d'un contrôleur. 
 
 \lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO verifier les ranges des lignes
 
-Grâce à la métaprogrammation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes RESTfull, une vérification de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont déportée dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} permet de réaliser une action supplémentaire avant chaque appel de fonction. Ici, excepté pour l'action \texttt{show} et \texttt{index} qui peuvent être publique, il faut que l'utilisateur soit authentifié pour que l'application puisse par après vérifier ses droits.
+Grâce à la méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes RESTfull, une vérification de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont déportée dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} permet de réaliser une action supplémentaire avant chaque appel de fonction. Ici, excepté pour l'action \texttt{show} et \texttt{index} qui peuvent être publique, il faut que l'utilisateur soit authentifié pour que l'application puisse par après vérifier ses droits. %TODO pas claire sur la fin tu commences par les exeption
 
 Dans une méthode du contrôleur accessible via les routes, plusieurs actions sont à réaliser :
 \begin{enumerate}
@@ -75,15 +82,16 @@ Dans une méthode du contrôleur accessible via les routes, plusieurs actions so
 \end{enumerate}
 
 \subsubsection{Vue}
-Les vues sont écrite en haml \ref{haml}. L'exemple de code \ref{lst:vue-user-index} avec \ref{lst:vue-user-partial} montre comment est représenté la vue servant à lister tout les utilisateur \ref{fig:vue-users}.
+\label{vues}
+Les vues sont écrite en haml \ref{haml}. L'exemple de code \ref{lst:vue-user-index} avec \ref{lst:vue-user-partial} montre comment est représenté la vue servant à lister tout les utilisateurs \ref{fig:vue-users}.
 
 \lstinputlisting[language=haml, caption={Vue \texttt{index} des utilisateurs}, label=lst:vue-user-index]{content/7-solution/3-rsnap/listings/index.html.haml}
-Le code source \ref{lst:vue-user-index} présente comment sont utilisé les variables d'instance créées par le controlleur. Par exemple, la variable \texttt{@title} sert de titre 1.
+Le code source \ref{lst:vue-user-index} présente comment sont utilisé les variables d'instance créées par le contrôleur. Par exemple, la variable \texttt{@title} sert de titre 1.
 
 \lstinputlisting[language=haml, caption={Vue d'une ligne \texttt{\_user} représentant un utilisateur}, label=lst:vue-user-partial]{content/7-solution/3-rsnap/listings/_user.html.haml}
 De plus, Rails permet de faire le rendu d'un autre fichier de manière élégante. La ligne 14 du code source \ref{lst:vue-user-index} permet d'exécuter le rendu sur tout les éléments de la collection \texttt{users} grâce au fichier \ref{lst:vue-user-partial}
 
-Les connaisseurs de Bootstrap \ref{bootstrap} auront reconnu l'usage intensif des classes de style qu'il propose. L'adaptativité de cet outil est visible sur la capture d'écran \ref{fig:vue-users}. En effet, le menu supérieur à été minifié car la taille de l'écran était trop petite pour acceuillir le menu en entier.
+Les connaisseurs de Bootstrap \ref{bootstrap} auront reconnu l'usage intensif des classes de style qu'il propose. L'adaptativité de cet outil est visible sur la capture d'écran \ref{fig:vue-users}. En effet, le menu supérieur à été réduit car la taille de l'écran était trop petite pour accueillir le menu en entier.
 
 \begin{figure}
   \begin{center}
