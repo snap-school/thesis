@@ -1,55 +1,56 @@
 \chapter{Définition de la problématique}
-Ce chapitre va permettre, grâce aux précédents, de positionner Rsnap par rapport aux initiatives similaires. Premièrement en reprenant les concepts différenciateurs du chapitre précédent et en regardant lesquels sont retenus pour Rsnap. Ensuite seront abordés les besoins que la plateforme devra remplir. Ces besoins motiveront les choix technologiques qui ont été faits pour ce travail.
+Ce chapitre a pour but de situer Rsnap par rapport aux initiatives similaires. Premièrement, Rsnap sera positionné en reprenant les concepts différenciateurs du chapitre précédent. Ensuite, sont abordés les besoins que la plateforme web doit remplir. Le troisième chapitre traite des choix technologiques qui ont été pris dans le cadre de ce travail.
+
 \section{Positionnement de Rsnap}
-Sur base des chapitres précédents, à savoir : les pratiques dans les autres pays développés dans le chapitre \ref{monde} et des concepts différenciateurs du chapitre \ref{concepts}. Cette partie est dédiée à explication précise de la problématique, aux apports de ce travail à l'état de l'art et au positionnement de Rsnap par rapport à ses homologues.
+%TODO plateforme mal défini car web cours pour les enseignants
+%TODO penser a une subsection
+%TODO Intro trop complette ne reprendre que les sous titres
+Rsnap veut combler des lacunes mises en évidence dans l'approche internationale \ref{monde}. En effet, aucune plateforme  web n'est disponible en français et peu se veulent orientées vers les professeurs. Sur le plan du langage, la plateforme Rsnap se veut entièrement en français pour pouvoir être utilisée par tous les enfants qui savent lire et étant inscrits dans l'enseignement francophone. Rsnap se veut aussi tourné vers les professeurs. Cela se traduit par une aide à la gestion de classe, une indépendance des enfants par rapport à un référent, l'absence de prérequis pour le professeur et l'édition de missions communautaires.\\
 
-Comme développé dans le chapitre \ref{monde}, l'apprentissage de la programmation est déjà bien avancé dans plusieurs pays. Ce n'est malheureusement pas encore tout à fait le cas dans le nôtre. En effet, quelques initiatives locales existent, mais aucune décision politique n'a été prise jusqu'à présent.\\
+La suite de ce chapitre reprend les concepts abordés dans le chapitre \ref{concepts} et y positionne Rsnap.
 
-À l'heure actuelle, aucune plateforme n'est disponible en français et de manière plus générale peu dans le monde se veulent orientés vers les professeurs. C'est pour combler ces lacunes que Rsnap a été pensé. Sur le plan du langage, la plate forme Rsnap se veut complètement en français pour pouvoir être utilisée par tous les enfants inscrits dans l'enseignement francophone sachant lire. Sur l'orientation professeur imprimé dans Rsnap, elle se traduit par une gestion de classe, une indépendance des enfants par rapport à un référent, l'absence de prérequis pour le professeur et l'édition de missions qui est communautaires.\\
+\subsection{Âge, genre et origine des utilisateurs} 
+Rsnap se veut une application qui vise un public de 10 à 14 ans. Les missions qui ont été développées dans le cadre de ce travail ciblent particulièrement cette tranche d'âge. Cette question est nuancée par l'analyse des résultats des expérimentations abordée dans le chapitre \ref{trancheage}. %TODO faire la référence quand on écrira les tranches d'âge
+Toute fois, l'application permettant la création de mission de manière autonome, d'autres tranches d'âge peuvent s'y appliquer. La créativité des utilisateurs est la seule limite formelle.\\
 
-La suite de ce chapitre va reprendre les concepts abordés dans le chapitre \ref{concepts} et détaillés ou Rsnap souhaite se positionner.
+En ce qui concerne les particularités des utilisateurs, aucune discrimination dans quelque sens que ce soit n'a été faite lors de la conception de ce travail, tant pour attirer un public que pour l'exclure. 
 
-\subsection{Âge, origine et genre} 
-Rsnap se veut une application qui vise un public de 10 à 14 ans et les missions qui ont été développées dans le cadre de ce travail, cible cette tranche d'âge particulièrement. Cette tranche sera nuancée lors de l'analyse des résultats de l'expérimentation sur les différentes tranches d'âge dans le chapitre \ref{trancheage}. %TODO faire la référence quand on écrira les tranches d'âge
-toute foi, l'application permettant la création de mission de manière autonome, il n'est pas exclu de créer des missions pour d'autres tranches d'âge. La créativité des utilisateurs est la seule limite formelle.\\
-
-À propos des origines et des genres, aucune discrimination dans quelque sens que ce soit n'a été faite lors de la conception de ce travail. Tant pour attirer un public peu représenté que pour l'exclure. Comme l'idée est de proposer l'application dans les écoles de la communauté française, l'application a été pensée pour un public francophone. Hormis ce point linguistique, c'est une problématique sans objet dans notre cas.
+Comme l'idée est de proposer l'application dans les écoles de la Fédération Wallonie-Bruxelles, elle a été pensée pour un public francophone. 
 
 \subsection{Outils, concepts et environnement de travail} 
 \label{SNAP}
-Rsnap se base sur le langage Snap! BYOB qui est un langage visuel. Ce choix s'explique par les objectifs qui sous-tendent ce travail, à savoir l'apprentissage de la programmation dans le but d'améliorer l'esprit logique des jeunes. L'accent étant mis sur la logique sous-jacente et, dans un premier temps, pas sur l'apprentissage d'un langage de programmation. Un but de l'application Rsnap étant également de susciter des vocations, ces vocations se dirigeront d'elles-mêmes vers un vrai langage de programmation pour lequel il existe déjà beaucoup de cours.
+L'apprentissage de la programmation dans le but d'améliorer l'esprit logique des jeunes est un des objectifs principaux de ce travail. Dans cette optique, Rsnap se base sur l'\underline{outil} Snap! BYOB qui est un langage visuel \ref{languages}. L'accent est mis sur l'acquisition d'un esprit logique grâce à des exercices de logiques plutôt que sur l'apprentissage d'un langage de programmation.  En effet, suivant l'adage "il faut diviser pour mieux régner", vouloir tout faire en même temps ne convient pas à tous. En se concentrant sur la logique, cela assure une meilleure acquisition de la matière. De plus, un des buts de l'application Rsnap est aussi de susciter des vocations en programmation, ce qui se fera naturellement.
 
-Le fait de dissocier l'apprentissage de la logique et d'un langage de programmation était également important lors de ce travail. En effet, il faut diviser pour mieux régner et vouloir tout faire en même temps ne convient pas à tous. En se concentrant sur la logique, cela assure une plus grande confiance dans l'acquisition de la matière.
+Un des objectifs de ce travail vise à ce que les personnes qui guident l'activité n'aient pas besoin de connaissance particulière en programmation. Un vrai langage de programmation a été écarté, car les encadrants auraient dû au minimum avoir connaissance de sa syntaxe.\\
 
-Un de nos objectifs était que les personnes qui guident l'activité n'aient pas besoin de connaissance particulière en programmation. De par cet objectif, un vrai langage de programmation a été écarté, car ils auraient dû au minimum avoir connaissance de sa syntaxe.\\
-
-La manière dont les concepts sont abordés dans Rsnap se fait par la procédure suivante :
+La manière dont les \underline{concepts} sont abordés dans Rsnap se fait par la procédure suivante :
 \begin{itemize}
 	\item une vidéo d'introduction à la mission ;
-	\item un texte descriptif de la mission qui reprend les concepts théoriques qui seront introduits dans la mission ;
-	\item une fois dans le programme les jeunes n'ont plus l'explication de manière explicite, cela les incite à travailler avec leur intuition tout en pouvant si nécessaire récupéré la description du point 2 ;
-	\item une page d'aide est disponible pour chaque bloc dans le menu contextuel.
+	\item un texte descriptif de la mission qui reprend les concepts théoriques introduits dans celle-ci ;
+	\item une fois dans le programme, les jeunes n'ont plus d'explication explicite, ce qui les incite à travailler avec leur intuition tout en pouvant, si nécessaire, récupérer la description du point 2 ;
+	\item une page d'aide est disponible pour chaque bloc dans le menu contextuel. %TODO bloc est il bien défini
 \end{itemize}
 
-En plus de cela, les missions implémentées dans ce travail sont de petites missions introduisant un à deux grands concepts maximum par mission. Ces petites missions ont pour but d'être assemblées pour faire un programme final plus grand. Plus d'information à propos du découpage et du contenu des missions est disponible dans la section \ref{missions}.\\
+Les missions implémentées dans ce travail sont de petites missions introduisant un à deux grands concepts maximum. Ces petites missions ont pour but d'être assemblées pour faire un programme final plus important. Plus d'informations à propos du découpage et du contenu des missions sont disponibles dans la section \ref{missions}.\\
 
-L'environnement de ce travail a été déterminer en grande partie par le milieu d'utilisation de l'application, à savoir les écoles. L'objectif d'indépendance des jeunes par rapport au référent a orienté l'activité vers la formation de binôme. Toute foi comme le groupe animé est une classe une introduction collective est possible et nécessaire. Ce travail étant basé sur une plate forme web, et l'accès au site n'étant pas limité, si les jeunes souhaitent utiliser le site en dehors des heures de cours, cela est également possible.
-Nous avons donc un travail lors des séances collectives qui s'effectue par binôme avec une possibilité de travail en dehors des séances prévues à cet effet.
+L'\underline{environnement de ce travail} est déterminé prioritairement par son milieu d'utilisation, à savoir les écoles. 
+
+L'indépendance des jeunes par rapport au référent oriente l'activité vers la formation de binôme. Toute fois, comme le groupe animé est une classe, une introduction collective est possible et souhaitable. 
+Si les jeunes le souhaite, ils peuvent également avoir accès au site web en dehors du cadre scolaire.
 
 \subsection{Type d'organisation, enseignants, création des cours}
-Le type d'organisation à l'heure actuelle est sans objet puisqu'aucune organisation officielle n'a été créée.\\
+Il n'y a pas d'organisation officielle qui supporte Rsnap. Elle pourrait être soit reprise par le gouvernement, soit être indépendante mais travailler pour ce dernier.\\
 
-À propos des enseignants, les activités ont été dispensées par les auteurs de ce travail. Toute foi le projet a été créé dans le but que la personne qui dispense l'activité n'ait pas besoin de connaissance spécifique en programmation. Le simple fait de réaliser les projets avant les jeunes devrait être suffisant pour acquérir la logique nécessaire pour la transmettre.\\
+À propos des enseignants, le projet a été créé dans le but que la personne qui dispense l'activité n'ait pas besoin de connaissance spécifique en programmation. Le simple fait de réaliser les projets avant les jeunes devrait être suffisant pour acquérir la logique nécessaire à la transmettre.\\
 
-La création des cours est un point sur lequel Rsnap se distingue de beaucoup d'autres par le fait qu'une partie des missions existent déjà et fond partie de ce travail. Mais les professeurs peuvent également créer des missions et les partager avec le reste de la communauté. Tout comme ils peuvent également reprendre des missions existantes et les améliorer ou les adapter. %TODO voir s’il faut parler du fait qu'on chapeautera le tout.
+La création des cours est un point sur lequel Rsnap se distingue de beaucoup d'autres. En effet, une partie des missions existent déjà et est intégrée à ce travail. Les professeurs peuvent également créer des missions et les partager avec le reste de la communauté. Tout comme ils peuvent aussi reprendre des missions existantes et les améliorer ou les adapter. %TODO voir s’il faut parler du fait qu'on chapeautera le tout.
 
-\section{Choix technologiques}
-Pour mettre en pratique les concepts du chapitre précédent et comme annoncé dans celui-ci, des choix technologiques doivent être faits. Cette partie a pour but de les présenter. La nécessité d'une plateforme légère et accessible partout pour ne pas dépendre du matériel propre aux écoles oriente le choix vers une plateforme web. 
-Comme introduite dans le chapitre \ref{rails}, la technologie Rails parait convenir pour ceci, la suite de ce chapitre va développer les besoins et choix techniques pris dans le développement de cette plateforme. 
-Comme expliqué au chapitre \ref{SNAP}, le choix du langage de programmation s'est porté sur SNAP! BYOB. Comme cette application existait déjà, il va donc falloir l'intégré à la plateforme. Ce sera le point développé ensuite.
+\section{Choix technologiques} %TODO revoir l'intro et la structure des titres.
+Pour mettre en pratique les concepts du chapitre précédent, des choix technologiques ont du être faits. La première partie a pour but de les présenter. 
+La nécessité d'une plateforme légère et accessible partout, pour ne pas dépendre du matériel propre aux écoles, oriente le choix vers une plateforme web. Comme introduite dans le chapitre \ref{rails}, la technologie Rails convient. La suite de ce chapitre développe les besoins et choix techniques pris pour le développement de cette plateforme. 
+Comme expliqué au chapitre \ref{SNAP}, le choix du langage de programmation s'est porté sur SNAP! BYOB. Comme cette application existait déjà, il va donc falloir l'intégrer à la plateforme web. Ce sera le dernier point développé.
 
-
-\paragraph{Platforme d'apprentissage}
+\paragraph{Plateforme d'apprentissage}
 La plateforme étant à destination des professeurs la majorité des besoins viennent d'eux. Cette partie va développer les besoins qui ont été pris en compte dans la conception de Rsnap. D'autres tierces entrent également en jeu dans l'établissement du cahier des charges de la plateforme. Les enfants ou encore des constats tels que la faible qualité du matériel informatique dans les écoles apporte des contraintes supplémentaires. Les principaux besoins pris en compte sont:
 \begin{description}
   \item[disponibilité des exercices:] fournir une série d'exercices aux élèves et permettre au professeur de les modifier ou d'en créer d'autres ;
