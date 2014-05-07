@@ -1,12 +1,8 @@
-\section{Technologies utilisées}
-\label{techno}
-Une description plus approfondie du fonctionnement des technologies utilisées sera présentée dans la suite de cette section. Une description technique de l'utilisation et du fonctionnement de Snap! et Ruby on Rails sera développée.
-
-\subsection{Snap!}
+\section{Snap!}
 \url{http://snap.berkeley.edu/SnapManual.pdf} %TODO mettre en biblio
 Cette partie donne un aperçu de l'application qui sera utilisée dans ce travail. La présentation de Snap! va se diviser en plusieurs paragraphes. La première expliquera les différents types de blocs et comment ils sont implémentés. L'étape suivante sera l'explication de l'exécution d'un programme. Ensuite sera présenté l'affichage les différents éléments de Snap!. %TODO plus d'explication bloc Derniere phrase
 
-\subsubsection{Blocs}
+\subsection{Blocs}
 Il existe plusieurs types de blocs qui constituent un programme Snap!. Sur la figure \ref{fig:software-used-script}, le programme présente les différents types blocs disponibles.
 \begin{figure}
   \begin{center}
@@ -16,28 +12,28 @@ Il existe plusieurs types de blocs qui constituent un programme Snap!. Sur la fi
   \end{center}
 \end{figure}
 
-\paragraph{Commande}
+\subsubsection{Commande}
 Le type principal de blocs est \texttt{commande}. Ces blocs peuvent être compris comme étant des procédures. En effet, ils exécutent une ou plusieurs opérations sur le système en fonction de paramètres fournis. Ces différents blocs doivent se baser soit sur une implémentation JavaScript pour les \texttt{commande} élémentaires, soit être une composition de \texttt{commande} pour fournir nouvelle \texttt{commande} plus complexe ou abstraite.
 
 Dans l'exemple de la figure \ref{fig:software-used-script}, tous les blocs \texttt{commande} ont la forme d'une pièce de puzzle. On peut y voir qu'une succession de \texttt{commande} crée un script. Les \texttt{commande} ont plusieurs couleurs suivant la catégorie à laquelle elles appartiennent : mouvement, apparence, contrôle, variable \ldots
 
-\paragraph{Reporter}
+\subsubsection{Reporter}
 Les \texttt{reporter} sont des fonctions. En effet, ils revoient une valeur. Ils sont toujours utilisés en temps que paramètres d'un autre bloc. La plupart des \texttt{reporter} sont des accesseurs à des variables ou à des états du système (position souris, heure \ldots). 
 
 Les \texttt{reporter} sont des blocs de forme arrondie. La figure \ref{fig:software-used-script} montre différentes utilisations de \texttt{reporter} : somme, valeur aléatoire, position \ldots Tout comme pour les \texttt{commande}, les \texttt{reporter} peuvent être de diverses couleurs suivant leur catégorie.
 
-\paragraph{Prédicat}
+\subsubsection{Prédicat}
 Les \texttt{prédicat} sont des reporters qui retournent une valeur booléenne. Ils sont donc utilisés en conjonction avec des commandes demandant une condition.
 
 Les \texttt{prédicat} ont une forme hexagonale.
 %TODO ajouter un exemple
 
-\paragraph{Chapeau}
+\subsubsection{Chapeau}
 Les \texttt{chapeau} sont des commandes spéciales car ils sont le point d'entrée obligatoire d'un script en permettant de démarrer l'exécution d'un script. Plusieurs types d'événements peuvent lancer un scripte : une touche pressée, un clic sur le drapeau vert.
 
 Dans la figure \ref{fig:software-used-script} le démarrage du programme est l'événement qui lance le scripte. Il est symbolisé par un drapeau vert.
 
-\subsubsection{Programme}
+\subsection{Programme}
 Snap! est plus qu'une interface graphique permettant de construire un programme. L'analyse de son fonctionnement interne est l'objet de ce paragraphe.
 
 Un programme est constitué de plusieurs processus. Chaque processus est exécuté en parallèle grâce à un ordonnanceur.
@@ -168,7 +164,7 @@ Process.prototype.runStep = function () {
 %     emptySlots        caches the number of empty slots for reification
 % */
 
-\subsubsection{Interface graphique}
+\subsection{Interface graphique}
 Un autre élément intéressant à analyser chez Snap! est sa façon d'afficher l'interface dans la balise HTML \texttt{canvas} voir code source \ref{lst-doonecycle}. Toutes les fonctionnalités de bases nécessaires à afficher tous les éléments graphiques de Snap! découlent de l'implémentation que l'on retrouve dans \texttt{morphic.js}.
 
 \texttt{morphic.js} fournit les abstractions pour redessiner des parties de l'interface et pour interagir avec l'utilisateur. Le \texttt{canvas} utilisé possède un \texttt{world}. Ce \texttt{world} est la racine de l'arbre composé de \texttt{morph} et leurs sous-\texttt{morph}. Chaque \texttt{morph} peut être déplacé, redimensionné via le code source ou les manipulations de l'utilisateur.
@@ -212,11 +208,11 @@ MyMorph.prototype.drawNew = function() {
 };
 \end{lstlisting}
 
-\subsection{Ruby on Rails}
+\section{Ruby on Rails}
 \label{rails} 
 Ruby on Rails est une plateforme de développement d'application web basée sur le langage de programmation Ruby. Cette partie présente la philosophie, l'architecture et des environnements de tests de Rails.
 
-\subsubsection{Philosophie}
+\subsection{Philosophie}
 Rails part de l'hypothèse qu'il existe une meilleure façon d'aborder la création d'application web. Si le programmeur respecte ce "Rails way", il améliorera sa productivité et écrira moins de code. D'après Rails, s’il persiste à utiliser ses anciennes habitudes, le développeur s'amusera beaucoup moins en créant son application.
 
 Pour atteindre cet objectif, Rails utilise deux principes majeurs :
@@ -225,14 +221,14 @@ Pour atteindre cet objectif, Rails utilise deux principes majeurs :
   \item[Ne vous répétez  pas] (DRY) L'architecture que propose Rails recommande de mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
 \end{description}
 
-\subsubsection{Architecture}
+\subsection{Architecture}
 Rails se base sur une architecture Modèle-Vue-Contrôleur. %TODO image MVC
-\paragraph{Modèle} 
+\subsubsection{Modèle} 
 Un modèle est typiquement une classe qui représente une table de la base de données. Une classe du modèle fournit aussi toutes les méthodes nécessaires à représenter et modifier l'objet dans le domaine d'application.
 
 La correspondance entre un objet Ruby et la base de données est réalisée grâce à \textit{Active Record}. Ce module de Rails permet de faire des appels sur des objets Ruby alors que dans d'autres framework, il faudrait utiliser des requêtes \textit{SQL}. \label{active-record}
   
-\paragraph{Contrôleur}
+\subsubsection{Contrôleur}
 \label{controleur}
 Le contrôleur a pour fonction d'accéder à une ressource. Une ressource est un modèle ou tout autre objet indirect tel que enregistrement, login, page d'accueil\ldots  
 
@@ -240,7 +236,7 @@ Il détermine quelle vue doit s'afficher et avec quels paramètres. Le contrôle
 
 Rails encourage d'avoir des ressources REST, c'est-à-dire, des ressources avec une représentation unique et des actions unifiées telles que create, new, edit, update, destroy, show, index. Les actions disponibles sur un contrôleur sont déterminées par le fichier de configurations des routes.
 
-\paragraph{Vue} 
+\subsubsection{Vue} 
 Les vues correspondent à ce que les utilisateurs reçoivent et voient. Ce sont typiquement des pages HTML, mais aussi des PDF, objets JSON, fichiers, etc\ldots
 
 Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il existe notamment: 
@@ -251,7 +247,7 @@ Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il exist
   \item[Bootstrap] Est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilise. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc. \label{bootstrap}
 \end{description}
 %TODO intégré avec les contrôleurs. Paperclip dans les vues
-\subsubsection{Gem's}
+\subsection{Gem's}
 Ruby fournit une manière de partager des extensions pour des programmes Ruby via les gems. Rails est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
 
 La communauté de Rails à écrit de nombreux gems permettant de rajouter facilement des fonctionnalités à une application. Quelque exemples de gems intéressants :
@@ -262,13 +258,23 @@ La communauté de Rails à écrit de nombreux gems permettant de rajouter facile
   \item[Authority] Gère les droits des utilisateurs sur les différentes ressources \textit{contrôleur}. \label{authority}
 \end{description}
 
-\subsubsection{Tests}
-Il existe tout un écosystème autour de Rails pour fournir du code de qualité. Cette partie présente quelques outils utilisés dans les tests. Les outils les plus employés seront présentés ci-dessous, bien que ce ne soit pas les seuls existants.\\
+\subsection{Tests}
+\label{rails-tests}
+Il existe tout un écosystème autour de Rails pour fournir du code de qualité. Cette partie présente quelques outils utilisés dans les tests. Les outils les plus employés seront présentés ci-dessous, bien que ce ne soit pas les seuls existants.
 
-Un outil de test fort apprécié des programmeurs Ruby et plus particulièrement Rails est Cucumber. Ce dernier réalise des tests dans un "behavior-driven development" (BDD) style. Ce style de tests se compose de deux parties. D'une part, le client ou chef de projet écrit des scénarii qui décrivent l'utilisation de fonctionnalités du domaine en langage naturel (Gherkin). D'autre part, le programmeur implémente ces scénarii. Ce type de test met l'accent sur ce que veut le client.
+\subsubsection{Tests comportementaux}
+\label{cucumber}
+Un outil de test fort apprécié des programmeurs Ruby et plus particulièrement Rails est Cucumber. Ce dernier réalise des tests dans un "behavior-driven development" (BDD) style. Ce style de tests se compose de deux parties. D'une part, le client ou chef de projet écrit des scénarii qui décrivent l'utilisation de fonctionnalités du domaine en langage naturel (Gherkin). D'autre part, le programmeur implémente ces scénarii. Ce type de test met l'accent sur ce que voit le client. Si tout ce que voit le client fonctionne, c'est que le coeur utile de l'application est correct. 
 
-Dans le cas de Rails, il est intéressant d'utiliser conjointement Cucumber et Capybara. Ce dernier permet de contrôler un navigateur et donc de réaliser des tests à la place d'un utilisateur. Ces tests permettront d'assurer le bon fonctionnement de ce que souhaite l'utilisateur.\\
+Dans le cas de Rails, il est intéressant d'utiliser conjointement Cucumber et Capybara. Ce dernier permet de contrôler un navigateur et donc de réaliser des tests à la place d'un utilisateur. Ces tests permettront d'assurer le bon fonctionnement de ce que souhaite l'utilisateur.
 
-Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ceci est réalisé entre autres grâce à \texttt{Travis CI}.\\
+\subsubsection{Intégration continue}
+\label{travis}
+Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ceci est réalisé entre autres grâce à \texttt{Travis CI}.
 
-Un autre outil aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie Rails. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
+\subsection{Métrique} 
+Différents services proposent de générer des rapports sur un projet. Ces informations sont fournie via l'analyse du code source du logiciel.
+\subsubsection{Bonne pratique} %TODO déplacer dans pilosophie
+Un service aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie Rails. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
+\subsubsection{Sécurité} %TODO déplacer dans gem's
+Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quel gem's ne sont pas à jours. Gemnasium informe donc les gestionnaires d'un logiciel quand une faille de sécurité est découverte dans un gem et qu'il faut donc le mettre à jour.

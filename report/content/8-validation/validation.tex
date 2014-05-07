@@ -1,21 +1,44 @@
 \chapter{Validation}
 
 \section{Implémentation}
-La conception d'un logiciel se déroule en plusieurs phase.
+Deux outils principaux ont été utilisés pour avoir un logiciel le mieux écrit possible. Cette section met en pratique \ref{rails-tests}.
+%TODO faire intro
 
+\subsection{Tests unitaires}
+Les tests unitaires servent à vérifier que le code testé fonctionne comme il doit. L'implémentation des tests c'est déroulée en parallèle de la création de l'application. Durant la conception de Rsnap, deux principaux types de tests ont été réalisés.
 
+\subsubsection{Outils pour les tests}
+Pour réaliser ces tests, Travis-CI (\ref{travis}) est relié à Github pour que tout les tests soient exécuté à chaque commit. De plus, lors des "pull request" un message est affiché pour connaitre l'état de la branche. Le programmeur peut donc facilement connaitre si l'acceptation de la branche introduira des bugs.
 
-expliquer comment on a fait pour implémenter. Quel était les moyen mis en place pour faire un bon logiciel.
+Une métrique générée par les tests est le couverture du code par ceux-ci. Cette information est fournie par Coveralls\ref{biblio} qui est liée à Travis-CI pour l'aquisition des données. Cette métrique est utile pour connaitre si le code est suffisament testé. Elle ne donne par contre pas l'information du type de code testé, il faut donc faire attention à ce que ce ne soit pas uniquement du code trivial qui soit testé.
 
-schéma uml
+Des données de tests sont aussi nécessaire. Celle-ci sont fournie grâce au gem FactoryGirls \footnote{\url{https://github.com/thoughtbot/factory_girl_rails}} qui propose un langage dédié pour écrire rapidement des fabriques.
 
-comcomber
+\subsubsection{Tests au niveau des controlleurs}
+Une première batterie de tests réalisée grâce à RSpec. Ces tests ont pour vocations de vérifier l'accès aux différentes routes : les droits des utilisateurs et le type de retour des contrôleurs.
 
-rspec
+Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une mission à chaque test. Deux tests sont ensuite réalisé qui vérifie que seul un utilisateur authentifié peut résourdre une mission.
 
-factories
+\lstinputlisting[language=Ruby, caption={Test de l'accès au programme associé \`a une mission}, label=lst:rspec]{content/8-validation/validation/program_mission_initializations_controller_test.rb}
 
-metrics (travis, gemnasium, codeclimate, coveralls, railsbestpractice)
+\subsubsection{Tests au niveau de l'utilisateur}
+Une deuxième série de tests est réalisée grâce à Cucumber \ref{cucumber}. Cette deuxième série permet de tester l'application d'un point de vue utilisateur. Gerkin permet d'écrire les scénarii en langage naturel. Ce type de tests permet d'assurer que les fonctionnalités demandées par l'utilisateur fonctionne et donc toutes les ressources qui en dépende. Ces tests sont donc de haut niveaux car ce n'est que indirectement que des erreurs internes à l'application peuvent être trouvées via les interactions faites sur l'interface.
+
+\lstinputlisting[language=Gherkin, caption={Tests de l'accès aux missions}, label=lst:cucumber-mission]{content/8-validation/validation/mission_access.feature}
+
+\lstinputlisting[language=Ruby, linerange={1-15}, caption={Extrait de l'implémentation des tests de l'accès aux missions}, label=lst:cucumber-implementation-mission]{content/8-validation/validation/mission_steps.rb}
+Le code source \ref{lst:cucumber-mission} montre différents scénarii décrivant l'accès aux missions. Le haut niveau de Gherkin est visible dans cet exemple. En effet, toute personne anglophone peut comprendre ce que teste les différents scénarii. 
+
+L'extrait de code \ref{lst:cucumber-implementation-mission}, montre comment est implémenté les scénarii précédents. La facon dont est piloté un navigateur pour raliser les tests est aussi visible via par exemple les méthodes : \texttt{click\_on}, \texttt{current\_path}, \texttt{visit}\ldots
+
+\subsection{Utilisation de metriques}%TODO ne suit pas la mm structure que dans connaissance nécessaire (metrique est dans test) 
+Un autre style d'outil donne des informations sur le projet via le code source de celui-ci. Deux services ont principalement été utilisé.
+
+\subsubsection{Sécurité}
+Gemnasium \ref{gemnasium} permet d'avoir un service de veille qui vérifie si les dépendance de l'application sont bien à jour et donc ne présente pas de risque de sécurité.
+
+\subsubsection{Rails way}
+rails\_best\_practice \ref{rbp} fourni quand à lui une information plus complexe à traiter. En effet, il renseigne les endroits dans le code sources qui ne respecterait pas le "rails way". De plus, il fourni des exemple pour refactorer ceux-ci. Cet outil est donc utile principalement en début de projet quand les auteurs ne connaissent pas encore bien quelles sont les bonnes pratiques.
 
 \section{Expériences}
 Cette section aborde les expériences réalisées pour ce travail. Ceci commence par un après-midi chez kidscode en petit groupe avec des initiés, vient ensuite le printemps des sciences pendant lequel environ 80 élèves ont tester l'application. Enfin vient une analyse des expériences à travers des formulaires remplis par les élèves et les professeurs.
