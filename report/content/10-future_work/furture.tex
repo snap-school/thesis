@@ -1,8 +1,9 @@
 \chapter{Future améliorations}
-Cette section va aborder les amélioration future possible pour Rsnap. Ces dernières sont soit issus d'objectif qui n'ont pas été rencontré par l'implémentation actuelle soit de l'analyse de l'expérience. Les améliorations suivant sont a retenir et sont discutées plus dans ce chapitre: test de la réussite de la mission, aide à la gestion de la classe, retravail des missions, ajout de mission, blocs d'aide a la correction automatique des programme.
+Cette section va aborder les amélioration future possible pour Rsnap. Ces dernières sont soit issus d'objectif qui n'ont pas été rencontré par l'implémentation actuelle soit de l'analyse de l'expérience. Les améliorations suivant sont a retenir et sont discutées plus dans ce chapitre: test de la réussite de la mission, aide à la gestion de la classe, retravail et ajout de mission, blocs d'aide a la correction automatique des programme.
 
 \section{Test de réussite de mission}
-Actuellement certain tests sont réaliser pour la réussite de la mission. Toute fois, aucun signale de réussite n'est envoyer vers les serveurs. Une mission est considéré comme effectuer dès que l'étudiant ouvre la mission. En effet, comme aucun méchanisme n'est présent pour validé une mission, la mission suivante se débloque dès l'ouverture de la précédente.\\
+
+Actuellement certain tests sont réaliser pour la réussite de la mission. Toute fois, aucun signale de réussite n'est envoyer vers les serveurs. Une mission est considéré comme effectuer dès que l'étudiant ouvre la mission. En effet, comme aucun mécanisme n'est présent pour validé une mission, la mission suivante se débloque dès l'ouverture de la précédente.\\
 
 Un signal envoyer au serveur serai possible par le simple envoie d'une requête à ce dernier. La difficulté réside dans la création d'un vrai bloc disponible dans l'interface \texttt{teacher} pour notifier au serveur la réussite d'une mission.
 
@@ -11,8 +12,23 @@ Un des but de ce travail est son utilisation dans l'enseignement. Pour ce faire 
 
 Le principe pensé pour la gestion de classe est que chaque professeurs puisse voir l'avancement de ses élèves. Pour ce faire il faut que les élèves désigne un professeur dans leur profile.
 
-\section{Retravail des missions}
-Comme dit dans la partie \ref
+\section{Retravail et ajout de missions}
+Comme mis en lumière dans la partie \ref{analyse-exp}, les expériences ont montré que certaines missions gagneraient à être retravailler.
+
+La mission de l'hélicoptère introduit deux concepts fort abstraits dans les boucles. Elle serait beaucoup plus facilement compréhensible par les enfants si elle était découpé en deux partie une pour chaque concept.
+
+La mission soyons courtois n'est pas encore assez attractive pour les enfants. Il était suggréré dans L'analyse \ref{appreciation} de rajouter le déplacement du personnage principale en plus.
+
+La mission chien et chat n'est pas assez dirigé. Une mission d'introduction supplémentaire serait probablement bénéfique. Un autre problème dans cette mission est le nombre de blocs laissé à disposition des élèves. Le choix avait été fait de leur laisser un accès à tous les blocs. Ce choix s'est révélé inapproprié.
+
+En plus des missions proposer il est important que d'autres missions soit crée pour avoir un cours consistant.
+
+\section{blocs d'aide a la correction automatique des programme}
+Un idée d'amélioration serai une série de bloc de correction automatique de programme. Il est déjà possible grâce au message de savoir jusqu'où l'étudiant est arrivé et donc lui attribuer des points en fonction de cela. Pour aller plus loin il serai intéressant d'avoir un compteur de bloc pour les scripts. En effet, un programme fait avec 20 blocs quand la solution optimale en comte 3 ne mérite probablement pas beaucoup de point.
+
+De manière générale, il serait intéressant d'avoir de vrai blocs disponible pour les professeurs pour permettre une précorrection automatique.
+
+Cette amélioration pourrait être couplé avec le test de réussite. Cette solution enverrait dans la requête au serveur une note et des informations sur l'avancée du programme grâce aux blocs crée pour cette amélioration.
 
 
 
