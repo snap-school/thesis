@@ -56,14 +56,18 @@ La nécessité d'une plateforme légère et accessible partout oriente le choix 
 Comme expliqué au chapitre \ref{SNAP}, le choix du langage de programmation s'est porté sur SNAP! BYOB.  Ce sera le dernier point développé.
 
 
+
 \subsection{Analyse des besoins} %TODO pas sur que ce soit utile de rajouter ceci à la section précédente
-Avant de faire des choix sur les technologies pour Rsnap. Une analyse des 
+Suite au positionnement de RSnap \ref{positionnement}, certains besoins techniques ont été mis en avant.
+
 % La plateforme étant à destination des professeurs la majorité des besoins viennent d'eux. Cette partie va développer les besoins qui ont été pris en compte dans la conception de Rsnap. D'autres tierces %TODO ??? entrent également en jeu dans l'établissement du cahier des charges de la plateforme. Les enfants ou encore des constats tels que la faible qualité du matériel informatique dans les écoles apporte des contraintes supplémentaires. Les principaux besoins pris en compte sont:
 
 %TODO subsection suivit direct par paragraph => pas bien
-\paragraph{Disponibilité des exercices} fournir une série d'exercices aux élèves et permettre au professeur de les modifier ou d'en créer d'autres.
+%TODO ordoner les besoins
+% \paragraph{Disponibilité des exercices} fournir une série d'exercices aux élèves et permettre au professeur de les modifier ou d'en créer d'autres.
 \paragraph{Différencier les utilisateurs} fournir une interface personnalisée suivant que l'utilisateur soit un professeur ou un élève.
-\paragraph{Stocker les résolutions} permettre aux étudiants d'enregistrer leurs solutions et aux professeurs de récupérer ces travaux pour ensuite les corriger.
+% \paragraph{Stocker les résolutions} permettre aux étudiants d'enregistrer leurs solutions et aux professeurs de récupérer ces travaux pour ensuite les corriger.
+\paragraph{Sauvegarder l'avancement} connaitre où en est la résolution des missions.
 \paragraph{Indépendant du matériel} avoir une plateforme accessible sur le plus d'ordinateurs et autres périphériques possible possible.
 \paragraph{Fiable et évolutif} avoir la possibilité de rajouter des fonctionnalités tout en gardant une stabilité de l'application.
 \paragraph{Facile à mettre en place et à maintenir} pouvoir être déployé facilement dans une école si cette dernière est équiper pour.
@@ -71,18 +75,22 @@ Avant de faire des choix sur les technologies pour Rsnap. Une analyse des
 \paragraph{Apprentissage de la programmation} fournir un environnement de développement intégré pour la pédagogie de la programmation.
 
 \subsection{Plateforme d'apprentissage}
-Rails permet de répondre ces besoins de manière élégante. En effet comme expliqué précédemment (\ref{rails}), rails permet de créer rapidement une application web.
+Pour résoudre les besoins précités, les choix suivant ont été fait.
 
-%TODO subsection suivit direct par paragraph => pas bien
+\begin{description}
+  \item[Technologie web] Pour faciliter l'utilisation de la platforme par tous, il est utile de choisir des technologies web. En effet, Il suffit d'un navigateur, une connexion internet pour que les utilisateurs puissent utiliser celle-ci.
+  \item[Logiciel libre] La connaissance ne doit pas être la propriété de quelqu'un, il faut la rendre accessible à tous. Les logiciels libres forcent à respecter ce droit d'accès à l'enseignement et à la culture. De plus, cela permet à tout un chacun d'héberger toute l'infrastructure en interne si il le désire.
+  \item[MVC] Pour séparer les différentes problématiques dans des composants bien défini, l'architecture MVC est un choix courant. Dans le cas de RSnap, Le modèle permet de gérer les concepts d'utilisateur, d'exercices et de résolution. La possibilité de donner différents droits aux utilisateurs suivant qu'ils sont des étudiants ou des professeurs se fait au niveau des contrôleurs. Les vues fournissent l'indépendance par rapport au matériel car elles peuvent être spécialisée en fonction de celui-ci.
+\end{description}
+Rails permet de résoudre ces différents choix. %TODO plus long
+En effet, comme expliqué dans la section \ref{gems}, Rails peut bénéficier de différents gem's pour avoir facilement les fonctionnalités demandées. Mais c'est aussi car les auteurs de ce travail avait l'habitude de travailler avec Rails que cette platforme fut choisie. Cette ensemble permet de développer rapidement et correctement une application qui correspond aux besoins. 
 
+%Rails permet de répondre ces besoins de manière élégante. En effet comme expliqué précédemment (\ref{rails}), rails permet de créer rapidement une application web.
 
-\paragraph{Web} Le fait que la solution soit une plateforme web permet de facilité son utilisation. Il suffit d'un navigateur, une connexion internet et que les utilisateurs créent leur compte. De plus, l'application étant développé en temps que logiciel libre, les écoles peuvent aussi héberger toute l'infrastructure en interne si elle le désire, moyennant un minimum de connaissance technique.
-
-
-\paragraph{MVC} Rails fourni une architecture MVC convenant très bien à la problématique. Le modèle permet de gérer les concepts d'utilisateur, d'exercices et de résolution. Ceci est encore facilité avec l'utilisation du gem \texttt{paperclip} pour les fichiers attachés.  La possibilité de donner différents droits aux utilisateurs suivant qu'ils sont des étudiants ou des professeurs se fait au niveau des contrôleurs. Ici encore la participation des gems : devise, rolify et authority facilite le travail. Les vues fournissent l'indépendance par rapport au matériel car elles ne nécessitent qu'un navigateur pour être affiché.
-
-\paragraph{Rails}La philosophie de Rails permet donc d'avoir une application qui se développe rapidement avec une architecture forte. Cette caractéristique permet de maintenir et de faire évoluer l'application facilement.
-
+%TODO subsection suivit direct par paragraph => pas bien 
+% \paragraph{Web} Le fait que la solution soit une plateforme web permet de facilité son utilisation. Il suffit d'un navigateur, une connexion internet et que les utilisateurs créent leur compte. De plus, l'application étant développé en temps que logiciel libre, les écoles peuvent aussi héberger toute l'infrastructure en interne si elle le désire, moyennant un minimum de connaissance technique.
+% \paragraph{MVC} Rails fourni une architecture MVC convenant très bien à la problématique. Le modèle permet de gérer les concepts d'utilisateur, d'exercices et de résolution. Ceci est encore facilité avec l'utilisation du gem \texttt{paperclip} pour les fichiers attachés.  La possibilité de donner différents droits aux utilisateurs suivant qu'ils sont des étudiants ou des professeurs se fait au niveau des contrôleurs. Ici encore la participation des gems : devise, rolify et authority facilite le travail. Les vues fournissent l'indépendance par rapport au matériel car elles ne nécessitent qu'un navigateur pour être affiché.
+% \paragraph{Rails}La philosophie de Rails permet donc d'avoir une application qui se développe rapidement avec une architecture forte. Cette caractéristique permet de maintenir et de faire évoluer l'application facilement.
 
 
 
@@ -93,4 +101,3 @@ Rails permet de répondre ces besoins de manière élégante. En effet comme exp
 \paragraph{web} Snap! est un langage basé sur JavaScript, n'importe quel navigateur relativement récent peut donc sans difficulté l'utiliser. Snap! est même concu pour supporter les tablets et donc les événements tactiles.
 \paragraph{langage complet} Pour pouvoir apprendre tout les concept de programmation, il faut que le langage soit un langage complet dans le sens de Turing. Un langage impératif est de plus intéressant car c'est le paradigme le plus répandu. Snap! permet d'enseigner ces concepts.
 \paragraph{amusant} Il faut absolument que les enfants s'amusent tout en apprenant. Snap! propose de programmer avec des blocs de couleurs ce qui rend attractif ce type de langage. De plus, le fait que directement, il est possible de faire bouger quelque chose à l'écran rajoute l'attrait que peuvent avoir les enfants.
-
