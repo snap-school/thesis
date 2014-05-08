@@ -217,9 +217,11 @@ Rails part de l'hypothèse qu'il existe une meilleure façon d'aborder la créat
 
 Pour atteindre cet objectif, Rails utilise deux principes majeurs :
 \begin{description}
-  \item[Convention plutôt que configuration] (CoC) Pour permettre au programmeur d'écrire moins de code, Rails permet de n'écrire que ce qui ne correspond pas aux conventions. Rails utilise la métaprogrammation pour fournir les conventions à tous les objets ;
-  \item[Ne vous répétez  pas] (DRY) L'architecture que propose Rails recommande de mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
+  \item[Convention plutôt que configuration (CoC)] Pour permettre au programmeur d'écrire moins de code, Rails permet de n'écrire que ce qui ne correspond pas aux conventions. Rails utilise la métaprogrammation pour fournir les conventions à tous les objets ;
+  \item[Ne vous répétez  pas (DRY)] L'architecture que propose Rails recommande de mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
 \end{description}
+
+Un service aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie Rails. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
 
 \subsection{Architecture}
 Rails se base sur une architecture Modèle-Vue-Contrôleur. %TODO image MVC
@@ -248,14 +250,16 @@ Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il exist
 \end{description}
 %TODO intégré avec les contrôleurs. Paperclip dans les vues
 \subsection{Gem's}
-Ruby fournit une manière de partager des extensions pour des programmes Ruby via les gems. Rails est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
+Ruby fournit une manière de partager des extensions pour des programmes Ruby via les gems. Rails lui-même est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
 
-La communauté de Rails à écrit de nombreux gems permettant de rajouter facilement des fonctionnalités à une application. Quelque exemples de gems intéressants :
+La communauté de Rails à écrit de nombreux gem's permettant de rajouter facilement des fonctionnalités à une application. Le fichier \texttt{Gemfile} sert à lister les gem's utilisé dans un projet. Le gestionnaire du projet, doit faire attention à toutes ces dépendances pour garder son logiciel à jour. Pour ce faire, Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quel gem's doivent être mis à jours. Gemnasium informe donc les gestionnaires d'un logiciel lorsqu'une faille de sécurité est découverte dans un gem et qu'il faut donc le mettre à jour.
+
+Quelque exemples de gems intéressants sont présentées ci-après.
 \begin{description}
   \item[Paperclip] Permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'amazon ou de dropbox.
-  \item[Devise] Gère la problématique de l'authentification des utilisateurs.
-  \item[Rolify] Donne des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
-  \item[Authority] Gère les droits des utilisateurs sur les différentes ressources \textit{contrôleur}. \label{authority}
+  \item[Devise] gère la problématique de l'authentification des utilisateurs.
+  \item[Rolify] donne des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
+  \item[Authority] gère les droits des utilisateurs sur les différentes ressources \textit{contrôleur}. \label{authority}
 \end{description}
 
 \subsection{Tests}
@@ -271,10 +275,3 @@ Dans le cas de Rails, il est intéressant d'utiliser conjointement Cucumber et C
 \subsubsection{Intégration continue}
 \label{travis}
 Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ceci est réalisé entre autres grâce à \texttt{Travis CI}.
-
-\subsection{Métrique} 
-Différents services proposent de générer des rapports sur un projet. Ces informations sont fournie via l'analyse du code source du logiciel.
-\subsubsection{Bonne pratique} %TODO déplacer dans pilosophie
-Un service aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie Rails. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
-\subsubsection{Sécurité} %TODO déplacer dans gem's
-Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quel gem's ne sont pas à jours. Gemnasium informe donc les gestionnaires d'un logiciel quand une faille de sécurité est découverte dans un gem et qu'il faut donc le mettre à jour.
