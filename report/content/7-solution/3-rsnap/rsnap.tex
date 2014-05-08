@@ -12,7 +12,7 @@ présentation de l'interface :
 \end{itemize}
 
 \subsection{Implémentation}
-Comme expliqués en section \ref{rails}, Rails possède une architecture Model-Vue-Controleur (MVC). Cette section va présenter l'application en se basant sur ce modèle d'architecture. La première expliquera donc le modèle, ensuite les contrôleurs seront discutés et enfin les vues seront présentées.
+Comme expliqués en section \ref{rails}, Rails possède une architecture Model-Vue-Controleur (MVC). Cette section va présenter l'application en se basant sur ce modèle d'architecture. La première partie explique donc le modèle, ensuite les contrôleurs sont discutés. Enfin les vues sont présentées.
 
 \subsubsection{Modèles}
 Les différents concepts utiles pour développer l'application sont ceux représentés par les différents modèles. Ceux-ci sont présentés sur la figure \ref{fig:models}.
@@ -25,32 +25,32 @@ Les différents concepts utiles pour développer l'application sont ceux représ
  \end{center}
 \end{figure}
 
-\paragraph{\texttt{User}} L'utilisateur contient les informations nécessaires à le représenter (\texttt{firstname}, \texttt{email} \ldots) et les informations pour s'authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). L'utilisateur peut posséder plusieurs rôles, programmes et projets.
+\paragraph{\texttt{User}} L'utilisateur contient les informations nécessaires à l'identifier (\texttt{firstname}, \texttt{email} \ldots) et les informations pour s'authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). L'utilisateur peut posséder plusieurs rôles, programmes et projets.
 
-\paragraph{\texttt{Rôle}} Les rôles permettent de donner des attributs à un utilisateur. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de Rsnap, deux rôles ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux rôles sont globaux et donc ne sont pas rattachés à une ressource spécifique.%TODO dans futur Works: role teacher sur ressource students_group
+\paragraph{\texttt{Rôle}} Les rôles permettent de donner des attributs à un utilisateur. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de Rsnap, deux types d'utilisateurs ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux rôles sont globaux et donc ne sont pas rattachés à une ressource spécifique.%TODO dans futur Works: role teacher sur ressource students_group
 
 Les rôles seront utiles en conjonction avec les autorités \ref{authority} pour donner des droits supplémentaires à ces types d'utilisateurs.
 
-\paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Une mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. Elle comporte en plus le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme. 
+\paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Une mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. De plus elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme. 
 
-\paragraph{\texttt{FileMission}} Les fichiers liés à une mission sont les différentes images que compose la description. %TODO dans furture work : on peut imaginer rajouter la possibilité de mettre d'autre style de fichier dedans : ex. PDF, slide de cours...
+\paragraph{\texttt{FileMission}} Les fichiers liés à une mission sont les différentes images qui compose la description. %TODO dans furture work : on peut imaginer rajouter la possibilité de mettre d'autre style de fichier dedans : ex. PDF, slide de cours...
 
-\paragraph{\texttt{Program}} Les programmes comportent la solution d'un étudiant à une mission donnée. Ils comportent uniquement le code source de l'étudiant.
+\paragraph{\texttt{Program}} Un programme contient la solution d'un étudiant pour une mission. Ils comportent uniquement le code source de l'étudiant.
 
-\paragraph{\texttt{Project}} Les projets sont identiques aux programmes excepté qu'ils ne sont pas liés à une mission. Ils comportent donc le nom du projet en plus du code source.
+\paragraph{\texttt{Project}} Les projets sont identiques aux programmes mais ne sont pas liés à une mission. Ils comportent donc le nom du projet en plus du code source.
 
 \paragraph{Exemple} \texttt{Program} est un bon exemple de modèle Rails (code source \ref{lst:model-program}). Seules les fonctionnalités qu’Active Record \ref{active-record} ne sait pas déduire de lui-même sont présentes. Le modèle contient donc uniquement :
 \begin{itemize}
-  \item le nom des modèles avec qui il est associé et la cardinalité de la relation (\texttt{belong\_to}) ;
-  \item la validation de certains attributs pour qu'ils respectent certaines contraintes (\texttt{validate}) ;
-  \item des méthodes de classes pour simplifier les requêtes au modèle (\texttt{scope}, \texttt{self.*}).
+  \item le nom des modèles avec qui il est associé et la cardinalité de la relation (\lstinline[language=Rails]{belongs_to} ligne 5-6) ;
+  \item la validation de certains attributs pour qu'ils respectent certaines contraintes (\lstinline[language=Rails]{validates} ligne 13-15) ;
+  \item des méthodes de classes pour simplifier les requêtes au modèle (\lstinline[language=Rails]{scope},  \lstinline[language=Rails]{self.*} ligne 17-23).
 \end{itemize}
 
-Comme c'est visible dans les \texttt{scope}, Active Record permet de faire des requêtes SQL directement en Ruby. 
+Comme c'est visible pour les \lstinline[language=Rails]{scope} à la ligne 17-19, Active Record permet de faire des requêtes SQL directement en Ruby. 
 \lstinputlisting[language=Rails, firstline=21, caption={Modèle \texttt{Program}}, label=lst:model-program]{content/7-solution/3-rsnap/listings/program.rb}
 
 \subsubsection{Controlleurs}
-Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:controllers} montre la liste des contrôleurs implémentés pour l'application. La majorité de ceux-ci se rapporte directement à un modèle spécifique. Il existe néanmoins certaines ressources différentes telles que : 
+Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:controllers} montre la liste des contrôleurs implémentés pour cette application. La majorité de ceux-ci se rapporte directement à un modèle spécifique. Il existe néanmoins certaines ressources différentes telles que : 
 \begin{itemize}
   \item les pages statiques (\texttt{HomeController}) ;
   \item l'ordonnancement des missions (\texttt{SortMissionsController}) ; 
@@ -72,11 +72,11 @@ L'extrait du contrôleur \texttt{MissionsController} \ref{lst:controller-mission
 
 \lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO verifier les ranges des lignes
 
-Grâce au méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes RESTfull, une vérification de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont déportées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} permet de réaliser une action supplémentaire avant chaque appel de fonction. Ici, excepté pour l'action \texttt{show} et \texttt{index} qui peuvent être publique, il faut que l'utilisateur soit authentifié pour que l'application puisse par après vérifier ses droits. %TODO pas claire sur la fin tu commences par les exceptions
+Grâce au méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes RESTfull, une vérification de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} permet de réaliser une action supplémentaire avant chaque appel de fonction. Ici, excepté pour l'action \texttt{show} et \texttt{index} qui peuvent être publique, il faut que l'utilisateur soit authentifié pour que l'application puisse par après vérifier ses droits. %TODO pas claire sur la fin tu commences par les exceptions
 
-Dans une méthode du contrôleur accessible via les routes, plusieurs actions sont à réaliser :
+Dans une méthode du contrôleur accessible via les routes, plusieurs actions sont à implémenter :
 \begin{enumerate}
-  \item traiter si nécessaire les paramètres fournis. Ceux-ci se trouvent dans \lstinline[language=Rails]{param} ;
+  \item traiter, si nécessaire, les paramètres fournis. Ceux-ci se trouvent dans \lstinline[language=Rails]{param} ;
   \item Assigner les variables d'instance que nécessitera la vue pour s'afficher correctement ;
   \item Exécuter le rendu de la page. Si la vue a le même nom que la méthode, cette étape est facultative.
 \end{enumerate}
@@ -105,12 +105,12 @@ Les connaisseurs de Bootstrap \ref{bootstrap} auront reconnu l'usage intensif de
 expliquer les différentes possibilités de stockage (fichier et site) prix, fonctionnalité...
 
 \subsection{Utilisation}
-Pour utiliser la plateforme, il faut tout d'abord s'enregistrer dessus. Ensuite, suivant le profil, différentes actions sont possibles. L'utilisateur normal peut uniquement résoudre les missions dans l'ordre proposé par les professeurs. Les professeurs peuvent aussi créer des missions. Cette section va présenter l'utilisation de la plateforme.
+Pour utiliser la plateforme, il faut tout d'abord s'enregistrer dessus. Ensuite, suivant le profil, différentes actions sont possibles. L'utilisateur normal peut uniquement résoudre les missions dans l'ordre proposé par les professeurs. Les professeurs peuvent aussi créer des missions. Cette section présente l'utilisation de la plateforme.
 %TODO faire des schémas/scénario avec les screenshot + tous les screenshot en annexe
 
 \paragraph{Professeur}
 Un professeur pour réaliser un cours de programmation doit pouvoir faire les choses suivante:
-\subparagraph{Créer des missions} Pour créer une nouvelle mission (figure \ref{fig:mission-create}), le professeur doit se rendre sur la page qui liste toutes les missions, ensuite il peut cliquer sur le bouton en bas de page "Nouvelle mission". La page suivante permet de renseigner les informations sur la mission : titre, description et explication de la mission, vidéo d'explication \ldots Il reste enfin à créer la mission proprement dite. Pour cela, lorsque le professeur clique sur le bouton "Créer une mission", il est redirigé vers l'interface de Snap!. Il peut alors créer tout ce qui est nécessaire à la réalisation et au test de la mission. Avant de sauver, il ne doit pas oublier de cacher les blocs et les scriptes qui ne doivent pas être visibles aux étudiants.
+\subparagraph{Créer des missions} Pour créer une nouvelle mission (figure \ref{fig:mission-create}), le professeur doit se rendre sur la page qui liste toutes les missions, ensuite il peut cliquer sur le bouton en bas de page "Nouvelle mission". La page suivante permet de renseigner les informations sur la mission : titre, description et explication de la mission, vidéo d'explication \ldots Il reste enfin à créer la mission proprement dite. Pour cela, lorsque le professeur clique sur le bouton "Créer une mission", il est redirigé vers l'interface de Snap!. Il peut alors créer tout ce qui est nécessaire à la réalisation et au test de la mission. Avant de sauver, il ne doit pas oublier de cacher les blocs et les scriptes qui ne doivent pas être visibles des étudiants.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{mission-create}
@@ -128,7 +128,7 @@ Un professeur pour réaliser un cours de programmation doit pouvoir faire les ch
   \end{center}
 \end{figure}
 
-\subparagraph{Corriger les soumissions de ses étudiants} Pour corriger les soumissions de ses étudiants (figure \ref{fig:program-correction}), le professeur doit simplement se rendre sur la page des programmes. À ce moment, le professeur peut simplement voir le programme qu'il désire corriger et rajouter des commentaires dans l'interface de Snap! qui s’ouvrira avec le programme de l'étudiant.
+\subparagraph{Corriger les soumissions de ses étudiants} Pour corriger les soumissions de ses étudiants (figure \ref{fig:program-correction}), le professeur se rend sur la page des programmes. À ce moment, il voit le programme qu'il désire corriger. Le programme de l'étudiant s'ouvrira dans l'interface Snap! Il pourra alors rajouter des commentaires.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{program-correction}
@@ -139,7 +139,11 @@ Un professeur pour réaliser un cours de programmation doit pouvoir faire les ch
 
 \paragraph{Étudiant}
 Un étudiant veux pouvoir réaliser les opérations suivantes :
-\subparagraph{Réaliser une mission} L'étudiant peut réaliser une mission (figure \ref{fig:program-creation}) en cliquant sur le nom de la mission. Soit il continue la mission là où il l'a laissée si le bouton est bleu, soit il commence la dernière mission qui lui est accessible. Dans les deux cas, il se retrouve sur l'interface de Snap! où il peut résoudre la mission.
+\subparagraph{Réaliser une mission} L'étudiant peut réaliser une mission (figure \ref{fig:program-creation}) en cliquant sur le nom de la mission. 
+
+Deux possibilité s'offre a lui. Soit le bouton est bleu, ce qui signifie que l'étudiant a déjà commencé la mission, il la va donc la continuer là où il s'était arrêter. Soit le bouton est vert et dans ce cas l'étudiant commence la mission depuis le départ.
+
+Dans les deux cas, il se retrouve sur l'interface de Snap! où il résout la mission.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{program-creation}
@@ -148,4 +152,4 @@ Un étudiant veux pouvoir réaliser les opérations suivantes :
   \end{center}
 \end{figure}
 
-\subparagraph{Réaliser un projet libre} Si l'étudiant a envie de créer quelque chose, il peut aller dans projet libre. Il aura alors à disposition le plein potentiel de Snap! et pourra laisser libre court à son imagination pour créer le programme de ses rêves.
+\subparagraph{Réaliser un projet libre} Si l'étudiant a envie de créer quelque chose, il peut aller dans projet libre. Il pourra alors utiliser Snap! à son plein potentiel et pourra laisser libre court à son imagination pour créer le programme de ses rêves.

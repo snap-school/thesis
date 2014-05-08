@@ -1,21 +1,21 @@
 \chapter{Validation}
 
 \section{Implémentation}
-Deux outils principaux ont été utilisés pour avoir un logiciel le mieux écrit possible. Cette section met en pratique \ref{rails-tests}.
+Deux outils principaux ont été utilisés pour avoir un logiciel le mieux écrit possible \ref{rails-tests}. Cette section les présente, premièrement, les tests unitaires, ensuite, les métriques.
 %TODO faire intro
 
 \subsection{Tests unitaires}
-Les tests unitaires servent à vérifier que le code testé fonctionne comme il doit. L'implémentation des tests c'est déroulée en parallèle de la création de l'application. Durant la conception de Rsnap, deux principaux types de tests ont été réalisés.
+Les tests unitaires servent à vérifier que le code testé fonctionne correctement. L'implémentation des tests s'est déroulée en parallèle de la création de l'application. Durant la conception de Rsnap, deux principaux types de tests ont été réalisés, les tests sur les controlleurs et ceux au niveau de l'utilisateur. Mais avant tout, les outils utiliser pour ces test sont présenté.
 
 \subsubsection{Outils pour les tests}
-Pour réaliser ces tests, Travis-CI (\ref{travis}) est relié à Github pour que tout les tests soient exécuté à chaque commit. De plus, lors des "pull request" un message est affiché pour connaitre l'état de la branche. Le programmeur peut donc facilement connaitre si l'acceptation de la branche introduira des bugs.
+Pour réaliser ces tests, Travis-CI (\ref{travis}) est relié à Github pour que tout les tests soient exécuté à chaque commit. De plus, lors des "pull request" un message est affiché pour connaitre l'état de la branche. Le programmeur peut donc facilement savoir si l'acceptation de la branche introduira des bugs.
 
-Une métrique générée par les tests est le couverture du code par ceux-ci. Cette information est fournie par Coveralls\ref{biblio} qui est liée à Travis-CI pour l'aquisition des données. Cette métrique est utile pour connaitre si le code est suffisament testé. Elle ne donne par contre pas l'information du type de code testé, il faut donc faire attention à ce que ce ne soit pas uniquement du code trivial qui soit testé.
+Une métrique générée par les tests est le couverture du code. Cette information est fournie par Coveralls\ref{biblio} qui est liée à Travis-CI pour l'aquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas l'information du type de code testé, il faut donc faire attention que les tests couvrent les parties critiques.
 
-Des données de tests sont aussi nécessaire. Celle-ci sont fournie grâce au gem FactoryGirls \footnote{\url{https://github.com/thoughtbot/factory_girl_rails}} qui propose un langage dédié pour écrire rapidement des fabriques.
+Il est nécessaire de crée des données pour les modèles. Ceci s'effectue grâce au gem FactoryGirls \footnote{\url{https://github.com/thoughtbot/factory_girl_rails}} qui propose un langage dédié pour écrire rapidement des fabriques. Les fabriques vont a leur tour généré des données pour peuplé les modèles.
 
 \subsubsection{Tests au niveau des controlleurs}
-Une première batterie de tests réalisée grâce à RSpec. Ces tests ont pour vocations de vérifier l'accès aux différentes routes : les droits des utilisateurs et le type de retour des contrôleurs.
+Une première série de tests est réalisée grâce à RSpec. Ces tests ont pour vocations de vérifier l'accès aux différentes routes : les droits des utilisateurs et le type de retour des contrôleurs.
 
 Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une mission à chaque test. Deux tests sont ensuite réalisé qui vérifie que seul un utilisateur authentifié peut résourdre une mission.
 
@@ -34,10 +34,10 @@ L'extrait de code \ref{lst:cucumber-implementation-mission}, montre comment est 
 \subsection{Utilisation de metriques}%TODO ne suit pas la mm structure que dans connaissance nécessaire (metrique est dans test) 
 Un autre style d'outil donne des informations sur le projet via le code source de celui-ci. Deux services ont principalement été utilisé.
 
-\subsubsection{Sécurité}
+\subsubsection{Gemnasium}
 Gemnasium \ref{gemnasium} permet d'avoir un service de veille qui vérifie si les dépendance de l'application sont bien à jour et donc ne présente pas de risque de sécurité.
 
-\subsubsection{Rails way}
+\subsubsection{rails\_best\_practice}
 rails\_best\_practice \ref{rbp} fourni quand à lui une information plus complexe à traiter. En effet, il renseigne les endroits dans le code sources qui ne respecterait pas le "rails way". De plus, il fourni des exemple pour refactorer ceux-ci. Cet outil est donc utile principalement en début de projet quand les auteurs ne connaissent pas encore bien quelles sont les bonnes pratiques.
 
 \section{Expériences}
