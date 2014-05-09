@@ -67,7 +67,7 @@ La création des cours est un point sur lequel Rsnap se distingue de beaucoup d'
 Pour mettre en pratique les concepts du chapitre précédent, des choix technologiques ont du être faits. La première partie a pour but de les présenter.
 
 Ensuite, deux principales fonctionnalités sont demandées. %TODO oui je sais c'est de nouveau trop court ;)
-D'une part une une platforme pour aider le professeur à gérer sa classe. Et d'autre part un langage de programmation utilisé pour les missions d'apprentissage. 
+D'une part une une platforme pour aider le professeur à gérer leurs classes. Et d'autre part un langage de programmation utilisé pour les missions d'apprentissage. 
 % La nécessité d'une plateforme légère et accessible partout, pour ne pas dépendre du matériel propre aux écoles, oriente le choix vers une plateforme web.
 % Comme introduite dans le chapitre \ref{rails}, la technologie Rails convient. La suite de ce chapitre développe les besoins et choix techniques pris pour le développement de cette plateforme. 
 
@@ -76,7 +76,7 @@ D'une part une une platforme pour aider le professeur à gérer sa classe. Et d'
 
 
 \subsection{Analyse des besoins} %TODO pas sur que ce soit utile de rajouter ceci à la section précédente
-Suite au positionnement de RSnap \ref{positionnement}, certains besoins techniques ont été mis en avant.
+Suite au positionnement de RSnap \ref{positionnement}, une analyse des besoins a été réalisée. Il en ressort une liste de besoins que voici:
 
 % La plateforme étant à destination des professeurs la majorité des besoins viennent d'eux. Cette partie va développer les besoins qui ont été pris en compte dans la conception de Rsnap. D'autres tierces %TODO ??? entrent également en jeu dans l'établissement du cahier des charges de la plateforme. Les enfants ou encore des constats tels que la faible qualité du matériel informatique dans les écoles apporte des contraintes supplémentaires. Les principaux besoins pris en compte sont:
 
@@ -104,7 +104,7 @@ Avec les besoins précités, les choix suivant ont été faits :
   \item[Logiciel libre] La connaissance ne doit pas être la propriété de quelqu'un, il faut la rendre accessible à tous. Les logiciels libres forcent à respecter ce droit d'accès à l'enseignement et à la culture. De plus, cela permet à tout un chacun d'héberger toute l'infrastructure en interne si il le désire.
   \item[MVC] Pour séparer les différentes problématiques dans des composants bien défini, l'architecture MVC est un choix courant. Dans le cas de RSnap, Le modèle permet de gérer les concepts d'utilisateur, d'exercices et de résolution. La possibilité de donner différents droits aux utilisateurs suivant qu'ils sont des étudiants ou des professeurs se fait au niveau des contrôleurs. Les vues fournissent l'indépendance par rapport au matériel car elles peuvent être spécialisée en fonction de celui-ci.
 \end{description}
-Rails permet de résoudre ces différents choix. %TODO plus long
+Un logicielle qui permet de satisfaire tous ces choix en même temps est Rails. %TODO plus long
 En effet, comme expliqué dans la section \ref{gems}, Rails peut bénéficier de différents gem's pour avoir facilement les fonctionnalités demandées. Mais c'est aussi car les auteurs de ce travail avait l'habitude de travailler avec Rails que cette platforme fut choisie. Cette ensemble permet de développer rapidement et correctement une application qui correspond aux besoins. 
 
 %Rails permet de répondre ces besoins de manière élégante. En effet comme expliqué précédemment (\ref{rails}), rails permet de créer rapidement une application web.
@@ -122,10 +122,10 @@ Le langage d'apprentissage est utilisé dans l'application pour inculquer la pro
 En tenant compte des besoins, certains choix ont été fait :
 \begin{description}
   \item[Langage complet] Pour pouvoir apprendre tout les concept de programmation, il faut que le langage soit un langage complet dans le sens de Turing. Un langage impératif est de plus intéressant car c'est le paradigme le plus répandu.
-  \item[Blocs] Les enfants ont plus de facilité à comprendre les choses quand ils voient les choses. Un langage par blocs est donc plus intéressant pour eux. De plus, ce type de langage propose un interface colorée plus attrayante ceux-ci. Mais encore, ces langages, proposant une interface graphique, fournissent un retour direct à l'utilisateur quand au résultat de son programme. En effet, il peut voir dans la fenêtre dédié son curseur s'animer, l'image évoluer\ldots %TODO j'ai l'impression de redire ce qui est mit dans la section "Outils, concepts et environnement de travail"
+  \item[Blocs] Les enfants ont plus de facilité à s'approprier la matière quand celle ci se présente de manière très visuelle. Un langage par blocs est donc plus intéressant pour eux. De plus, ce type de langage propose un interface colorée plus attrayante. De plus, ces langages proposant une interface graphique, fournissent un retour direct à l'utilisateur quand au résultat de son programme. En effet, il peut voir dans la fenêtre dédié son curseur évoluer\ldots %TODO j'ai l'impression de redire ce qui est mit dans la section "Outils, concepts et environnement de travail"
   \item[JavaScript] Pour que le langage soit disponible au plus grand nombre, il faut qu'il soit disponible sur la majorité des navigateurs actuels. Or, actuelement, le standart du web pour faire de l'animation est le JavaScript. Le langage d'apprentissage doit donc être implémenté en JavaScript pour fonctionner aussi bien sur des ordinateurs que des tablettes.
 \end{description}
-Ces différents choix mènent à sélectionner Snap! comme langage d'apprentissage.
+Ces différents choix mènent à sélectionner Snap! comme langage d'apprentissage pour ce travail.
 
 %TODO subsection suivit direct par paragraph => pas bien
 % \paragraph{web} Snap! est un langage basé sur JavaScript, n'importe quel navigateur relativement récent peut donc sans difficulté l'utiliser. Snap! est même concu pour supporter les tablets et donc les événements tactiles.
