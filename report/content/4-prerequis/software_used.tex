@@ -1,6 +1,6 @@
 \section{Snap!}
 \url{http://snap.berkeley.edu/SnapManual.pdf} %TODO mettre en biblio
-Cette partie donne un aperçu de l'application qui sera utilisée dans ce travail. La présentation de Snap! va se diviser en plusieurs paragraphes. La première expliquera les différents types de blocs et comment ils sont implémentés. L'étape suivante sera l'explication de l'exécution d'un programme. Ensuite sera présenté l'affichage les différents éléments de Snap!. %TODO plus d'explication bloc Derniere phrase
+Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de Snap! se diviser en plusieurs paragraphes. La première explique les différents types de blocs et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de Snap!. %TODO plus d'explication bloc Derniere phrase
 
 \subsection{Blocs}
 Il existe plusieurs types de blocs qui constituent un programme Snap!. Sur la figure \ref{fig:software-used-script}, le programme présente les différents types blocs disponibles.
@@ -18,14 +18,12 @@ Le type principal de blocs est \texttt{commande}. Ces blocs peuvent être compri
 Dans l'exemple de la figure \ref{fig:software-used-script}, tous les blocs \texttt{commande} ont la forme d'une pièce de puzzle. On peut y voir qu'une succession de \texttt{commande} crée un script. Les \texttt{commande} ont plusieurs couleurs suivant la catégorie à laquelle elles appartiennent : mouvement, apparence, contrôle, variable \ldots
 
 \subsubsection{Reporter}
-Les \texttt{reporter} sont des fonctions. En effet, ils revoient une valeur. Ils sont toujours utilisés en temps que paramètres d'un autre bloc. La plupart des \texttt{reporter} sont des accesseurs à des variables ou à des états du système (position souris, heure \ldots). 
+Les \texttt{reporter's} sont des fonctions. En effet, ils renvoient une valeur. Ils sont toujours utilisés en temps que paramètres d'un autre bloc. La plupart des \texttt{reporter} sont des accesseurs à des variables ou à des états du système (position souris, heure \ldots). 
 
-Les \texttt{reporter} sont des blocs de forme arrondie. La figure \ref{fig:software-used-script} montre différentes utilisations de \texttt{reporter} : somme, valeur aléatoire, position \ldots Tout comme pour les \texttt{commande}, les \texttt{reporter} peuvent être de diverses couleurs suivant leur catégorie.
+Les \texttt{reporter} sont des blocs de forme arrondie. La figure \ref{fig:software-used-script} montre différentes utilisations de \texttt{reporter} : somme, valeur aléatoire, position, etc. Tout comme pour les \texttt{commande}, les \texttt{reporter} peuvent être de diverses couleurs suivant leur catégorie.
 
 \subsubsection{Prédicat}
-Les \texttt{prédicat} sont des reporters qui retournent une valeur booléenne. Ils sont donc utilisés en conjonction avec des commandes demandant une condition.
-
-Les \texttt{prédicat} ont une forme hexagonale.
+Les \texttt{prédicat} sont des reporters qui retournent une valeur booléenne. Ils sont donc utilisés en conjonction avec des commandes demandant une condition. Les \texttt{prédicat} ont une forme hexagonale.
 %TODO ajouter un exemple
 
 \subsubsection{Chapeau}
@@ -274,4 +272,4 @@ Dans le cas de Rails, il est intéressant d'utiliser conjointement Cucumber et C
 
 \subsubsection{Intégration continue}
 \label{travis}
-Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ceci est réalisé entre autres grâce à \texttt{Travis CI}.
+Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ceci est réalisé entre autres grâce à \texttt{Travis CI}\footnote{\url{https://travis-ci.org/}}.
