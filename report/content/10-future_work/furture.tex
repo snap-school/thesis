@@ -1,49 +1,49 @@
-\chapter{Future améliorations}
-Ce chapitre va aborder les améliorations possibles pour Rsnap. Ces dernières sont soit issues d'objectifs qui n'ont pas été rencontrés par l'implémentation actuelle soit de l'analyse de l'expérience. %TODO pour moi la suite ne sert à rien : Les améliorations suivantes sont à retenir et sont discutées plus dans ce chapitre: test de la réussite de la mission, aide à la gestion de la classe, retravail et ajout de mission, blocs d'aide a la correction automatique des programme.
+﻿\chapter{Future améliorations}
+Ce chapitre va aborder les améliorations possibles pour Rsnap. Ces dernières sont soit issues d'objectifs qui n'ont pas été rencontrés par l'implémentation actuelle soit de l'analyse de l'expérience. %TODO pour moi la suite ne sert à rien : Les améliorations suivantes sont à retenir et sont discutées plus dans ce chapitre: test de la réussite de la mission, aide à la gestion de la classe, retravaille et ajout de mission, blocs d'aide a la correction automatique des programmes.
 
 \section{Tester la réussite des missions}
-Actuellement certains tests sont réalisé pour que l'étudant connaisse la réussite de la mission. Toutes fois, aucun signal n'est envoyer vers les serveurs pour transmettre celle-ci. Une mission est considéré comme réussie dès que l'étudiant ouvre la mission. En effet, comme aucun mécanisme n'est présent pour valider une mission, la mission suivante se débloque dès le premier enregistrement de la précédente.
+Actuellement, certains tests sont réalisés pour que l'étudiant connaisse la réussite de la mission. Toutes fois, aucun signal n'est envoyé vers les serveurs pour transmettre celle-ci. Une mission est considérée comme réussie dès que l'étudiant ouvre la mission. En effet, comme aucun mécanisme n'est présent pour valider une mission, la mission suivante se débloque dès le premier enregistrement de la précédente.
 
 \paragraph{Modifications à apporter}
-Un signal envoyé au serveur serai possible par le simple envoie d'une requête à ce dernier. La difficulté réside dans la création d'un vrai bloc disponible dans l'interface des professeurs qui servirait à notifier le serveur de la réussite de la mission.
+Un signal envoyé au serveur serait possible par le simple envoi d'une requête à ce dernier. La difficulté réside dans la création d'un vrai bloc disponible dans l'interface des professeurs qui servirait à notifier le serveur de la réussite de la mission.
 
 \section{Aide à la gestion des groupes}
-Un des but de ce travail est son utilisation dans l'enseignement. Pour ce faire un système de gestion des élèves par classe a été pensé. Malheureusement, le temps a manqué pour avoir une gestion de groupes finie. 
+Un des buts de ce travail est son utilisation dans l'enseignement. Pour ce faire, un système de gestion des élèves par classe a été pensé. Malheureusement, le temps a manqué pour avoir une gestion de groupes finie. 
 
 \paragraph{Modifications à apporter}
-Le principe pensé pour la gestion de classe est que chaque professeurs puisse voir l'avancement de ses élèves. En plus de l'assignation des étudiants et professeurs à une ou plusieurs classes, il faut aussi que les droits des professeurs ne s'appliquent que pour ses propres étudiants. 
+Le principe pensé pour la gestion de classe est que chaque professeur puisse voir l'avancement de ses élèves. En plus de l'assignation des étudiants et professeurs à une ou plusieurs classes, il faut aussi que les droits des professeurs ne s'appliquent que pour ses propres étudiants. 
 
-Concretement, il faut rajouter dans le modèle une classe qui représente un cours. Celle-ci serait constituée de la description de ce cours ainsi que d'un professeur et de plusieurs élèves. Il faut bien sur aussi modifier les authorités qui gèrent les droits pour tenir compte de ces différente assignations.
+Concrètement, il faut rajouter dans le modèle une classe qui représente un cours. Celle-ci serait constituée de la description de ce cours ainsi que d'un professeur et de plusieurs élèves. Il faut bien sûr aussi modifier les autorités qui gèrent les droits pour tenir compte de ces différentes assignations.
 
 \section{Amélioration et ajout de missions}
 Comme mis en lumière dans la partie \ref{analyse-exp}, les expériences ont montré que certaines missions gagneraient à être retravaillées.
 
 \paragraph{Hélocoptère}
-La mission de l'hélicoptère introduit deux concepts fort abstraits : les boucles et les conditions. Elle serait beaucoup plus facilement compréhensible par les enfants si elle était découpé en deux partie une pour chaque concept.
+La mission de l'hélicoptère introduit deux concepts fort abstraits : les boucles et les conditions. Elle serait beaucoup plus facilement compréhensible par les enfants si elle était découpée en deux parties un pour chaque concept.
 
 \paragraph{Soyons courtois}
-La mission soyons courtois n'est pas encore assez attractive pour les enfants. Il était suggéré dans L'analyse \ref{appreciation} de rajouter la programmation des mouvement de leur personnage. En effet, actuellement les autre personnage bougent seul. On pourrait demander au jeune de programmer ce qui est nécessaire pour que son personnage se déplace grâce au clavier. %TODO c'est deja fait je comprend pas ce que tu as voulu dire
+La mission soyons courtois n'est pas encore assez attractive pour les enfants. Il était suggéré dans L'analyse \ref{appreciation} de rajouter la programmation des mouvements de leur personnage. En effet, actuellement les autres personnages bougent seuls. On pourrait demander au jeune de programmer ce qui est nécessaire pour que son personnage se déplace grâce au clavier. %TODO c'est déjà fait je comprends pas ce que tu as voulu dire
 
 \paragraph{Chien et chat}
-La mission chien et chat n'est pas assez dirigé. Une mission d'introduction supplémentaire serait probablement bénéfique. Un autre problème dans cette mission est le nombre de blocs laissés à disposition des élèves. Le choix avait été fait de leur laisser un accès à tous les blocs pour qu'il voient la pleine puissance de Snap!. Ce choix s'est révélé inapproprié.
+La mission chien et chat n'est pas assez dirigé. Une mission d'introduction supplémentaire serait probablement bénéfique. Un autre problème dans cette mission est le nombre de blocs laissés à disposition des élèves. Le choix avait été fait de leur laisser un accès à tous les blocs pour qu'ils voient la pleine puissance de Snap!. Ce choix s'est révélé inapproprié.
 
 \paragraph{Ajout de missions}
-En plus des missions proposées, il est important que d'autres missions soit créées pour avoir un cours consistant. Ces nouvelles missions permttrait d'apporter de nouveaux concepts mais surtout permettrait aux enfants de pratiquer les concepts déjà appris pour mieux les intégrer.
+En plus des missions proposées, il est important que d'autres missions soient créées pour avoir un cours consistant. Ces nouvelles missions permettraient d'apporter de nouveaux concepts, mais surtout permettraient aux enfants de pratiquer les concepts déjà appris pour mieux les intégrer.
 
 \section{blocs d'introspection des programmes}
-Un idée d'amélioration serait une série de blocs pour avoir des informations sur le programme. Il est déjà possible grâce événements de savoir jusqu'où l'étudiant est arrivé et donc lui attribuer des points en fonction de cela. Pour aller plus loin il serai intéressant d'avoir un compteur de bloc pour les scripts. En effet, un programme fait avec 20 blocs quand la solution optimale en compte 3 ne mérite probablement pas beaucoup de point.
-De manière générale, il serait intéressant d'avoir de vrai blocs disponible pour les professeurs pour faciliter la création de correction et cotation automatique.
+Une idée d'amélioration serait une série de blocs pour avoir des informations sur le programme. Il est déjà possible grâce événements de savoir jusqu'où l'étudiant est arrivé et donc lui attribuer des points en fonction de cela. Pour aller plus loin, il serait intéressant d'avoir un compteur de bloc pour les scripts. En effet, un programme fait avec 20 blocs quand la solution optimale en compte 3 ne mérite probablement pas beaucoup de point.
+De manière générale, il serait intéressant d'avoir de vrais blocs disponibles pour les professeurs pour faciliter la création de correction et cotation automatique.
 
-Cette amélioration pourrait être couplé avec le test de réussite. Cette solution enverrait dans la requête au serveur une note et des informations sur l'avancée du programme grâce aux blocs d'introspection.
+Cette amélioration pourrait être couplée avec le test de réussite. Cette solution enverrait dans la requête au serveur une note et des informations sur l'avancée du programme grâce aux blocs d'introspection.
 
 \section{Charte graphique}
 Pour que ce logiciel soit utilisé, il faut porter attention au ressenti des utilisateurs. Un point important est donc d'avoir une charte graphique unifiée et cohérente en fonction du public visé.
 
 \paragraph{Bootstrap et Snap!}
-Actuellement, d'une part toutes la partie Rails utilise Bootstrap de manière brute, d'autre part l'interface de Snap! n'a été modifié que de manière fonctionnelle. Il serait peut-etre jusdicieux d'adapter un peu la feuille de style de Bootstrap et l'implémentation de Snap! pour avoir un thème graphique unifié et fournir un environement plus enfantin.
+Actuellement, d'une part toute la partie Rails utilise Bootstrap de manière brute, d'autre part l'interface de Snap! n'a été modifié que de manière fonctionnelle. Il serait peut-être judicieux d'adapter un peu la feuille de style de Bootstrap et l'implémentation de Snap! pour avoir un thème graphique unifié et fournir un environnement plus enfantin.
 
 \paragraph{Missions}
-Les ressources graphiques utilisées dans les missions proviennent toutes de sources différentes. Avoir un artiste qui dessinerait les différents objets nécessaire permettrait de créer une meilleure unité entre les missions.
+Les ressources graphiques utilisées dans les missions proviennent toutes de sources différentes. Avoir un artiste qui dessinerait les différents objets nécessaires permettrait de créer une meilleure unité entre les missions.
 
 
 % obliger la réussite des test de la mission avant de pouvoir passer à la suivante

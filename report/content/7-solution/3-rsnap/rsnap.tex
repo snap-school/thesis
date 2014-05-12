@@ -1,10 +1,10 @@
-\section{Rsnap}
+﻿\section{Rsnap}
 \graphicspath{{content/7-solution/3-rsnap/images/}}
 
 \subsection{Interface}
 présentation de l'interface :
 \begin{itemize}
-  \item design joli et adaptative
+  \item design joli et adaptatif
   \item student side
   \item prof side
   \item arrangement des missions + ouverture successive
@@ -12,7 +12,7 @@ présentation de l'interface :
 \end{itemize}
 
 \subsection{Implémentation}
-Comme expliqués en section \ref{rails}, Rails possède une architecture Model-Vue-Controleur (MVC). Cette section va présenter l'application en se basant sur ce modèle d'architecture. La première partie explique donc le modèle, ensuite les contrôleurs sont discutés. Enfin les vues sont présentées.
+Comme expliqués en section \ref{rails}, Rails possède une architecture Model-Vue-Controleur (MVC). Cette section va présenter l'application en se basant sur ce modèle d'architecture. La première partie explique donc le modèle, ensuite les contrôleurs sont discutés. Enfin, les vues sont présentées.
 
 \subsubsection{Modèles}
 Les différents concepts utiles pour développer l'application sont ceux représentés par les différents modèles. Ceux-ci sont présentés sur la figure \ref{fig:models}.
@@ -31,13 +31,13 @@ Les différents concepts utiles pour développer l'application sont ceux représ
 
 Les rôles seront utiles en conjonction avec les autorités \ref{authority} pour donner des droits supplémentaires à ces types d'utilisateurs.
 
-\paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Une mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. De plus elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme. 
+\paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Une mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. De plus, elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme. 
 
 \paragraph{\texttt{FileMission}} Les fichiers liés à une mission sont les différentes images qui compose la description. %TODO dans furture work : on peut imaginer rajouter la possibilité de mettre d'autre style de fichier dedans : ex. PDF, slide de cours...
 
 \paragraph{\texttt{Program}} Un programme contient la solution d'un étudiant pour une mission. Ils comportent uniquement le code source de l'étudiant.
 
-\paragraph{\texttt{Project}} Les projets sont identiques aux programmes mais ne sont pas liés à une mission. Ils comportent donc le nom du projet en plus du code source.
+\paragraph{\texttt{Project}} Les projets sont identiques aux programmes, mais ne sont pas liés à une mission. Ils comportent donc le nom du projet en plus du code source.
 
 \paragraph{Exemple} \texttt{Program} est un bon exemple de modèle Rails (code source \ref{lst:model-program}). Seules les fonctionnalités qu’Active Record \ref{active-record} ne sait pas déduire de lui-même sont présentes. Le modèle contient donc uniquement :
 \begin{itemize}
@@ -70,9 +70,9 @@ Comme expliqué dans la section \ref{controleur}, les méthodes accessibles sont
 \paragraph{Exemple}
 L'extrait du contrôleur \texttt{MissionsController} \ref{lst:controller-mission} montre l'usage classique d'un contrôleur. 
 
-\lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO verifier les ranges des lignes
+\lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO vérifier les ranges des lignes
 
-Grâce au méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes RESTfull, une vérification de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} permet de réaliser une action supplémentaire avant chaque appel de fonction. Ici, excepté pour l'action \texttt{show} et \texttt{index} qui peuvent être publique, il faut que l'utilisateur soit authentifié pour que l'application puisse par après vérifier ses droits. %TODO pas claire sur la fin tu commences par les exceptions
+Grâce au méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes RESTfull, une vérification de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} permet de réaliser une action supplémentaire avant chaque appel de fonction. Ici, excepté pour l'action \texttt{show} et \texttt{index} qui peuvent être publique, il faut que l'utilisateur soit authentifié pour que l'application puisse ensuite vérifier ses droits. %TODO pas claire sur la fin tu commences par les exceptions
 
 Dans une méthode du contrôleur accessible via les routes, plusieurs actions sont à implémenter :
 \begin{enumerate}
@@ -141,7 +141,7 @@ Un professeur pour réaliser un cours de programmation doit pouvoir faire les ch
 Un étudiant veux pouvoir réaliser les opérations suivantes :
 \subparagraph{Réaliser une mission} L'étudiant peut réaliser une mission (figure \ref{fig:program-creation}) en cliquant sur le nom de la mission. 
 
-Deux possibilité s'offre a lui. Soit le bouton est bleu, ce qui signifie que l'étudiant a déjà commencé la mission, il la va donc la continuer là où il s'était arrêter. Soit le bouton est vert et dans ce cas l'étudiant commence la mission depuis le départ.
+Deux possibilités s'offrent à lui. Soit le bouton est bleu, ce qui signifie que l'étudiant a déjà commencé la mission, il la va donc la continuer là où il s'était arrêté. Soit, le bouton est vert et dans ce cas l'étudiant commence la mission depuis le départ.
 
 Dans les deux cas, il se retrouve sur l'interface de Snap! où il résout la mission.
 \begin{figure}
