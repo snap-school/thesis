@@ -1,8 +1,8 @@
 \section{Snap!}
 \label{solution SNAP}
-Comme expliqués précédemment, nous sommes partis d'un projet existant, Snap! BYOB, pour l'environnement de programmation. Ce projet a pour but de fournir une interface et un environnement supportant la programmation par bloc. Ce projet ne s'inscrit pas dans le cadre d'un apprentissage scolaire ou guidé. Il a donc fallu adapter le projet pour une utilisation plus scolaire. Nous allons expliquer dans cette partie les différentes adaptations que nous avons apportées au projet d'origine et pourquoi elles sont nécessaire pour remplir nos objectifs.\\
+Ce travail part d'un environnent de programmation existant : Snap! BYOB. Ce projet a pour but de fournir une interface et un environnement supportant la programmation par bloc. Cependant, ce projet ne s'inscrit pas dans le cadre d'un apprentissage scolaire ou guidé. Il a donc fallu l'adapter. Cette partie explique les différentes adaptations apportées au projet d'origine et pourquoi elles sont nécessaires pour remplir les objectifs.\\
 
-Dans les adaptations opérées, nous retiendrons : une simplification de l'interface, la sauvegarde sur les serveurs du projet courant, une différenciation de rôle pour le professeur par rapport au public cible, une amélioration de la traduction en français, le masquage des scripts.
+Dans les adaptations opérées, sont retenus : une simplification de l'interface, une différenciation de rôle entre le professeur et le public cible, le masquage des scripts, une amélioration de la traduction en français et la sauvegarde sur les serveurs du projet courant.
 
 \begin{figure}[]
   \begin{center}
@@ -14,29 +14,35 @@ Dans les adaptations opérées, nous retiendrons : une simplification de l'inter
 
 \subsection{L'interface}
 \label{interface}
-Comme expliqué précédemment le projet original n'avait pas une vocation didactique de groupe et avait un publique cible plus large que le notre. Dans cette idée, il y avait des menus pour des fonctionnalités de gestion de l'ordonnanceur, option d'affichage, paramètres d'éditions, etc. Il est évident que ces fonctionnalités ne sont pas utiles pour notre public. De plus vu l'âge de notre public toutes distractions qui peuvent être évitées améliorent sensiblement l'attention de ces derniers.
+Comme expliqué précédemment, le Snap! n'a pas une vocation didactique de groupe et a un publique cible plus large. Il a des menus pour des fonctionnalités de gestion de l'ordonnanceur, des options d'affichage, des paramètres d'éditions, etc. Certaines de ces fonctionnalités sont trop complexes et/ou peuvent distraire inutilement le public visé par Rsnap.
 
-Dans cette optique, nous avons opéré un nettoyage en profondeur de l'interface dans l'optique de laisser uniquement les menus utiles. Toutefois comme il est discuté dans les rôles \ref{role}, il est intéressant de ne pas simplement les effacer, mais bien de les masquer.\\
+Un nettoyage en profondeur de l'interface de Snap! a été opéré afin de laisser uniquement les menus utiles. Toutefois, il n'ont pas été effacés mais masqués afin qu'il puissent être utilisés par les professeurs, comme il est discuté dans les rôles \ref{role}.\\
 
-Une autre adaptation de l'interface réalisée est l'ajout d'un menu pour les interactions avec notre plateforme web. Ce menu contient des boutons tel que : "sauvegarder sur le serveur" pour enregistrer leur travail sur la plateforme; "description" qui permet de retrouver le résumé introductif de la mission; "retour à la liste des missions" qui demande a sauver le travail puis renvoie vers la page listant les missions sur le site web.
+Une autre adaptation de l'interface est l'ajout d'un menu pour les interactions avec la plateforme web. Ce menu contient des boutons tels que : 
+\begin{itemize}
+  \item "sauvegarder sur le serveur", pour enregistrer le travail de l'étudiant sur la plateforme ; 
+  \item "description", pour permet de retrouver le résumé introductif de la mission ; 
+  \item "retour à la liste des missions", pour sauvegarder le travail puis renvoyer vers la page listant les missions sur le site web.
+\end{itemize}
 
 \subsection{Les rôles}
 \label{role}
-Dans l'optique de fournir une interface épurée pour les étudiants comme expliqués dans la section \ref{interface}. Il était nécessaire d'enlever des parties de l'interface non pertinente. Toutefois, ces options inutiles aux étudiants peuvent l'être pour les professeurs, mais également pour une mission en "monde ouvert". Il est donc utile de ne pas dédoubler les interfaces, mais bien d'avoir une interface modulaire suivant son utilisation. \\
+Afin de fournir une interface épurée pour les étudiants comme expliqués dans la section \ref{interface}, il est nécessaire d'enlever des parties non pertinentes de l'interface de Snap!. Toutefois, ces options inutiles aux étudiants peuvent l'être pour les professeurs et également pour une mission en "monde ouvert". Il est donc utile d'avoir une interface modulaire suivant son utilisation. \\
 
-Pour différencier les utilisations de l'interface, nous avons ajouté la notion de rôles. Nous avons défini deux rôles: étudiant et professeur. Grâce à cela, quand les étudiants ouvre un projet, Snap! est lancé avec le rôle étudiant ce qui permet de ne pas afficher les options superflues. Quand c'est un professeur qui souhaite modifier une mission ou en créer une nouvelle, RSNAP lance Snap! avec le rôle professeur ce qui permet d'avoir accès aux fonctions avancées de Snap!.\\
+Pour différencier les utilisations de l'interface, la notion de rôles a été ajoutée. Deux rôles sont définis : étudiant et professeur. Ainsi, quand un étudiant ouvre un projet, Snap! est lancé avec le rôle étudiant, ce qui permet de ne pas afficher les options superflues. Quand un professeur souhaite modifier une mission ou en créer une nouvelle, Rsnap lance Snap! avec le rôle professeur ce qui donne accès aux fonctions avancées de Snap!.\\
 
-Ces rôles permettent également la gestion du masquage de script. En effet, il est intéressant qu'un professeur puisse masquer des blocs, mais cela ne sert à rien si les étudiants peuvent les réafficher.
+Ces rôles permettent également la gestion du masquage de script. Il est intéressant qu'un professeur puisse masquer des blocs, sans que les étudiants ne puissent les réafficher.
 
 \subsection{Masquer les scripts}
-Il a été nécessaire pour la création des missions de cacher des blocs aux étudiants. Par exemple, la partie de vérification du code de l'étudiant ou encore le code de l'environnement de la mission ne doivent pas apparaître pour les étudiants. 
+Pour la création des missions, il a été nécessaire de cacher des blocs aux étudiants. Par exemple, la partie de vérification du code de l'étudiant ou encore le code de l'environnement de la mission ne doivent pas leur apparaître. 
 
-Une possibilité de cacher des blocs existait déjà dans la zone des blocs sources (voir l'interface sur la figure \ref{fig:snap interface}) de l'interface pour que tous les blocs n'apparaissent pas comme on peut le voir sur la figure \ref{fig:cacher}. Nous avons étendu cette fonction pour pouvoir également cacher des blocs ou des scripts dans la partie d'édition.
+Une possibilité de cacher des blocs existait déjà dans la zone des blocs sources (voir la figure \ref{fig:cacher}) de l'interface. Cette fonctionnalité est étendue pour pouvoir également cacher des blocs ou des scripts dans la partie d'édition (voir la figure \ref{fig:snap interface}).
 
-Il a également fallu ajouter cette information dans la sauvegarde du projet. Ceci a été réalisé grâce à la balise \texttt{hidden} dans le XML. Cette balise n'est présente que si le bloc doit être caché pour limiter les ajouts au document de sauvegarde.\\
+Il a donc fallu ajouter cette information dans la sauvegarde du projet. Ceci a été réalisé grâce à la balise \texttt{hidden} dans le XML.\\
 
-Cette fonctionnalité pouvant être intéressante pour le projet original, elle a été proposée dans une \texttt{pull request}. Les responsables de Snap! ont été très intéressé par cette fonctionnalité qui est toujours en cours d'étude.
-\begin{figure}[]
+
+Cette fonctionnalité étant intéressante pour le projet original, elle a été proposée dans une \texttt{pull request}. Les responsables de Snap! ont marqué leur intérêt pour cette fonctionnalité qui est toujours en cours d'étude.
+\begin{figure}
   \begin{center}
     \includegraphics[scale=0.5]{content/7-solution/2-snap/images/cacher}
     \caption{Option pour cacher la définition d'un bloc}
@@ -45,12 +51,13 @@ Cette fonctionnalité pouvant être intéressante pour le projet original, elle 
 \end{figure}
 
 \subsection{Traduction}
-Le caractère francophone de ce travail est une part importante dans sa différenciation par rapport aux autres initiatives similaires introduites dans la section \ref{travail associé}. L'application était déjà traduite partiellement en français, mais une large majorité des traductions étaient incomplètes, inexistantes ou erronées. Une partie du travail a donc été de finir et amélioré la traduction de l'application. La traduction de l'application se divise en deux parties, la partie interface et la partie aident. Pour ce travail ont été développés des outils de traduction d'aide automatisé. Ces outils ont été développés, car des aides en français existaient déjà dans le projet SCRATCH. Il était donc plus efficace d'avoir un outil de traduction automatique que de retraduire manuellement les aides.
+Ce travail se différencie des autres initiatives similaires introduites dans la section \ref{travail associé} par sont caractère francophone. L'application était déjà traduite partiellement en français mais une large majorité des traductions était incomplète, inexistante ou erronée. Il a donc fallu en améliorer la traduction. La traduction de l'application est différente pour la partie interface et la partie fournissant les aides. 
 
-Cette partie a été proposée au projet original de Snap! et acceptée, mais ne sera intégré qu'après quelques aménagements. Elle est donc actuellement acceptée, mais en attente.
+Des aides étaient déjà disponibles en anglais. La possibilité de les avoir dans d'autres langues a été développée pour ce travail. De plus, des aides en français étaient déjà existantes dans le projet SCRATCH. C'est donc elles qui ont été utilisées pour Snap!.
+
+L'ensemble de ces aménagements a été proposé au projet original. Il a été accepté et il sera intégré après quelques modifications du serveur utilisé par Snap!.
 
 \subsection{Sauvegarde sur le serveur}
-Comme il était nécessaire d'interfacé l'environnement de programmation avec un site web, nous avons du reimplementer certaine fonctionnalité d'import-export.\\
+Comme il est nécessaire d'interfacer l'environnement de programmation avec un site web, l'implémentation de certaines fonctionnalités d'import-export spécifiques à Rsnap a été réalisée.
 
-Il était nécessaire de disposer d'un fichier XML pour le sauvegarder sur les serveurs. Des fonctions existantes ont été adaptées pour permettre d'avoir ce fichier et de pouvoir l'envoyer sur l'adresse internet désirée.
-
+Il est nécessaire de disposer d'un fichier XML pour sauvegarder les missions sur le serveur. Les fonctions existantes ont été adaptées pour permettre d'avoir ce fichier et de pouvoir l'envoyer au serveur.
