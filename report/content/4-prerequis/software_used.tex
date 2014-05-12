@@ -222,7 +222,14 @@ Pour atteindre cet objectif, Rails utilise deux principes majeurs :
 Un service aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie Rails. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
 
 \subsection{Architecture}
-Rails se base sur une architecture Modèle-Vue-Contrôleur. %TODO image MVC
+Rails se base sur une architecture Modèle-Vue-Contrôleur \ref{fig:mvc}.
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.3]{content/4-prerequis/images/mvc}
+    \caption{Schéma interaction d'un modèle MVC}
+    \label{fig:mvc}
+  \end{center}
+\end{figure}
 \subsubsection{Modèle} 
 Un modèle est typiquement une classe qui représente une table de la base de données. Une classe du modèle fournit aussi toutes les méthodes nécessaires à représenter et modifier l'objet dans le domaine d'application.
 
