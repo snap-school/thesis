@@ -85,7 +85,7 @@ Un programme est constitué de plusieurs processus. Chaque processus est exécut
 Un processus \texttt{Process} représente l'exécution d'un scripte, une pile de blocs. Il assure aussi le suivit de l'exécution du scripte : prochain bloc à exécuter, objet sur lequel il s'applique, contexte décrivant l'état courant, etc.
 
 L'ordonnanceur \texttt{ThreadManager} appelle successivement la fonction \texttt{runStep()} sur le code source \ref{lst-runstep} sur chaque processus. Cette fonction exécute un certain nombre de blocs via \texttt{this.evaluateContext()} de manière atomique. Elle rend la main volontairement à l'ordonnanceur quand elle a fini. Comme il est possible d'écrire soi-même des blocs, \texttt{runStep()} rend aussi la main si trop de temps s'est écoulé depuis le début de l'exécution de cette étape. La convention veut que les processus rendent la main à la fin de chaque itération de boucles et quand une opération relative au temps ou synchrone est exécutée.
-
+\begin{figure}
 \begin{lstlisting}[caption={Fonction \texttt{runStep()} de \texttt{Process}},label=lst-runstep,language=JavaScript]
 Process.prototype.runStep = function () {
 /*
@@ -128,7 +128,7 @@ Process.prototype.runStep = function () {
     }
 };
 \end{lstlisting}
-
+\end{figure}
 
 
 % /*
@@ -168,7 +168,7 @@ Un autre élément intéressant à analyser chez Snap! est sa façon d'afficher 
 \texttt{morphic.js} fournit les abstractions pour redessiner des parties de l'interface et pour interagir avec l'utilisateur. Le \texttt{canvas} utilisé possède un \texttt{world}. Ce \texttt{world} est la racine de l'arbre composé de \texttt{morph} et leurs sous-\texttt{morph}. Chaque \texttt{morph} peut être déplacé, redimensionné via le code source ou les manipulations de l'utilisateur.
 
 La fonction principale de \texttt{morphic.js} consiste à parcourir continuellement tous les éléments du \texttt{world} pour redessiner ceux qui ont été modifiés. Le \texttt{world} permet à l'ordonnanceur d'exécuter une étape entre chaque itération. Le code source \ref{lst-doonecycle} montre que le monde est rafraîchit toutes les 50 millisecondes.
-
+\begin{figure}
 \begin{lstlisting}[caption={Exemple d'utilisation de \texttt{morphic.js}},label=lst-doonecycle,language=HTML5,alsolanguage=JavaScript]
 <!DOCTYPE html>
 <html>
@@ -194,9 +194,10 @@ La fonction principale de \texttt{morphic.js} consiste à parcourir continuellem
     </body>
 </html>
 \end{lstlisting}
-
+\end{figure}
 La fonction \texttt{drawNew()} sert à dessiner un \texttt{morph}. Le code source \ref{lst-drawnew} montre que cette fonction dessine son objet sur une image stockée dans l'objet. Cette image provient d'un \texttt{canvas} virtuel généré grâce à l'image du \texttt{morph} parent.
 
+\begin{figure}
 \begin{lstlisting}[caption={Modèle pour la fonction \texttt{drawNew()}},label=lst-drawnew,language=JavaScript]
 MyMorph.prototype.drawNew = function() {
     var context;
@@ -205,6 +206,7 @@ MyMorph.prototype.drawNew = function() {
     // use context to paint stuff here
 };
 \end{lstlisting}
+\end{figure}
 
 \section{Ruby on Rails}
 \label{rails} 
@@ -255,6 +257,7 @@ Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il exist
 \end{description}
 %TODO intégré avec les contrôleurs. Paperclip dans les vues
 \subsection{Gem's}
+\label{gems}
 Ruby fournit une manière de partager des extensions pour des programmes Ruby via les gems. Rails lui-même est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
 
 La communauté de Rails à écrit de nombreux gem's permettant de rajouter facilement des fonctionnalités à une application. Le fichier \texttt{Gemfile} sert à lister les gem's utilisé dans un projet. Le gestionnaire du projet, doit faire attention à toutes ces dépendances pour garder son logiciel à jour. Pour ce faire, Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quel gem's doivent être mis à jours. Gemnasium informe donc les gestionnaires d'un logiciel lorsqu'une faille de sécurité est découverte dans un gem et qu'il faut donc le mettre à jour.
