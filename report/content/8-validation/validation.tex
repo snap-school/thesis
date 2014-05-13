@@ -1,28 +1,30 @@
 \chapter{Validation}
+Ce chapitre va présenté les technique de validation de la plateforme Rsnap. La validation du code est discuté code dans un premier temps. Ensuite les expériences sur des populations d'étudiants et leurs analyses sont développé.
 
 \section{Implémentation}
-Deux outils principaux ont été utilisés pour avoir un logiciel le mieux écrit possible \ref{rails-tests}. Cette section les présente, premièrement, les tests unitaires, ensuite, les métriques.
-%TODO faire intro
+Cette section présente les outils utilisés pour la validation du code de Rsnap. Deux outils principaux ont été utilisés pour avoir un logiciel le mieux écrit possible \ref{rails-tests}. Cette section les présente, premièrement, les tests unitaires, ensuite, les métriques.
 
 \subsection{Tests unitaires}
-Les tests unitaires servent à vérifier que le code testé fonctionne correctement. L'implémentation des tests s'est déroulée en parallèle de la création de l'application. Durant la conception de Rsnap, deux principaux types de tests ont été réalisés, les tests sur les contrôleurs et ceux au niveau de l'utilisateur. Mais avant tout, les outils utiliser pour ces tests sont présentés.
+Les tests unitaires servent à vérifier que le code fonctionne correctement. L'implémentation des tests s'est déroulée en parallèle de la création de l'application. Deux principaux types de tests ont été réalisés, ceux sur les contrôleurs et ceux au niveau de l'utilisateur. Ces tests sont présenté après une courte section qui présente les programme utiliser pour les tests.
 
 \subsubsection{Outils pour les tests}
-Pour réaliser ces tests, Travis-CI (\ref{travis}) est relié à Github pour que tous les tests soient exécutés à chaque commit. De plus, lors des "pull request" un message est affiché pour connaitre l'état de la branche. Le programmeur peut donc facilement savoir si l'acceptation de la branche introduira des bogues.
+Un des programme utilisé pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une "pull request" des tests sont également effectuer pour savoir si l'acceptation de la branche introduira des bogues.
 
-Une métrique générée par les tests est la couverture du code. Cette information est fournie par Coveralls\ref{biblio} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas l'information du type de code testé, il faut donc faire attention que les tests couvrent les parties critiques.
+Une des métriques générée par les tests est la couverture du code. Cette information est fournie par Coveralls\ref{biblio} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas l'information du type de code testé, il faut donc faire attention que les tests couvrent effectivement les parties critiques.
 
-Il est nécessaire de créer des données pour les modèles. Ceci s'effectue grâce au gem FactoryGirls \footnote{\url{https://github.com/thoughtbot/factory_girl_rails}} qui propose un langage dédié pour écrire rapidement des fabriques. Les fabriques vont à leur tour généré des données pour peupler les modèles.
+Enfin, lors les tests, il est nécessaire d'avoir des données pour les modèles. Ceci s'effectue grâce au gem FactoryGirls \footnote{\url{https://github.com/thoughtbot/factory_girl_rails}} qui propose un langage dédié pour écrire rapidement des fabriques. Ces dernière vont généré ces données de test pour peupler les modèles.
 
 \subsubsection{Tests au niveau des contrôleurs}
-Une première série de tests est réalisée grâce à RSpec. Ces tests ont pour vocations de vérifier l'accès aux différentes routes : les droits des utilisateurs et le type de retour des contrôleurs.
+Une première type de tests est réalisée grâce à RSpec. Ces tests ont pour vocations de vérifier l'accès aux différentes routes \ref{routes} : les droits des utilisateurs et le type de retour des contrôleurs.
 
-Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une mission à chaque test. Deux tests sont ensuite réalisé qui vérifie que seul un utilisateur authentifié peut ressourdre une mission.
+Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une mission à chaque test. Deux tests sont ensuite réalisé qui vérifie que seul un utilisateur authentifié peut réaliser une mission.
 
 \lstinputlisting[language=Ruby, caption={Test de l'accès au programme associé \`a une mission}, label=lst:rspec]{content/8-validation/validation/program_mission_initializations_controller_test.rb}
 
 \subsubsection{Tests au niveau de l'utilisateur}
-Une deuxième série de tests est réalisée grâce à Cucumber \ref{cucumber}. Cette deuxième série permet de tester l'application d'un point de vue de utilisateur. Gerkin permet d'écrire les scénarii en langage naturel. Ce type de tests permet d'assurer que les fonctionnalités demandées par l'utilisateur fonctionnent et donc toutes les ressources qui en dépendent. Ces tests sont donc de haut niveau, car ce n'est qu’indirectement que des erreurs internes à l'application peuvent être trouvées via les interactions faites sur l'interface.
+Un deuxième type de tests est réalisée grâce à Cucumber \ref{cucumber}. Ces tests s'effectue du point de vue de utilisateur.  Ceux-ci assure que les fonctionnalités demandées par l'utilisateur fonctionnent et aussi toutes les ressources dépendantes. 
+
+Gerkin est utilisé pour écrire les scénarii en langage naturel. Ces tests sont donc de haut niveau, car ce n'est qu’indirectement que des erreurs internes à l'application peuvent être trouvées via les interactions faites sur l'interface.
 
 \lstinputlisting[language=Gherkin, caption={Tests de l'accès aux missions}, label=lst:cucumber-mission]{content/8-validation/validation/mission_access.feature}
 
