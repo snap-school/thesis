@@ -18,13 +18,13 @@ Les concepts utiles pour développer l'application sont ceux présentés par les
 
 \paragraph{\texttt{User}} Ce modèle contient les informations nécessaires pour identifier les utilisateurs (\texttt{firstname}, \texttt{email} \ldots) et pour les authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). Les utilisateurs peuvent posséder plusieurs rôles, programmes et projets.
 
-\paragraph{\texttt{Role}} Les rôles permettent de donner des attributs aux utilisateurs. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de Rsnap, deux types d'utilisateurs ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux rôles sont globaux et ne sont donc pas rattachés à une ressource spécifique.%TODO dans futur Works: role teacher sur ressource students_group
+\paragraph{\texttt{Role}} Les rôles permettent de donner des attributs aux utilisateurs. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de Rsnap, deux types d'utilisateurs ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux rôles sont globaux et ne sont donc pas rattachés à une ressource spécifique.
 
 Les rôles sont utiles en conjonction avec les autorités \ref{authority} pour donner des droits supplémentaires à ces types d'utilisateurs.
 
 \paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Une mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. De plus, elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme. 
 
-\paragraph{\texttt{FileMission}} Les fichiers liés à une mission sont les différentes images qui composent la description. %TODO dans furture work : on peut imaginer rajouter la possibilité de mettre d'autre style de fichier dedans : ex. PDF, slide de cours...
+\paragraph{\texttt{FileMission}} Les fichiers liés à une mission sont les différentes images qui composent la description. 
 
 \paragraph{\texttt{Program}} Les programmes contiennent la solution d'un étudiant pour une mission. Ils contiennent uniquement le code source de l'étudiant.
 
@@ -68,7 +68,7 @@ L'extrait du contrôleur \texttt{MissionsController} \ref{lst:controller-mission
 \lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO vérifier les ranges des lignes
 \end{figure}
 
-Grâce à la méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes REST, des vérifications de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} donne la possibilité de réaliser une action supplémentaire avant chaque appel de fonction. Dans cet exemple, il faut que l'utilisateur soit authentifié pour que l'application puisse ensuite vérifier ses droits. Ceci à l'exception des actions \texttt{show} et \texttt{index} qui peuvent être publiques.  %TODO pas claire sur la fin tu commences par les exceptions
+Grâce à la méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes REST, des vérifications de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} donne la possibilité de réaliser une action supplémentaire avant chaque appel de fonction. Dans cet exemple, il faut que l'utilisateur soit authentifié pour que l'application puisse ensuite vérifier ses droits. Ceci à l'exception des actions \texttt{show} et \texttt{index} qui peuvent être publiques.  
 
 Dans une méthode public d'un contrôleur plusieurs actions sont à implémenter :
 \begin{enumerate}

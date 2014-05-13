@@ -19,14 +19,20 @@ Un premier type de tests est réalisé grâce à RSpec. Ces tests ont pour vocat
 
 Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une mission à chaque test. Deux tests sont ensuite réalisé qui vérifie que seul un utilisateur authentifié peut réaliser une mission.
 
+\begin{figure}
 \lstinputlisting[language=Ruby, caption={Test de l'accès au programme associé \`a une mission}, label=lst:rspec]{content/8-validation/validation/program_mission_initializations_controller_test.rb}
+\end{figure}
 
 \subsubsection{Tests au niveau de l'utilisateur}
 Un deuxième type de tests est réalisé grâce à Cucumber \ref{cucumber}. Ces tests s'effectuent à partir du point de vue de l'utilisateur. Ils assurent le bon fonctionnement des fonctionnalités demandées par l'utilisateur ainsi que des ressources qui en dépendent. Ces tests sont donc de haut niveau, car ce n'est que via les interactions faites sur l'interface que des erreurs internes à l'application peuvent être trouvées.
 
+\begin{figure}
 \lstinputlisting[language=Gherkin, caption={Tests de l'accès aux missions}, label=lst:cucumber-mission]{content/8-validation/validation/mission_access.feature}
+\end{figure}
 
+\begin{figure}
 \lstinputlisting[language=Ruby, linerange={1-15}, caption={Extrait de l'implémentation des tests de l'accès aux missions}, label=lst:cucumber-implementation-mission]{content/8-validation/validation/mission_steps.rb}
+\end{figure}
 
 Gerkin est utilisé pour écrire les scénarii en langage naturel. 
 Le code source \ref{lst:cucumber-mission} montre différents scénarii décrivant l'accès aux missions. Le haut niveau de Gherkin est visible dans cet exemple. En effet, toute personne anglophone peut comprendre ce que testent les différents scénarii. 
