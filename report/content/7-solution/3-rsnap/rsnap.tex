@@ -1,4 +1,4 @@
-\section{Rsnap}
+﻿\section{Rsnap}
 \graphicspath{{content/7-solution/3-rsnap/images/}}
 Cette section traite de l'implémentation de la solution Rsnap ainsi qu'une présentation de son utilisation.
 
@@ -65,12 +65,12 @@ Comme il est expliqué dans la section \ref{controleur}, les méthodes accessibl
 L'extrait du contrôleur \texttt{MissionsController} \ref{lst:controller-mission} montre l'usage classique d'un contrôleur. 
 
 \begin{figure}
-\lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO vérifier les ranges des lignes
+\lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du contrôleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO vérifier les ranges des lignes
 \end{figure}
 
-Grâce à la méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes REST, des vérifications de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} donne la possibilité de réaliser une action supplémentaire avant chaque appel de fonction. Dans cet exemple, il faut que l'utilisateur soit authentifié pour que l'application puisse ensuite vérifier ses droits. Ceci à l'exception des actions \texttt{show} et \texttt{index} qui peuvent être publiques.  
+Grâce au méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes REST, des vérifications de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} donne la possibilité de réaliser une action supplémentaire avant chaque appel de fonction. Dans cet exemple, il faut que l'utilisateur soit authentifié pour que l'application puisse ensuite vérifier ses droits. Ceci à l'exception des actions \texttt{show} et \texttt{index} qui peuvent être publiques.  
 
-Dans une méthode public d'un contrôleur plusieurs actions sont à implémenter :
+Dans une méthode publique d'un contrôleur plusieurs actions sont à implémenter :
 \begin{enumerate}
   \item traiter, si nécessaire, les paramètres fournis. Ceux-ci se trouvent dans \lstinline[language=Rails]{params} ;
   \item Assigner les variables d'instance dont la vue a besoin pour s'afficher correctement ;
@@ -106,7 +106,7 @@ Les connaisseurs de Bootstrap \ref{bootstrap} auront reconnu l'usage intensif de
 
 \subsection{Utilisation}
 Pour utiliser la plateforme, il faut d'abord s'enregistrer. Ensuite, suivant le profil, différentes actions sont possibles. L'utilisateur normal peut uniquement résoudre les missions dans l'ordre proposé par les professeurs. Les professeurs peuvent aussi créer des missions. Cette section présente l'utilisation de la plateforme.
-%TODO faire des schémas/scénario avec les screenshot + tous les screenshot en annexe
+%TODO screenshot en annexe
 
 \paragraph{Professeur}
 Afin de réaliser un cours de programmation, un professeur doit pouvoir faire les actions suivantes :
@@ -141,7 +141,7 @@ Afin de réaliser un cours de programmation, un professeur doit pouvoir faire le
 Un étudiant doit pouvoir réaliser les opérations suivantes :
 \subparagraph{Réaliser une mission} L'étudiant réalise une mission (figure \ref{fig:program-creation}) en cliquant sur le nom de la mission. 
 
-Deux possibilités s'offrent à lui. Soit le bouton est bleu, ce qui signifie que la mission a déjà été commencée. L'étudiant la reprend là où elle s'était arrêtée. Soit, le bouton est vert et dans ce cas, une nouvelle mission commence.
+Deux possibilités s'offrent à lui. Soit, le bouton est bleu, ce qui signifie que la mission a déjà été commencée. L'étudiant la reprend là où elle s'était arrêtée. Soit, le bouton est vert et dans ce cas, une nouvelle mission commence.
 
 Dans les deux cas, l'étudiant se retrouve sur l'interface de Snap!.
 \begin{figure}

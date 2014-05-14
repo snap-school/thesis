@@ -1,17 +1,34 @@
-\chapter{Connaissances nécessaires}
+﻿\chapter{Connaissances nécessaires}
 Ce chapitre commencera par présenter de manière succincte les prérequis pour pouvoir suivre ce document. Ensuite, une description plus technique présentera les outils utilisés.
 
 \section{Prérequis}
 Les connaissances nécessaires à la bonne compréhension de ce travail vont être développées dans cette partie.
 
 \paragraph{Snap!}
-Commençons par la partie portant sur Snap! BYOB. Cette application est implémentée en JavaScript. Donc, de bonnes connaissances dans ce langage de programmation seront un atout pour comprendre les apports et modifications de la version de départ. Des connaissances en XML et JSON seront également un plus pour toutes les fonctions d'importation et d'exportation.
+Commençons par la partie portant sur Snap! BYOB. 
+
+Cette application est implémentée en JavaScript. Donc, de bonnes connaissances dans ce langage de programmation seront un atout pour comprendre les logicielles utilisés et les apports et modifications apportées à ceux-ci.
+
+Cette application utilise une programmation dite par bloc. Le principe est d'empiler des blocs qui représentent des opérations. Une fois ces blocs assemblés, il représente un programme exécutable. Un exemple de programme est disponible sur la figure \ref{fig:prog}
+
+\begin{figure}[]
+  \begin{center}
+  \includegraphics[width=\textwidth]{content/4-prerequis/images/snap}
+        \caption{Exemple de programmation par bloc}
+    \label{fig:prog}
+  \end{center}
+\end{figure}
+
 
 \paragraph{Ruby on Rails}
-La plateforme web, elle est implémentée en Ruby on Rails qui est le framework le plus utilisé pour la création de site web en Ruby. Ce framework est un atout car il permet de créer facilement des sites sur une architecture de type modèle-vue-contrôleur. Rails se base sur des conventions au lieu de se baser sur des configurations. Cela permet d'alléger considérablement le nombre de lignes nécessaires pour la création d'un site web. Ce framework étant basé sur Ruby, il permet l'usage des gems Ruby. Un gems est une bibliothèque logicielle qui permet d'avoir facilement des fonctionnalités supplémentaires. Plus de détails techniques seront donnés dans la suite de ce chapitre \ref{techno}. %TODO ajouter gem au glossaire
+La plateforme web est implémentée en Ruby on Rails qui est le framework le plus utilisé pour la création de site web en Ruby. 
+
+Des connaissances sur l'architecture de type modèle-vue-contrôleur sont nécessaire. 
+
+L'utilisation de gems, bibliothèque logicielle, demande des bases en développement Ruby. Plus de détails techniques seront donnés dans la suite de ce chapitre \ref{techno}. %TODO ajouter gem au glossaire
 
 \paragraph{Pédagogie}
 Pour l'apprentissage de la programmation aux jeunes, des notions de pédagogie sont également nécessaires. 
-Les programmes d'apprentissages existants permettent de définir pour chaque année d'étude, les concepts considérés comme acquis par les élèves. La communication avec les jeunes demande un vocabulaire adapté. Tout ceci s'avère important pour les choix de design d'interface. Par exemple, suivant leur âge, les jeunes ne seront pas stimulés par les mêmes images ou couleurs. %TODO revoir ce chapitre
+Les programmes d'apprentissages existants permettent de définir les concepts considérés comme acquis par les élèves. La communication avec les jeunes demande un vocabulaire adapté. Tout ceci s'avère important pour les choix de design d'interface. Par exemple, suivant leur âge, les jeunes ne seront pas stimulés par les mêmes images ou couleurs.
 
 \input{content/4-prerequis/software_used}
