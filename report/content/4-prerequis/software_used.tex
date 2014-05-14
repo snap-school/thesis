@@ -1,5 +1,5 @@
 \section{Snap!}
-\url{http://snap.berkeley.edu/SnapManual.pdf} %TODO mettre en biblio
+\footnote{\url{http://snap.berkeley.edu/SnapManual.pdf}}  %TODO mettre en biblio
 Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de Snap! se diviser en plusieurs paragraphes. La première explique les différents types de blocs et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de Snap!. %TODO plus d'explication bloc Derniere phrase
 
 \subsection{Blocs}
@@ -84,7 +84,7 @@ Un programme est constitué de plusieurs processus. Chaque processus est exécut
 
 Un processus \texttt{Process} représente l'exécution d'un scripte, une pile de blocs. Il assure aussi le suivit de l'exécution du scripte : prochain bloc à exécuter, objet sur lequel il s'applique, contexte décrivant l'état courant, etc.
 
-L'ordonnanceur \texttt{ThreadManager} appelle successivement la fonction \texttt{runStep()} sur le code source \ref{lst-runstep} sur chaque processus. Cette fonction exécute un certain nombre de blocs via \texttt{this.evaluateContext()} de manière atomique. Elle rend la main volontairement à l'ordonnanceur quand elle a fini. Comme il est possible d'écrire soi-même des blocs, \texttt{runStep()} rend aussi la main si trop de temps s'est écoulé depuis le début de l'exécution de cette étape. La convention veut que les processus rendent la main à la fin de chaque itération de boucles et quand une opération relative au temps ou synchrone est exécutée.
+L'ordonnanceur \texttt{ThreadManager} appelle la fonction \texttt{runStep()} (extrait de code source \ref{lst-runstep}) successivement sur chaque processus. Cette fonction exécute un certain nombre de blocs via \texttt{this.evaluateContext()} de manière atomique. Elle rend la main volontairement à l'ordonnanceur quand elle a fini. Comme il est possible d'écrire soi-même des blocs, \texttt{runStep()} rend aussi la main si trop de temps s'est écoulé depuis le début de l'exécution de cette étape. La convention veut que les processus rendent la main à la fin de chaque itération de boucles et quand une opération relative au temps ou synchrone est exécutée.
 \begin{figure}
 \begin{lstlisting}[caption={Fonction \texttt{runStep()} de \texttt{Process}},label=lst-runstep,language=JavaScript]
 Process.prototype.runStep = function () {
@@ -218,7 +218,7 @@ Rails part de l'hypothèse qu'il existe une meilleure façon d'aborder la créat
 Pour atteindre cet objectif, Rails utilise deux principes majeurs :
 \begin{description}
   \item[Convention plutôt que configuration (CoC)] Pour permettre au programmeur d'écrire moins de code, Rails permet de n'écrire que ce qui ne correspond pas aux conventions. Rails utilise la métaprogrammation pour fournir les conventions à tous les objets ;
-  \item[Ne vous répétez  pas (DRY)] L'architecture que propose Rails recommande de mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
+  \item[Ne vous répétez  pas (DRY)] Rails recommande une architecture où il faut mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
 \end{description}
 
 Un service aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie Rails. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
@@ -258,7 +258,7 @@ Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il exist
 %TODO intégré avec les contrôleurs. Paperclip dans les vues
 \subsection{Gem's}
 \label{gems}
-Ruby fournit une manière de partager des extensions pour des programmes Ruby via les gems. Rails lui-même est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
+Ruby fournit une manière de partager des fonctionnalités pour des programmes Ruby via les gems. Rails lui-même est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
 
 La communauté de Rails à écrit de nombreux gem's permettant de rajouter facilement des fonctionnalités à une application. Le fichier \texttt{Gemfile} sert à lister les gem's utilisé dans un projet. Le gestionnaire du projet, doit faire attention à toutes ces dépendances pour garder son logiciel à jour. Pour ce faire, Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quel gem's doivent être mis à jours. Gemnasium informe donc les gestionnaires d'un logiciel lorsqu'une faille de sécurité est découverte dans un gem et qu'il faut donc le mettre à jour.
 
@@ -267,7 +267,7 @@ Quelque exemples de gems intéressants sont présentées ci-après.
   \item[Paperclip] Permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'amazon ou de dropbox.
   \item[Devise] gère la problématique de l'authentification des utilisateurs.
   \item[Rolify] donne des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
-  \item[Authority] gère les droits des utilisateurs sur les différentes ressources \textit{contrôleur}. \label{authority}
+  \item[Authority] gère les droits des utilisateurs sur les différentes ressources des contrôleurs. \label{authority}
 \end{description}
 
 \subsection{Tests}
