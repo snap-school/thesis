@@ -1,6 +1,6 @@
 \section{Snap!}
 \footnote{\url{http://snap.berkeley.edu/SnapManual.pdf}}  %TODO mettre en biblio
-Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de Snap! se diviser en plusieurs paragraphes. La première explique les différents types de blocs et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de Snap!. 
+Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de Snap! se diviser en plusieurs paragraphes. La première explique les différents types de blocs et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de Snap!. %TODO plus d'explication bloc Derniere phrase
 
 \subsection{Blocs}
 Il existe plusieurs types de blocs qui constituent un programme Snap!. Sur la figure \ref{fig:software-used-script}, le programme présente les différents types blocs disponibles.
@@ -23,8 +23,8 @@ Les \texttt{reporter's} sont des fonctions. En effet, ils renvoient une valeur. 
 Les \texttt{reporter} sont des blocs de forme arrondie. La figure \ref{fig:software-used-script} montre différentes utilisations de \texttt{reporter} : somme, valeur aléatoire, position, etc. Tout comme pour les \texttt{commande}, les \texttt{reporter} peuvent être de diverses couleurs suivant leur catégorie.
 
 \subsubsection{Prédicat}
-Les \texttt{prédicat} sont des reporters qui retournent une valeur booléenne. Ils sont donc utilisés en conjonction avec des commandes demandant une condition. Les \texttt{prédicat} ont une forme hexagonale sur la figure \ref{fig:software-used-script}.
-
+Les \texttt{prédicat} sont des reporters qui retournent une valeur booléenne. Ils sont donc utilisés en conjonction avec des commandes demandant une condition. Les \texttt{prédicat} ont une forme hexagonale.
+%TODO ajouter un exemple
 
 \subsubsection{Chapeau}
 Les \texttt{chapeau} sont des commandes spéciales car ils sont le point d'entrée obligatoire d'un script en permettant de démarrer l'exécution d'un script. Plusieurs types d'événements peuvent lancer un scripte : une touche pressée, un clic sur le drapeau vert.
@@ -246,7 +246,7 @@ Il détermine quelle vue doit s'afficher et avec quels paramètres. Le contrôle
 Rails encourage d'avoir des ressources REST, c'est-à-dire, des ressources avec une représentation unique et des actions unifiées telles que create, new, edit, update, destroy, show, index. Les actions disponibles sur un contrôleur sont déterminées par le fichier de configurations des routes.
 
 \subsubsection{Vue} 
-Les vues correspondent à ce que les utilisateurs reçoivent et voient. Ce sont typiquement des pages HTML, mais aussi des PDF, objets JSON, fichiers, etc.
+Les vues correspondent à ce que les utilisateurs reçoivent et voient. Ce sont typiquement des pages HTML, mais aussi des PDF, objets JSON, fichiers, etc\ldots
 
 Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il existe notamment: 
 \begin{description}
@@ -255,7 +255,7 @@ Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il exist
   \item[CoffeeScript] Est un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire, plus courte et d'ajouter des sucres syntaxiques par rapport à JavaScript;
   \item[Bootstrap] Est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilise. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc. \label{bootstrap}
 \end{description}
-
+%TODO intégré avec les contrôleurs. Paperclip dans les vues
 \subsection{Gem's}
 \label{gems}
 Ruby fournit une manière de partager des fonctionnalités pour des programmes Ruby via les gems. Rails lui-même est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
