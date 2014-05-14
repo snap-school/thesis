@@ -1,4 +1,4 @@
-﻿\section{Snap!}
+\section{Snap!}
 \footnote{\url{http://snap.berkeley.edu/SnapManual.pdf}}  %TODO mettre en biblio
 Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de Snap! se diviser en plusieurs paragraphes. La première explique les différents types de blocs et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de Snap!. 
 
@@ -27,7 +27,7 @@ Les \texttt{prédicat} sont des reporters qui retournent une valeur booléenne. 
 
 
 \subsubsection{Chapeau}
-Les \texttt{chapeau} sont des commandes spéciales, car ils sont le point d'entrée obligatoire d'un script en permettant de démarrer l'exécution d'un script. Plusieurs types d'événements peuvent lancer un scripte : une touche pressée, un clic sur le drapeau vert.
+Les \texttt{chapeau} sont des commandes spéciales car ils sont le point d'entrée obligatoire d'un script en permettant de démarrer l'exécution d'un script. Plusieurs types d'événements peuvent lancer un scripte : une touche pressée, un clic sur le drapeau vert.
 
 Dans la figure \ref{fig:software-used-script} le démarrage du programme est l'événement qui lance le scripte. Il est symbolisé par un drapeau vert.
 
@@ -239,7 +239,7 @@ La correspondance entre un objet Ruby et la base de données est réalisée grâ
   
 \subsubsection{Contrôleur}
 \label{controleur}
-Le contrôleur a pour fonction d'accéder à une ressource. Une ressource est un modèle ou tout autre objet indirect tel qu’enregistrement, login, page d'accueil\ldots  
+Le contrôleur a pour fonction d'accéder à une ressource. Une ressource est un modèle ou tout autre objet indirect tel que enregistrement, login, page d'accueil\ldots  
 
 Il détermine quelle vue doit s'afficher et avec quels paramètres. Le contrôleur a donc la tâche de vérifier la sécurité et l'intégrité des données fournies par l'utilisateur. Ensuite, il peut interroger différents modèles et fournir les réponses à la vue adéquate.
 
@@ -251,7 +251,7 @@ Les vues correspondent à ce que les utilisateurs reçoivent et voient. Ce sont 
 Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il existe notamment: 
 \begin{description}
   \item[Haml] Un langage fournissant une syntaxe raccourcie du HTML. Il se base sur l'indentation plutôt que sur une syntaxe XML. Haml permet donc de respecter le principe \texttt{DRY} et d'améliorer la lisibilité par un code source plus court et bien indenté ; \label{haml}
-  \item[JQuery] Cette bibliothèque JavaScript bien connue permet de modifier facilement le document courant, de gérer des événements, de créer des animations, etc. ;
+  \item[JQuery] Cette bibliothèque javaScript bien connue permet de modifier facilement le document courant, de gérer des événements, de créer des animations, etc. ;
   \item[CoffeeScript] Est un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire, plus courte et d'ajouter des sucres syntaxiques par rapport à JavaScript;
   \item[Bootstrap] Est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilise. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc. \label{bootstrap}
 \end{description}
@@ -260,11 +260,11 @@ Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il exist
 \label{gems}
 Ruby fournit une manière de partager des fonctionnalités pour des programmes Ruby via les gems. Rails lui-même est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
 
-La communauté de Rails à écrit de nombreux gem's permettant de rajouter facilement des fonctionnalités à une application. Le fichier \texttt{Gemfile} sert à lister les gem's utilisés dans un projet. Le gestionnaire du projet doit faire attention à toutes ces dépendances pour garder son logiciel à jour. Pour ce faire, Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quels gem's doivent être mis à jour. Gemnasium informe donc les gestionnaires d'un logiciel lorsqu'une faille de sécurité est découverte dans un gem et qu'il faut donc le mettre à jour.
+La communauté de Rails à écrit de nombreux gem's permettant de rajouter facilement des fonctionnalités à une application. Le fichier \texttt{Gemfile} sert à lister les gem's utilisé dans un projet. Le gestionnaire du projet, doit faire attention à toutes ces dépendances pour garder son logiciel à jour. Pour ce faire, Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quel gem's doivent être mis à jours. Gemnasium informe donc les gestionnaires d'un logiciel lorsqu'une faille de sécurité est découverte dans un gem et qu'il faut donc le mettre à jour.
 
-Quelque exemples de gems intéressants sont présentés ci-après.
+Quelque exemples de gems intéressants sont présentées ci-après.
 \begin{description}
-  \item[Paperclip] Permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'amazone ou de dropbox.
+  \item[Paperclip] Permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'amazon ou de dropbox.
   \item[Devise] gère la problématique de l'authentification des utilisateurs.
   \item[Rolify] donne des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
   \item[Authority] gère les droits des utilisateurs sur les différentes ressources des contrôleurs. \label{authority}
