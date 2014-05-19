@@ -17,7 +17,7 @@ Le positionnement RSnap vis à vis de son public visé est présenté dans cette
 
 \paragraph{Âge}
 Rsnap se veut une application qui vise un public de 10 à 14 ans. Les missions qui ont été développées dans le cadre de ce travail ciblent particulièrement cette tranche d'âge. Cette question est nuancée par l'analyse des résultats des expérimentations abordée dans le chapitre \ref{trancheage}.
-Toute fois, l'application permettant la création de mission de manière autonome, d'autres tranches d'âge peuvent s'y appliquer. La créativité des utilisateurs est la seule limite formelle.
+Toutefois, l'application permettant la création de mission de manière autonome, d'autres tranches d'âge peuvent s'y appliquer. La créativité des utilisateurs est la seule limite formelle.
 
 \paragraph{Origine et genre}
 En ce qui concerne les particularités des utilisateurs, aucune discrimination dans quelque sens que ce soit n'a été faite lors de la conception de ce travail, tant pour attirer un public que pour l'exclure. 
@@ -31,7 +31,7 @@ Cette section explique comment sont utilisés les différentes ressources pour a
 \label{outil}
 L'apprentissage de la programmation dans le but d'améliorer l'esprit logique des jeunes est un des objectifs principaux de ce travail. Dans cette optique, Rsnap se base sur un langage visuel \ref{langages}. L'accent est mis sur l'acquisition d'un esprit logique grâce à des exercices de logiques plutôt que sur l'apprentissage d'un langage de programmation.  En effet, suivant l'adage "il faut diviser pour mieux régner", vouloir tout faire en même temps ne convient pas à tous. En se concentrant sur la logique, cela assure une meilleure acquisition de la matière. De plus, un des buts de l'application Rsnap est aussi de susciter des vocations en programmation, ce qui se fera naturellement.
 
-Un des objectifs de ce travail vise à ce que les personnes qui guident l'activité n'aient pas besoin de connaissance particulière en programmation. Un vrai langage de programmation a été écarté, car les encadrants auraient dû au minimum avoir connaissance de sa syntaxe.
+De plus un des objectifs de ce travail vise à ce que les personnes qui guident l'activité n'aient pas besoin de connaissance particulière en programmation. Un vrai langage de programmation a été écarté, car les encadrants auraient dû au minimum avoir connaissance de sa syntaxe.
 
 \paragraph{Concepts}
 La manière dont les concepts sont abordés dans Rsnap se fait par la procédure suivante :
@@ -47,7 +47,7 @@ Les missions implémentées dans ce travail sont de petites missions introduisan
 \paragraph{environnement de ce travail}
 L'environnement de ce travail est déterminé prioritairement par son milieu d'utilisation, à savoir les écoles. 
 
-L'indépendance des jeunes par rapport au référent oriente l'activité vers la formation de binôme. Toute fois, comme le groupe animé est une classe, une introduction collective est possible et souhaitable. 
+L'indépendance des jeunes par rapport au référent oriente l'activité vers la formation de binôme. Toutefois, comme le groupe animé est une classe, une introduction collective est possible et souhaitable. 
 Si les jeunes le souhaite, ils peuvent également avoir accès au site web en dehors du cadre scolaire.
 
 \subsection{Type d'organisation, enseignants, création des cours}
@@ -84,7 +84,7 @@ Suite au positionnement de RSnap \ref{positionnement}, une critères d'utilisati
   \item[Différencier les utilisateurs] afin de fournir une interface personnalisée suivant que l'utilisateur soit un professeur ou un élève.
   \item[Indépendance du matériel] afin d'avoir une plateforme accessible sur le plus d'ordinateurs et autres périphériques possibles.
   \item[Fiabilité et évolutivité] pour avoir la possibilité de rajouter des fonctionnalités tout en gardant une stabilité de l'application.
-  \item[Facilité à mettre en place et à maintenir] en vue d'être déployable facilement dans une école si cette dernière a le matériel adéquat.
+  \item[Facilité à mettre en place et à maintenir] en vue d'être déployable facilement dans une école si cette dernière a le matériel adéquat à savoir un serveur web.
   \item[Sauvegarder l'avancement] pour permettre à chaque utilisateur de connaitre où en est la résolution de ses missions.
 \end{description}
 
@@ -94,7 +94,7 @@ La plateforme d'apprentissage est la partie de l'application qui permet d'aider 
 Sur base des critères précités, les choix suivant ont été faits :
 \begin{description}
   \item[Technologie web] Pour faciliter l'utilisation de la plateforme par tous, il est utile de choisir des technologies web. En effet, Il suffit d'un navigateur et d'une connexion internet pour que les utilisateurs puissent y accéder.
-  \item[Logiciel libre] La connaissance ne devant pas être la propriété de quelques uns, il faut viser à la rendre accessible à tous. Les logiciels libres forcent à respecter ce droit d'accès à l'enseignement et à la culture. De plus, cela permet à tout un chacun d'héberger toute l'infrastructure en interne.
+  \item[Logiciel libre] La connaissance ne devant pas être la propriété de quelques uns, il faut viser à la rendre accessible à tous. Les logiciels libres forcent à respecter ce droit d'accès à l'enseignement et à la culture. De plus, cela permet à tout un chacun d'héberger l'infrastructure en interne.
   \item[MVC] Pour séparer les différentes problématiques dans des composants bien définis, l'architecture MVC est un choix courant. Dans le cas de RSnap, le modèle permet de gérer les concepts d'utilisateurs, d'exercices et de résolutions. La possibilité de donner des droits différenciés aux étudiants ou aux professeurs se fait au niveau des contrôleurs. Les vues fournissent l'indépendance par rapport au matériel car elles peuvent être spécialisées en fonction de celui-ci.
 \end{description}
 Un logiciel qui permet de satisfaire tous ces choix en même temps est Rails. En effet, comme expliqué dans la section \ref{gems}, Rails peut bénéficier de différents gem's pour avoir facilement les fonctionnalités demandées. C'est aussi grâce à la connaissance approfondie de cet outil par les auteurs de ce travail que cette plateforme a été choisie. Ces deux éléments ont permis de développer rapidement et correctement une application qui correspond aux critères. 
