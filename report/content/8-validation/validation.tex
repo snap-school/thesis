@@ -10,12 +10,12 @@ Les tests unitaires servent à vérifier que le code fonctionne correctement. L'
 \subsubsection{Outils pour les tests}
 Un des programmes utilisés pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une "pull request", les tests sont également effectués pour savoir si l'acceptation de la branche introduira des bogues.
 
-Une des métriques générées par les tests est la couverture du code. Cette information est fournie par Coveralls\ref{biblio} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas d'information sur le type de code testé. Il faut donc être attentif à ce que les tests couvrent effectivement les parties critiques.
+Une des métriques générées par les tests est la couverture du code. Cette information est fournie par Coveralls\cite{coveralls} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas d'information sur le type de code testé. Il faut donc être attentif à ce que les tests couvrent effectivement les parties critiques.
 
-Enfin, lors des tests, il est nécessaire d'avoir des données pour peupler les modèles. Ceci s'effectue grâce au gem FactoryGirls \footnote{\url{https://github.com/thoughtbot/factory_girl_rails}} qui propose un langage dédié pour écrire rapidement des fabriques. Ces dernières vont générer ces données de test pour peupler les modèles.
+Enfin, lors des tests, il est nécessaire d'avoir des données pour peupler les modèles. Ceci s'effectue grâce au gem FactoryGirls \cite{factorygirls} qui propose un langage dédié pour écrire rapidement des fabriques. Ces dernières vont générer ces données de test pour peupler les modèles.
 
 \subsubsection{Tests au niveau des contrôleurs}
-Un premier type de tests est réalisé grâce à RSpec. Ces tests ont pour vocation de vérifier l'accès aux différentes routes \ref{routes} : les droits des utilisateurs et le type de retour des contrôleurs.
+Un premier type de tests est réalisé grâce à RSpec \cite{rspec}. Ces tests ont pour vocation de vérifier l'accès aux différentes routes \ref{rails-routes} : les droits des utilisateurs et le type de retour des contrôleurs.
 
 Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une mission à chaque test. Deux tests sont ensuite réalisé qui vérifie que seul un utilisateur authentifié peut réaliser une mission.
 
@@ -96,7 +96,7 @@ Elle a été remplacée par \texttt{Soyons courtois} décrit en section \ref{mis
 Lors de l'expérience, un groupe d'enfants a réussi à corrompre l'environnement de la mission suite à une série obscure d'opérations. Pour palier à ce genre de risque, un bouton "réinitialiser la mission" a été rajouté dans l'interface de Snap!. Il permet de réinitialiser la mission courante.
 
 \paragraph{Ajout de vidéo d'introduction}
-Comme observé dans cette expérience, les jeunes ont tendance à ne pas lire les textes explicatifs des missions. Il peut en résulter un manque de productivité. Une vidéo d'introduction a donc été rajoutée au début de chaque mission (figure \ref{quelque part}). Cette vidéo explique le but de la mission et donne les instructions. En cas d'oubli, un résumé écrit est toujours présent.
+Comme observé dans cette expérience, les jeunes ont tendance à ne pas lire les textes explicatifs des missions. Il peut en résulter un manque de productivité. Une vidéo d'introduction a donc été rajoutée au début de chaque mission (figure \ref{fig:program-creation}). Cette vidéo explique le but de la mission et donne les instructions. En cas d'oubli, un résumé écrit est toujours présent.
 
 \subsection{Printemps des Sciences}
 Cette expérience s'est déroulée dans le cadre de la semaine Scienceinfuse. Des écoles du fondamental et du secondaire viennent participer à des animations dans les universités. L'expérience s'est déroulée avec quatre groupes d'enfants. Ces activités duraient une heure trente y compris les temps d'installation et de prise en charge. Les élèves étaient en programmation par paire \ref{paire} et donc à deux devant un ordinateur.
@@ -170,7 +170,7 @@ Par des expériences ludiques menées en une heure, les enfants ont appris des c
 
 \subsection{Analyse des formulaires}
 \label{analyse-exp}
-Un formulaire a été complèté par chaque enfants et chaque professeurs à la fin de l'activité. Dans cette partie, les formulaires sont analysés. Les données complètes, les graphiques et les commentaires sont disponibles en annexe, section \ref{annex-data-form}.
+Un formulaire a été complèté par chaque enfants et chaque professeurs à la fin de l'activité. Dans cette partie, les formulaires sont analysés. Les données complètes, les graphiques et les commentaires sont disponibles en annexe \ref{annex-data-form}.
 
 \paragraph{Niveau des enfants en informatique}
 Une des questions du formulaire portait sur la connaissance de l'informatique et de la programmation. Les schémas montrent comment les enfants auto-évaluent leurs compétences en informatique et en programmation avant de faire l'expérience \ref{fig:niveau-avant} et après l'expérience \ref{fig:niveau-apres}.

@@ -1,9 +1,8 @@
 \section{Snap!}
-\footnote{\url{http://snap.berkeley.edu/SnapManual.pdf}}  %TODO mettre en biblio
-Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de Snap! se diviser en plusieurs paragraphes. La première explique les différents types de blocs et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de Snap!. %TODO plus d'explication bloc Derniere phrase
+Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de Snap! \cite{snap} se diviser en plusieurs paragraphes. La première explique les différents types de blocs et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de Snap!. %TODO plus d'explication bloc Derniere phrase
 
 \subsection{Blocs}
-Il existe plusieurs types de blocs qui constituent un programme Snap!. Sur la figure \ref{fig:software-used-script}, le programme présente les différents types blocs disponibles.
+Il existe plusieurs types de blocs qui constituent un programme Snap! \cite{snap-man}. Sur la figure \ref{fig:software-used-script}, le programme présente les différents types blocs disponibles.
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{content/5-related_work/images/script}
@@ -210,21 +209,22 @@ MyMorph.prototype.drawNew = function() {
 
 \section{Ruby on Rails}
 \label{rails} 
-Ruby on Rails est une plateforme de développement d'application web basée sur le langage de programmation Ruby. Cette partie présente la philosophie, l'architecture et des environnements de tests de Rails.
+Ruby on Rails \cite{rails} est une plateforme de développement d'application web basée sur le langage de programmation Ruby \cite{ruby}. Cette partie présente la philosophie, l'architecture et des environnements de tests de Rails.
 
 \subsection{Philosophie}
-Rails part de l'hypothèse qu'il existe une meilleure façon d'aborder la création d'application web. Si le programmeur respecte ce "Rails way", il améliorera sa productivité et écrira moins de code. D'après Rails, s’il persiste à utiliser ses anciennes habitudes, le développeur s'amusera beaucoup moins en créant son application.
+Rails part de l'hypothèse qu'il existe une meilleure façon d'aborder la création d'application web \cite{rails-guides}. Si le programmeur respecte ce "Rails way", il améliorera sa productivité et écrira moins de code. D'après Rails, s’il persiste à utiliser ses anciennes habitudes, le développeur s'amusera beaucoup moins en créant son application.
 
 Pour atteindre cet objectif, Rails utilise deux principes majeurs :
 \begin{description}
-  \item[Convention plutôt que configuration (CoC)] Pour permettre au programmeur d'écrire moins de code, Rails permet de n'écrire que ce qui ne correspond pas aux conventions. Rails utilise la métaprogrammation pour fournir les conventions à tous les objets ;
-  \item[Ne vous répétez  pas (DRY)] Rails recommande une architecture où il faut mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
+  \item[Convention plutôt que configuration (CoC) \cite{wiki-coc}] Pour permettre au programmeur d'écrire moins de code, Rails permet de n'écrire que ce qui ne correspond pas aux conventions. Rails utilise la métaprogrammation pour fournir les conventions à tous les objets ;
+  \item[Ne vous répétez  pas (DRY) \cite{wiki-dry}] Rails recommande une architecture où il faut mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
 \end{description}
 
+\label{rbp}
 Un service aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie Rails. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
 
 \subsection{Architecture}
-Rails se base sur une architecture Modèle-Vue-Contrôleur \ref{fig:mvc}.
+Rails se base sur une architecture Modèle-Vue-Contrôleur \cite{wiki-mvc} (figure \ref{fig:mvc}).
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[scale=0.3]{content/4-prerequis/images/mvc}
@@ -243,31 +243,33 @@ Le contrôleur a pour fonction d'accéder à une ressource. Une ressource est un
 
 Il détermine quelle vue doit s'afficher et avec quels paramètres. Le contrôleur a donc la tâche de vérifier la sécurité et l'intégrité des données fournies par l'utilisateur. Ensuite, il peut interroger différents modèles et fournir les réponses à la vue adéquate.
 
-Rails encourage d'avoir des ressources REST, c'est-à-dire, des ressources avec une représentation unique et des actions unifiées telles que create, new, edit, update, destroy, show, index. Les actions disponibles sur un contrôleur sont déterminées par le fichier de configuration des routes.
+\label{rest}\label{rails-routes}
+Rails encourage d'avoir des ressources REST \cite{wiki-rest}, c'est-à-dire, des ressources avec une représentation unique et des actions unifiées telles que create, new, edit, update, destroy, show, index. Les actions disponibles sur un contrôleur sont déterminées par le fichier de configuration des routes.
 
 \subsubsection{Vue} 
 Les vues correspondent à ce que les utilisateurs reçoivent et voient. Ce sont typiquement des pages HTML, mais aussi des PDF, objets JSON, fichiers, etc\ldots
 
 Pour faciliter la création des vues, Rails permet d'utiliser des gems. Il existe notamment: 
 \begin{description}
-  \item[Haml] un langage fournissant une syntaxe raccourcie du HTML. Il se base sur l'indentation plutôt que sur une syntaxe XML. Haml permet donc de respecter le principe \texttt{DRY} et d'améliorer la lisibilité par un code source plus court et bien indenté ; \label{haml}
-  \item[JQuery] cette bibliothèque javaScript bien connue permet de modifier facilement le document courant, de gérer des événements, de créer des animations, etc. ;
-  \item[CoffeeScript] est un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire, plus courte et d'ajouter des sucres syntaxiques par rapport à JavaScript;
-  \item[Bootstrap] est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilisent. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc. \label{bootstrap}
+  \item[Haml \cite{haml} \label{haml}] un langage fournissant une syntaxe raccourcie du HTML. Il se base sur l'indentation plutôt que sur une syntaxe XML. Haml permet donc de respecter le principe \texttt{DRY} et d'améliorer la lisibilité par un code source plus court et bien indenté ; \label{haml}
+  \item[JQuery \cite{jquery}] cette bibliothèque javaScript bien connue permet de modifier facilement le document courant, de gérer des événements, de créer des animations, etc. ;
+  \item[CoffeeScript \cite{coffeescript}] est un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire, plus courte et d'ajouter des sucres syntaxiques par rapport à JavaScript;
+  \item[Bootstrap \cite{bootstrap}] est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilisent. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc. \label{bootstrap}
 \end{description}
 %TODO intégré avec les contrôleurs. Paperclip dans les vues
 \subsection{Gem's}
 \label{gems}
-Ruby fournit une manière de partager des fonctionnalités pour des programmes Ruby via les gems. Rails lui-même est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
+Ruby fournit une manière de partager des fonctionnalités pour des programmes Ruby via les gems \cite{gem}. Rails lui-même est un gem et dépend de nombreux autres notamment Active Record présentés plus haut.
 
+\label{gemnasium}
 La communauté de Rails a écrit de nombreux gem's permettant de rajouter facilement des fonctionnalités à une application. Le fichier \texttt{Gemfile} sert à lister les gem's utilisé dans un projet. Le gestionnaire du projet, doit faire attention à toutes ces dépendances pour garder son logiciel à jour. Pour ce faire, Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quel gem's doivent être mis à jours. Gemnasium informe donc les gestionnaires d'un logiciel lorsqu'une faille de sécurité est découverte dans un gem et qu'il faut donc le mettre à jour.
 
 Quelque exemples de gems intéressants sont présentées ci-après.
 \begin{description}
-  \item[Paperclip] permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'amazon ou de dropbox.
-  \item[Devise] gère la problématique de l'authentification des utilisateurs.
-  \item[Rolify] donne des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
-  \item[Authority] gère les droits des utilisateurs sur les différentes ressources des contrôleurs. \label{authority}
+  \item[Paperclip \cite{paperclip}] permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'amazon ou de dropbox.
+  \item[Devise \cite{devise}] gère la problématique de l'authentification des utilisateurs.
+  \item[Rolify \cite{rolify}] donne des rôles aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
+  \item[Authority \cite{authority}] gère les droits des utilisateurs sur les différentes ressources des contrôleurs. \label{authority}
 \end{description}
 
 \subsection{Tests}
@@ -276,10 +278,10 @@ Il existe tout un écosystème autour de Rails pour fournir du code de qualité.
 
 \subsubsection{Tests comportementaux}
 \label{cucumber}
-Un outil de test fort apprécié des programmeurs Ruby et plus particulièrement Rails est Cucumber. Ce dernier réalise des tests dans un "behavior-driven development" (BDD) style. Ce style de tests se compose de deux parties. D'une part, le client ou chef de projet écrit des scénarii qui décrivent l'utilisation de fonctionnalités du domaine en langage naturel (Gherkin). D'autre part, le programmeur implémente ces scénarii. Ce type de test met l'accent sur ce que voit le client. Si tout ce que voit le client fonctionne, c'est que le coeur utile de l'application est correct. 
+Un outil de test fort apprécié des programmeurs Ruby et plus particulièrement Rails est Cucumber \cite{cucumber}. Ce dernier réalise des tests dans un "behavior-driven development" \cite{wiki-bdd} style. Ce style de tests se compose de deux parties. D'une part, le client ou chef de projet écrit des scénarii qui décrivent l'utilisation de fonctionnalités du domaine en langage naturel (Gherkin \cite{gherkin}). D'autre part, le programmeur implémente ces scénarii. Ce type de test met l'accent sur ce que voit le client. Si tout ce que voit le client fonctionne, c'est que le coeur utile de l'application est correct. 
 
-Dans le cas de Rails, il est intéressant d'utiliser conjointement Cucumber et Capybara. Ce dernier permet de contrôler un navigateur et donc de réaliser des tests à la place d'un utilisateur. Ces tests permettront d'assurer le bon fonctionnement de ce que souhaite l'utilisateur.
+Dans le cas de Rails, il est intéressant d'utiliser conjointement Cucumber et Capybara \cite{capybara}. Ce dernier permet de contrôler un navigateur et donc de réaliser des tests à la place d'un utilisateur. Ces tests permettront d'assurer le bon fonctionnement de ce que souhaite l'utilisateur.
 
 \subsubsection{Intégration continue}
 \label{travis}
-Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ceci est réalisé entre autres grâce à \texttt{Travis CI}\footnote{\url{https://travis-ci.org/}}.
+Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue \cite{wiki-int-cont}. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ce service est proposé entre autres par \texttt{Travis CI}\cite{travis}.
