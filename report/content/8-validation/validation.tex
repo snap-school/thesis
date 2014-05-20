@@ -196,12 +196,18 @@ remplissage par binome
 
 biais
 
-\subsubsection{Analyse des formulaires}
+formulaire avec valeur entre 1 et 4
 
-\paragraph{Niveau des enfants en informatique}
+\subsection{Analyse des formulaires}
+
+\subsubsection{Niveau des enfants en informatique}
 Une des questions du formulaire portait sur la connaissance de l'informatique et de la programmation. Les schémas montrent comment les enfants auto-évaluent leurs compétences en informatique et en programmation avant de faire l'expérience \ref{fig:niveau-avant} et après l'expérience \ref{fig:niveau-apres}.
+
+Les enfants avaient l'impression de connaître assez bien l'utilisation d'un ordinateur avant de venir et que notre expérience n'a pas aidé dans l'utilisation. En effet, le score moyen de ces deux métrique est respectivement de 3,3 et 2,4 et une variance de 0,7 et 1,3.
+
+La compréhension de ce qu'est la programmation, c'est par ailleurs bien améliorée. Globalement, ils ne savaient pas ce qu'est la programmation (moyenne de 1,8). Cette donnée est a relativiser car la variance est importante : 1,0. Après l'expérience, les participants comprenaient beaucoup mieux ce qu'est la programmation (moyenne de 3,3 et variance 0,8).
 \begin{figure}
-  \begin{center}
+  \begin{center}%TODO use subfigure
     \includegraphics[width=.7\textwidth]{content/8-validation/images/avant}
     \includegraphics[width=\textwidth]{content/8-validation/images/programmation}
     \caption{Auto-estimation du niveau en informatique et en programmation des participants avant l'activité}
@@ -210,7 +216,7 @@ Une des questions du formulaire portait sur la connaissance de l'informatique et
 \end{figure}
 
 \begin{figure}
-  \begin{center}
+  \begin{center} %TODO use subfigure
     \includegraphics[width=.7\textwidth]{content/8-validation/images/apres}
     \includegraphics[width=.7\textwidth]{content/8-validation/images/apres-programmation}
     \caption{Auto-estimation du niveau en informatique et en programmation des participants après l'activité}
@@ -218,15 +224,11 @@ Une des questions du formulaire portait sur la connaissance de l'informatique et
   \end{center}
 \end{figure}
 
-\paragraph{Appréciation des missions}
+\subsubsection{Évaluation des missions}
 \label{appreciation}
-En plus de l'évaluation de leur niveau de compétences en informatique et en programmation, les participants ont également évalué séparément chaque mission. Les graphiques représentant cette évaluation sont sur la figure \ref{fig:evaluation-mission}. On voit que les missions qui ont été le moins appréciées sont la troisième, "soyons courtois", et la quatrième, "chien et chat".
-Sur base des commentaires et de l'appréciation des auteurs, la notation de la quatrième mission peut s'expliquer par la frustration des utilisateurs de ne pas avoir eu le temps de la finir.
-Pour la troisième mission, les retours indiquent que les élèves ont trouvé cette mission trop simple. Cette mission pourrait être reconstruite ultérieurement en intégrant, par exemple, le déplacement du personnage.\\
-
-
-\begin{figure}[ht]
-  \begin{center}
+En plus de l'évaluation de leur niveau de compétences en informatique et en programmation, les participants ont également évalué séparément chaque mission. Les graphiques représentant cette évaluation sont sur la figure \ref{fig:evaluation-mission}. On voit que les missions qui ont été le moins appréciées sont la troisième, "soyons courtois", et la quatrième, "chien et chat". Le score des missions est présenté dans le tableau \ref{tab:form}
+\begin{figure}
+  \begin{center}%TODO use subfigure
     \includegraphics[width=.7\textwidth]{content/8-validation/images/voiture}
     \includegraphics[width=.7\textwidth]{content/8-validation/images/helico}
     \includegraphics[width=.7\textwidth]{content/8-validation/images/courtois}
@@ -236,20 +238,42 @@ Pour la troisième mission, les retours indiquent que les élèves ont trouvé c
   \end{center}
 \end{figure}
 
-\paragraph{Appréciation des professeurs}
-En ce qui concerne les retours des professeurs, voir annexe \ref{result-prof}, ils étaient tous, sans exception, très positifs. Les professeurs d'humanité ont montré beaucoup d'intérêts pour l'utilisation de l'application dans leurs cours. Malgré l'insistance des auteurs, les professeurs n'ont pas donné de critique.
+\begin{table}
+  \caption{Score des missions}
+  \label{tab:form}
 
-\paragraph{Analyse des missions}
-Pour les utilisateurs, la première mission a été la plus laborieuse. Cependant, cette mission a le plus haut taux d'appréciation des enfants. Est-ce du à la facilité de compréhension de cette mission? Est-ce le graphisme? Ou encore son côté concret? Les formulaires n'apportent pas assez d'éléments de réponse.\\
+  \begin{center}
+    \begin{tabular}{r|llll}
+      Mission          & Moyenne & Variance & Moyenne du fondamental & Moyenne du secondaire \\ \hline
+      En voiture       & & & & \\
+      Hélicoptère      & & & & \\
+      Soyons courtois  & & & & \\
+      Chien et chat    & & & & \\
+    \end{tabular}
+  \end{center}
+\end{table}
 
-La seconde mission, celle de l'"hélicoptère", a été appréciée, mais, comme cité plus haut \ref{analyse-scienceinfuse}, elle pourrait être séparée en deux missions. En effet, beaucoup d'étudiants ont eu besoin de l'aide des auteurs pour cumuler les deux concepts abordés en une fois.\\
+\paragraph{Appréciation générale}
 
-La troisième mission, "soyons courtois", est la moins appréciée. D'après les retours des élèves, elle semble être trop facile. Comme suggéré plus haut \ref{appreciation}, une piste serait de rajouter l'implémentation des mouvements à cette mission.\\
+Pour la troisième mission, les retours indiquent que les élèves ont trouvé cette mission trop simple. Cette mission pourrait être reconstruite ultérieurement en intégrant, par exemple, le déplacement du personnage.
 
+Sur base des commentaires et de l'appréciation des auteurs, la notation de la quatrième mission peut s'expliquer par la frustration des utilisateurs de ne pas avoir eu le temps de la finir.
+
+
+\paragraph{En voiture}
+Pour les utilisateurs, la première mission a été la plus laborieuse. Cependant, cette mission a le plus haut taux d'appréciation des enfants. Est-ce du à la facilité de compréhension de cette mission? Est-ce le graphisme? Ou encore son côté concret? Les formulaires n'apportent pas assez d'éléments de réponse.
+
+\paragraph{Hélicoptère}
+La seconde mission, celle de l'"hélicoptère", a été appréciée, mais, comme cité plus haut \ref{analyse-scienceinfuse}, elle pourrait être séparée en deux missions. En effet, beaucoup d'étudiants ont eu besoin de l'aide des auteurs pour cumuler les deux concepts abordés en une fois.
+
+\paragraph{Soyons courtois}
+La troisième mission, "soyons courtois", est la moins appréciée. D'après les retours des élèves, elle semble être trop facile. Comme suggéré plus haut \ref{appreciation}, une piste serait de rajouter l'implémentation des mouvements à cette mission.
+
+\paragraph{Chien et chat}
 La quatrième mission, "chien et chat", a passionné les élèves mais ils ont été frustrés par le manque de temps. Personne n'a réussi à la finir. Il faudrait peut-être envisager de guider davantage les étudiants dans cette mission. Par exemple, tous les blocs y étaient accessibles, ceci afin que les étudiants puissent découvrir ce qui est possible de faire avec Snap!. L'analyse des questionnaires montre que les étudiants se perdent dans la masse de blocs disponibles.
 Une autre possibilité serai d'augmenter le temps imparti à l'expérience tout en tenant compte de la capacité de concentration des enfants. Une durée qui semble intéressante serait deux plages de cinquante minutes.
 
-\paragraph{Tranche d'âge}
+\subsubsection{Tranche d'âge}
 \label{trancheage}
 Un des objectifs de ce travail est que les enfants utilisent cette application de manière quasi-autonome. Dans ce sens, durant les expériences, les auteurs ont constaté que les enfants de début d'humanité sont plus aptes à travailler de cette manière que les élèves de primaire: moins d'appel à l'aide, plus de persévérance, meilleur prise en charge individuelle, etc.
 En conséquence, l'application pour des élèves du fondamental, nécessite soit une plus grande maîtrise de la matière soit plus d'encadrants.
@@ -262,6 +286,7 @@ En conséquence, l'application pour des élèves du fondamental, nécessite soit
 % différence d'age
 % appréciation des missions
 
-
-
 %chiffre et analyse de notre formulaire prof et student.
+
+\subsubsection{Appréciation des professeurs}
+En ce qui concerne les retours des professeurs, voir annexe \ref{result-prof}, ils étaient tous, sans exception, très positifs. Les professeurs d'humanité ont montré beaucoup d'intérêts pour l'utilisation de l'application dans leurs cours. Malgré l'insistance des auteurs, les professeurs n'ont pas donné de critique négative.
