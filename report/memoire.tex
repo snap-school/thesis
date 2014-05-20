@@ -10,10 +10,8 @@
 \usepackage{subcaption}
 \include{listings}
 
-% \usepackage[nomain,acronym,xindy,toc]{glossaries}
-% \makeglossary
-% \usepackage[xindy]{imakeidx}
-% \makeindex
+\usepackage{glossaries} 
+\makeglossary
 
 \newcommand{\fwshort}{RSnap}
 \newcommand{\fwlong}{Plateforme web pour accompagner l'apprentissage de la programmation par les 10 - 14 ans}
@@ -53,7 +51,9 @@
 %======================
 %	DOCUMENT
 %======================
-%include{content/12-glossary/glossary}
+%\input{content/12-glossary/glossary}
+
+
 \begin{document}
 %\dominitoc
 
@@ -95,10 +95,14 @@
 \include{content/10-future_work/furture}
 
 
-% \appendix
-% \glsaddall
-% \printindex
-% \printglossaries
+%\input{content/12-glossary/glossary}
+\appendix
+
+\newacronym{TEM}{TEM}{scanning electron microscope}
+blabla \gls{TEM}
+\glsaddall
+%\printindex
+\printglossaries
 
 \nocite{*} %TODO remove after check
 \bibliographystyle{plain}
