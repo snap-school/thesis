@@ -156,10 +156,13 @@ Dans ces classes une différence de niveau au sein des groupe a été observé. 
 
 \subsubsection{Analyse}
 \label{analyse-scienceinfuse}
-Tout en tenant compte des remarques précédentes, l'ensemble de ces expériences s'est globalement bien déroulée. Les objectifs ont été approchés. Le niveau des missions correspondait à ce qui était souhaité. La plupart des enfants a très vite et bien pris en main l'interface de Snap!. Les modifications apportées par la première expérience ont montré toutes leurs utilités. En autre, le bouton "réinitialisation" s'est avéré facile à utiliser. La mission \texttt{Soyons courtois}, voir section \ref{mission-courtois}, a été appréciée des enfants et a remplis pleinement son rôle.\\
+Tout en tenant compte des remarques précédentes, l'ensemble de ces expériences s'est globalement bien déroulée. Les objectifs ont été approchés. Le niveau des missions correspondait à ce qui était souhaité. La plupart des enfants ont très vite et bien pris en main l'interface de Snap!. Les modifications apportées par la première expérience ont montré toutes leurs utilités. En autre, le bouton "réinitialisation" s'est avéré facile à utiliser. La mission \texttt{Soyons courtois}, voir section \ref{mission-courtois}, a été appréciée des enfants et a remplis pleinement son rôle.
 
+%TODO revoir les titre des paragraph et p-e en faire aussi dans l'intro de analyse
+\paragraph{Vidée}
 Une crainte était que grâce au lecteur \texttt{YouTube}, ils regardent d'autres vidéos, mais il n'en fût rien et leur curiosité était assez forte pour les garder dans l'application.
 
+\paragraph{Amélioration}
 Ces expériences ont mis en évidence d'autres améliorations possibles: 
 \begin{itemize}
   \item ajouter un message d'information sur la sauvegarde des projets ;
@@ -167,9 +170,19 @@ Ces expériences ont mis en évidence d'autres améliorations possibles:
   \item diviser la mission hélicoptère en deux missions séparées: la boucle "répéter indéfiniment" et la condition "si".
 \end{itemize}
 
-Par des expériences ludiques menées en une heure, les enfants ont appris des concepts basiques de la programmation. Les auteurs se sont rendu compte que beaucoup d'enfants n'avaient pas vu le temps passé.
+\paragraph{Tranche d'âge}
+\label{trancheage}
+Un des objectifs de ce travail est que les enfants utilisent cette application de manière quasi-autonome. Dans ce sens, durant les expériences, les auteurs ont constaté que les enfants de début d'humanité sont plus aptes à travailler de cette manière que les élèves de primaire: moins d'appel à l'aide, plus de persévérance, meilleur prise en charge individuelle, etc.
+En conséquence, l'application pour des élèves du fondamental, nécessite soit une plus grande maîtrise de la matière soit plus d'encadrants.
 
-\section{Analyse des formulaires}
+\paragraph{conclusion}
+Par des expériences ludiques menées en une heure, les enfants ont appris des concepts basiques de la programmation. Les auteurs se sont rendu compte que beaucoup d'enfants n'avaient pas vu le temps passé.
+% Les grands vont plus vite
+
+% mission voiture cool pour la structuration
+% débouché sur du concret
+
+\section{Formulaires}
 \label{analyse-exp}
 Un formulaire a été complèté par chaque enfants et chaque professeurs à la fin de l'activité. Dans cette partie, les formulaires sont analysés. Les données complètes, les graphiques et les commentaires des enfants sont disponibles en annexe \ref{annex-data-form}. %TODO réécrire en fonction de ce que je vais écrire %TODO on parle du formulaire des prof ?
 
@@ -199,41 +212,83 @@ biais
 formulaire avec valeur entre 1 et 4
 
 \subsection{Analyse des formulaires}
+L'analyse du formulaire se déroule en suivant les deux but de celui-ci, à savoir le niveau des enfants en informatique et l'évaluation des missions.
 
 \subsubsection{Niveau des enfants en informatique}
-Une des questions du formulaire portait sur la connaissance de l'informatique et de la programmation. Les schémas montrent comment les enfants auto-évaluent leurs compétences en informatique et en programmation avant de faire l'expérience \ref{fig:niveau-avant} et après l'expérience \ref{fig:niveau-apres}.
+Une des questions du formulaire portait sur la connaissance de l'informatique et de la programmation. Les schémas montrent comment les enfants auto-évaluent leurs compétences en informatique \ref{fig:niveau-info} et en programmation \ref{fig:niveau-prog}.
 
-Les enfants avaient l'impression de connaître assez bien l'utilisation d'un ordinateur avant de venir et que notre expérience n'a pas aidé dans l'utilisation. En effet, le score moyen de ces deux métrique est respectivement de 3,3 et 2,4 et une variance de 0,7 et 1,3.
+Les enfants avaient l'impression de connaître assez bien l'utilisation d'un ordinateur avant de venir et que notre expérience n'a pas aidé dans l'utilisation.
 
-La compréhension de ce qu'est la programmation, c'est par ailleurs bien améliorée. Globalement, ils ne savaient pas ce qu'est la programmation (moyenne de 1,8). Cette donnée est a relativiser car la variance est importante : 1,0. Après l'expérience, les participants comprenaient beaucoup mieux ce qu'est la programmation (moyenne de 3,3 et variance 0,8).
+La compréhension de ce qu'est la programmation, c'est par ailleurs bien améliorée. Globalement, ils ne savaient pas ce qu'est la programmation. Après l'expérience, les participants comprenaient beaucoup mieux ce qu'est la programmation. %TODO mettre référence vers tab et fig
+
 \begin{figure}
-  \begin{center}%TODO use subfigure
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/avant}
-    \includegraphics[width=\textwidth]{content/8-validation/images/programmation}
-    \caption{Auto-estimation du niveau en informatique et en programmation des participants avant l'activité}
-    \label{fig:niveau-avant}
+  \begin{center}
+    \begin{subfigure}[b]{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/avant}
+      \caption{Avant l'expérience}
+    \end{subfigure}
+    \begin{subfigure}[b]{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/apres}
+      \caption{Amélioration grace à l'expérience}
+    \end{subfigure}
+    \caption{Auto-estimation du niveau en informatique des participants}
+    \label{fig:niveau-info}
+  \end{center}
+\end{figure}
+\begin{figure}
+  \begin{center}
+    \begin{subfigure}[b]{\textwidth}
+      \begin{center}
+        \includegraphics[width=.7\textwidth]{content/8-validation/images/programmation}
+        \caption{Avant l'expérience}
+      \end{center}
+    \end{subfigure}
+    \begin{subfigure}[b]{\textwidth}
+      \begin{center}
+        \includegraphics[width=.5\textwidth]{content/8-validation/images/apres-programmation}
+        \caption{Amélioration grace à l'expérience}
+      \end{center}
+    \end{subfigure}
+    \caption{Auto-estimation de la connaissance en programmation des participants}
+    \label{fig:niveau-prog}
   \end{center}
 \end{figure}
 
-\begin{figure}
-  \begin{center} %TODO use subfigure
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/apres}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/apres-programmation}
-    \caption{Auto-estimation du niveau en informatique et en programmation des participants après l'activité}
-    \label{fig:niveau-apres}
+\begin{table}
+  \begin{center}
+    \begin{tabular}{r|cc|cc}
+               & \multicolumn{2}{c|}{Utilisation d'un ordinateur} & \multicolumn{2}{c}{Connaissance de la programmation} \\
+               & Avant & Amélioration                             & Avant & Amélioration \\ \hline
+      Moyenne  & 3,3 & 2,4 & 1,8 & 3,3 \\
+      Variance & 0,7 & 1,3 & 1,0 & 0,8 \\
+    \end{tabular}
   \end{center}
-\end{figure}
+  \caption{Score des missions}
+  \label{tab:form-info}
+\end{table}
 
 \subsubsection{Évaluation des missions}
 \label{appreciation}
-En plus de l'évaluation de leur niveau de compétences en informatique et en programmation, les participants ont également évalué séparément chaque mission. Les graphiques représentant cette évaluation sont sur la figure \ref{fig:evaluation-mission}. On voit que les missions qui ont été le moins appréciées sont la troisième, "soyons courtois", et la quatrième, "chien et chat". Le score des missions est présenté dans le tableau \ref{tab:form}.
+En plus de l'évaluation de leur niveau de compétences en informatique et en programmation, les participants ont également évalué séparément chaque mission. Les graphiques représentant cette évaluation sont sur la figure \ref{fig:evaluation-mission}. Le score des missions est présenté dans le tableau \ref{tab:form-missions}.
 \begin{figure}
-  \begin{center}%TODO use subfigure
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/voiture}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/helico}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/courtois}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/chien}
-    \caption{Évaluation des missions par les enfants: En voiture \ref{mission-voiture}, hélicoptère \ref{mission-helicoptere}, soyons courtois \ref{mission-courtois}, tu ne m'attraperas jamais \ref{chien-chat}}
+  \begin{center}
+    \begin{subfigure}{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/voiture}
+      \caption{En voiture}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/helico}
+      \caption{Hélicoptère}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/courtois}
+      \caption{Soyons courtois}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/chien}
+      \caption{Tu ne m'attraperas jamais}
+    \end{subfigure}
+    \caption{Évaluation des missions par les enfants}
     \label{fig:evaluation-mission}
   \end{center}
 \end{figure}
@@ -250,43 +305,28 @@ En plus de l'évaluation de leur niveau de compétences en informatique et en pr
     \end{tabular}
   \end{center}
   \caption{Score des missions}
-  \label{tab:form}
+  \label{tab:form-missions}
 \end{table}
 
-\paragraph{Appréciation générale}
+%TODO mettre des références vers tab et fig
+\paragraph{En voiture \ref{mission-voiture}}
+Pour les utilisateurs, la première mission a été la plus laborieuse. En effet, les expérimentateurs ont du fournir de l'aide à de nombreuse reprise pour débloquer les participants. Cependant, cette mission a le plus haut taux d'appréciation des enfants. Est-ce du à la facilité de compréhension de cette mission ? Est-ce le graphisme ? Ou encore son côté concret ? Les formulaires n'apportent pas assez d'éléments de réponse.
 
-Pour la troisième mission, les retours indiquent que les élèves ont trouvé cette mission trop simple. Cette mission pourrait être reconstruite ultérieurement en intégrant, par exemple, le déplacement du personnage.
+\paragraph{Hélicoptère \ref{mission-helicoptere}}
+La seconde mission a été appréciée, mais, comme cité plus haut \ref{analyse-scienceinfuse}, elle pourrait être séparée en deux missions. En effet, beaucoup d'étudiants ont eu besoin de l'aide des auteurs pour cumuler les deux concepts abordés en une fois.
 
-Sur base des commentaires et de l'appréciation des auteurs, la notation de la quatrième mission peut s'expliquer par la frustration des utilisateurs de ne pas avoir eu le temps de la finir.
+\paragraph{Soyons courtois \ref{mission-courtois}}
+La troisième mission est la moins appréciée du fondamental. Une différence par rapport au autre mission est que la description de celle-ci ne comporte pas de vidéo explicative. Cette différence pourrait expliquer la différence de résultat entre le fondamental et le secondaire.
+%Pour la troisième mission, les retours indiquent que les élèves ont trouvé cette mission trop simple. Cette mission pourrait être reconstruite ultérieurement en intégrant, par exemple, le déplacement du personnage.
+% D'après les retours des élèves, elle semble être trop facile. Comme suggéré plus haut \ref{appreciation}, une piste serait de rajouter l'implémentation des mouvements à cette mission.
 
+\paragraph{Tu ne m'attraperas jamais \ref{chien-chat}}
+La quatrième mission, "chien et chat", a passionné les élèves mais ils ont été frustrés par le manque de temps. Personne n'a réussi à la finir. Il faudrait peut-être envisager de guider davantage les étudiants dans cette mission. Par exemple, tous les blocs y étaient accessibles, ceci afin que les étudiants puissent découvrir ce qui est possible de faire avec Snap!. L'analyse des commentaires montre que les étudiants se perdent dans la masse de blocs disponibles.
 
-\paragraph{En voiture}
-Pour les utilisateurs, la première mission a été la plus laborieuse. Cependant, cette mission a le plus haut taux d'appréciation des enfants. Est-ce du à la facilité de compréhension de cette mission? Est-ce le graphisme? Ou encore son côté concret? Les formulaires n'apportent pas assez d'éléments de réponse.
-
-\paragraph{Hélicoptère}
-La seconde mission, celle de l'"hélicoptère", a été appréciée, mais, comme cité plus haut \ref{analyse-scienceinfuse}, elle pourrait être séparée en deux missions. En effet, beaucoup d'étudiants ont eu besoin de l'aide des auteurs pour cumuler les deux concepts abordés en une fois.
-
-\paragraph{Soyons courtois}
-La troisième mission, "soyons courtois", est la moins appréciée. D'après les retours des élèves, elle semble être trop facile. Comme suggéré plus haut \ref{appreciation}, une piste serait de rajouter l'implémentation des mouvements à cette mission.
-
-\paragraph{Chien et chat}
-La quatrième mission, "chien et chat", a passionné les élèves mais ils ont été frustrés par le manque de temps. Personne n'a réussi à la finir. Il faudrait peut-être envisager de guider davantage les étudiants dans cette mission. Par exemple, tous les blocs y étaient accessibles, ceci afin que les étudiants puissent découvrir ce qui est possible de faire avec Snap!. L'analyse des questionnaires montre que les étudiants se perdent dans la masse de blocs disponibles.
 Une autre possibilité serai d'augmenter le temps imparti à l'expérience tout en tenant compte de la capacité de concentration des enfants. Une durée qui semble intéressante serait deux plages de cinquante minutes.
 
-\subsubsection{Tranche d'âge}
-\label{trancheage}
-Un des objectifs de ce travail est que les enfants utilisent cette application de manière quasi-autonome. Dans ce sens, durant les expériences, les auteurs ont constaté que les enfants de début d'humanité sont plus aptes à travailler de cette manière que les élèves de primaire: moins d'appel à l'aide, plus de persévérance, meilleur prise en charge individuelle, etc.
-En conséquence, l'application pour des élèves du fondamental, nécessite soit une plus grande maîtrise de la matière soit plus d'encadrants.
-
-% Les grands vont plus vite
-
-% mission voiture cool pour la structuration
-% débouché sur du concret
-
-% différence d'age
-% appréciation des missions
-
-%chiffre et analyse de notre formulaire prof et student.
+Cette mission est aussi particularisée par une différence d'appréciation entre les deux tranche d'age étudiée. En effet, le fondamental a mieux aimer réaliser cette mission que le secondaire. Cette différence peut-être expliqué par la part de créativité laisser au participant notament dans le choix de l'image pour les personnages.
+%Sur base des commentaires et de l'appréciation des auteurs, la notation de la quatrième mission peut s'expliquer par la frustration des utilisateurs de ne pas avoir eu le temps de la finir.
 
 \subsubsection{Appréciation des professeurs}
 En ce qui concerne les retours des professeurs, voir annexe \ref{result-prof}, ils étaient tous, sans exception, très positifs. Les professeurs d'humanité ont montré beaucoup d'intérêts pour l'utilisation de l'application dans leurs cours. Malgré l'insistance des auteurs, les professeurs n'ont pas donné de critique négative.
