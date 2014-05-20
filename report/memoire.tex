@@ -10,7 +10,9 @@
 \usepackage{subcaption}
 \include{listings}
 
-\usepackage{glossaries} 
+\usepackage[nottoc]{tocbibind}
+
+\usepackage[xindy,toc,translate=babel,nonumberlist]{glossaries} 
 \makeglossary
 
 \newcommand{\fwshort}{RSnap}
@@ -47,11 +49,13 @@
 \frefformat{plain}{\fancyreflstlabelprefix}%%
  {\freflstname\fancyrefdefaultspacing#1}
 
-%\includeonly{content/8-validation/validation}
+
+
+%\includeonly{content/10-future_work/furture, content/7-solution/solution}
 %======================
 %	DOCUMENT
 %======================
-%\input{content/12-glossary/glossary}
+\input{content/12-glossary/glossary}
 
 
 \begin{document}
@@ -95,13 +99,9 @@
 \include{content/10-future_work/furture}
 
 
-%\input{content/12-glossary/glossary}
 \appendix
 
-\newacronym{TEM}{TEM}{scanning electron microscope}
-blabla \gls{TEM}
-\glsaddall
-%\printindex
+\glsaddall %TODO remove after check
 \printglossaries
 
 \nocite{*} %TODO remove after check
