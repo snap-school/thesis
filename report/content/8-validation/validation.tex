@@ -8,7 +8,7 @@ Dans cette section, les outils de validation du code de \gls{Rsnap} sont présen
 Les tests unitaires servent à vérifier que le code fonctionne correctement. L'implémentation des tests s'est déroulée en parallèle à la création de l'application. Deux principaux types de tests ont été réalisés, ceux sur les contrôleurs et ceux au niveau de l'utilisateur. Avant de les aborder, un courte section présente les programmes utilisés pour les tests.
 
 \subsubsection{Outils pour les tests}
-Un des programmes utilisés pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une "pull request", les tests sont également effectués pour savoir si l'acceptation de la branche introduira des bogues.
+Un des programmes utilisés pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une \texttt{\gls{pull}}, les tests sont également effectués pour savoir si l'acceptation de la branche introduira des bogues.
 
 Une des métriques générées par les tests est la couverture du code. Cette information est fournie par Coveralls\cite{coveralls} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas d'information sur le type de code testé. Il faut donc être attentif à ce que les tests couvrent effectivement les parties critiques.
 
