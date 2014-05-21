@@ -1,18 +1,18 @@
 \chapter{Validation}
-Ce chapitre présente les techniques de validation de la plateforme Rsnap. La validation du code est abordée dans un premier temps. Ensuite, les expériences sur des populations d'étudiants et leurs analyses sont développées.
+Ce chapitre présente les techniques de validation de la plateforme \gls{Rsnap}. La validation du code est abordée dans un premier temps. Ensuite, les expériences sur des populations d'étudiants et leurs analyses sont développées.
 
 \section{Implémentation}
-Dans cette section, les outils de validation du code de Rsnap sont présentés. Deux outils principaux ont été utilisés pour avoir un logiciel le mieux écrit possible \ref{rails-tests} : les tests unitaires et les métriques.
+Dans cette section, les outils de validation du code de \gls{Rsnap} sont présentés. Deux outils principaux ont été utilisés pour avoir un logiciel le mieux écrit possible \ref{rails-tests} : les tests unitaires et les métriques.
 
 \subsection{Tests unitaires}
 Les tests unitaires servent à vérifier que le code fonctionne correctement. L'implémentation des tests s'est déroulée en parallèle à la création de l'application. Deux principaux types de tests ont été réalisés, ceux sur les contrôleurs et ceux au niveau de l'utilisateur. Avant de les aborder, un courte section présente les programmes utilisés pour les tests.
 
 \subsubsection{Outils pour les tests}
-Un des programmes utilisés pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une "pull request", les tests sont également effectués pour savoir si l'acceptation de la branche introduira des bogues.
+Un des programmes utilisés pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une \texttt{\gls{pull}}, les tests sont également effectués pour savoir si l'acceptation de la branche introduira des bogues.
 
 Une des métriques générées par les tests est la couverture du code. Cette information est fournie par Coveralls\cite{coveralls} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas d'information sur le type de code testé. Il faut donc être attentif à ce que les tests couvrent effectivement les parties critiques.
 
-Enfin, lors des tests, il est nécessaire d'avoir des données pour peupler les modèles. Ceci s'effectue grâce au gem FactoryGirls \cite{factorygirls} qui propose un langage dédié pour écrire rapidement des fabriques. Ces dernières vont générer ces données de test pour peupler les modèles.
+Enfin, lors des tests, il est nécessaire d'avoir des données pour peupler les modèles. Ceci s'effectue grâce au \gls{gem} FactoryGirls \cite{factorygirls} qui propose un langage dédié pour écrire rapidement des fabriques. Ces dernières vont générer ces données de test pour peupler les modèles.
 
 \subsubsection{Tests au niveau des contrôleurs}
 Un premier type de tests est réalisé grâce à RSpec \cite{rspec}. Ces tests ont pour vocation de vérifier l'accès aux différentes routes \ref{rails-routes} : les droits des utilisateurs et le type de retour des contrôleurs.
@@ -34,8 +34,8 @@ Un deuxième type de tests est réalisé grâce à Cucumber \ref{cucumber}. Ces 
 \lstinputlisting[language=Ruby, linerange={1-15}, caption={Extrait de l'implémentation des tests de l'accès aux missions}, label=lst:cucumber-implementation-mission]{content/8-validation/validation/mission_steps.rb}
 \end{figure}
 
-Gerkin est utilisé pour écrire les scénarii en langage naturel. 
-Le code source \ref{lst:cucumber-mission} montre différents scénarii décrivant l'accès aux missions. Le haut niveau de Gherkin est visible dans cet exemple. En effet, toute personne anglophone peut comprendre ce que testent les différents scénarii. 
+Gerkin est utilisé pour écrire les scénarii en langage naturel.
+Le code source \ref{lst:cucumber-mission} montre différents scénarii décrivant l'accès aux missions. Le haut niveau de Gherkin est visible dans cet exemple. En effet, toute personne anglophone peut comprendre ce que testent les différents scénarii.
 
 L'extrait de code \ref{lst:cucumber-implementation-mission}, montre comment sont implémentés les scénarii précédents. La façon dont est piloté un navigateur pour réaliser les tests est aussi visible via les méthodes : \texttt{click\_on}, \texttt{current\_path}, \texttt{visit}\ldots
 
@@ -62,22 +62,22 @@ Il est important de définir le contexte et la publique de l'expérience qui en 
 Lors de cette expérience, le public était composé de 10 enfants de 10 à 14 ans ayant déjà fait une demi-année de programmation dans le cadre du projet KidsCode. Le niveau de ces enfants n'est donc pas à négliger. Ils sont habitués à exécuter un programme et maîtrisent les principaux concepts de la programmation.
 
 \subsubsection{Buts}
-Le but poursuivi dans cette expérience est de valider l'utilisabilité de la plateforme et également le niveau de difficulté des missions proposées. 
+Le but poursuivi dans cette expérience est de valider l'utilisabilité de la plateforme et également le niveau de difficulté des missions proposées.
 
 Un autre but était de familiariser les expérimentateurs avec des utilisateurs en petit groupe, en vue de préparer la seconde expérience.
 Même si ce dernier point pourrait sembler être moins justifié dans le cadre d'un mémoire sur l'informatique, l'aspect pédagogique rentre en ligne de compte dans le cadre de l'utilisation de l'application. Certains paramètres ont pu être identifiés et réfléchis pour leurs implications dans l'expérience ultérieure.
 %Pour limiter le plus possible les biais dus à un manque de pédagogie ou d'expérience dans la gestion d'un groupe d'enfant, il était important de pouvoir avoir cette première expérience.
 
 \subsubsection{Déroulement}
-L'expérience s'est déroulée pendant un peu plus d'une heure. A la suite des activités habituelles de KidsCode, la dernière heure y était consacrée. 
+L'expérience s'est déroulée pendant un peu plus d'une heure. A la suite des activités habituelles de KidsCode, la dernière heure y était consacrée.
 
 Le début de l'expérience a été marqué par une perte d'attention et la dissipation des enfants. Une fois le groupe repris en main, les jeunes ont directement montré beaucoup d'intérêts, aussi bien pour l'interface qu'ils découvraient, que pour la compétition intergroupes qui s'est rapidement mis en place.
 
 Comme expliqué dans la partie précédente \ref{context-kidscode}, le public avait déjà de bonnes notions de programmation par rapport au public visé par ce mémoire. Les premières missions ont donc été rapidement réalisées. Les principaux points de ralentissement étaient des problèmes de lecture des consignes. En effet, les auteurs n'avaient prévu que des consignes écrites. Or, les jeunes ne prenaient pas le temps de les lire et ne savaient donc pas quoi faire. Il semble que ce soit l'impatience des jeunes à mener les missions plus que leur niveau de lecture qui détermine leur comportement.
 
-La compétition que les jeunes ont mise en place dès le début a eu un effet bénéfique pour leur évolution car elle leur donnait la motivation de réaliser les défis proposés. Ceci était fort visible à chaque passage de mission. Chaque fois qu'un groupe finissait sa mission, il était important pour lui de le signaler aux autres. Cela lui donnait une satisfaction qui le poussait à réaliser la mission suivante. 
+La compétition que les jeunes ont mise en place dès le début a eu un effet bénéfique pour leur évolution car elle leur donnait la motivation de réaliser les défis proposés. Ceci était fort visible à chaque passage de mission. Chaque fois qu'un groupe finissait sa mission, il était important pour lui de le signaler aux autres. Cela lui donnait une satisfaction qui le poussait à réaliser la mission suivante.
 
-Dans les délais impartis, alors que tous sont arrivés à la mission finale du chien et du chat \ref{chien-chat}, personne n'a réussi à la finir. 
+Dans les délais impartis, alors que tous sont arrivés à la mission finale du chien et du chat \ref{chien-chat}, personne n'a réussi à la finir.
 
 Quand a sonné la fin de l'expérience, beaucoup de jeunes nous ont demandé comment faire pour montrer à leur famille ce qu'ils avaient réalisé et comment faire pour continuer la mission finale.
 
@@ -88,12 +88,12 @@ Dans l'ensemble, l'expérience s'est très bien déroulée et les participants o
 Cependant pour tenir compte de certains paramètres, des améliorations ont été apportées à l'application. Ces modifications sont abordées dans la suite de cette partie.
 
 \paragraph{Changement dans les missions}
-La mission \texttt{répète et répépète} a été retirée car elle s'est avérée peu accrocheuse pour les enfants et peu intéressante par rapport aux concepts introduits. Un personnage devait répéter ce que disait un autre. Pendant cette mission, beaucoup d'enfants se sont dispersés parce qu'ils s'embêtaient et que ce n'était pas assez concret. Cette mission avait pour but de faire découvrir les fonctions d'affichage de textes. 
+La mission \texttt{répète et répépète} a été retirée car elle s'est avérée peu accrocheuse pour les enfants et peu intéressante par rapport aux concepts introduits. Un personnage devait répéter ce que disait un autre. Pendant cette mission, beaucoup d'enfants se sont dispersés parce qu'ils s'embêtaient et que ce n'était pas assez concret. Cette mission avait pour but de faire découvrir les fonctions d'affichage de textes.
 
 Elle a été remplacée par \texttt{Soyons courtois} décrit en section \ref{mission-courtois}. Cette nouvelle mission est beaucoup plus dynamique que la précédente, car elle permet à l'étudiant de se déplacer et d'utiliseer les capteurs de collisions introduits dans la mission précédente.
 
 \paragraph{Ajout d'un bouton "réinitialiser la mission"}
-Lors de l'expérience, un groupe d'enfants a réussi à corrompre l'environnement de la mission suite à une série obscure d'opérations. Pour palier à ce genre de risque, un bouton "réinitialiser la mission" a été rajouté dans l'interface de Snap!. Il permet de réinitialiser la mission courante.
+Lors de l'expérience, un groupe d'enfants a réussi à corrompre l'environnement de la mission suite à une série obscure d'opérations. Pour palier à ce genre de risque, un bouton "réinitialiser la mission" a été rajouté dans l'interface de \gls{snap}. Il permet de réinitialiser la mission courante.
 
 \paragraph{Ajout de vidéo d'introduction}
 Comme observé dans cette expérience, les jeunes ont tendance à ne pas lire les textes explicatifs des missions. Il peut en résulter un manque de productivité. Une vidéo d'introduction a donc été rajoutée au début de chaque mission (figure \ref{fig:program-creation}). Cette vidéo explique le but de la mission et donne les instructions. En cas d'oubli, un résumé écrit est toujours présent.
@@ -113,12 +113,12 @@ Un autre but poursuivi était l'évaluation de l'âge idéal et du niveau de dif
 
 Les auteurs désiraient aussi observer les réactions et l'intérêt des étudiants pour la solution proposée.
 
-Un dernier but était évidemment de récolter l'avis des étudiants. 
+Un dernier but était évidemment de récolter l'avis des étudiants.
 
 \subsubsection{Déroulement}
 Le déroulement de cette expérience se divise en deux parties. La première présente le déroulement de l'activité commune aux écoles participantes. Ensuite vient une explication particulière à chaque écoles pour en détailler leurs spécificités.
 \paragraph{Déroulement général des activités}
-Lors de la mise en place de l'activité, une petite démonstration de l'interface a été présentée pour familiariser les étudiants à Snap!. 
+Lors de la mise en place de l'activité, une petite démonstration de l'interface a été présentée pour familiariser les étudiants à \gls{snap}.
 
 Suite à cela, ils ont été invités à créer un compte par groupe de deux (par ordinateur).
 
@@ -126,13 +126,13 @@ Une fois la première vidéo passée, les élèves ont entamé la première miss
 
 La première mission était celle de la voiture, décrite à la section \ref{mission-voiture}. Les étudiants devaient y aborder un concept difficile, à savoir la structuration mentale de leur script. En effet, la voiture revenait à son point de départ à chaque lancement du script. Finalement, après quelques essais et erreurs, ils ont tous réussi cette mission.\\
 
-Une fois la première mission finie, les auteurs ont du rappeler aux étudiants comment la sauver et comment revenir à la liste des missions. Ensuite, les élèves retrouvaient seuls comment continuer. 
+Une fois la première mission finie, les auteurs ont du rappeler aux étudiants comment la sauver et comment revenir à la liste des missions. Ensuite, les élèves retrouvaient seuls comment continuer.
 
 Une question récurrente des étudiants était de savoir si leur mission avait bien été enregistrée sur le serveur.\\
 
 À la fin de l'expérience, tous les participants ont reçu un diplôme avec l'adresse web de l'application, afin qu'ils sachent continuer leur programme chez eux.
 
-\paragraph{École Sainte-Marie} 
+\paragraph{École Sainte-Marie}
 La première classe à avoir testé l'application est une sixième primaire de l'école Sainte-Marie de Bousval. Le groupe était composé d'une petite vingtaine d'élèves.
 
 L'activité s'est déroulée avec une petite contrariété informatique. En effet, l'interpréteur JavaScript des machines mises à disposition était très lent. Ceci n'a pas compromis le déroulement de l'activité, mais fut, à quelques moments, une source de frustrations pour certains élèves très enthousiastes.
@@ -156,7 +156,7 @@ Dans ces classes une différence de niveau au sein des groupe a été observé. 
 
 \subsubsection{Analyse}
 \label{analyse-scienceinfuse}
-Compte tenu des remarques précédentes, l'ensemble de ces expériences s'est globalement bien déroulée. Les objectifs ont été approchés. Le niveau des missions correspondait à ce qui était souhaité. La plupart des enfants ont très vite et bien pris en main l'interface de Snap!. Les modifications apportées par la première expérience ont montré toutes leurs utilités. En autre, le bouton "réinitialisation" s'est avéré facile à utiliser. La mission \texttt{Soyons courtois}, voir section \ref{mission-courtois}, a été appréciée des enfants et a remplis pleinement son rôle.
+Compte tenu des remarques précédentes, l'ensemble de ces expériences s'est globalement bien déroulée. Les objectifs ont été approchés. Le niveau des missions correspondait à ce qui était souhaité. La plupart des enfants ont très vite et bien pris en main l'interface de \gls{snap}. Les modifications apportées par la première expérience ont montré toutes leurs utilités. En autre, le bouton "réinitialisation" s'est avéré facile à utiliser. La mission \texttt{Soyons courtois}, voir section \ref{mission-courtois}, a été appréciée des enfants et a remplis pleinement son rôle.
 
 Certains point sont un peut plus détaillé tel que les vidéos d'introduction, les tranches d'âge et les améliorations qui ont été trouvées grace à cette expérience.
 
@@ -323,7 +323,7 @@ La troisième mission est la moins appréciée du fondamental. Une différence p
 % D'après les retours des élèves, elle semble être trop facile. Comme suggéré plus haut \ref{appreciation}, une piste serait de rajouter l'implémentation des mouvements à cette mission.
 
 \paragraph{Tu ne m'attraperas jamais \ref{chien-chat}}
-La quatrième mission, "chien et chat", a passionné les élèves mais ils ont été frustrés par le manque de temps. Personne n'a réussi à la finir. Il faudrait peut-être envisager de guider davantage les étudiants dans cette mission. Par exemple, tous les blocs y étaient accessibles, ceci afin que les étudiants puissent découvrir ce qui est possible de faire avec Snap!. L'analyse des commentaires montre que les étudiants se perdent dans la masse de blocs disponibles.
+La quatrième mission, "chien et chat", a passionné les élèves mais ils ont été frustrés par le manque de temps. Personne n'a réussi à la finir. Il faudrait peut-être envisager de guider davantage les étudiants dans cette mission. Par exemple, tous les \glspl{bloc} y étaient accessibles, ceci afin que les étudiants puissent découvrir ce qui est possible de faire avec \gls{snap}. L'analyse des commentaires montre que les étudiants se perdent dans la masse de \glspl{bloc} disponibles.
 
 Une autre possibilité serai d'augmenter le temps imparti à l'expérience tout en tenant compte de la capacité de concentration des enfants. Une durée qui semble intéressante serait deux plages de cinquante minutes.
 

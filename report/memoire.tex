@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,twoside,titlepage]{ThesisStyle}
+\documentclass[a4paper,11pt,twoside,titlepage,french]{ThesisStyle}
 
 \usepackage[english,francais]{babel}
 \usepackage[utf8]{inputenc} % comment out for lualatex/xelatex
@@ -10,10 +10,10 @@
 \usepackage{subcaption}
 \include{listings}
 
-% \usepackage[nomain,acronym,xindy,toc]{glossaries}
-% \makeglossary
-% \usepackage[xindy]{imakeidx}
-% \makeindex
+\usepackage[nottoc]{tocbibind}
+
+\usepackage[toc,translate=true,style=altlist]{glossaries} 
+\makeglossary
 
 \newcommand{\fwshort}{RSnap}
 \newcommand{\fwlong}{Plateforme web pour accompagner l'apprentissage de la programmation par les 10 - 14 ans}
@@ -49,11 +49,15 @@
 \frefformat{plain}{\fancyreflstlabelprefix}%%
  {\freflstname\fancyrefdefaultspacing#1}
 
-%\includeonly{content/8-validation/validation}
+
+
+%\includeonly{}
 %======================
 %	DOCUMENT
 %======================
-%include{content/12-glossary/glossary}
+\input{content/12-glossary/glossary}
+
+
 \begin{document}
 %\dominitoc
 
@@ -76,29 +80,36 @@
 %==========================
 %       PART 1
 %==========================
+\glsresetall
 \include{content/4-prerequis/background}
+\glsresetall
 \include{content/5-related_work/travail}
+\glsresetall
 \include{content/6-problem_statement/statement}
 
 
 %==========================
 %       PART 2
 %==========================
+\glsresetall
 \include{content/7-solution/solution}
+\glsresetall
 \include{content/8-validation/validation}
 
 
 %==========================
 %       PART 3
 %==========================
+\glsresetall
 \include{content/9-conclusion/conclusion}
+\glsresetall
 \include{content/10-future_work/furture}
 
 
-% \appendix
-% \glsaddall
-% \printindex
-% \printglossaries
+\appendix
+
+\renewcommand{\glsnamefont}[1]{\makefirstuc{#1}}
+\printglossaries
 
 \nocite{*} %TODO remove after check
 \bibliographystyle{plain}
