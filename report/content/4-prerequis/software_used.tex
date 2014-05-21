@@ -1,5 +1,5 @@
 \section{Snap!}
-Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de \gls{snap} \cite{snap} se diviser en plusieurs paragraphes. La première explique les différents types de blocs et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de \gls{snap}. %TODO plus d'explication bloc Derniere phrase
+Cette partie donne un aperçu de l'application qui est utilisée dans ce travail. La présentation de \gls{snap} \cite{snap} se diviser en plusieurs paragraphes. La première explique les différents types de \glspl{bloc} et comment ils sont implémentés. L'étape suivante est l'explication de l'exécution d'un programme. Ensuite vient l'affichage les différents éléments de \gls{snap}.
 
 \subsection{Utilisation}
 %Cette partie présente comment utiliser \gls{snap} pour faire un programme. Elle présentera le différente division de l'interface graphique ainsi que leur utilité. Pour ce faire les image \ref{fig:snap interface} et \ref{fig:prog} sont utilisé, la première présente les différentes divisions de l'interface, la seconde montre un exemple concret de programme.
@@ -7,7 +7,7 @@ Cette partie va illustrer comment réaliser un programme avec \gls{snap} ceci pe
 
 Pour réaliser un programme avec \gls{snap}, il faut commencer par savoir combien de personnages sont souhaités. Les personnages s'appellent des \textit{sprites} et sont visible dans la \textit{zone des sprites} de la figure \ref{fig:snap interface}. On peut voir dans le programme de l'image \ref{fig:prog}, que deux personnages y sont présent, un chien et un chat. Le bouton blanc au dessus de la \textit{zone de sprites} permet d'ajouter des personnages.\\
 
-Après avoir ajouté le nombre de personnages souhaité, il faut maintenant faire des scripts qui seront le code du programme. Les scripts sont assemblé, par glissé-déposé, dans la \textit{zone d'édition} au centre de l'interface. Ceux-ci sont construit à l'aide de bloc qui se trouve dans la \textit{zone des blocs sources}. Cette zone contient tous les blocs disponibles classés par catégorie suivant l'action du bloc.\\
+Après avoir ajouté le nombre de personnages souhaité, il faut maintenant faire des scripts qui seront le code du programme. Les scripts sont assemblé, par glissé-déposé, dans la \textit{zone d'édition} au centre de l'interface. Ceux-ci sont construit à l'aide de \gls{bloc} qui se trouve dans la \textit{zone des \glspl{bloc} sources}. Cette zone contient tous les \glspl{bloc} disponibles classés par catégorie suivant l'action du \gls{bloc}.\\
 
 Une fois le programme fini, le drapeau vert dans la \textit{barre d'outils}, lance le programme. Quand le programme est lancé, les actions des scripts sont visibles dans la \textit{scène}. Cette zone représente le monde dans lequel va évoluer les personnages. On peut y mettre un fond comme arrière plan ou simplement le laisser blanc comme dans l'exemple, ceci se fait via le bouton stage de la \textit{zone de sprites}.
 \paragraph{Barre d'outils}
@@ -21,7 +21,7 @@ Une fois le programme fini, le drapeau vert dans la \textit{barre d'outils}, lan
 \end{figure}
 
 \subsection{Blocs}
-Il existe plusieurs types de blocs qui constituent un programme \gls{snap} \cite{snap-man}. Sur la figure \ref{fig:software-used-script}, le programme présente les différents types blocs disponibles.
+Il existe plusieurs types de \glspl{bloc} qui constituent un programme \gls{snap} \cite{snap-man}. Sur la figure \ref{fig:software-used-script}, le programme présente les différents types \glspl{bloc} disponibles.
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{content/5-related_work/images/script}
@@ -31,14 +31,14 @@ Il existe plusieurs types de blocs qui constituent un programme \gls{snap} \cite
 \end{figure}
 
 \subsubsection{Commande}
-Le type principal de blocs est \texttt{commande}. Ces blocs peuvent être compris comme étant des procédures. En effet, ils exécutent une ou plusieurs opérations sur le système en fonction de paramètres fournis. Ces différents blocs doivent se baser soit sur une implémentation JavaScript pour les \texttt{commande} élémentaires, soit être une composition de \texttt{commande} pour fournir une nouvelle \texttt{commande} plus complexe ou abstraite.
+Le type principal de \glspl{bloc} est \texttt{commande}. Ces \glspl{bloc} peuvent être compris comme étant des procédures. En effet, ils exécutent une ou plusieurs opérations sur le système en fonction de paramètres fournis. Ces différents \glspl{bloc} doivent se baser soit sur une implémentation JavaScript pour les \texttt{commande} élémentaires, soit être une composition de \texttt{commande} pour fournir une nouvelle \texttt{commande} plus complexe ou abstraite.
 
-Dans l'exemple de la figure \ref{fig:software-used-script}, tous les blocs \texttt{commande} ont la forme d'une pièce de puzzle. On peut y voir qu'une succession de \texttt{commande} crée un script. Les \texttt{commande} ont plusieurs couleurs suivant la catégorie à laquelle elles appartiennent : mouvement, apparence, contrôle, variable \ldots
+Dans l'exemple de la figure \ref{fig:software-used-script}, tous les \glspl{bloc} \texttt{commande} ont la forme d'une pièce de puzzle. On peut y voir qu'une succession de \texttt{commande} crée un script. Les \texttt{commande} ont plusieurs couleurs suivant la catégorie à laquelle elles appartiennent : mouvement, apparence, contrôle, variable \ldots
 
 \subsubsection{Reporter}
-Les \texttt{reporter's} sont des fonctions. En effet, ils renvoient une valeur. Ils sont toujours utilisés en temps que paramètres d'un autre bloc. La plupart des \texttt{reporter} sont des accesseurs à des variables ou à des états du système (position souris, heure \ldots).
+Les \texttt{reporter's} sont des fonctions. En effet, ils renvoient une valeur. Ils sont toujours utilisés en temps que paramètres d'un autre \gls{bloc}. La plupart des \texttt{reporter} sont des accesseurs à des variables ou à des états du système (position souris, heure \ldots).
 
-Les \texttt{reporter} sont des blocs de forme arrondie. La figure \ref{fig:software-used-script} montre différentes utilisations de \texttt{reporter} : somme, valeur aléatoire, position, etc. Tout comme pour les \texttt{commande}, les \texttt{reporter} peuvent être de diverses couleurs suivant leur catégorie.
+Les \texttt{reporter} sont des \glspl{bloc} de forme arrondie. La figure \ref{fig:software-used-script} montre différentes utilisations de \texttt{reporter} : somme, valeur aléatoire, position, etc. Tout comme pour les \texttt{commande}, les \texttt{reporter} peuvent être de diverses couleurs suivant leur catégorie.
 
 \subsubsection{Prédicat}
 Les \texttt{prédicat} sont des reporters qui retournent une valeur booléenne. Ils sont donc utilisés en conjonction avec des commandes demandant une condition. Les \texttt{prédicat} ont une forme hexagonale.
@@ -100,9 +100,9 @@ Un programme est constitué de plusieurs processus. Chaque processus est exécut
 %                         and when the process was paused
 % */
 
-Un processus \texttt{Process} représente l'exécution d'un script, une pile de blocs. Il assure aussi le suivi de l'exécution du script : prochain bloc à exécuter, objet sur lequel il s'applique, contexte décrivant l'état courant, etc.
+Un processus \texttt{Process} représente l'exécution d'un script, une pile de \glspl{bloc}. Il assure aussi le suivi de l'exécution du script : prochain \gls{bloc} à exécuter, objet sur lequel il s'applique, contexte décrivant l'état courant, etc.
 
-L'ordonnanceur \texttt{ThreadManager} appelle la fonction \texttt{runStep()} (extrait de code source \ref{lst-runstep}) successivement sur chaque processus. Cette fonction exécute un certain nombre de blocs via \texttt{this.evaluateContext()} de manière atomique. Elle rend la main volontairement à l'ordonnanceur quand elle a fini. Comme il est possible d'écrire soi-même des blocs, \texttt{runStep()} rend aussi la main si trop de temps s'est écoulé depuis le début de l'exécution de cette étape. La convention veut que les processus rendent la main à la fin de chaque itération de boucles et quand une opération relative au temps ou synchrone est exécutée.
+L'ordonnanceur \texttt{ThreadManager} appelle la fonction \texttt{runStep()} (extrait de code source \ref{lst-runstep}) successivement sur chaque processus. Cette fonction exécute un certain nombre de \glspl{bloc} via \texttt{this.evaluateContext()} de manière atomique. Elle rend la main volontairement à l'ordonnanceur quand elle a fini. Comme il est possible d'écrire soi-même des \glspl{bloc}, \texttt{runStep()} rend aussi la main si trop de temps s'est écoulé depuis le début de l'exécution de cette étape. La convention veut que les processus rendent la main à la fin de chaque itération de boucles et quand une opération relative au temps ou synchrone est exécutée.
 \begin{figure}
 \begin{lstlisting}[caption={Fonction \texttt{runStep()} de \texttt{Process}},label=lst-runstep,language=JavaScript]
 Process.prototype.runStep = function () {
@@ -243,7 +243,7 @@ Pour atteindre cet objectif, Rails utilise deux principes majeurs :
 Un service aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie \gls{rails}. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
 
 \subsection{Architecture}
-\gls{rails} se base sur une architecture Modèle-Vue-Contrôleur \cite{wiki-mvc} (figure \ref{fig:mvc}).
+\gls{rails} se base sur une architecture \gls{mvc} \cite{wiki-mvc} (figure \ref{fig:mvc}).
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[scale=0.3]{content/4-prerequis/images/mvc}

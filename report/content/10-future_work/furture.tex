@@ -5,7 +5,7 @@ Ce chapitre aborde les améliorations possibles pour \gls{Rsnap}. Elle sont soit
 Certains tests sont prévus pour que l'étudiant connaisse la réussite de la mission. Toutefois, aucun signal n'est envoyé vers les serveurs pour leur transmettre cette réussite. Comme aucun mécanisme n'est présent pour valider une mission, la mission suivante se débloque dès le premier enregistrement de la précédente.
 
 \paragraph{Modifications à apporter}
-Le simple envois d'une requête au serveur suffirait si la mission est réussie. La difficulté réside dans la création d'un vrai bloc disponible dans l'interface des professeurs qui servirait à informer le serveur de la réussite de la mission.
+Le simple envois d'une requête au serveur suffirait si la mission est réussie. La difficulté réside dans la création d'un vrai \gls{bloc} disponible dans l'interface des professeurs qui servirait à informer le serveur de la réussite de la mission.
 
 \section{Aide à la gestion des groupes}
 Un des buts de ce travail est son utilisation dans l'enseignement. Ainsi, un système de gestion des élèves par classe a été pensé par les auteurs. Malheureusement, le temps imparti à ce travail a manqué pour avoir une implémentation complète de gestion de groupes.
@@ -25,17 +25,17 @@ La mission de l'hélicoptère introduit deux concepts fort abstraits : les boucl
 La mission "soyons courtois" n'est pas encore assez attractive pour les enfants. Il était suggéré dans L'analyse \ref{appreciation} de rajouter la programmation des mouvements de leur personnage. En effet, actuellement, seuls les autres personnages bougent. On pourrait envisager que le jeune programme ce qui est nécessaire pour déplacer son personnage avec le clavier.
 
 \paragraph{Chien et chat}
-Comme développé dans l'annalyse \ref{analyse-exp}, la mission "chien et chat" n'est pas assez dirigée. Une mission d'introduction supplémentaire serait probablement bénéfique. Un autre problème dans cette mission est le nombre de blocs laissés à disposition des élèves. Le choix avait été fait de leur laisser un accès à tous les blocs pour qu'ils voient la pleine puissance de \gls{snap}. Ce choix s'est révélé inapproprié.
+Comme développé dans l'annalyse \ref{analyse-exp}, la mission "chien et chat" n'est pas assez dirigée. Une mission d'introduction supplémentaire serait probablement bénéfique. Un autre problème dans cette mission est le nombre de \glspl{bloc}  laissés à disposition des élèves. Le choix avait été fait de leur laisser un accès à tous les \glspl{bloc}  pour qu'ils voient la pleine puissance de \gls{snap}. Ce choix s'est révélé inapproprié.
 
 \paragraph{Ajout de missions}
 En plus des missions proposées, il est important que d'autres missions soient créées pour avoir des cours plus consistants. Ces nouvelles missions permettraient d'apporter de nouveaux concepts, mais surtout permettraient aux enfants de pratiquer les concepts déjà appris pour mieux les intégrer. Il serait intéressant d'introduire les variables et les fonctions dans des missions futures.
 
 \section{Blocs d'introspection des programmes}
-Une autre amélioration serait une série de blocs fournissant des informations sur le programme. Il est déjà possible de savoir jusqu'où l'étudiant est arrivé et donc de lui attribuer des points en fonction.
-Pour aller plus loin, il serait intéressant d'avoir un compteur de blocs pour les scripts. En effet, un programme fait avec 20 blocs quand la solution optimale en compte 3 ne mérite probablement pas autant de point.
-De manière générale, il pourrait être envisagé de fournir de vrais blocs aux professeurs afin de leur faciliter la création de corrections et de cotations automatiques.
+Une autre amélioration serait une série de \glspl{bloc}  fournissant des informations sur le programme. Il est déjà possible de savoir jusqu'où l'étudiant est arrivé et donc de lui attribuer des points en fonction.
+Pour aller plus loin, il serait intéressant d'avoir un compteur de \glspl{bloc}  pour les scripts. En effet, un programme fait avec 20 \glspl{bloc}  quand la solution optimale en compte 3 ne mérite probablement pas autant de point.
+De manière générale, il pourrait être envisagé de fournir de vrais \glspl{bloc}  aux professeurs afin de leur faciliter la création de corrections et de cotations automatiques.
 
-Cette amélioration pourrait être couplée avec le test de réussite. Cette solution enverrait dans la requête au serveur une note et des informations sur l'avancée du programme grâce à ces blocs d'introspection.
+Cette amélioration pourrait être couplée avec le test de réussite. Cette solution enverrait dans la requête au serveur une note et des informations sur l'avancée du programme grâce à ces \glspl{bloc}  d'introspection.
 
 \section{Charte graphique}
 Pour que ce logiciel soit apprécié, une attention particulière au ressenti des utilisateurs est nécessaire. Un point important est donc d'avoir une charte graphique unifiée et cohérente en fonction du public visé.

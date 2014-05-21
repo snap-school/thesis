@@ -80,27 +80,35 @@
 %==========================
 %       PART 1
 %==========================
+\glsresetall
 \include{content/4-prerequis/background}
+\glsresetall
 \include{content/5-related_work/travail}
+\glsresetall
 \include{content/6-problem_statement/statement}
 
 
 %==========================
 %       PART 2
 %==========================
+\glsresetall
 \include{content/7-solution/solution}
+\glsresetall
 \include{content/8-validation/validation}
 
 
 %==========================
 %       PART 3
 %==========================
+\glsresetall
 \include{content/9-conclusion/conclusion}
+\glsresetall
 \include{content/10-future_work/furture}
 
 
 \appendix
 
+\renewcommand{\glsnamefont}[1]{\makefirstuc{#1}}
 \printglossaries
 
 \nocite{*} %TODO remove after check
