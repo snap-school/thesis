@@ -1,6 +1,6 @@
 \section{Rsnap}
 \graphicspath{{content/7-solution/3-rsnap/images/}}
-Cette section traite de l'implémentation de la solution \gls{Rsnap} ainsi qu'une présentation de son utilisation.
+Cette section traite de l'implémentation de la solution \gls{rsnap} ainsi qu'une présentation de son utilisation.
 
 \subsection{Implémentation}
 Comme expliqués en section \ref{rails}, \gls{rails} possède une architecture Model-Vue-Controleur. Cette section va présenter l'application en se basant sur ce modèle d'architecture. La première partie explique le modèle, ensuite les contrôleurs sont abordés. Enfin, les vues sont présentées.
@@ -18,17 +18,17 @@ Les concepts utiles pour développer l'application sont ceux présentés par les
 
 \paragraph{\texttt{User}} Ce modèle contient les informations nécessaires pour identifier les utilisateurs (\texttt{firstname}, \texttt{email} \ldots) et pour les authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). Les utilisateurs peuvent posséder plusieurs \glspl{role}, programmes et projets.
 
-\paragraph{\texttt{Role}} Les \glspl{role} permettent de donner des attributs aux utilisateurs. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de \gls{Rsnap}, deux types d'utilisateurs ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux \glspl{role} sont globaux et ne sont donc pas rattachés à une ressource spécifique.
+\paragraph{\texttt{Role}} Les \glspl{role} permettent de donner des attributs aux utilisateurs. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de \gls{rsnap}, deux types d'utilisateurs ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux \glspl{role} sont globaux et ne sont donc pas rattachés à une ressource spécifique.
 
 Les \glspl{role} sont utiles en conjonction avec les autorités \ref{authority} pour donner des droits supplémentaires à ces types d'utilisateurs.
 
-\paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Une mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. De plus, elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme.
+\paragraph{\texttt{Mission}} Les \glspl{mission} représentent tout ce qui est nécessaire pour avoir un exercice. Une \gls{mission} comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. De plus, elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme.
 
-\paragraph{\texttt{FileMission}} Les fichiers liés à une mission sont les différentes images qui composent la description.
+\paragraph{\texttt{FileMission}} Les fichiers liés à une \gls{mission} sont les différentes images qui composent la description.
 
-\paragraph{\texttt{Program}} Les programmes contiennent la solution d'un étudiant pour une mission. Ils contiennent uniquement le code source de l'étudiant.
+\paragraph{\texttt{Program}} Les programmes contiennent la solution d'un étudiant pour une \gls{mission}. Ils contiennent uniquement le code source de l'étudiant.
 
-\paragraph{\texttt{Project}} Les projets sont identiques aux programmes, mais ne sont pas liés à une mission. Ils contiennent donc le nom du projet en plus du code source.
+\paragraph{\texttt{Project}} Les projets sont identiques aux programmes, mais ne sont pas liés à une \gls{mission}. Ils contiennent donc le nom du projet en plus du code source.
 
 \paragraph{Exemple} \texttt{Program} est un bon exemple de modèle \gls{rails} (code source \ref{lst:model-program}). Seules les fonctionnalités qu’Active Record \ref{active-record} ne sait pas déduire de lui-même sont présentes. Le modèle contient donc uniquement :
 \begin{itemize}
@@ -46,8 +46,8 @@ Comme c'est visible pour les \lstinline[language=Rails]{scope} à la ligne 17-19
 Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:controllers} montre la liste des contrôleurs implémentés pour cette application. La majorité de ceux-ci se rapporte directement à un modèle spécifique. Il existe néanmoins certaines ressources différentes telles que :
 \begin{itemize}
   \item les pages statiques (\texttt{HomeController}) ;
-  \item l'ordonnancement des missions (\texttt{SortMissionsController}) ;
-  \item la création d'un programme depuis une mission (\texttt{InitializationMissionController}) ;
+  \item l'ordonnancement des \glspl{mission} (\texttt{SortMissionsController}) ;
+  \item la création d'un programme depuis une \gls{mission} (\texttt{InitializationMissionController}) ;
   \item les ressources utiles à l'affichage de \gls{snap} (\texttt{SnapAssetsController}).
 \end{itemize}
 
@@ -105,12 +105,12 @@ Les connaisseurs de Bootstrap \ref{bootstrap} auront reconnu l'usage intensif de
 \end{figure}
 
 \subsection{Utilisation}
-Pour utiliser la plateforme, il faut d'abord s'enregistrer. Ensuite, suivant le profil, différentes actions sont possibles. L'utilisateur normal peut uniquement résoudre les missions dans l'ordre proposé par les professeurs. Les professeurs peuvent aussi créer des missions. Cette section présente l'utilisation de la plateforme.
+Pour utiliser la plateforme, il faut d'abord s'enregistrer. Ensuite, suivant le profil, différentes actions sont possibles. L'utilisateur normal peut uniquement résoudre les \glspl{mission} dans l'ordre proposé par les professeurs. Les professeurs peuvent aussi créer des \glspl{mission}. Cette section présente l'utilisation de la plateforme.
 %TODO screenshot en annexe
 
 \paragraph{Professeur}
 Afin de réaliser un cours de programmation, un professeur doit pouvoir faire les actions suivantes :
-\subparagraph{Créer des missions} Pour créer une nouvelle mission (figure \ref{fig:mission-create}), le professeur doit se rendre sur la page qui liste toutes les missions. Ensuite, il clique sur le bouton en bas de page "Nouvelle mission". Sur la page suivante, il donne les informations sur la mission : titre, description, explication de la mission, vidéo d'explication \ldots Il lui reste à créer la mission proprement dite. Lorsque le professeur clique sur le bouton "Créer une mission", il est redirigé vers l'interface de \gls{snap}. Il peut alors créer tout ce qui est nécessaire à la réalisation et au test de la mission. Avant de sauver, il ne doit pas oublier de cacher les \glspl{bloc} et les \glspl{script} qui ne doivent pas être visibles par les étudiants.
+\subparagraph{Créer des missions} Pour créer une nouvelle \gls{mission} (figure \ref{fig:mission-create}), le professeur doit se rendre sur la page qui liste toutes les \glspl{mission}. Ensuite, il clique sur le bouton en bas de page "Nouvelle mission". Sur la page suivante, il donne les informations sur la \gls{mission} : titre, description, explication de la mission, vidéo d'explication \ldots Il lui reste à créer la mission proprement dite. Lorsque le professeur clique sur le bouton "Créer une \gls{mission}", il est redirigé vers l'interface de \gls{snap}. Il peut alors créer tout ce qui est nécessaire à la réalisation et au test de la mission. Avant de sauver, il ne doit pas oublier de cacher les \glspl{bloc} et les \glspl{script} qui ne doivent pas être visibles par les étudiants.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{mission-create}
@@ -119,7 +119,7 @@ Afin de réaliser un cours de programmation, un professeur doit pouvoir faire le
   \end{center}
 \end{figure}
 
-\subparagraph{Ordonner les missions} Pour ordonner les missions (figure \ref{fig:mission-order}) dans un ordre pédagogique, il suffit de les glisser dans la liste.
+\subparagraph{Ordonner les missions} Pour ordonner les \glspl{mission} (figure \ref{fig:mission-order}) dans un ordre pédagogique, il suffit de les glisser dans la liste.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{mission-order}
@@ -139,9 +139,9 @@ Afin de réaliser un cours de programmation, un professeur doit pouvoir faire le
 
 \paragraph{Étudiant}
 Un étudiant doit pouvoir réaliser les opérations suivantes :
-\subparagraph{Réaliser une mission} L'étudiant réalise une mission (figure \ref{fig:program-creation}) en cliquant sur le nom de la mission.
+\subparagraph{Réaliser une mission} L'étudiant réalise une \gls{mission} (figure \ref{fig:program-creation}) en cliquant sur le nom de la \gls{mission}.
 
-Deux possibilités s'offrent à lui. Soit le bouton est bleu, ce qui signifie que la mission a déjà été commencée. L'étudiant la reprend là où elle s'était arrêtée. Soit, le bouton est vert et dans ce cas, une nouvelle mission commence.
+Deux possibilités s'offrent à lui. Soit le bouton est bleu, ce qui signifie que la \gls{mission} a déjà été commencée. L'étudiant la reprend là où elle s'était arrêtée. Soit, le bouton est vert et dans ce cas, une nouvelle \gls{mission} commence.
 
 Dans les deux cas, l'étudiant se retrouve sur l'interface de \gls{snap}.
 \begin{figure}
