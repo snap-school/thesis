@@ -16,11 +16,11 @@ Les concepts utiles pour développer l'application sont ceux présentés par les
  \end{center}
 \end{figure}
 
-\paragraph{\texttt{User}} Ce modèle contient les informations nécessaires pour identifier les utilisateurs (\texttt{firstname}, \texttt{email} \ldots) et pour les authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). Les utilisateurs peuvent posséder plusieurs rôles, programmes et projets.
+\paragraph{\texttt{User}} Ce modèle contient les informations nécessaires pour identifier les utilisateurs (\texttt{firstname}, \texttt{email} \ldots) et pour les authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). Les utilisateurs peuvent posséder plusieurs \glspl{role}, programmes et projets.
 
-\paragraph{\texttt{Role}} Les rôles permettent de donner des attributs aux utilisateurs. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de \gls{Rsnap}, deux types d'utilisateurs ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux rôles sont globaux et ne sont donc pas rattachés à une ressource spécifique.
+\paragraph{\texttt{Role}} Les \glspl{role} permettent de donner des attributs aux utilisateurs. Ce modèle a été généré automatiquement par Rolify \ref{rolify}. Dans le cas de \gls{Rsnap}, deux types d'utilisateurs ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux \glspl{role} sont globaux et ne sont donc pas rattachés à une ressource spécifique.
 
-Les rôles sont utiles en conjonction avec les autorités \ref{authority} pour donner des droits supplémentaires à ces types d'utilisateurs.
+Les \glspl{role} sont utiles en conjonction avec les autorités \ref{authority} pour donner des droits supplémentaires à ces types d'utilisateurs.
 
 \paragraph{\texttt{Mission}} Les missions représentent tout ce qui est nécessaire pour avoir un exercice. Une mission comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. De plus, elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme.
 
@@ -59,7 +59,7 @@ Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:c
  \end{center}
 \end{figure}
 
-Comme il est expliqué dans la section \ref{controleur}, les méthodes accessibles sont définies dans \texttt{routes.rb}. Les contrôleurs ont tous des ressources REST excepté \texttt{HomeController}. Ceci est visible dans \texttt{routes.rb} ou en regardant les fonctions publiques disponibles dans les contrôleurs sur la figure \ref{fig:controllers}.
+Comme il est expliqué dans la section \ref{controleur}, les méthodes accessibles sont définies dans \texttt{routes.rb}. Les contrôleurs ont tous des ressources \gls{rest} excepté \texttt{HomeController}. Ceci est visible dans \texttt{routes.rb} ou en regardant les fonctions publiques disponibles dans les contrôleurs sur la figure \ref{fig:controllers}.
 
 \paragraph{Exemple}
 L'extrait du contrôleur \texttt{MissionsController} \ref{lst:controller-mission} montre l'usage classique d'un contrôleur.
@@ -68,7 +68,7 @@ L'extrait du contrôleur \texttt{MissionsController} \ref{lst:controller-mission
 \lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO vérifier les ranges des lignes
 \end{figure}
 
-Grâce à la méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes REST, des vérifications de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} donne la possibilité de réaliser une action supplémentaire avant chaque appel de fonction. Dans cet exemple, il faut que l'utilisateur soit authentifié pour que l'application puisse ensuite vérifier ses droits. Ceci à l'exception des actions \texttt{show} et \texttt{index} qui peuvent être publiques.
+Grâce à la méta-programmation, \lstinline[language=Rails]{authorize_actions_for Mission} permet de rajouter, sur toutes les méthodes \gls{rest}, des vérifications de ce que peut réaliser ou pas l'utilisateur courant. Ces vérifications sont injectées dans les autorités \ref{autority}. De plus, la méthode \lstinline[language=Rails]{before_filter} donne la possibilité de réaliser une action supplémentaire avant chaque appel de fonction. Dans cet exemple, il faut que l'utilisateur soit authentifié pour que l'application puisse ensuite vérifier ses droits. Ceci à l'exception des actions \texttt{show} et \texttt{index} qui peuvent être publiques.
 
 Dans une méthode public d'un contrôleur plusieurs actions sont à implémenter :
 \begin{enumerate}
@@ -110,7 +110,7 @@ Pour utiliser la plateforme, il faut d'abord s'enregistrer. Ensuite, suivant le 
 
 \paragraph{Professeur}
 Afin de réaliser un cours de programmation, un professeur doit pouvoir faire les actions suivantes :
-\subparagraph{Créer des missions} Pour créer une nouvelle mission (figure \ref{fig:mission-create}), le professeur doit se rendre sur la page qui liste toutes les missions. Ensuite, il clique sur le bouton en bas de page "Nouvelle mission". Sur la page suivante, il donne les informations sur la mission : titre, description, explication de la mission, vidéo d'explication \ldots Il lui reste à créer la mission proprement dite. Lorsque le professeur clique sur le bouton "Créer une mission", il est redirigé vers l'interface de \gls{snap}. Il peut alors créer tout ce qui est nécessaire à la réalisation et au test de la mission. Avant de sauver, il ne doit pas oublier de cacher les \glspl{bloc} et les scripts qui ne doivent pas être visibles par les étudiants.
+\subparagraph{Créer des missions} Pour créer une nouvelle mission (figure \ref{fig:mission-create}), le professeur doit se rendre sur la page qui liste toutes les missions. Ensuite, il clique sur le bouton en bas de page "Nouvelle mission". Sur la page suivante, il donne les informations sur la mission : titre, description, explication de la mission, vidéo d'explication \ldots Il lui reste à créer la mission proprement dite. Lorsque le professeur clique sur le bouton "Créer une mission", il est redirigé vers l'interface de \gls{snap}. Il peut alors créer tout ce qui est nécessaire à la réalisation et au test de la mission. Avant de sauver, il ne doit pas oublier de cacher les \glspl{bloc} et les \glspl{script} qui ne doivent pas être visibles par les étudiants.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{mission-create}
