@@ -61,11 +61,11 @@
 \begin{document}
 %\dominitoc
 
-
+\frontmatter
 \maketitle
 %\input{titlepage}
 
-\pagenumbering{arabic}
+%\pagenumbering{arabic}
 
 \include{content/1-abstract/abstract}
 \include{content/2-acknowledgements/acknow}
@@ -74,7 +74,7 @@
 %\listoffigures
 
 
-%\mainmatter
+\mainmatter
 \include{content/3-introduction/intro}
 
 %==========================
@@ -115,8 +115,9 @@
 \bibliographystyle{plain}
 \bibliography{biblio}
 
-%\printnomenclature
-%\cleardoublepage
+\include{content/11-reference/reference}
+
+\cleardoublepage
 
 
 \end{document}
