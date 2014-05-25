@@ -1,4 +1,4 @@
-\chapter{Validation}
+﻿\chapter{Validation}
 Ce chapitre présente les techniques de validation de la plateforme \gls{rsnap}. La validation du code est abordée dans un premier temps. Ensuite, les expériences sur des populations d'étudiants et leurs analyses sont développées.
 
 \section{Implémentation}
@@ -39,7 +39,7 @@ Le code source \ref{lst:cucumber-mission} montre différents scénarii décrivan
 
 L'extrait de code \ref{lst:cucumber-implementation-mission}, montre comment sont implémentés les scénarii précédents. La façon dont est piloté un navigateur pour réaliser les tests est aussi visible via les méthodes : \texttt{click\_on}, \texttt{current\_path}, \texttt{visit}\ldots
 
-\subsection{Utilisation de metriques}
+\subsection{Utilisation de métriques}
 Un autre style d'outils donne des informations sur le projet via son code source. Deux services ont principalement été utilisés.
 
 \subsubsection{Gemnasium}
@@ -49,7 +49,7 @@ Gemnasium \ref{gemnasium} permet d'avoir un service de veille qui vérifie si le
 rails\_best\_practice \ref{rbp} fournit quant à lui une information plus complexe à traiter. En effet, il renseigne les endroits dans le code source qui ne respecteraient pas le "rails way" et en fournit des exemples de réécriture. Cet outil est donc principalement utile en début de projet quand les auteurs ne connaissent pas encore bien quelles sont les bonnes pratiques.
 
 \section{Expériences}
-Cette section aborde les expériences réalisées pour ce travail. celles-ci commencent par un après-midi chez KidsCode. Vient ensuite le "Printemps des Sciences" pendant lequel environ 80 élèves ont testé l'application. Enfin, une analyse des expériences à travers des formulaires remplis par les élèves et les professeurs est approchée.
+Cette section aborde les expériences réalisées pour ce travail. Celles-ci commencent par un après-midi chez KidsCode. Vient ensuite le "Printemps des Sciences" pendant lequel environ 80 élèves ont testé l'application. Enfin, une analyse des expériences à travers des formulaires remplis par les élèves et les professeurs est approchée.
 
 \subsection{KidsCode}
 \label{kidscode}
@@ -71,11 +71,11 @@ Même si ce dernier point pourrait sembler être moins justifié dans le cadre d
 \subsubsection{Déroulement}
 L'expérience s'est déroulée pendant un peu plus d'une heure. A la suite des activités habituelles de KidsCode, la dernière heure y était consacrée.
 
-Le début de l'expérience a été marqué par une perte d'attention et la dissipation des enfants. Une fois le groupe repris en main, les jeunes ont directement montré beaucoup d'intérêts, aussi bien pour l'interface qu'ils découvraient, que pour la compétition intergroupes qui s'est rapidement mis en place.
+Le début de l'expérience a été marqué par une perte d'attention et la dissipation des enfants. Une fois le groupe repris en main, les jeunes ont directement montré beaucoup d'intérêts, aussi bien pour l'interface qu'ils découvraient, que pour la compétition intergroupe qui s'est rapidement mis en place.
 
 Comme expliqué dans la partie précédente \ref{context-kidscode}, le public avait déjà de bonnes notions de programmation par rapport au public visé par ce mémoire. Les premières \glspl{mission} ont donc été rapidement réalisées. Les principaux points de ralentissement étaient des problèmes de lecture des consignes. En effet, les auteurs n'avaient prévu que des consignes écrites. Or, les jeunes ne prenaient pas le temps de les lire et ne savaient donc pas quoi faire. Il semble que ce soit l'impatience des jeunes à mener les \glspl{mission} plus que leur niveau de lecture qui détermine leur comportement.
 
-La compétition que les jeunes ont mise en place dès le début a eu un effet bénéfique pour leur évolution car elle leur donnait la motivation de réaliser les défis proposés. Ceci était fort visible à chaque passage de \gls{mission}. Chaque fois qu'un groupe finissait sa \gls{mission}, il était important pour lui de le signaler aux autres. Cela lui donnait une satisfaction qui le poussait à réaliser la \gls{mission} suivante.
+La compétition que les jeunes ont mise en place dès le début a eu un effet bénéfique pour leur évolution, car elle leur donnait la motivation de réaliser les défis proposés. Ceci était fort visible à chaque passage de \gls{mission}. Chaque fois qu'un groupe finissait sa \gls{mission}, il était important pour lui de le signaler aux autres. Cela lui donnait une satisfaction qui le poussait à réaliser la \gls{mission} suivante.
 
 Dans les délais impartis, alors que tous sont arrivés à la \gls{mission} finale du chien et du chat \ref{chien-chat}, personne n'a réussi à la finir.
 
@@ -88,9 +88,9 @@ Dans l'ensemble, l'expérience s'est très bien déroulée et les participants o
 Cependant pour tenir compte de certains paramètres, des améliorations ont été apportées à l'application. Ces modifications sont abordées dans la suite de cette partie.
 
 \paragraph{Changement dans les missions}
-La \gls{mission} \texttt{répète et répépète} a été retirée car elle s'est avérée peu accrocheuse pour les enfants et peu intéressante par rapport aux concepts introduits. Un personnage devait répéter ce que disait un autre. Pendant cette \gls{mission}, beaucoup d'enfants se sont dispersés parce qu'ils s'embêtaient et que ce n'était pas assez concret. Cette \gls{mission} avait pour but de faire découvrir les fonctions d'affichage de textes.
+La \gls{mission} \texttt{répète et répépète} a été retirée, car elle s'est avérée peu accrocheuse pour les enfants et peu intéressante par rapport aux concepts introduits. Un personnage devait répéter ce que disait un autre. Pendant cette \gls{mission}, beaucoup d'enfants se sont dispersés parce qu'ils s'embêtaient et que ce n'était pas assez concret. Cette \gls{mission} avait pour but de faire découvrir les fonctions d'affichage de textes.
 
-Elle a été remplacée par \texttt{Soyons courtois} décrit en section \ref{mission-courtois}. Cette nouvelle \gls{mission} est beaucoup plus dynamique que la précédente, car elle permet à l'étudiant de se déplacer et d'utiliseer les capteurs de collisions introduits dans la \gls{mission} précédente.
+Elle a été remplacée par \texttt{Soyons courtois} décrit en section \ref{mission-courtois}. Cette nouvelle \gls{mission} est beaucoup plus dynamique que la précédente, car elle permet à l'étudiant de se déplacer et d'utiliser les capteurs de collisions introduits dans la \gls{mission} précédente.
 
 \paragraph{Ajout d'un bouton "réinitialiser la mission"}
 Lors de l'expérience, un groupe d'enfants a réussi à corrompre l'environnement de la \gls{mission} suite à une série obscure d'opérations. Pour palier à ce genre de risque, un bouton "réinitialiser la mission" a été rajouté dans l'interface de \gls{snap}. Il permet de réinitialiser la \gls{mission} courante.
@@ -109,14 +109,14 @@ L'origine des jeunes est également variée. Il y a eu des classes de Chimay, de
 \subsubsection{Buts}
 Le but principal de cette expérience était de confronter l'application à son usage réel dans des classes d'étudiants. Il fallait pouvoir observer comment elle se déroule en réalité et en ressortir une analyse des besoins spécifiques de l'application.
 
-Un autre but poursuivi était l'évaluation de l'âge idéal et du niveau de difficulté des \glspl{mission} pour des néophytes. En effet, lors de l'expérience précédente, le public était volontaire et avait déjà des connaissances en programmation. De par ce fait, le niveau des \glspl{mission} devait être afiné sur le public visé.
+Un autre but poursuivi était l'évaluation de l'âge idéal et du niveau de difficulté des \glspl{mission} pour des néophytes. En effet, lors de l'expérience précédente, le public était volontaire et avait déjà des connaissances en programmation. De par ce fait, le niveau des \glspl{mission} devait être affiné sur le public visé.
 
 Les auteurs désiraient aussi observer les réactions et l'intérêt des étudiants pour la solution proposée.
 
 Un dernier but était évidemment de récolter l'avis des étudiants.
 
 \subsubsection{Déroulement}
-Le déroulement de cette expérience se divise en deux parties. La première présente le déroulement de l'activité commune aux écoles participantes. Ensuite vient une explication particulière à chaque écoles pour en détailler leurs spécificités.
+Le déroulement de cette expérience se divise en deux parties. La première présente le déroulement de l'activité commune aux écoles participantes. Ensuite vient une explication particulière à chaque école pour en détailler leurs spécificités.
 \paragraph{Déroulement général des activités}
 Lors de la mise en place de l'activité, une petite démonstration de l'interface a été présentée pour familiariser les étudiants à \gls{snap}.
 
@@ -137,7 +137,7 @@ La première classe à avoir testé l'application est une sixième \gls{primaire
 
 L'activité s'est déroulée avec une petite contrariété informatique. En effet, l'interpréteur JavaScript des machines mises à disposition était très lent. Ceci n'a pas compromis le déroulement de l'activité, mais fut, à quelques moments, une source de frustrations pour certains élèves très enthousiastes.
 
-À la fin du temps imparti, tous les élèves avaient atteint la dernière \gls{mission}, décrit en section \ref{chien-chat}. Ils n'ont généralement pas fini l'étape de déplacement du personnage, mais étaient bien avancés en ce sens.
+À la fin du temps imparti, tous les élèves avaient atteint la dernière \gls{mission}, décrite en section \ref{chien-chat}. Ils n'ont généralement pas fini l'étape de déplacement du personnage, mais étaient bien avancés en ce sens.
 
 \paragraph{L'athénée royal Paule Delvaux}
 Cette école est venue avec une classe de sixième \gls{primaire} également. Pour cette expérience, le problème de réactivité de l'interface a été corrigé.
@@ -148,29 +148,29 @@ Cependant, ils sont arrivés à peu près aux mêmes résultats que ceux de Bous
 L'enthousiasme des jeunes était également au rendez-vous et ils se sont bien amusés.
 
 \paragraph{Collège saint Joseph}
-Les deux dernières classes à participer à l'expérience étaient du collège saint Joseph de Chimay accompagnées par leur professeur de mathématique qui semblent induire auprès de leurs élèves un intérêt pour la logique, entre autres de programmation.
+Les deux dernières classes à participer à l'expérience étaient du collège saint Joseph de Chimay accompagné par leur professeur de mathématique qui semblent induire auprès de leurs élèves un intérêt pour la logique, entre autres de programmation.
 
-Comme ces deux classes avaient un niveau de première \gls{humanite}, les enfants étaient plus autonomes. L'expérience s'est déroulée comme pour les \glspl{primaire}. La première \gls{mission} était la plus laborieuse, mais une fois celle-ci passée, le reste a été plus aisé. Ces enfants étant plus grands, il a semblé aux auteurs qu'ils présentaient une capacité d'apprentissage plus élevée. En effet, ils ont été beaucoup plus rapides pour réaliser les \glspl{mission}. Ceci leur a permis d'avancer davantage dans la dernière \gls{mission}. Certains groupes ont même réaliser un programme fonctionnel pour cette dernière \gls{mission}: il ne manquait que le score à implémenter.\\
+Comme ces deux classes avaient un niveau de première \gls{humanite}, les enfants étaient plus autonomes. L'expérience s'est déroulée comme pour les \glspl{primaire}. La première \gls{mission} était la plus laborieuse, mais une fois celle-ci passée, le reste a été plus aisé. Ces enfants étant plus grands, il a semblé aux auteurs qu'ils présentaient une capacité d'apprentissage plus élevée. En effet, ils ont été beaucoup plus rapides pour réaliser les \glspl{mission}. Ceci leur a permis d'avancer davantage dans la dernière \gls{mission}. Certains groupes ont même réalisé un programme fonctionnel pour cette dernière \gls{mission}: il ne manquait que le score à implémenter.\\
 
-Dans ces classes une différence de niveau au sein des groupe a été observé. En effet certains duos étaient très autonome alors que d'autre se rapprochaient plus des groupes de l'enseignement \gls{fondamental}.
+Dans ces classes une différence de niveau au sein des groupes a été observée. En effet certains duos étaient très autonomes alors que d'autres se rapprochaient plus des groupes de l'enseignement \gls{fondamental}.
 
 \subsubsection{Analyse}
 \label{analyse-scienceinfuse}
-Compte tenu des remarques précédentes, l'ensemble de ces expériences s'est globalement bien déroulée. Les objectifs ont été approchés. Le niveau des \glspl{mission} correspondait à ce qui était souhaité. La plupart des enfants ont très vite et bien pris en main l'interface de \gls{snap}. Les modifications apportées par la première expérience ont montré toutes leurs utilités. En autre, le bouton "réinitialisation" s'est avéré facile à utiliser. La \gls{mission} \texttt{Soyons courtois}, voir section \ref{mission-courtois}, a été appréciée des enfants et a remplis pleinement son \gls{role}.
+Compte tenu des remarques précédentes, l'ensemble de ces expériences s'est globalement bien déroulé. Les objectifs ont été approchés. Le niveau des \glspl{mission} correspondait à ce qui était souhaité. La plupart des enfants ont très vite et bien pris en main l'interface de \gls{snap}. Les modifications apportées par la première expérience ont montré toutes leurs utilités. En autre, le bouton "réinitialisation" s'est avéré facile à utiliser. La \gls{mission} \texttt{Soyons courtois}, voir section \ref{mission-courtois}, a été appréciée des enfants et a remplis pleinement son \gls{role}.
 
-Certains point sont un peut plus détaillé tel que les vidéos d'introduction, les tranches d'âge et les améliorations qui ont été trouvées grace à cette expérience.
+Certains points sont un peu plus détaillés tels que les vidéos d'introduction, les tranches d'âge et les améliorations qui ont été trouvées grâce à cette expérience.
 
-%TODO revoir les titre des paragraph et p-e en faire aussi dans l'intro de analyse
+%TODO revoir les titre des paragraph et p-e en faire aussi dans l'intro d’analyse
 \paragraph{Vidéo}
 Une crainte était que grâce au lecteur \texttt{YouTube}, ils regardent d'autres vidéos après avoir regarder leur vidéo d'introduction à la \gls{mission}. Il n'en fût rien et leur curiosité était assez forte pour les garder dans l'application.
 
 \paragraph{Tranche d'âge}
 \label{trancheage}
-Un des objectifs de ce travail est que les enfants utilisent cette application de manière quasi-autonome. Dans ce sens, durant les expériences, les auteurs ont constaté que les enfants de début d'\gls{humanite} sont plus aptes à travailler de cette manière que les élèves de \gls{primaire} : moins d'appel à l'aide, plus de persévérance, meilleur prise en charge individuelle, etc.
+Un des objectifs de ce travail est que les enfants utilisent cette application de manière quasi-autonome. Dans ce sens, durant les expériences, les auteurs ont constaté que les enfants de début d'\gls{humanite} sont plus aptes à travailler de cette manière que les élèves de \gls{primaire} : moins d'appels à l'aide, plus de persévérance, meilleure prise en charge individuelle, etc.
 En conséquence, l'application pour des élèves du \gls{fondamental}, nécessite soit une plus grande maîtrise de la matière soit plus d'encadrants.
 
 \paragraph{Amélioration}
-Lors de cette expérience, les auteurs ont été particulièrement attentif au retour des enfants et a leur réaction spontanées. Il ressort de ces observations quelques améliorations tel que:
+Lors de cette expérience, les auteurs ont été particulièrement attentifs au retour des enfants et ont leur réaction spontanée. Il ressort de ces observations quelques améliorations telles que:
 \begin{itemize}
   \item ajouter un message d'information sur la sauvegarde des projets ;
   \item diminuer le taux de rafraîchissement de la fenêtre ;
@@ -186,7 +186,7 @@ Par des expériences ludiques menées en une heure, les enfants ont appris des c
 
 \section{Formulaires}
 \label{analyse-exp}
-Un formulaire a été complèté par chaque enfants et chaque professeurs à la fin de l'activité. Dans cette partie, les formulaires sont analysés. Les données complètes, les graphiques et les commentaires des enfants sont disponibles en annexe \ref{annex-data-form}. %TODO réécrire en fonction de ce que je vais écrire %TODO on parle du formulaire des prof ?
+Un formulaire a été complété par chaque enfant et chaque professeur à la fin de l'activité. Dans cette partie, les formulaires sont analysés. Les données complètes, les graphiques et les commentaires des enfants sont disponibles en annexe \ref{annex-data-form}. %TODO réécrire en fonction de ce que je vais écrire %TODO on parle du formulaire des prof ?
 
 \subsection{Création du formulaire}
 Le formulaire a deux objectifs principaux : connaître nos participants et connaître leur ressenti sur les \glspl{mission}.
@@ -199,30 +199,30 @@ Le formulaire a deux objectifs principaux : connaître nos participants et conna
 \end{figure}
 
 \paragraph{Participant}
-La première partie du formulaire (figure \ref{fig:form-user}) est utile pour apprendre des informations générales sur les participants tel que leur age, leur niveau de connaissance en informatique et en programmation avant et après l'expérience.
+La première partie du formulaire (figure \ref{fig:form-user}) est utile pour apprendre des informations générales sur les participants telles que leur age, leur niveau de connaissance en informatique et en programmation avant et après l'expérience.
 
 \paragraph{Missions}
-La deuxième partie du formulaire est un questionnaire identique pour chaque \gls{mission} (figure \ref{fig:form-user}). Celui-ci permet d'obtenir des retours sur l'appréciation de ceux-ci. Ces retours porte sur les différentes parties des \glspl{mission} : les explications, la réalisation et leur appréciation générale. Les formulaire sont collecté dans le but d'améliorer les \glspl{mission}.
+La deuxième partie du formulaire est un questionnaire identique pour chaque \gls{mission} (figure \ref{fig:form-user}). Celui-ci permet d'obtenir des retours sur l'appréciation de ceux-ci. Ces retours porte sur les différentes parties des \glspl{mission} : les explications, la réalisation et leur appréciation générale. Les formulaires sont collectés dans le but d'améliorer les \glspl{mission}.
 
 \subsection{Protocole de récolte}
-%TODO !!! glossaire. n'oublie pas de rajouter les mot du glossaire pour ces 4 points
-demande à tous les 10 dernières min du printemps des sciences de remplir
+%TODO !!! glossaire. n'oublie pas de rajouter les mots du glossaire pour ces 4 points
+demande à toutes les 10 dernières min du printemps des sciences de remplir
 
-remplissage par binome : \gls{fondamental} (16) et \gls{secondaire} (20)
+remplissage par binôme : \gls{fondamental} (16) et \gls{secondaire} (20)
 
 biais
 
 formulaire avec valeur entre 1 et 4
 
 \subsection{Analyse des formulaires}
-L'analyse des formulaires se déroule en suivant leur deux but, le niveau des enfants en informatique et l'évaluation des \glspl{mission}.
+L'analyse des formulaires se déroule en suivant leurs deux buts, le niveau des enfants en informatique et l'évaluation des \glspl{mission}.
 
 \subsubsection{Niveau des enfants en informatique}
-Une questions du formulaire portait sur la connaissance de l'informatique et de la programmation. Les schémas montrent comment les enfants auto-évaluent leurs compétences en informatique \ref{fig:niveau-info} et en programmation \ref{fig:niveau-prog}.
+Une question du formulaire portait sur la connaissance de l'informatique et de la programmation. Les schémas montrent comment les enfants autoévaluent leurs compétences en informatique \ref{fig:niveau-info} et en programmation \ref{fig:niveau-prog}.
 
 Les enfants avaient l'impression de connaître assez bien l'utilisation d'un ordinateur avant de venir et que notre expérience n'a pas aidé dans son utilisation.
 
-La compréhension de ce qu'est la programmation, s'est par ailleurs bien améliorée. Avant, ils ne savaient pas ce qu'est la programmation, alors qu'après l'expérience, les participants estimait beaucoup mieux comprendre ce qu'est la programmation. %TODO mettre référence vers tab et fig
+La compréhension de ce qu'est la programmation s'est par ailleurs bien améliorée. Avant, ils ne savaient pas ce qu'est la programmation, alors qu'après l'expérience, les participants estimaient beaucoup mieux comprendre ce qu'est la programmation. %TODO mettre référence vers tab et fig
 
 \begin{figure}
   \begin{center}
@@ -232,7 +232,7 @@ La compréhension de ce qu'est la programmation, s'est par ailleurs bien amélio
     \end{subfigure}
     \begin{subfigure}[b]{.49\textwidth}
       \includegraphics[width=\textwidth]{content/8-validation/images/apres}
-      \caption{Amélioration grace à l'expérience}
+      \caption{Amélioration grâce à l'expérience}
     \end{subfigure}
     \caption{Auto-estimation du niveau en informatique des participants}
     \label{fig:niveau-info}
@@ -249,7 +249,7 @@ La compréhension de ce qu'est la programmation, s'est par ailleurs bien amélio
     \begin{subfigure}[b]{\textwidth}
       \begin{center}
         \includegraphics[width=.5\textwidth]{content/8-validation/images/apres-programmation}
-        \caption{Amélioration grace à l'expérience}
+        \caption{Amélioration grâce à l'expérience}
       \end{center}
     \end{subfigure}
     \caption{Auto-estimation de la connaissance en programmation des participants}
@@ -313,7 +313,7 @@ En plus de l'évaluation de leur niveau de compétences en informatique et en pr
 
 %TODO mettre des références vers tab et fig
 \paragraph{En voiture \ref{mission-voiture}}
-Pour les utilisateurs, la première \gls{mission} a été la plus laborieuse. En effet, les expérimentateurs ont du fournir de l'aide à de nombreuse reprise pour débloquer les participants. Cependant, cette \gls{mission} a le plus haut taux d'appréciation des enfants. Est-ce du à la facilité de compréhension de cette \gls{mission} ? Est-ce le graphisme ? Ou encore son côté concret ? Les formulaires n'apportent pas assez d'éléments de réponse.
+Pour les utilisateurs, la première \gls{mission} a été la plus laborieuse. En effet, les expérimentateurs ont dû fournir de l'aide à de nombreuses reprises pour débloquer les participants. Cependant, cette \gls{mission} a le plus haut taux d'appréciation des enfants. Est-ce dû à la facilité de compréhension de cette \gls{mission} ? Est-ce le graphisme ? Ou encore son côté concret ? Les formulaires n'apportent pas assez d'éléments de réponse.
 
 \paragraph{Hélicoptère \ref{mission-helicoptere}}
 La seconde \gls{mission} a été appréciée, mais, comme cité plus haut \ref{analyse-scienceinfuse}, elle pourrait être séparée en deux \glspl{mission}. En effet, beaucoup d'étudiants ont eu besoin de l'aide des auteurs pour cumuler les deux concepts abordés en une fois.
@@ -324,12 +324,12 @@ La troisième \gls{mission} est la moins appréciée du \gls{fondamental}. Une d
 % D'après les retours des élèves, elle semble être trop facile. Comme suggéré plus haut \ref{appreciation}, une piste serait de rajouter l'implémentation des mouvements à cette mission.
 
 \paragraph{Tu ne m'attraperas jamais \ref{chien-chat}}
-La quatrième \gls{mission}, "chien et chat", a passionné les élèves mais ils ont été frustrés par le manque de temps. Personne n'a réussi à la finir. Il faudrait peut-être envisager de guider davantage les étudiants dans cette \gls{mission}. Par exemple, tous les \glspl{bloc} y étaient accessibles, ceci afin que les étudiants puissent découvrir ce qui est possible de faire avec \gls{snap}. L'analyse des commentaires montre que les étudiants se perdent dans la masse de \glspl{bloc} disponibles.
+La quatrième \gls{mission}, "chien et chat", a passionné les élèves, mais ils ont été frustrés par le manque de temps. Personne n'a réussi à la finir. Il faudrait peut-être envisager de guider davantage les étudiants dans cette \gls{mission}. Par exemple, tous les \glspl{bloc} y étaient accessibles, ceci afin que les étudiants puissent découvrir ce qui est possible de faire avec \gls{snap}. L'analyse des commentaires montre que les étudiants se perdent dans la masse de \glspl{bloc} disponibles.
 
-Une autre possibilité serai d'augmenter le temps imparti à l'expérience tout en tenant compte de la capacité de concentration des enfants. Une durée qui semble intéressante serait deux plages de cinquante minutes.
+Une autre possibilité serait d'augmenter le temps imparti à l'expérience tout en tenant compte de la capacité de concentration des enfants. Une durée qui semble intéressante serait deux plages de cinquante minutes.
 
-Cette \gls{mission} est aussi particularisée par une différence d'appréciation entre les deux tranche d'age étudiée. En effet, le \gls{fondamental} a mieux aimer réaliser cette \gls{mission} que le \gls{secondaire}. Cette différence peut-être expliqué par la part de créativité laisser au participant notament dans le choix de l'image pour les personnages.
+Cette \gls{mission} est aussi particularisée par une différence d'appréciation entre les deux tranches d'age étudiée. En effet, le \gls{fondamental} a mieux aimé réaliser cette \gls{mission} que le \gls{secondaire}. Cette différence peut-être expliquée par la part de créativité laisser au participant notamment dans le choix de l'image pour les personnages.
 %Sur base des commentaires et de l'appréciation des auteurs, la notation de la quatrième mission peut s'expliquer par la frustration des utilisateurs de ne pas avoir eu le temps de la finir.
 
 \subsubsection{Appréciation des professeurs}
-En ce qui concerne les retours des professeurs, voir annexe \ref{result-prof}, ils étaient tous, sans exception, très positifs. Les professeurs d'\gls{humanite} ont montré beaucoup d'intérêts pour l'utilisation de l'application dans leurs cours. Malgré l'insistance des auteurs, les professeurs n'ont pas donné de critique négative.
+En ce qui concerne les retours des professeurs, voir annexe \ref{result-prof}, ils étaient tous, sans exception, très positive. Les professeurs d'\gls{humanite} ont montré beaucoup d'intérêts pour l'utilisation de l'application dans leurs cours. Malgré l'insistance des auteurs, les professeurs n'ont pas donné de critique négative.
