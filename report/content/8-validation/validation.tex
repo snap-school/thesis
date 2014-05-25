@@ -5,20 +5,19 @@ Ce chapitre présente les techniques de validation de la plateforme \gls{rsnap}.
 Dans cette section, les outils de validation du code de \gls{rsnap} sont présentés. Deux outils principaux ont été utilisés pour avoir un logiciel le mieux écrit possible \ref{rails-tests} : les tests unitaires et les métriques.
 
 \subsection{Tests unitaires}
-Les tests unitaires servent à vérifier que le code fonctionne correctement. L'implémentation des tests s'est déroulée en parallèle à la création de l'application. Deux principaux types de tests ont été réalisés, ceux sur les contrôleurs et ceux au niveau de l'utilisateur. Avant de les aborder, une courte section présente les programmes utilisés pour les tests.
+Les tests unitaires servent à vérifier que le code fonctionne correctement. L'implémentation des tests s'est déroulée en parallèle à la création de l'application. Deux principaux types de tests ont été réalisés, ceux sur les contrôleurs et ceux au niveau de l'utilisateur. Avant de les aborder, un courte section présente les programmes utilisés pour les tests.
 
 \subsubsection{Outils pour les tests}
-Un des programmes utilisés pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une "pull request", les tests sont également effectués pour savoir si l'acceptation de la branche introduira des bogues.
+Un des programmes utilisés pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une \texttt{\gls{pull}}, les tests sont également effectués pour savoir si l'acceptation de la branche introduira des bogues.
 
-Une des métriques générées par les tests est la couverture du code. Cette information est fournie par Coveralls\ref{biblio} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas d'information sur le type de code testé. Il faut donc être attentif à ce que les tests couvrent effectivement les parties critiques.
+Une des métriques générées par les tests est la couverture du code. Cette information est fournie par Coveralls\cite{coveralls} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas d'information sur le type de code testé. Il faut donc être attentif à ce que les tests couvrent effectivement les parties critiques.
 
-Enfin, lors des tests, il est nécessaire d'avoir des données pour peupler les modèles. Ceci s'effectue grâce au gem FactoryGirls \footnote{\url{https://github.com/thoughtbot/factory_girl_rails}} qui propose un langage dédié pour écrire rapidement des fabriques. Ces dernières vont générer ces données de test pour peupler les modèles.
+Enfin, lors des tests, il est nécessaire d'avoir des données pour peupler les modèles. Ceci s'effectue grâce au \gls{gem} FactoryGirls \cite{factorygirls} qui propose un langage dédié pour écrire rapidement des fabriques. Ces dernières vont générer ces données de test pour peupler les modèles.
 
 \subsubsection{Tests au niveau des contrôleurs}
-Un premier type de tests est réalisé grâce à RSpec. Ces tests ont pour vocation de vérifier l'accès aux différentes routes \ref{routes} : les droits des utilisateurs et le type de retour des contrôleurs.
+Un premier type de tests est réalisé grâce à RSpec \cite{rspec}. Ces tests ont pour vocation de vérifier l'accès aux différentes routes \ref{rails-routes} : les droits des utilisateurs et le type de retour des contrôleurs.
 
-Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une \gls{mission} à chaque test. Deux tests sont ensuite réalisés qui vérifient que seul un utilisateur authentifié peut réaliser une \gls{mission}.
-
+Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une \gls{mission} à chaque test. Deux tests sont ensuite réalisé qui vérifie que seul un utilisateur authentifié peut réaliser une \gls{mission}.
 
 \begin{figure}
 \lstinputlisting[language=Ruby, caption={Test de l'accès au programme associé \`a une mission}, label=lst:rspec]{content/8-validation/validation/program_mission_initializations_controller_test.rb}
@@ -35,13 +34,12 @@ Un deuxième type de tests est réalisé grâce à Cucumber \ref{cucumber}. Ces 
 \lstinputlisting[language=Ruby, linerange={1-15}, caption={Extrait de l'implémentation des tests de l'accès aux missions}, label=lst:cucumber-implementation-mission]{content/8-validation/validation/mission_steps.rb}
 \end{figure}
 
-Gerkin est utilisé pour écrire les scénarii en langage naturel. 
-Le code source \ref{lst:cucumber-mission} montre différents scénarii décrivant l'accès aux \glspl{mission}. Le haut niveau de Gherkin est visible dans cet exemple. En effet, toute personne anglophone peut comprendre ce que testent les différents scénarii. 
-
+Gerkin est utilisé pour écrire les scénarii en langage naturel.
+Le code source \ref{lst:cucumber-mission} montre différents scénarii décrivant l'accès aux \glspl{mission}. Le haut niveau de Gherkin est visible dans cet exemple. En effet, toute personne anglophone peut comprendre ce que testent les différents scénarii.
 
 L'extrait de code \ref{lst:cucumber-implementation-mission}, montre comment sont implémentés les scénarii précédents. La façon dont est piloté un navigateur pour réaliser les tests est aussi visible via les méthodes : \texttt{click\_on}, \texttt{current\_path}, \texttt{visit}\ldots
 
-\subsection{Utilisation de métriques}
+\subsection{Utilisation de metriques}
 Un autre style d'outils donne des informations sur le projet via son code source. Deux services ont principalement été utilisés.
 
 \subsubsection{Gemnasium}
@@ -51,7 +49,7 @@ Gemnasium \ref{gemnasium} permet d'avoir un service de veille qui vérifie si le
 rails\_best\_practice \ref{rbp} fournit quant à lui une information plus complexe à traiter. En effet, il renseigne les endroits dans le code source qui ne respecteraient pas le "rails way" et en fournit des exemples de réécriture. Cet outil est donc principalement utile en début de projet quand les auteurs ne connaissent pas encore bien quelles sont les bonnes pratiques.
 
 \section{Expériences}
-Cette section aborde les expériences réalisées pour ce travail. Celles-ci commencent par un après-midi chez KidsCode. Vient ensuite le "Printemps des Sciences" pendant lequel environ 80 élèves ont testé l'application. Enfin, une analyse des expériences à travers des formulaires remplis par les élèves et les professeurs est approchée.
+Cette section aborde les expériences réalisées pour ce travail. celles-ci commencent par un après-midi chez KidsCode. Vient ensuite le "Printemps des Sciences" pendant lequel environ 80 élèves ont testé l'application. Enfin, une analyse des expériences à travers des formulaires remplis par les élèves et les professeurs est approchée.
 
 \subsection{KidsCode}
 \label{kidscode}
@@ -64,23 +62,22 @@ Il est important de définir le contexte et la publique de l'expérience qui en 
 Lors de cette expérience, le public était composé de 10 enfants de 10 à 14 ans ayant déjà fait une demi-année de programmation dans le cadre du projet KidsCode. Le niveau de ces enfants n'est donc pas à négliger. Ils sont habitués à exécuter un programme et maîtrisent les principaux concepts de la programmation.
 
 \subsubsection{Buts}
-Le but poursuivi dans cette expérience est de valider l'utilisabilité de la plateforme et également le niveau de difficulté des \glspl{mission} proposées. 
-
+Le but poursuivi dans cette expérience est de valider l'utilisabilité de la plateforme et également le niveau de difficulté des \glspl{mission} proposées.
 
 Un autre but était de familiariser les expérimentateurs avec des utilisateurs en petit groupe, en vue de préparer la seconde expérience.
 Même si ce dernier point pourrait sembler être moins justifié dans le cadre d'un mémoire sur l'informatique, l'aspect pédagogique rentre en ligne de compte dans le cadre de l'utilisation de l'application. Certains paramètres ont pu être identifiés et réfléchis pour leurs implications dans l'expérience ultérieure.
 %Pour limiter le plus possible les biais dus à un manque de pédagogie ou d'expérience dans la gestion d'un groupe d'enfant, il était important de pouvoir avoir cette première expérience.
 
 \subsubsection{Déroulement}
-L'expérience s'est déroulée pendant un peu plus d'une heure. A la suite des activités habituelles de KidsCode, la dernière heure y était consacrée. 
+L'expérience s'est déroulée pendant un peu plus d'une heure. A la suite des activités habituelles de KidsCode, la dernière heure y était consacrée.
 
-Le début de l'expérience a été marqué par une perte d'attention et la dissipation des enfants. Une fois le groupe repris en main, les jeunes ont directement montré beaucoup d'intérêts, aussi bien pour l'interface qu'ils découvraient, que pour la compétition intergroupe qui s'est rapidement mis en place.
+Le début de l'expérience a été marqué par une perte d'attention et la dissipation des enfants. Une fois le groupe repris en main, les jeunes ont directement montré beaucoup d'intérêts, aussi bien pour l'interface qu'ils découvraient, que pour la compétition intergroupes qui s'est rapidement mis en place.
 
 Comme expliqué dans la partie précédente \ref{context-kidscode}, le public avait déjà de bonnes notions de programmation par rapport au public visé par ce mémoire. Les premières \glspl{mission} ont donc été rapidement réalisées. Les principaux points de ralentissement étaient des problèmes de lecture des consignes. En effet, les auteurs n'avaient prévu que des consignes écrites. Or, les jeunes ne prenaient pas le temps de les lire et ne savaient donc pas quoi faire. Il semble que ce soit l'impatience des jeunes à mener les \glspl{mission} plus que leur niveau de lecture qui détermine leur comportement.
 
-La compétition que les jeunes ont mise en place dès le début a eu un effet bénéfique pour leur évolution, car elle leur donnait la motivation de réaliser les défis proposés. Ceci était fort visible à chaque passage de \gls{mission}. Chaque fois qu'un groupe finissait sa \gls{mission}, il était important pour lui de le signaler aux autres. Cela lui donnait une satisfaction qui le poussait à réaliser la \gls{mission} suivante. 
+La compétition que les jeunes ont mise en place dès le début a eu un effet bénéfique pour leur évolution car elle leur donnait la motivation de réaliser les défis proposés. Ceci était fort visible à chaque passage de \gls{mission}. Chaque fois qu'un groupe finissait sa \gls{mission}, il était important pour lui de le signaler aux autres. Cela lui donnait une satisfaction qui le poussait à réaliser la \gls{mission} suivante.
 
-Dans les délais impartis, alors que tous sont arrivés à la mission finale du chien et du chat \ref{chien-chat}, personne n'a réussi à la finir. 
+Dans les délais impartis, alors que tous sont arrivés à la \gls{mission} finale du chien et du chat \ref{chien-chat}, personne n'a réussi à la finir.
 
 Quand a sonné la fin de l'expérience, beaucoup de jeunes nous ont demandé comment faire pour montrer à leur famille ce qu'ils avaient réalisé et comment faire pour continuer la \gls{mission} finale.
 
@@ -91,15 +88,15 @@ Dans l'ensemble, l'expérience s'est très bien déroulée et les participants o
 Cependant pour tenir compte de certains paramètres, des améliorations ont été apportées à l'application. Ces modifications sont abordées dans la suite de cette partie.
 
 \paragraph{Changement dans les missions}
-La mission \texttt{répète et répépète} a été retirée, car elle s'est avérée peu accrocheuse pour les enfants et peu intéressante par rapport aux concepts introduits. Un personnage devait répéter ce que disait un autre. Pendant cette \gls{mission}, beaucoup d'enfants se sont dispersés parce qu'ils s'embêtaient et que ce n'était pas assez concret. Cette \gls{mission} avait pour but de faire découvrir les fonctions d'affichage de textes. 
+La \gls{mission} \texttt{répète et répépète} a été retirée car elle s'est avérée peu accrocheuse pour les enfants et peu intéressante par rapport aux concepts introduits. Un personnage devait répéter ce que disait un autre. Pendant cette \gls{mission}, beaucoup d'enfants se sont dispersés parce qu'ils s'embêtaient et que ce n'était pas assez concret. Cette \gls{mission} avait pour but de faire découvrir les fonctions d'affichage de textes.
 
-Elle a été remplacée par \texttt{Soyons courtois} décrit en section \ref{mission-courtois}. Cette nouvelle \gls{mission} est beaucoup plus dynamique que la précédente, car elle permet à l'étudiant de se déplacer et d'utiliser les capteurs de collisions introduits dans la \gls{mission}ion précédente.
+Elle a été remplacée par \texttt{Soyons courtois} décrit en section \ref{mission-courtois}. Cette nouvelle \gls{mission} est beaucoup plus dynamique que la précédente, car elle permet à l'étudiant de se déplacer et d'utiliseer les capteurs de collisions introduits dans la \gls{mission} précédente.
 
 \paragraph{Ajout d'un bouton "réinitialiser la mission"}
-Lors de l'expérience, un groupe d'enfants a réussi à corrompre l'environnement de la \gls{mission} suite à une série obscure d'opérations. Pour pallier à ce genre de risque, un bouton "réinitialiser la \gls{mission}" a été rajouté dans l'interface de \gls{snap}. Il permet de réinitialiser la mission courante.
+Lors de l'expérience, un groupe d'enfants a réussi à corrompre l'environnement de la \gls{mission} suite à une série obscure d'opérations. Pour palier à ce genre de risque, un bouton "réinitialiser la mission" a été rajouté dans l'interface de \gls{snap}. Il permet de réinitialiser la \gls{mission} courante.
 
 \paragraph{Ajout de vidéo d'introduction}
-Comme observés dans cette expérience, les jeunes ont tendance à ne pas lire les textes explicatifs des \gls{mission}. Il peut en résulter un manque de productivité. Une vidéo d'introduction a donc été rajoutée au début de chaque \gls{mission} (figure \ref{quelque part}). Cette vidéo explique le but de la \gls{mission} et donne les instructions. En cas d'oubli, un résumé écrit est toujours présent.
+Comme observé dans cette expérience, les jeunes ont tendance à ne pas lire les textes explicatifs des \glspl{mission}. Il peut en résulter un manque de productivité. Une vidéo d'introduction a donc été rajoutée au début de chaque \gls{mission} (figure \ref{fig:program-creation}). Cette vidéo explique le but de la \gls{mission} et donne les instructions. En cas d'oubli, un résumé écrit est toujours présent.
 
 \subsection{Printemps des Sciences}
 Cette expérience s'est déroulée dans le cadre de la semaine Scienceinfuse. Des écoles du \gls{fondamental} et du \gls{secondaire} viennent participer à des animations dans les universités. L'expérience s'est déroulée avec quatre groupes d'enfants. Ces activités duraient une heure trente y compris les temps d'installation et de prise en charge. Les élèves étaient en programmation par paire \ref{paire} et donc à deux devant un ordinateur.
@@ -112,15 +109,16 @@ L'origine des jeunes est également variée. Il y a eu des classes de Chimay, de
 \subsubsection{Buts}
 Le but principal de cette expérience était de confronter l'application à son usage réel dans des classes d'étudiants. Il fallait pouvoir observer comment elle se déroule en réalité et en ressortir une analyse des besoins spécifiques de l'application.
 
-Un autre but poursuivi était l'évaluation de l'âge idéal et du niveau de difficulté des \glspl{mission} pour des néophytes. En effet, lors de l'expérience précédente, le public était volontaire et avait déjà des connaissances en programmation. De par ce fait, le niveau des \glspl{mission} devait être affiné sur le public visé.
+Un autre but poursuivi était l'évaluation de l'âge idéal et du niveau de difficulté des \glspl{mission} pour des néophytes. En effet, lors de l'expérience précédente, le public était volontaire et avait déjà des connaissances en programmation. De par ce fait, le niveau des \glspl{mission} devait être afiné sur le public visé.
 
 Les auteurs désiraient aussi observer les réactions et l'intérêt des étudiants pour la solution proposée.
 
-Un dernier but était évidemment de récolter l'avis des étudiants. 
+Un dernier but était évidemment de récolter l'avis des étudiants.
 
 \subsubsection{Déroulement}
+Le déroulement de cette expérience se divise en deux parties. La première présente le déroulement de l'activité commune aux écoles participantes. Ensuite vient une explication particulière à chaque écoles pour en détailler leurs spécificités.
 \paragraph{Déroulement général des activités}
-Lors de la mise en place de l'activité, une petite démonstration de l'interface a été présentée pour familiariser les étudiants à Snap!. 
+Lors de la mise en place de l'activité, une petite démonstration de l'interface a été présentée pour familiariser les étudiants à \gls{snap}.
 
 Suite à cela, ils ont été invités à créer un compte par groupe de deux (par ordinateur).
 
@@ -128,18 +126,18 @@ Une fois la première vidéo passée, les élèves ont entamé la première \gls
 
 La première \gls{mission} était celle de la voiture, décrite à la section \ref{mission-voiture}. Les étudiants devaient y aborder un concept difficile, à savoir la structuration mentale de leur \gls{script}. En effet, la voiture revenait à son point de départ à chaque lancement du \gls{script}. Finalement, après quelques essais et erreurs, ils ont tous réussi cette \gls{mission}.\\
 
-Une fois la première \glspl{mission} finie, les auteurs ont dû rappeler aux étudiants comment la sauver et comment revenir à la liste des \glspl{mission}. Ensuite, les élèves retrouvaient seuls comment continuer. 
+Une fois la première \gls{mission} finie, les auteurs ont du rappeler aux étudiants comment la sauver et comment revenir à la liste des \glspl{mission}. Ensuite, les élèves retrouvaient seuls comment continuer.
 
 Une question récurrente des étudiants était de savoir si leur \gls{mission} avait bien été enregistrée sur le serveur.\\
 
 À la fin de l'expérience, tous les participants ont reçu un diplôme avec l'adresse web de l'application, afin qu'ils sachent continuer leur programme chez eux.
 
-\paragraph{École Sainte-Marie} 
+\paragraph{École Sainte-Marie}
 La première classe à avoir testé l'application est une sixième \gls{primaire} de l'école Sainte-Marie de Bousval. Le groupe était composé d'une petite vingtaine d'élèves.
 
 L'activité s'est déroulée avec une petite contrariété informatique. En effet, l'interpréteur JavaScript des machines mises à disposition était très lent. Ceci n'a pas compromis le déroulement de l'activité, mais fut, à quelques moments, une source de frustrations pour certains élèves très enthousiastes.
 
-À la fin du temps imparti, tous les élèves avaient atteint la dernière \gls{mission}, décrite en section \ref{chien-chat}. Ils n'ont généralement pas fini l'étape de déplacement du personnage, mais étaient bien avancés en ce sens.
+À la fin du temps imparti, tous les élèves avaient atteint la dernière \gls{mission}, décrit en section \ref{chien-chat}. Ils n'ont généralement pas fini l'étape de déplacement du personnage, mais étaient bien avancés en ce sens.
 
 \paragraph{L'athénée royal Paule Delvaux}
 Cette école est venue avec une classe de sixième \gls{primaire} également. Pour cette expérience, le problème de réactivité de l'interface a été corrigé.
@@ -150,17 +148,17 @@ Cependant, ils sont arrivés à peu près aux mêmes résultats que ceux de Bous
 L'enthousiasme des jeunes était également au rendez-vous et ils se sont bien amusés.
 
 \paragraph{Collège saint Joseph}
-Les deux dernières classes à participer à l'expérience étaient du collège saint Joseph de Chimay accompagné par leur professeur de mathématique qui semblent induire auprès de leurs élèves un intérêt pour la logique, entre autres de programmation.
+Les deux dernières classes à participer à l'expérience étaient du collège saint Joseph de Chimay accompagnées par leur professeur de mathématique qui semblent induire auprès de leurs élèves un intérêt pour la logique, entre autres de programmation.
 
-Comme ces deux classes avaient un niveau de première \gls{humanite}, les enfants étaient plus autonomes. L'expérience s'est déroulée comme pour les \glspl{primaire}. La première \gls{mission} était la plus laborieuse, mais une fois celle-ci passée, le reste a été plus aisé. Ces enfants étant plus grands, il a semblé aux auteurs qu'ils présentaient une capacité d'apprentissage plus élevée. En effet, ils ont été beaucoup plus rapides pour réaliser les \gls{mission}. Ceci leur a permis d'avancer davantage dans la dernière \gls{mission}. Certains groupes ont même réalisé un programme fonctionnel pour cette dernière \gls{mission}: il ne manquait que le score à implémenter.\\
+Comme ces deux classes avaient un niveau de première \gls{humanite}, les enfants étaient plus autonomes. L'expérience s'est déroulée comme pour les \glspl{primaire}. La première \gls{mission} était la plus laborieuse, mais une fois celle-ci passée, le reste a été plus aisé. Ces enfants étant plus grands, il a semblé aux auteurs qu'ils présentaient une capacité d'apprentissage plus élevée. En effet, ils ont été beaucoup plus rapides pour réaliser les \glspl{mission}. Ceci leur a permis d'avancer davantage dans la dernière \gls{mission}. Certains groupes ont même réaliser un programme fonctionnel pour cette dernière \gls{mission}: il ne manquait que le score à implémenter.\\
 
-Dans ces classes une différence de niveau au sein des groupes a été observée. En effet certains duos étaient très autonomes alors que d'autres se rapprochaient plus des groupes de l'enseignement \gls{fondamental}.
+Dans ces classes une différence de niveau au sein des groupe a été observé. En effet certains duos étaient très autonome alors que d'autre se rapprochaient plus des groupes de l'enseignement \gls{fondamental}.
 
 \subsubsection{Analyse}
 \label{analyse-scienceinfuse}
-Tout en tenant compte des remarques précédentes, l'ensemble de ces expériences s'est globalement bien déroulé. Les objectifs ont été approchés. Le niveau des \gls{mission} correspondait à ce qui était souhaité. La plupart des enfants a très vite et bien pris en main l'interface de \gls{snap}. Les modifications apportées par la première expérience ont montré toutes leurs utilités. En autre, le bouton "réinitialisation" s'est avéré facile à utiliser. La \gls{mission} \texttt{Soyons courtois}, voir section \ref{mission-courtois}, a été appréciée des enfants et a remplis pleinement son \gls{role}.\\
+Compte tenu des remarques précédentes, l'ensemble de ces expériences s'est globalement bien déroulée. Les objectifs ont été approchés. Le niveau des \glspl{mission} correspondait à ce qui était souhaité. La plupart des enfants ont très vite et bien pris en main l'interface de \gls{snap}. Les modifications apportées par la première expérience ont montré toutes leurs utilités. En autre, le bouton "réinitialisation" s'est avéré facile à utiliser. La \gls{mission} \texttt{Soyons courtois}, voir section \ref{mission-courtois}, a été appréciée des enfants et a remplis pleinement son \gls{role}.
 
-Une crainte était que grâce au lecteur \texttt{YouTube}, ils regardent d'autres vidéos, mais il n'en fût rien et leur curiosité était assez forte pour les garder dans l'application.
+Certains point sont un peut plus détaillé tel que les vidéos d'introduction, les tranches d'âge et les améliorations qui ont été trouvées grace à cette expérience.
 
 %TODO revoir les titre des paragraph et p-e en faire aussi dans l'intro de analyse
 \paragraph{Vidéo}
@@ -173,30 +171,32 @@ En conséquence, l'application pour des élèves du \gls{fondamental}, nécessit
 
 \paragraph{Amélioration}
 Lors de cette expérience, les auteurs ont été particulièrement attentif au retour des enfants et a leur réaction spontanées. Il ressort de ces observations quelques améliorations tel que:
-
 \begin{itemize}
   \item ajouter un message d'information sur la sauvegarde des projets ;
   \item diminuer le taux de rafraîchissement de la fenêtre ;
   \item diviser la \gls{mission} hélicoptère en deux \glspl{mission} séparées: la boucle "répéter indéfiniment" et la condition "si".
 \end{itemize}
 
+\paragraph{Impression générale}
 Par des expériences ludiques menées en une heure, les enfants ont appris des concepts basiques de la programmation. Les auteurs se sont rendu compte que beaucoup d'enfants n'avaient pas vu le temps passé.
+% Les grands vont plus vite
 
-\subsection{Analyse des formulaires}
+% mission voiture cool pour la structuration
+% débouché sur du concret
+
+\section{Formulaires}
 \label{analyse-exp}
-Un formulaire a été complété par chaque enfant et chaque professeur à la fin de l'activité. Dans cette partie, les formulaires sont analysés. Les données complètes, les graphiques et les commentaires sont disponibles en annexe, section \ref{annex-data-form}.
+Un formulaire a été complèté par chaque enfants et chaque professeurs à la fin de l'activité. Dans cette partie, les formulaires sont analysés. Les données complètes, les graphiques et les commentaires des enfants sont disponibles en annexe \ref{annex-data-form}. %TODO réécrire en fonction de ce que je vais écrire %TODO on parle du formulaire des prof ?
 
-\paragraph{Niveau des enfants en informatique}
-Une des questions du formulaire portait sur la connaissance de l'informatique et de la programmation. Les schémas montrent comment les enfants autoévaluent leurs compétences en informatique et en programmation avant de faire l'expérience \ref{fig:niveau-avant} et après l'expérience \ref{fig:niveau-apres}.
-\begin{figure}[]
+\subsection{Création du formulaire}
+Le formulaire a deux objectifs principaux : connaître nos participants et connaître leur ressenti sur les \glspl{mission}.
+\begin{figure}%TODO utiliser subfigure
   \begin{center}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/avant}
-    \includegraphics[width=\textwidth]{content/8-validation/images/programmation}
-    \caption{Auto-estimation du niveau en informatique et en programmation des participants avant l'activité}
-    \label{fig:niveau-avant}
+    \includegraphics[width=\textwidth]{content/8-validation/images/form}
+    \caption{Formulaire pour connaître les participants et leur ressenti à propos de la première mission}
+    \label{fig:form-user}
   \end{center}
 \end{figure}
-
 
 \paragraph{Participant}
 La première partie du formulaire (figure \ref{fig:form-user}) est utile pour apprendre des informations générales sur les participants tel que leur age, leur niveau de connaissance en informatique et en programmation avant et après l'expérience.
@@ -226,39 +226,90 @@ La compréhension de ce qu'est la programmation, s'est par ailleurs bien amélio
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/apres}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/apres-programmation}
-    \caption{Auto-estimation du niveau en informatique et en programmation des participants après l'activité}
-    \label{fig:niveau-apres}
+    \begin{subfigure}[b]{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/avant}
+      \caption{Avant l'expérience}
+    \end{subfigure}
+    \begin{subfigure}[b]{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/apres}
+      \caption{Amélioration grace à l'expérience}
+    \end{subfigure}
+    \caption{Auto-estimation du niveau en informatique des participants}
+    \label{fig:niveau-info}
+  \end{center}
+\end{figure}
+\begin{figure}
+  \begin{center}
+    \begin{subfigure}[b]{\textwidth}
+      \begin{center}
+        \includegraphics[width=.7\textwidth]{content/8-validation/images/programmation}
+        \caption{Avant l'expérience}
+      \end{center}
+    \end{subfigure}
+    \begin{subfigure}[b]{\textwidth}
+      \begin{center}
+        \includegraphics[width=.5\textwidth]{content/8-validation/images/apres-programmation}
+        \caption{Amélioration grace à l'expérience}
+      \end{center}
+    \end{subfigure}
+    \caption{Auto-estimation de la connaissance en programmation des participants}
+    \label{fig:niveau-prog}
   \end{center}
 \end{figure}
 
-\paragraph{Appréciation des missions}
-\label{appreciation}
-En plus de l'évaluation de leur niveau de compétences en informatique et en programmation, les participants ont également évalué séparément chaque \gls{mission}. Les graphiques représentant cette évaluation sont sur la figure \ref{fig:evaluation-mission}. On voit que les \glspl{mission} qui ont été le moins appréciées sont la troisième, "soyons courtois", et la quatrième, "chien et chat".
-
-Sur base des commentaires et de l'appréciation des auteurs, la notation de la quatrième \gls{mission} peut s'expliquer par la frustration des utilisateurs de ne pas avoir eu le temps de la finir.
-Pour la troisième \gls{mission}, les retours indiquent que les élèves ont trouvé cette \gls{mission} trop simple. Cette \gls{mission} pourrait être reconstruite ultérieurement en intégrant, par exemple, le déplacement du personnage.\\
-
-
-\begin{figure}[ht]
+\begin{table}
   \begin{center}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/voiture}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/helico}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/courtois}
-    \includegraphics[width=.7\textwidth]{content/8-validation/images/chien}
-    \caption{Évaluation des missions par les enfants: En voiture \ref{mission-voiture}, hélicoptère \ref{mission-helicoptere}, soyons courtois \ref{mission-courtois}, tu ne m'attraperas jamais \ref{chien-chat}}
+    \begin{tabular}{r|cc|cc}
+               & \multicolumn{2}{c|}{Utilisation d'un ordinateur} & \multicolumn{2}{c}{Connaissance de la programmation} \\
+               & Avant & Amélioration                             & Avant & Amélioration \\ \hline
+      Moyenne  & 3,3 & 2,4 & 1,8 & 3,3 \\
+      Variance & 0,7 & 1,3 & 1,0 & 0,8 \\
+    \end{tabular}
+  \end{center}
+  \caption{Score des missions}
+  \label{tab:form-info}
+\end{table}
+
+\subsubsection{Évaluation des missions}
+\label{appreciation}
+En plus de l'évaluation de leur niveau de compétences en informatique et en programmation, les participants ont également évalué séparément chaque mission. Les graphiques représentant cette évaluation sont sur la figure \ref{fig:evaluation-mission}. Le score des \glspl{mission} est présenté dans le tableau \ref{tab:form-missions}.
+\begin{figure}
+  \begin{center}
+    \begin{subfigure}{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/voiture}
+      \caption{En voiture}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/helico}
+      \caption{Hélicoptère}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/courtois}
+      \caption{Soyons courtois}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/chien}
+      \caption{Tu ne m'attraperas jamais}
+    \end{subfigure}
+    \caption{Évaluation des missions par les enfants}
     \label{fig:evaluation-mission}
   \end{center}
 \end{figure}
 
-\paragraph{Appréciation des professeurs}
-En ce qui concerne les retours des professeurs, voir annexe \ref{result-prof}, ils étaient tous, sans exception, très positifs. Les professeurs d'humanité ont montré beaucoup d'intérêts pour l'utilisation de l'application dans leurs cours. Malgré l'insistance des auteurs, les professeurs n'ont pas donné de critique.
-
-\paragraph{Analyse des missions}
-Pour les utilisateurs, la première mission a été la plus laborieuse. Cependant, cette mission a le plus haut taux d'appréciation des enfants. Est-ce dû à la facilité de compréhension de cette mission? Est-ce le graphisme? Ou encore son côté concret? Les formulaires n'apportent pas assez d'éléments de réponse.\\
-
-La seconde mission, celle de l'"hélicoptère", a été appréciée, mais, comme cité plus haut \ref{analyse-scienceinfuse}, elle pourrait être séparée en deux missions. En effet, beaucoup d'étudiants ont eu besoin de l'aide des auteurs pour cumuler les deux concepts abordés en une fois.\\
+\begin{table}
+  \begin{center}
+    \begin{tabular}{r|cc|c|c}
+                       & \multicolumn{2}{c|}{Général} & Fondamental & Secondaire \\
+      Mission          & Moyenne & Variance           & Moyenne     & Moyenne \\ \hline
+      En voiture       & 3,5 & 0,5 & 3,6 & 3,5 \\
+      Hélicoptère      & 3,1 & 1,1 & 3,1 & 3,1 \\
+      Soyons courtois  & 2,8 & 1,3 & 2,2 & 3,0 \\
+      Chien et chat    & 2,8 & 1,6 & 3,4 & 2,6 \\
+    \end{tabular}
+  \end{center}
+  \caption{Score des missions}
+  \label{tab:form-missions}
+\end{table}
 
 %TODO mettre des références vers tab et fig
 \paragraph{En voiture \ref{mission-voiture}}
@@ -274,6 +325,8 @@ La troisième \gls{mission} est la moins appréciée du \gls{fondamental}. Une d
 
 \paragraph{Tu ne m'attraperas jamais \ref{chien-chat}}
 La quatrième \gls{mission}, "chien et chat", a passionné les élèves mais ils ont été frustrés par le manque de temps. Personne n'a réussi à la finir. Il faudrait peut-être envisager de guider davantage les étudiants dans cette \gls{mission}. Par exemple, tous les \glspl{bloc} y étaient accessibles, ceci afin que les étudiants puissent découvrir ce qui est possible de faire avec \gls{snap}. L'analyse des commentaires montre que les étudiants se perdent dans la masse de \glspl{bloc} disponibles.
+
+Une autre possibilité serai d'augmenter le temps imparti à l'expérience tout en tenant compte de la capacité de concentration des enfants. Une durée qui semble intéressante serait deux plages de cinquante minutes.
 
 Cette \gls{mission} est aussi particularisée par une différence d'appréciation entre les deux tranche d'age étudiée. En effet, le \gls{fondamental} a mieux aimer réaliser cette \gls{mission} que le \gls{secondaire}. Cette différence peut-être expliqué par la part de créativité laisser au participant notament dans le choix de l'image pour les personnages.
 %Sur base des commentaires et de l'appréciation des auteurs, la notation de la quatrième mission peut s'expliquer par la frustration des utilisateurs de ne pas avoir eu le temps de la finir.
