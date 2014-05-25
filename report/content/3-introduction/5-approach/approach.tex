@@ -1,10 +1,28 @@
 \section{Approche}
 \label{intro-approche}
+<<<<<<< HEAD
 %TODO \gls{Rsnap}
 L'application développée dans le cadre de ce travail est nommé \gls{rsnap}.
+=======
+Comme des plates-formes d'apprentissage de la programmation aux jeunes existe déjà nous avons mené une étude de ces dernières pour savoir si elles pouvaient correspondre à nos!!! besoin.
+>>>>>>> antidote
 
-\paragraph{La plateforme} La plateforme sera implémenté par une combinaison entre un environnement de programmation existant \gls{snap} \cite{snap} et un site web en \gls{rails} \cite{rails}. Cette combinaison permet d'avoir une plateforme accessible par tous les ordinateurs ayant accès à internet et un navigateur récent.
+Deux plates-formes étaient assez abouties pour être potentiellement utilisable. SCRATCH et SNAP!, commençons par l'analyse de SCRATCH.
 
+<<<<<<< HEAD
 La plateforme devant aussi permettre la création de contenu par les professeurs, il sera nécessaire d'introduire des \glspl{role} différent pour ceux-ci et les jeunes.
 
 \paragraph{Le contenu} Le contenu initial fourni sera une série de \glspl{mission} qui se succède, la fin de l'une débloquant la suivante. Cette série d'exercices introduira les concepts nécessaire à la création d'un jeu plus conséquent. Ce jeu sera un jeu de poursuite permettant aux jeunes de jouer entre eux.
+=======
+SCRATCH est une plate-forme de programmation par blocs. C'est une application autonome qui s'exécute sous Windows, Mac et Linux. SCRATCH est implémentée en Squeak \footnote{Implémentation libre de SmallTalk} et est distribué sous licence Creative Commons "Attribution-ShareAlike" ce qui signifie qu'il est possible de le réutiliser et de le modifier tant que la licence est conservée et que les sources sont citées. SCRATCH a également une interface web appelée scratch 2.0, mais la licence de cette dernière n'est pas encore connue et le code n'est pas encore libéré. Ceci pose un gros problème, car cela fait depuis début 2013 que la version bêta de l'application web est sortie et si le code n'a pas encore été libéré on peut penser que cette application sera sous licence propriétaire. Ceci nous empêchera de réutiliser ce code pour ce travail.
+
+SNAP est une plate-forme de programmation par blocs qui s'exécute dans un navigateur internet. Cette plate-forme est programmée en JavaScript et est sous licence AGPL. Cette licence permet de reprendre le travail et de l'étendre. Le fait que l'application soit faite pour être exécutée dans un navigateur est un point important, car c'est un des objectifs de ce travail. La licence est tout à fait adaptée aux objectifs également dans le sens ou il est possible de repartir de cette plate-forme pour avoir un travail fini de qualité supérieure à un cas ou il fallait ne commencer depuis rien. Le JavaScript n'est pas un langage que nous!!! maîtrisons bien, mais ce dernier reste un langage largement utiliser et ayant une large communauté.
+À l'utilisation, il s'avère que l'interface de SNAP est moins aboutie que celle de SCRATCH, tant au point de vue des images que des couleurs et de l'allure générale. Celle de SCRATCH a par exemple des couleurs plus "flash" et une impression de plus de dynamisme avec des couleurs tranchées et claires. L'interface de SNAP est essentiellement dans les tons sombres ce qui n'incite pas au dynamisme. Ceci s'explique par la différence de moyen pour le développement de chaque produit. En effet SNAP est une application communautaire alors que SCRATCH est le fruit d'une société, il est donc évident que les moyens mis en oeuvre ne sont pas les même. Par contre, le fait que SNAP soit communautaire implique qu'il y a de forte chance pour qu'il reste sous licence open source. Du coté de SCRATCH il a été question que la version web soit mise sous licence propriétaire ce qui aurait un effet catastrophique sur le projet de ce travail.
+
+
+Au vu de cette analyse, c'est donc SNAP qui a été choisi pour être la base de ce travail. Pour atteindre les objectifs fixés précédemment il a fallu forcker l'application et la coupler à un site web pour permettre de récupérer les projets implémentés et aussi de donner les projets dans un ordre prédéfini a l'application. Ce site permettra aussi aux jeunes de voir leur progression ainsi que de reprendre et d'améliorer leur ancien projet.
+
+Nous allons reprendre le projet libre SNAP BYOB, en faire une interface libre de tout bouton inutile pour l'apprentissage en milieu scolaire. 
+
+Faire tourner l'application dans un navigateur internet et sauvegarder les données sur un serveur distant. Grâce à ce serveur, permettre une gestion de classe pour faciliter l'utilisation du côté du corps enseignant.
+>>>>>>> antidote

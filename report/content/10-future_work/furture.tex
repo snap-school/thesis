@@ -1,11 +1,11 @@
 \chapter{Futures améliorations}
-Ce chapitre aborde les améliorations possibles pour \gls{rsnap}. Elle sont soit liées d'objectifs qui n'ont pas été rencontrés ou à l'analyse des expériences.
+Ce chapitre aborde les améliorations possibles pour \gls{rsnap}. Elles sont soit liées d'objectifs qui n'ont pas été rencontrés ou à l'analyse des expériences.
 
 \section{Tester la réussite des missions}
 Certains tests sont prévus pour que l'étudiant connaisse la réussite de la \gls{mission}. Toutefois, aucun signal n'est envoyé vers les serveurs pour leur transmettre cette réussite. Comme aucun mécanisme n'est présent pour valider une \gls{mission}, la \gls{mission} suivante se débloque dès le premier enregistrement de la précédente.
 
 \paragraph{Modifications à apporter}
-Le simple envois d'une requête au serveur suffirait si la \gls{mission} est réussie. La difficulté réside dans la création d'un vrai \gls{bloc} disponible dans l'interface des professeurs qui servirait à informer le serveur de la réussite de la \gls{mission}.
+Le simple envoi d'une requête au serveur suffirait si la \gls{mission} est réussie. La difficulté réside dans la création d'un vrai \gls{bloc} disponible dans l'interface des professeurs qui servirait à informer le serveur de la réussite de la \gls{mission}.
 
 \section{Aide à la gestion des groupes}
 Un des buts de ce travail est son utilisation dans l'enseignement. Ainsi, un système de gestion des élèves par classe a été pensé par les auteurs. Malheureusement, le temps imparti à ce travail a manqué pour avoir une implémentation complète de gestion de groupes.
@@ -16,7 +16,7 @@ Le principe pensé pour la gestion de classe est que chaque professeur puisse vo
 Concrètement, il faut rajouter dans le modèle une \texttt{classe} qui représente un cours. Celle-ci serait constituée de la description de ce cours, d'un professeur et de plusieurs élèves. Il faut bien sûr aussi modifier les autorités qui gèrent les droits pour tenir compte de ces différentes assignations.
 
 \section{Amélioration et ajout de missions}
-Comme mis en lumière dans la partie \ref{analyse-exp}, les expériences ont montré que certaines \glspl{mission} gagneraient à être retravaillées.
+Comme mises en lumière dans la partie \ref{analyse-exp}, les expériences ont montré que certaines \glspl{mission} gagneraient à être retravaillées.
 
 \paragraph{Hélocoptère}
 La \gls{mission} de l'hélicoptère introduit deux concepts fort abstraits : les boucles et les conditions. Elle serait beaucoup plus facilement compréhensible par les enfants si elle était découpée en deux parties, une pour chaque concept.
@@ -25,38 +25,38 @@ La \gls{mission} de l'hélicoptère introduit deux concepts fort abstraits : les
 La \gls{mission} "soyons courtois" n'est pas encore assez attractive pour les enfants. Il était suggéré dans L'analyse \ref{appreciation} de rajouter la programmation des mouvements de leur personnage. En effet, actuellement, seuls les autres personnages bougent. On pourrait envisager que le jeune programme ce qui est nécessaire pour déplacer son personnage avec le clavier.
 
 \paragraph{Chien et chat}
-Comme développé dans l'annalyse \ref{analyse-exp}, la \gls{mission} "chien et chat" n'est pas assez dirigée. Une \gls{mission} d'introduction supplémentaire serait probablement bénéfique. Un autre problème dans cette \gls{mission} est le nombre de \glspl{bloc}  laissés à disposition des élèves. Le choix avait été fait de leur laisser un accès à tous les \glspl{bloc}  pour qu'ils voient la pleine puissance de \gls{snap}. Ce choix s'est révélé inapproprié.
+Comme développée dans l'analyse \ref{analyse-exp}, la \gls{mission} "chien et chat" n'est pas assez dirigée. Une \gls{mission} d'introduction supplémentaire serait probablement bénéfique. Un autre problème dans cette \gls{mission} est le nombre de \glspl{bloc} laissés à disposition des élèves. Le choix avait été fait de leur laisser un accès à tous les \glspl{bloc} pour qu'ils voient la pleine puissance de \gls{snap}. Ce choix s'est révélé inapproprié. 
 
 \paragraph{Ajout de missions}
 En plus des \glspl{mission} proposées, il est important que d'autres \glspl{mission} soient créées pour avoir des cours plus consistants. Ces nouvelles \glspl{mission} permettraient d'apporter de nouveaux concepts, mais surtout permettraient aux enfants de pratiquer les concepts déjà appris pour mieux les intégrer. Il serait intéressant d'introduire les variables et les fonctions dans des \glspl{mission} futures.
 
 \section{Blocs d'introspection des programmes}
-Une autre amélioration serait une série de \glspl{bloc}  fournissant des informations sur le programme. Il est déjà possible de savoir jusqu'où l'étudiant est arrivé et donc de lui attribuer des points en fonction.
-Pour aller plus loin, il serait intéressant d'avoir un compteur de \glspl{bloc}  pour les \glspl{script}. En effet, un programme fait avec 20 \glspl{bloc}  quand la solution optimale en compte 3 ne mérite probablement pas autant de point.
-De manière générale, il pourrait être envisagé de fournir de vrais \glspl{bloc}  aux professeurs afin de leur faciliter la création de corrections et de cotations automatiques.
+Une autre amélioration serait une série de \glspl{bloc} fournissant des informations sur le programme. Il est déjà possible de savoir jusqu'où l'étudiant est arrivé et donc de lui attribuer des points en fonction. 
+Pour aller plus loin, il serait intéressant d'avoir un compteur de \glspl{bloc} pour les \glspl{script}. En effet, un programme fait avec 20 \glspl{bloc} quand la solution optimale en compte 3 ne mérite probablement pas autant de points.
+De manière générale, il pourrait être envisagé de fournir de vrais \glspl{bloc} aux professeurs afin de leur faciliter la création de corrections et de cotations automatiques.
 
-Cette amélioration pourrait être couplée avec le test de réussite. Cette solution enverrait dans la requête au serveur une note et des informations sur l'avancée du programme grâce à ces \glspl{bloc}  d'introspection.
+Cette amélioration pourrait être couplée avec le test de réussite. Cette solution enverrait dans la requête au serveur une note et des informations sur l'avancée du programme grâce à ces blocs d'introspection.
 
 \section{Charte graphique}
 Pour que ce logiciel soit apprécié, une attention particulière au ressenti des utilisateurs est nécessaire. Un point important est donc d'avoir une charte graphique unifiée et cohérente en fonction du public visé.
 
 \paragraph{Bootstrap et Snap!}
-Actuellement, d'une part toute la partie \gls{rails} utilise Bootstrap de manière brute, d'autre part l'interface de \gls{snap} n'a été modifié que de manière fonctionnelle. Il serait judicieux d'adapter un peu la feuille de style de Bootstrap et l'implémentation de \gls{snap} pour avoir un thème graphique unifié et fournir un environnement plus adapté.
+Actuellement, d'une part toute la partie Rails utilise Bootstrap de manière brute, d'autre part l'interface de Snap! n'a été modifié que de manière fonctionnelle. Il serait judicieux d'adapter un peu la feuille de style de Bootstrap et l'implémentation de Snap! pour avoir un thème graphique unifié et fournir un environnement plus adapté.
 
 \paragraph{Missions}
 Les ressources graphiques utilisées dans les \glspl{mission} proviennent toutes de sources différentes. Avoir un artiste qui dessinerait les différents objets nécessaires créerait une meilleure unité entre les \glspl{mission} et les mettrait en valeur.
 
 
 % obliger la réussite des test de la mission avant de pouvoir passer à la suivante
-%
+% 
 % gestion des classes
-%
+% 
 % rearanger les missions voir analyse
-%
+% 
 % plus de split dans les missions
-%
+% 
 % plus de missions
-%
+% 
 % block de correction automatique des missions
-%
+% 
 % charte graphique plus cohérente a travers le site et snap! et sur les présentation des missions.
