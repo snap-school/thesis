@@ -230,19 +230,19 @@ MyMorph.prototype.drawNew = function() {
 
 \section{Ruby on Rails}
 \label{rails}
-\gls{rails} \cite{rails} est une plateforme de développement d'application web basée sur le langage de programmation Ruby \cite{ruby}. Cette partie présente la philosophie, l'architecture et des environnements de tests de \gls{rails}.
+\gls{rails} \cite{rails} est une plateforme de développement d'applications web basée sur le langage de programmation Ruby \cite{ruby}. Cette partie présente la philosophie, l'architecture et des environnements de tests de \gls{rails}.
 
 \subsection{Philosophie}
-\gls{rails} part de l'hypothèse qu'il existe une meilleure façon d'aborder la création d'application web \cite{rails-guides}. Si le programmeur respecte ce "Rails way", il améliorera sa productivité et écrira moins de code. D'après \gls{rails}, s’il persiste à utiliser ses anciennes habitudes, le développeur s'amusera beaucoup moins en créant son application.
+\gls{rails} part de l'hypothèse qu'il existe une meilleure façon d'aborder la création d'applications web \cite{rails-guides}. Si le programmeur respecte ce "Rails way", il améliorera sa productivité et écrira moins de code. D'après \gls{rails}, s’il persiste à utiliser ses anciennes habitudes, le développeur s'amusera beaucoup moins en créant son application.
 
-Pour atteindre cet objectif, \gls{rails} utilisent deux principes majeurs :
+Pour atteindre cet objectif, \gls{rails} utilise deux principes majeurs :
 \begin{description}
-  \item[Convention plutôt que configuration (CoC) \cite{wiki-coc}] Pour permettre au programmeur d'écrire moins de code, \gls{rails} permet de n'écrire que ce qui ne correspond pas aux conventions. \gls{rails} utilise la métaprogrammation pour fournir les conventions à tous les objets ;
-  \item[Ne vous répétez  pas (DRY) \cite{wiki-dry}] \gls{rails} recommande une architecture où il faut mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
+  \item[Convention plutôt que configuration (CoC) \cite{wiki-coc} :] Pour permettre au programmeur d'écrire moins de code, \gls{rails} permet de n'écrire que ce qui ne correspond pas aux conventions. \gls{rails} utilise la métaprogrammation pour fournir les conventions à tous les objets.
+  \item[Ne vous répétez  pas (DRY) \cite{wiki-dry} :] \gls{rails} recommande une architecture où il faut mettre l'information à un endroit unique et bien déterminé. Ceci permet d'avoir un code plus court, plus maintenable, plus extensible et avec moins de bogues.
 \end{description}
 
 \label{rbp}
-Un service aidant à mieux comprendre et respecter le "Rails way" présenté plus tôt est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie \gls{rails}. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
+Un service aidant à mieux comprendre et respecter le "Rails way" est Rails\_best\_practices. Il fournit des métriques utiles pour détecter des écarts à la philosophie \gls{rails}. Cet outil s'utilise avec les conseils fournis par \url{http://rails-bestpractices.com} aidant à refactorer les morceaux de code qui ne respecteraient pas les conventions.
 
 \subsection{Architecture}
 \gls{rails} se base sur une architecture \gls{mvc} \cite{wiki-mvc} (figure \ref{fig:mvc}).
@@ -265,37 +265,37 @@ Le contrôleur a pour fonction d'accéder à une ressource. Une ressource est un
 Il détermine quelle vue doit s'afficher et avec quels paramètres. Le contrôleur a donc la tâche de vérifier la sécurité et l'intégrité des données fournies par l'utilisateur. Ensuite, il peut interroger différents modèles et fournir les réponses à la vue adéquate.
 
 \label{rest}\label{rails-routes}
-\gls{rails} encourage d'avoir des ressources \gls{rest} \cite{wiki-rest}, c'est-à-dire, des ressources avec une représentation unique et des actions unifiées telles que create, new, edit, update, destroy, show, index. Les actions disponibles sur un contrôleur sont déterminées par le fichier de configuration des routes.
+\gls{rails} encourage à avoir des ressources \gls{rest} \cite{wiki-rest}, c'est-à-dire, des ressources avec une représentation unique et des actions unifiées telles que create, new, edit, update, destroy, show, index. Les actions disponibles sur un contrôleur sont déterminées par le fichier de configuration des routes.
 
 \subsubsection{Vue}
 Les vues correspondent à ce que les utilisateurs reçoivent et voient. Ce sont typiquement des pages HTML, mais aussi des PDF, objets JSON, fichiers, etc
 
 Pour faciliter la création des vues, \gls{rails} permet d'utiliser des \glspl{gem}. Il existe notamment:
 \begin{description}
-  \item[Haml \cite{haml} \label{haml}] un langage fournissant une syntaxe raccourcie du HTML. Il se base sur l'indentation plutôt que sur une syntaxe XML. Haml permet donc de respecter le principe \texttt{DRY} et d'améliorer la lisibilité par un code source plus court et bien indenté ;
-  \item[JQuery \cite{jquery}] cette bibliothèque JavaScript bien connue permet de modifier facilement le document courant, de gérer des événements, de créer des animations, etc. ;
-  \item[CoffeeScript \cite{coffeescript}] est un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire, plus courte et d'ajouter des sucres syntaxiques par rapport à JavaScript;
-  \item[Bootstrap \cite{bootstrap}] est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilisent. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc. \label{bootstrap}
+  \item[Haml \cite{haml} \label{haml} :] un langage fournissant une syntaxe raccourcie du HTML. Il se base sur l'indentation plutôt que sur une syntaxe XML. Haml permet donc de respecter le principe \texttt{DRY} et d'améliorer la lisibilité par un code source plus court et bien indenté ;
+  \item[JQuery \cite{jquery} :] cette bibliothèque JavaScript bien connue permet de modifier facilement le document courant, de gérer des événements, de créer des animations, etc. ;
+  \item[CoffeeScript \cite{coffeescript} :] est un langage qui se compile en JavaScript. Il permet d'avoir une syntaxe plus claire, plus courte et d'ajouter des sucres syntaxiques par rapport à JavaScript;
+  \item[Bootstrap \cite{bootstrap} :] est un framework CSS qui découple le fond et la forme de l'affichage d'une page HTML. Ce framework donne un design adaptatif pour tous types d'écrans aux pages qui l'utilisent. Il fournit aussi de nombreux composants utiles : boutons, alertes, barres de progression, messages d'aide, etc. \label{bootstrap}
 \end{description}
 %TODO intégré avec les contrôleurs. Paperclip dans les vues
 \subsection{Gems}
 \label{gems}
-Ruby fournit une manière de partager des fonctionnalités pour des programmes Ruby via les \glspl{gem} \cite{gem}. \gls{rails} lui-même est un \gls{gem} et dépend de nombreux autres notamment Active Record présentés plus haut.
+Ruby fournit une manière de partager des fonctionnalités pour des programmes Ruby via les \glspl{gem} \cite{gem}. \gls{rails} lui-même est un \gls{gem} et dépend de nombreux autres notamment Active Record présenté plus haut.
 
 \label{gemnasium}
-La communauté de \gls{rails} a écrit de nombreux \glspl{gem}  permettant de rajouter facilement des fonctionnalités à une application. Le fichier \texttt{Gemfile} sert à lister les \glspl{gem}  utilisé dans un projet. Le gestionnaire du projet doit faire attention à toutes ces dépendances pour garder son logiciel à jour. Pour ce faire, Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quel \glspl{gem}  doivent être mis à jours. Gemnasium informe donc les gestionnaires d'un logiciel lorsqu'une faille de sécurité est découverte dans un \gls{gem} et qu'il faut donc le mettre à jour.
+La communauté de \gls{rails} a écrit de nombreux \glspl{gem}  permettant de rajouter facilement des fonctionnalités à une application. Le fichier \texttt{Gemfile} sert à lister les \glspl{gem}  utilisés dans un projet. Le gestionnaire du projet doit faire attention à toutes ces dépendances pour garder son logiciel à jour. Pour ce faire, Gemnasium analyse le fichier \texttt{Gemfile} pour indiquer quels \glspl{gem}  doivent être mis à jour. Gemnasium informe donc les gestionnaires d'un logiciel lorsqu'une faille de sécurité est découverte dans un \gls{gem} et qu'il faut donc le mettre à jour.
 
-Quelque exemples de \glspl{gem} intéressants sont présentées ci-après.
+Quelque exemples de \glspl{gem} intéressants sont présentés ci-après.
 \begin{description}
-  \item[Paperclip \cite{paperclip}] permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'amazone ou de dropbox.
-  \item[Devise \cite{devise}] gère la problématique de l'authentification des utilisateurs.
-  \item[Rolify \cite{rolify}] donne des \glspl{role} aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
-  \item[Authority \cite{authority}] gère les droits des utilisateurs sur les différentes ressources des contrôleurs. \label{authority}
+  \item[Paperclip \cite{paperclip} :] permet de facilement récupérer et stocker des fichiers. Paperclip intègre donc la gestion de fichiers tiers de manière élégante dans une classe du modèle. Il fournit notamment divers pilotes pour stocker ces fichiers aussi bien en local que sur le nuage d'Amazon ou de Dropbox.
+  \item[Devise \cite{devise} :] gère la problématique de l'authentification des utilisateurs.
+  \item[Rolify \cite{rolify} :] donne des \glspl{role} aux utilisateurs de manière générale (ex. administrateur) ou sur une ressource (ex. modérateur d'un forum).\label{rolify}
+  \item[Authority \cite{authority} :] gère les droits des utilisateurs sur les différentes ressources des contrôleurs. \label{authority}
 \end{description}
 
 \subsection{Tests}
 \label{rails-tests}
-Il existe tout un écosystème autour de \gls{rails} pour fournir du code de qualité. Cette partie présente quelques outils utilisés dans les tests. Les outils les plus employés seront présentés ci-dessous, bien que ce ne soit pas les seuls existants.
+Il existe tout un écosystème autour de \gls{rails} pour fournir du code de qualité. Cette partie présente quelques outils utilisés dans les tests. Les outils les plus employés sont présentés ci-dessous, bien que ce ne soit pas les seuls existants.
 
 \subsubsection{Tests comportementaux}
 \label{cucumber}
@@ -305,4 +305,4 @@ Dans le cas de \gls{rails}, il est intéressant d'utiliser conjointement Cucumbe
 
 \subsubsection{Intégration continue}
 \label{travis}
-Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue \cite{wiki-int-cont}. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ce service est proposé entre autres par \texttt{Travis CI}\cite{travis}.
+Dans le cadre d'un développement actif, il est intéressant d'avoir un serveur qui réalise des tests d'intégration continue \cite{wiki-int-cont}. En effectuant les tests lors de chaque nouveau \texttt{commit}, les développeurs sont informés directement si une modification du code source a induit une régression des fonctionnalités. Ce service est proposé, entre autres, par \texttt{Travis CI}\cite{travis}.
