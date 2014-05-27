@@ -10,14 +10,14 @@ Les tests unitaires servent à vérifier que le code fonctionne correctement. L'
 \subsubsection{Outils pour les tests}
 Un des programmes utilisés pour les tests est Travis-CI (\ref{travis}). Ce programme est relié à Github pour que tous les tests soient exécutés à chaque commit sur le dépôt. De plus, lors d'une \texttt{\gls{pull}}, les tests sont également effectués pour savoir si l'acceptation de la branche introduira des bogues.
 
-Une des métriques générées par les tests est la couverture du code. Cette information est fournie par Coveralls\cite{coveralls} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas d'information sur le type de code testé. Il faut donc être attentif à ce que les tests couvrent effectivement les parties critiques.
+Une des métriques générée par les tests est la couverture du code. Cette information est fournie par Coveralls\cite{coveralls} qui est liée à Travis-CI pour l'acquisition des données. Cette métrique est utile pour connaître la fraction du code couvert par les tests. Elle ne donne par contre pas d'information sur le type de code testé. Il faut donc être attentif à ce que les tests couvrent effectivement les parties critiques.
 
 Enfin, lors des tests, il est nécessaire d'avoir des données pour peupler les modèles. Ceci s'effectue grâce au \gls{gem} FactoryGirls \cite{factorygirls} qui propose un langage dédié pour écrire rapidement des fabriques. Ces dernières vont générer ces données de test pour peupler les modèles.
 
 \subsubsection{Tests au niveau des contrôleurs}
 Un premier type de tests est réalisé grâce à RSpec \cite{rspec}. Ces tests ont pour vocation de vérifier l'accès aux différentes routes \ref{rails-routes} : les droits des utilisateurs et le type de retour des contrôleurs.
 
-Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une \gls{mission} à chaque test. Deux tests sont ensuite réalisé qui vérifie que seul un utilisateur authentifié peut réaliser une \gls{mission}.
+Un exemple de test est visible sur dans le code source \ref{lst:rspec}. La partie \texttt{setup} utilise la fabrique spécifique pour créer une \gls{mission} à chaque test. Deux tests sont ensuite réalisés qui vérifient que seul un utilisateur authentifié peut réaliser une \gls{mission}.
 
 \begin{figure}
 \lstinputlisting[language=Ruby, caption={Test de l'accès au programme associé \`a une mission}, label=lst:rspec]{content/8-validation/validation/program_mission_initializations_controller_test.rb}
@@ -57,7 +57,7 @@ La première expérience s'est déroulée chez KidsCode. Cette organisation a é
 
 \subsubsection{Contexte}
 \label{context-kidscode}
-Il est important de définir le contexte et la publique de l'expérience qui en influencent considérable son analyse.
+Il est important de définir le contexte et le public de l'expérience qui en influencent considérable son analyse.
 
 Lors de cette expérience, le public était composé de 10 enfants de 10 à 14 ans ayant déjà fait une demi-année de programmation dans le cadre du projet KidsCode. Le niveau de ces enfants n'est donc pas à négliger. Ils sont habitués à exécuter un programme et maîtrisent les principaux concepts de la programmation.
 
@@ -192,8 +192,15 @@ Un formulaire a été complété par chaque enfant et chaque professeur à la fi
 Le formulaire a deux objectifs principaux : connaître nos participants et connaître leur ressenti sur les \glspl{mission}.
 \begin{figure}%TODO utiliser subfigure
   \begin{center}
-    \includegraphics[width=\textwidth]{content/8-validation/images/form}
-    \caption{Formulaire pour connaître les participants et leur ressenti à propos de la première mission}
+    \begin{subfigure}[b]{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/form-user}
+      \caption{Formulaire pour connaître les participants}
+    \end{subfigure}
+    \begin{subfigure}[b]{.49\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/form-car}
+      \caption{Formulaire pour connaître le ressenti des participants à propos de la première mission}
+    \end{subfigure}
+    \caption{Formulaire fourni aux participants}
     \label{fig:form-user}
   \end{center}
 \end{figure}
@@ -219,12 +226,12 @@ La compréhension de ce qu'est la programmation s'est par ailleurs bien amélior
 
 \begin{figure}
   \begin{center}
-    \begin{subfigure}[b]{.49\textwidth}
-      \includegraphics[width=\textwidth]{content/8-validation/images/avant}
+    \begin{subfigure}[b]{\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/ordi-avant}
       \caption{Avant l'expérience}
     \end{subfigure}
-    \begin{subfigure}[b]{.49\textwidth}
-      \includegraphics[width=\textwidth]{content/8-validation/images/apres}
+    \begin{subfigure}[b]{\textwidth}
+      \includegraphics[width=\textwidth]{content/8-validation/images/ordi-apres}
       \caption{Amélioration grâce à l'expérience}
     \end{subfigure}
     \caption{Auto-estimation du niveau en informatique des participants}
@@ -235,13 +242,13 @@ La compréhension de ce qu'est la programmation s'est par ailleurs bien amélior
   \begin{center}
     \begin{subfigure}[b]{\textwidth}
       \begin{center}
-        \includegraphics[width=.7\textwidth]{content/8-validation/images/programmation}
+        \includegraphics[width=\textwidth]{content/8-validation/images/prog-avant}
         \caption{Avant l'expérience}
       \end{center}
     \end{subfigure}
     \begin{subfigure}[b]{\textwidth}
       \begin{center}
-        \includegraphics[width=.5\textwidth]{content/8-validation/images/apres-programmation}
+        \includegraphics[width=\textwidth]{content/8-validation/images/prog-apres}
         \caption{Amélioration grâce à l'expérience}
       \end{center}
     \end{subfigure}
@@ -268,22 +275,7 @@ La compréhension de ce qu'est la programmation s'est par ailleurs bien amélior
 En plus de l'évaluation de leur niveau de compétences en informatique et en programmation, les participants ont également évalué séparément chaque mission. Les graphiques représentant cette évaluation sont sur la figure \ref{fig:evaluation-mission}. Le score des \glspl{mission} est présenté dans le tableau \ref{tab:form-missions}.
 \begin{figure}
   \begin{center}
-    \begin{subfigure}{.49\textwidth}
-      \includegraphics[width=\textwidth]{content/8-validation/images/voiture}
-      \caption{En voiture}
-    \end{subfigure}
-    \begin{subfigure}{.49\textwidth}
-      \includegraphics[width=\textwidth]{content/8-validation/images/helico}
-      \caption{Hélicoptère}
-    \end{subfigure}
-    \begin{subfigure}{.49\textwidth}
-      \includegraphics[width=\textwidth]{content/8-validation/images/courtois}
-      \caption{Soyons courtois}
-    \end{subfigure}
-    \begin{subfigure}{.49\textwidth}
-      \includegraphics[width=\textwidth]{content/8-validation/images/chien}
-      \caption{Tu ne m'attraperas jamais}
-    \end{subfigure}
+    \includegraphics[width=\textwidth]{content/8-validation/images/aimer}
     \caption{Évaluation des missions par les enfants}
     \label{fig:evaluation-mission}
   \end{center}
