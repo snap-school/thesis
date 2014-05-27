@@ -22,11 +22,11 @@ Les concepts utiles pour développer l'application sont ceux présentés par les
 
 Les \glspl{role} sont utiles en conjonction avec les autorités \ref{authority} pour donner des droits supplémentaires à ces types d'utilisateurs.
 
-\paragraph{\texttt{Mission}} Les \glspl{mission} représentent tout ce qui est nécessaire pour avoir un exercice. Une \gls{mission} comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'étudiant ce qu'il devra faire. De plus, elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'étudiant et les tests pour vérifier le programme.
+\paragraph{\texttt{Mission}} Les \glspl{mission} représentent tout ce qui est nécessaire pour avoir un exercice. Une \gls{mission} comporte donc un titre, une description avec des images et une vidéo pour expliquer à l'élève ce qu'il devra faire. De plus, elle comporte le code source initial de l'exercice. Généralement, celui-ci contient le squelette initial du programme pour l'élève et les tests pour vérifier le programme.
 
 \paragraph{\texttt{FileMission}} Les fichiers liés à une \gls{mission} sont les différentes images qui composent la description.
 
-\paragraph{\texttt{Program}} Les programmes contiennent la solution d'une \gls{mission}. Ils contiennent uniquement le code source de l'étudiant.
+\paragraph{\texttt{Program}} Les programmes contiennent la solution d'une \gls{mission}. Ils contiennent uniquement le code source de l'élève.
 
 \paragraph{\texttt{Project}} Les projets sont identiques aux programmes, mais ne sont pas liés à une \gls{mission}. Ils contiennent donc le nom du projet en plus du code source.
 
@@ -110,7 +110,7 @@ Pour utiliser la plateforme, il faut d'abord s'enregistrer. Ensuite, suivant le 
 
 \paragraph{Professeur}
 Si un professaur veut lui-même réaliser un cours de programmation, il doit pouvoir faire les actions suivantes :
-\subparagraph{Créer des missions} Pour créer une nouvelle \gls{mission} (figure \ref{fig:mission-create}), le professeur se rend sur la page qui liste toutes les \glspl{mission}. Ensuite, il clique sur le bouton en bas de page "Nouvelle mission". Sur la page suivante, il donne les informations sur la \gls{mission} : titre, description, explication de la mission, vidéo d'explication \ldots Il lui reste à créer la mission proprement dite. Lorsque le professeur clique sur le bouton "Créer une \gls{mission}", il est redirigé vers l'interface de \gls{snap}. Il peut alors créer tout ce qui est nécessaire à la réalisation et au test de la mission. Avant de sauver, il ne doit pas oublier de cacher les \glspl{bloc} et les \glspl{script} qui ne doivent pas être visibles par les étudiants.
+\subparagraph{Créer des missions} Pour créer une nouvelle \gls{mission} (figure \ref{fig:mission-create}), le professeur se rend sur la page qui liste toutes les \glspl{mission}. Ensuite, il clique sur le bouton en bas de page "Nouvelle mission". Sur la page suivante, il donne les informations sur la \gls{mission} : titre, description, explication de la mission, vidéo d'explication \ldots Il lui reste à créer la mission proprement dite. Lorsque le professeur clique sur le bouton "Créer une \gls{mission}", il est redirigé vers l'interface de \gls{snap}. Il peut alors créer tout ce qui est nécessaire à la réalisation et au test de la mission. Avant de sauver, il ne doit pas oublier de cacher les \glspl{bloc} et les \glspl{script} qui ne doivent pas être visibles par les élèves.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{mission-create}
@@ -128,7 +128,7 @@ Si un professaur veut lui-même réaliser un cours de programmation, il doit pou
   \end{center}
 \end{figure}
 
-\subparagraph{Corriger les soumissions des étudiants} Pour corriger les soumissions de ses étudiants (figure \ref{fig:program-correction}), le professeur se rend sur la page des programmes. Il y sélectionne le programme qu'il désire corriger et qui s'ouvre dans l'interface \gls{snap}. Le professeur peut alors rajouter des commentaires.
+\subparagraph{Corriger les soumissions des élèves} Pour corriger les soumissions de ses élèves (figure \ref{fig:program-correction}), le professeur se rend sur la page des programmes. Il y sélectionne le programme qu'il désire corriger et qui s'ouvre dans l'interface \gls{snap}. Le professeur peut alors rajouter des commentaires.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{program-correction}
@@ -138,12 +138,12 @@ Si un professaur veut lui-même réaliser un cours de programmation, il doit pou
 \end{figure}
 
 \paragraph{Étudiant}
-Un étudiant doit pouvoir réaliser les opérations suivantes :
-\subparagraph{Réaliser une mission} L'étudiant réalise une \gls{mission} (figure \ref{fig:program-creation}) en cliquant sur le nom de la \gls{mission}.
+Un élève doit pouvoir réaliser les opérations suivantes :
+\subparagraph{Réaliser une mission} L'élève réalise une \gls{mission} (figure \ref{fig:program-creation}) en cliquant sur le nom de la \gls{mission}.
 
-Deux possibilités s'offrent à lui. Soit le bouton est bleu, ce qui signifie que la \gls{mission} a déjà été commencée. L'étudiant la reprend là où elle s'était arrêtée. Soit, le bouton est vert et dans ce cas, une nouvelle \gls{mission} commence.
+Deux possibilités s'offrent à lui. Soit le bouton est bleu, ce qui signifie que la \gls{mission} a déjà été commencée. L'élève la reprend là où elle s'était arrêtée. Soit, le bouton est vert et dans ce cas, une nouvelle \gls{mission} commence.
 
-Dans les deux cas, l'étudiant se retrouve sur l'interface de \gls{snap}.
+Dans les deux cas, l'élève se retrouve sur l'interface de \gls{snap}.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{program-creation}
@@ -152,7 +152,7 @@ Dans les deux cas, l'étudiant se retrouve sur l'interface de \gls{snap}.
   \end{center}
 \end{figure}
 
-\subparagraph{Réaliser un projet libre} Si l'étudiant a envie de créer quelque chose (figure \ref{fig:project}), il va dans le menu "projet libre". Il utilise \gls{snap} à son plein potentiel et laisse libre court à son imagination pour créer le programme de ses rêves.
+\subparagraph{Réaliser un projet libre} Si l'élève a envie de créer quelque chose (figure \ref{fig:project}), il va dans le menu "projet libre". Il utilise \gls{snap} à son plein potentiel et laisse libre court à son imagination pour créer le programme de ses rêves.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{project}

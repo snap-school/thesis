@@ -67,7 +67,7 @@ Pour mettre en pratique les concepts du chapitre précédent, des critères d'ut
 Suite au positionnement de \gls{rsnap} \ref{positionnement}, des critères d'utilisation ont été réalisés. Ces critères sont les suivants :
 % La plateforme étant à destination des professeurs la majorité des besoins viennent d'eux. Cette partie va développer les besoins qui ont été pris en compte dans la conception de \gls{rsnap}. D'autres tiers %TODO ??? entrent également en jeu dans l'établissement du cahier des charges de la plateforme. Les enfants ou encore des constats tels que la faible qualité du matériel informatique dans les écoles apporte des contraintes supplémentaires. Les principaux besoins pris en compte sont:
 % \paragraph{Disponibilité des exercices} fournir une série d'exercices aux élèves et permettre au professeur de les modifier ou d'en créer d'autres.
-% \paragraph{Stocker les résolutions} permettre aux étudiants d'enregistrer leurs solutions et aux professeurs de récupérer ces travaux pour ensuite les corriger.
+% \paragraph{Stocker les résolutions} permettre aux élèves d'enregistrer leurs solutions et aux professeurs de récupérer ces travaux pour ensuite les corriger.
 
 \begin{description}
   \item[Apprentissage de la programmation] pour fournir un environnement de développement intégré pour la pédagogie de la programmation.
@@ -80,13 +80,13 @@ Suite au positionnement de \gls{rsnap} \ref{positionnement}, des critères d'uti
 \end{description}
 
 \subsection{Plateforme d'apprentissage}
-La plateforme d'apprentissage est la partie de l'application qui permet d'aider à gérer un ensemble d'étudiants en fournissant une interface pour mettre à disposition des \glspl{mission} et récupérer les soumissions.
+La plateforme d'apprentissage est la partie de l'application qui permet d'aider à gérer un ensemble d'élèves en fournissant une interface pour mettre à disposition des \glspl{mission} et récupérer les soumissions.
 
 Sur base des critères précités, les choix suivants ont été faits :
 \begin{description}
   \item[Technologie web] Pour faciliter l'utilisation de la plateforme par tous, il est utile de choisir des technologies web. En effet, il suffit d'un navigateur et d'une connexion internet pour que les utilisateurs puissent y accéder.
   \item[Logiciel libre] La connaissance ne devant pas être la propriété de quelques-uns, ce travail a visé à la rendre accessible à tous. Les logiciels libres forcent à respecter ce droit d'accès à l'enseignement et à la culture. De plus, cela permet à tout un chacun d'héberger l'infrastructure en interne.
-  \item[MVC] Pour séparer les différentes problématiques dans des composants bien définis, l'architecture \gls{mvc} est un choix courant. Dans le cas de \gls{rsnap}, le modèle permet de gérer les concepts d'utilisateurs, d'exercices et de résolutions. La possibilité de donner des droits différenciés aux étudiants ou aux professeurs se fait au niveau des contrôleurs. Les vues fournissent l'indépendance par rapport au matériel, car elles peuvent être spécialisées en fonction de celui-ci.
+  \item[MVC] Pour séparer les différentes problématiques dans des composants bien définis, l'architecture \gls{mvc} est un choix courant. Dans le cas de \gls{rsnap}, le modèle permet de gérer les concepts d'utilisateurs, d'exercices et de résolutions. La possibilité de donner des droits différenciés aux élèves ou aux professeurs se fait au niveau des contrôleurs. Les vues fournissent l'indépendance par rapport au matériel, car elles peuvent être spécialisées en fonction de celui-ci.
 \end{description}
 Un logiciel qui permet de satisfaire tous ces choix en même temps est \gls{rails}. En effet, comme expliqué dans la section \ref{gems}, \gls{rails} peut bénéficier de différents \glspl{gem}  pour avoir facilement les fonctionnalités demandées. C'est aussi du fait de la connaissance approfondie de cet outil par les auteurs de ce travail que cette plateforme a été choisie. Ces deux éléments ont permis de développer rapidement et correctement une application qui correspond aux critères.
 

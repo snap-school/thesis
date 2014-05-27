@@ -2,7 +2,7 @@
 Ce chapitre aborde les améliorations possibles pour \gls{rsnap}. Elles sont soit liées d'objectifs qui n'ont pas été rencontrés ou à l'analyse des expériences.
 
 \section{Tester la réussite des missions}
-Certains tests sont prévus pour que l'étudiant connaisse la réussite de la \gls{mission}. Toutefois, aucun signal n'est envoyé vers les serveurs pour leur transmettre cette réussite. Comme aucun mécanisme n'est présent pour valider une \gls{mission}, la \gls{mission} suivante se débloque dès le premier enregistrement de la précédente.
+Certains tests sont prévus pour que l'élève connaisse la réussite de la \gls{mission}. Toutefois, aucun signal n'est envoyé vers les serveurs pour leur transmettre cette réussite. Comme aucun mécanisme n'est présent pour valider une \gls{mission}, la \gls{mission} suivante se débloque dès le premier enregistrement de la précédente.
 
 \paragraph{Modifications à apporter}
 Le simple envoi d'une requête au serveur suffirait si la \gls{mission} est réussie. La difficulté réside dans la création d'un vrai \gls{bloc} disponible dans l'interface des professeurs qui servirait à informer le serveur de la réussite de la \gls{mission}.
@@ -11,7 +11,7 @@ Le simple envoi d'une requête au serveur suffirait si la \gls{mission} est réu
 Un des buts de ce travail est son utilisation dans l'enseignement. Ainsi, un système de gestion des élèves par classe a été pensé par les auteurs. Malheureusement, le temps imparti à ce travail a manqué pour avoir une implémentation complète de gestion de groupes.
 
 \paragraph{Modifications à apporter}
-Le principe pensé pour la gestion de classe est que chaque professeur puisse voir l'avancement de ses élèves. Chaque étudiant doit être assigné à ses propres classes et les droits des professeurs ne doivent porter que sur leurs classes.
+Le principe pensé pour la gestion de classe est que chaque professeur puisse voir l'avancement de ses élèves. Chaque élève doit être assigné à ses propres classes et les droits des professeurs ne doivent porter que sur leurs classes.
 
 Concrètement, il faut rajouter dans le modèle une \texttt{classe} qui représente un cours. Celle-ci serait constituée de la description de ce cours, d'un professeur et de plusieurs élèves. Il faut bien sûr aussi modifier les autorités qui gèrent les droits pour tenir compte de ces différentes assignations.
 
@@ -31,7 +31,7 @@ Comme développé dans l'analyse \ref{analyse-exp}, la \gls{mission} "chien et c
 En plus des \glspl{mission} proposées, il est important que d'autres \glspl{mission} soient créées pour avoir des cours plus consistants. Ces nouvelles \glspl{mission} permettraient d'apporter de nouveaux concepts, mais surtout permettraient aux enfants de pratiquer les concepts déjà appris pour mieux les intégrer. Il serait intéressant d'introduire les variables et les fonctions dans des \glspl{mission} futures.
 
 \section{Blocs d'introspection des programmes}
-Une autre amélioration serait une série de \glspl{bloc}  fournissant des informations sur le programme. Il est déjà possible de savoir jusqu'où l'étudiant est arrivé et donc de lui attribuer des points en fonction.
+Une autre amélioration serait une série de \glspl{bloc}  fournissant des informations sur le programme. Il est déjà possible de savoir jusqu'où l'élève est arrivé et donc de lui attribuer des points en fonction.
 Pour aller plus loin, il serait intéressant d'avoir un compteur de \glspl{bloc}  pour les \glspl{script}. En effet, un programme fait avec 20 \glspl{bloc}  quand la solution optimale en compte 3 ne mérite probablement pas autant de points.
 De manière générale, il pourrait être envisagé de fournir de vrais \glspl{bloc}  aux professeurs afin de leur faciliter la création de corrections et de cotations automatiques.
 

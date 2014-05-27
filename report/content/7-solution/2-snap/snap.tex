@@ -12,18 +12,18 @@ Un nettoyage en profondeur de l'interface de \gls{snap} a été opéré afin de 
 
 Une autre adaptation de l'interface est l'ajout d'un menu pour les interactions avec la plateforme web. Ce menu contient des boutons tels que :
 \begin{itemize}
-  \item "sauvegarder sur le serveur", pour enregistrer le travail de l'étudiant sur la plateforme ;
+  \item "sauvegarder sur le serveur", pour enregistrer le travail de l'élève sur la plateforme ;
   \item "description", pour permettre de retrouver le résumé introductif de la \gls{mission} ;
   \item "retour à la liste des missions", pour sauvegarder le travail puis renvoyer vers la page listant les \glspl{mission} sur le site web.
 \end{itemize}
 
 \subsection{Les rôles}
 \label{role}
-Afin de fournir une interface épurée pour les étudiants, comme expliqué dans la section \ref{interface}, il est nécessaire d'enlever des parties non pertinentes de l'interface de \gls{snap}. Toutefois, ces options inutiles aux étudiants peuvent l'être pour les professeurs et également pour une \gls{mission} en "mode ouvert". Il est donc utile d'avoir une interface modulaire suivant son utilisation. \\
+Afin de fournir une interface épurée pour les élèves, comme expliqué dans la section \ref{interface}, il est nécessaire d'enlever des parties non pertinentes de l'interface de \gls{snap}. Toutefois, ces options inutiles aux élèves peuvent l'être pour les professeurs et également pour une \gls{mission} en "mode ouvert". Il est donc utile d'avoir une interface modulaire suivant son utilisation. \\
 
-Pour différencier les utilisations de l'interface, la notion de \glspl{role} a été ajoutée. Deux \glspl{role} sont définis : étudiant et professeur. Ainsi, quand un élève ouvre un projet, \gls{snap} est lancé avec le rôle étudiant, ce qui permet de ne pas afficher les options superflues. Quand un professeur souhaite modifier une \gls{mission} ou en créer une nouvelle, \gls{rsnap} lance \gls{snap} avec le rôle professeur ce qui donne accès aux fonctions avancées de \gls{snap}.\\
+Pour différencier les utilisations de l'interface, la notion de \glspl{role} a été ajoutée. Deux \glspl{role} sont définis : élève et professeur. Ainsi, quand un élève ouvre un projet, \gls{snap} est lancé avec le rôle élève, ce qui permet de ne pas afficher les options superflues. Quand un professeur souhaite modifier une \gls{mission} ou en créer une nouvelle, \gls{rsnap} lance \gls{snap} avec le rôle professeur ce qui donne accès aux fonctions avancées de \gls{snap}.\\
 
-Ces \glspl{role} permettent également la gestion du masquage de \glspl{script}. Il est intéressant qu'un professeur puisse masquer des \glspl{bloc}, sans que les étudiants ne puissent les réafficher.
+Ces \glspl{role} permettent également la gestion du masquage de \glspl{script}. Il est intéressant qu'un professeur puisse masquer des \glspl{bloc}, sans que les élèves ne puissent les réafficher.
 
 \subsection{Masquer les scripts}
 Pour la création des \glspl{mission}, il a été nécessaire de cacher des \glspl{bloc} aux élèves. Par exemple, la partie de vérification du code de l'élève ou encore le code de l'environnement de la \gls{mission} ne doivent pas leur apparaître.
