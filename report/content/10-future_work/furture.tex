@@ -1,5 +1,5 @@
 \chapter{Futures améliorations}
-Ce chapitre aborde les améliorations possibles pour \gls{rsnap}. Elles sont soit liées d'objectifs qui n'ont pas été rencontrés ou à l'analyse des expériences.
+Ce chapitre aborde les améliorations possibles pour \gls{rsnap}. Elles sont soit liées aux objectifs qui n'ont pas été rencontrés ou à l'analyse des expériences.
 
 \section{Tester la réussite des missions}
 Certains tests sont prévus pour que l'élève connaisse la réussite de la \gls{mission}. Toutefois, aucun signal n'est envoyé vers les serveurs pour leur transmettre cette réussite. Comme aucun mécanisme n'est présent pour valider une \gls{mission}, la \gls{mission} suivante se débloque dès le premier enregistrement de la précédente.
@@ -22,7 +22,7 @@ Comme mis en lumière dans la partie \ref{analyse-exp}, les expériences ont mon
 La \gls{mission} de l'hélicoptère introduit deux concepts fort abstraits : les boucles et les conditions. Elle serait beaucoup plus facilement compréhensible par les enfants si elle était découpée en deux parties, une pour chaque concept.
 
 \paragraph{Soyons courtois}
-La \gls{mission} "soyons courtois" n'est pas encore assez attractive pour les enfants. Il était suggéré dans L'analyse \ref{appreciation} de rajouter la programmation des mouvements de leur personnage. En effet, actuellement, seuls les autres personnages bougent. On pourrait envisager que le jeune programme ce qui est nécessaire pour déplacer son personnage avec le clavier.
+La \gls{mission} "soyons courtois" n'est pas encore assez attractive pour les enfants. Il était suggéré dans l'analyse \ref{appreciation} de rajouter la programmation des mouvements de leur personnage. En effet, actuellement, seuls les autres personnages bougent. On pourrait envisager que le jeune programme ce qui est nécessaire pour déplacer son personnage avec le clavier.
 
 \paragraph{Chien et chat}
 Comme développé dans l'analyse \ref{analyse-exp}, la \gls{mission} "chien et chat" n'est pas assez dirigée. Une \gls{mission} d'introduction supplémentaire serait probablement bénéfique. Un autre problème dans cette \gls{mission} est le nombre de \glspl{bloc}  laissés à disposition des élèves. Le choix avait été fait de leur laisser un accès à tous les \glspl{bloc}  pour qu'ils voient la pleine puissance de \gls{snap}. Ce choix s'est révélé inapproprié.
@@ -33,6 +33,7 @@ En plus des \glspl{mission} proposées, il est important que d'autres \glspl{mis
 \section{Blocs d'introspection des programmes}
 Une autre amélioration serait une série de \glspl{bloc}  fournissant des informations sur le programme. Il est déjà possible de savoir jusqu'où l'élève est arrivé et donc de lui attribuer des points en fonction.
 Pour aller plus loin, il serait intéressant d'avoir un compteur de \glspl{bloc}  pour les \glspl{script}. En effet, un programme fait avec 20 \glspl{bloc}  quand la solution optimale en compte 3 ne mérite probablement pas autant de points.
+
 De manière générale, il pourrait être envisagé de fournir de vrais \glspl{bloc}  aux professeurs afin de leur faciliter la création de corrections et de cotations automatiques.
 
 Cette amélioration pourrait être couplée avec le test de réussite. Cette solution enverrait dans la requête au serveur une note et des informations sur l'avancée du programme grâce à ces \glspl{bloc}  d'introspection.

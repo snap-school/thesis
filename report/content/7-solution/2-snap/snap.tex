@@ -2,7 +2,7 @@
 \label{solution SNAP}
 Ce travail part d'un environnent de programmation existant : \gls{snap}. Ce projet a pour but de fournir une interface et un environnement supportant la programmation par \glspl{bloc}. Cependant, il ne s'inscrit pas dans le cadre d'un apprentissage scolaire ou guidé. Il a donc fallu l'adapter. Cette partie explique les différentes adaptations apportées au projet d'origine et pourquoi elles sont nécessaires pour remplir les objectifs.\\
 
-Dans les adaptations opérées, sont retenues : une simplification de l'interface, une différenciation des \glspl{role} entre le professeur et le public cible, le masquage des \glspl{script}, une amélioration de la traduction en français et la sauvegarde sur les serveurs du projet courant.
+Dans les adaptations opérées, sont retenues une simplification de l'interface, une différenciation des \glspl{role} entre le professeur et le public cible, le masquage des \glspl{script}, une amélioration de la traduction en français et la sauvegarde sur les serveurs du projet courant.
 
 \subsection{L'interface}
 \label{interface}
@@ -30,7 +30,7 @@ Pour la création des \glspl{mission}, il a été nécessaire de cacher des \gls
 
 Une possibilité de cacher des \glspl{bloc} existait déjà dans la zone des \glspl{bloc} sources (voir la figure \ref{fig:cacher}) de l'interface. Cette fonctionnalité est étendue pour pouvoir également cacher des \glspl{bloc} ou des \glspl{script} dans la partie d'édition (voir la figure \ref{fig:snap interface}).
 
-Il a donc fallu ajouter cette information dans la sauvegarde du projet. Ceci a été réalisé grâce à la balise \texttt{hidden} dans le XML.\\
+Il a donc fallu ajouter cette information dans la sauvegarde du projet. Ceci a été réalisé grâce à la balise \texttt{hidden} dans le XML, voir \ref{save-server}.\\
 
 
 Cette fonctionnalité étant intéressante pour le projet original, elle a été proposée dans une \texttt{\gls{pull}}. Les responsables de \gls{snap} ont marqué leur intérêt pour cette fonctionnalité qui est toujours en cours d'étude.
@@ -43,13 +43,14 @@ Cette fonctionnalité étant intéressante pour le projet original, elle a été
 \end{figure}
 
 \subsection{Traduction}
-Ce travail se différencie des autres initiatives similaires introduites dans la section \ref{travail-associe} par son caractère francophone. L'application était déjà traduite partiellement en français, mais une large majorité des traductions était incomplète, inexistante ou erronée. Il a donc fallu en améliorer la traduction. La traduction de l'application est différente pour la partie interface et la partie fournissant les aides.
+Ce travail se différencie des autres initiatives similaires introduites dans la section \ref{travail-associe} par son caractère francophone. L'application était déjà traduite partiellement en français, mais une large majorité des traductions étaient incomplètes, inexistantes ou erronées. Il a donc fallu en améliorer la traduction. La traduction de l'application est différente pour la partie interface et la partie fournissant les aides.
 
 Des aides étaient déjà disponibles en anglais. La possibilité de les avoir dans d'autres langues a été développée pour ce travail. De plus, des aides en français étaient déjà existantes dans le projet SCRATCH \cite{scratch-translation}. C'est donc elles qui ont été utilisées pour \gls{snap}.
 
 L'ensemble de ces aménagements a été proposé au projet original. Il a été accepté et il sera intégré après quelques modifications du serveur utilisé par \gls{snap}.
 
 \subsection{Sauvegarde sur le serveur}
+\label{save-server}
 Comme il est nécessaire d'interfacer l'environnement de programmation avec un site web, l'implémentation de certaines fonctionnalités d'import-export spécifiques à \gls{rsnap} a été réalisée.
 
 Il faut disposer d'un fichier XML pour sauvegarder les \glspl{mission} sur le serveur. Les fonctions existantes ont été adaptées pour permettre d'avoir ce fichier et de pouvoir l'envoyer au serveur.
