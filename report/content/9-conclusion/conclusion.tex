@@ -1,36 +1,60 @@
 \chapter{Conclusions}
+Ce chapitre conclut ce mémoire en reprenant les objectifs établis au chapitre \ref{intro-objectifs}. Ces objectif s'articulaient en trois volets majeur: plateforme d'apprentissage, contenu et langue et il se fini par un bilan final de ce mémoire.
 \section{Plateforme d'apprentissage}
-	disponibilité de l'application/ portabilité
-	stockage web bof
-	tanche d'âge? -> ok
-	gestion de classe --
+L'objectif étais de fournir une plateforme qui permet d'enseigner la programmation aux jeunes de 10 à 14 ans. Cette plateforme doit être disponible partout et être facile d'utilisation. Elle doit également pouvoir stocker des informations pour qu'elles soient disponibles lors de prochaines utilisations.\\
+
+Cet objectif se décompose en plusieurs parties:
+\begin{description}
+  \item[La portabilité] La plateforme \gls{rsnap} se présente sous la forme d'un site web \cite{rsnap} pour pouvoir y accéder grâce à n'importe quel ordinateur, tablette, etc. Elle est développé en \gls{rails} et JavaScript qui sont des technologies ayant fait leurs preuves, ceci assure une meilleur périnité à la plateforme. Cependant, pour pouvoir bénéficier de toutes les fonctionnalités utilisées par \gls{snap}, il est nécessaire d'avoir un navigateur récent.
+
+  \item[Disponibilité] L'application étant un site web, une connexion à internet est donc nécessaire pour pouvoir avoir accès à la plateforme. Hormis cette contrainte, la plateforme est disponible en tout temps et tout endroit.
+
+  \item[Gestion de classe] L'application fournit déjà la possibilité d'avoir des rôles différent pour les élèves et les professeurs. Ceci permet notament aux professeurs gérer la progression des élèves. Cette fonctionnalité est encore un petit peu primitive pour être pleinement utilisable. Elle souffre d'un problème de cloisonnement pour le \gls{role} des professeurs mais est déjà utilisable pour les élèves.
+
+  \item[L'âge des utilisateurs] Les expériences, voir section \ref{experience}, ont permis de montrer que la plateforme est adaptée à la tranche d'âge visée par ce travail. En effet, les élèves n'avaient aucun mal à passer d'une \gls{mission} à l'autre, sauver leurs projets, les reprendre, etc. Ceci est le fruit des adaptations réalisées grâce aux expériences.
+\end{description}
+
 \section{Contenu}
-	mission
-		un peu d'évaluation -> pointage des erreur
-		bon orientation générale
-		nécessité de contenu supplémentaire
+Le contenu comprend toutes les ressources pédagogiques de la plateforme \gls{rsnap}, c'est-à-dire les différente \glspl{mission} de \gls{rsnap} mais également les outils pour en créer de nouvelles.
+
+Dans le contenu il est important de différencier les \glspl{mission} existante des moyens mis en place pour créer ultérieurement du contenu suplémentaire. C'est avec cette subdivision que cette section va aborder le contenu de \gls{rsnap}.
+
+\subsection{Missions existantes}
+Cette partie va détailler les concepts enseignés et leur mise en pratique dans les \glspl{mission} déjà proposées.
+\begin{description}
+  \item[Concepts] Les \glspl{mission} déjà présentes dans \gls{rsnap} introduisent les concepts de base de la programmation tel que les boucles, les conditions et l'enchainement d'instructions. Certains concepts sont moins facile à maitriser par les enfants. Dans les \glspl{mission} actuelles, il serait avantageux de mieux séparer certains concepts. Par exemple, la \gls{mission} de l'hélicoptère, voir section \ref{helicoptere}, introduit les boucles et les conditions, il serait plus judicieux d'en faire deux \glspl{mission} différentes. Malgré cela tous les enfants ont réussi à réaliser ces \glspl{mission} durant les expériences ce qui montre qu'elles sont déjà bien abouties.
+
+  \item[Mise en pratique] La forme des \glspl{mission} a fortement intéressé les élèves. Des personnages concret et des retours directs sur leurs actions se sont avérés important. Les élèves appréciaient, par exemple, que la voiture explose si elle sortait de la route. Ces détails permettent de garder l'enfant attentif et concentré sur les \glspl{mission}.
+\end{description}
+
+\subsection{Creation de missions}
+Cette partie aborde les outils mis en place pour aider à la création de \glspl{mission} supplémentaires.
+
+\begin{description}
+  \item[Creation de contenu] Pour permettre aux professeurs d'avoir du contenu adapté à leurs besoins, \gls{rsnap} permet de créer leurs propres \glspl{mission}. C'est dans cette optique que des modifications on été opérées sur \gls{snap}, voir section \ref{solution SNAP}. La création de \glspl{mission} par les professeurs a été pensée pour que ces derniers n'aient pas besoin de connaissance spécifique en programation. En effet, ils créent leurs nouvelles \glspl{mission} directement dans l'interface de \gls{snap}.
+
+  \item[Communauté] La creation de \glspl{mission} dans \gls{rsnap} se veut communautaire. En effet comme expliqué dans la section \ref{communaute}, toutes \glspl{mission} crées sont disponnible pour tous les professeurs.
+\end{description}
+
 \section{Langue}
-	full french
-	pull request en court
-	traduction facile de Rsnap
+
+Un des points important de ce travail est qu'il doit être en français pour pouvoir être proposé au plus grande nombre possible d'enfants francophone.
+
+\begin{description}
+  \item[Traduction] L'application \gls{rsnap} a été créée et pensée en français. Il est envisageable de traduire cette plateforme. En effet comme elle respecte bien les principe de \gls{rails}, elle est facile à traduire. La seule partie qui ne pourrait être traduite de manière semi-automatique est les descriptions de \gls{mission}. De plus, \gls{rsnap} intègre l'interface de programmation \gls{snap} pour laquelle une traduction partielle existait déjà. Une partie de ce travail a été de completer cette traduction. Ce travail à d'ailleur fait l'objet d'une \gls{pull} à la communauté de \gls{snap} qui l'a acceuillie avec beaucoup d'interêts.
+
+  \item[Culture] Il est important de souligné que la traduction d'une application dans une langue est plus comlpexe que la traduction de chaque mot. Une traduction, c'est aussi adapter le contenu à la culture du public cible. La création du contenu de \gls{rsnap} s'est essentiellement inspiré de travaux anglophones, il était donc important de vérifier cette vision sur un public francophone. Les expériences nous montrent que cette adaptation a été réussie pour le contenu proposé.
+
+\end{description}
+
 \section{Bilan final}
-	grande application en marche -> avec des truc existant
-	beaucoup reste a faire
-	bonne acceuil
-	communauté
-	derniere phrase genre un pas en plus a été fait pour s'intégré dans une europe de demain
+Cette section évalue les objectifs de manière plus global, met en lumières les apports de ce travail à l'état de l'art et se fini par une vision du future de cette application.
 
+\begin{description}
+  \item[Objectifs] Dans l'ensemble, les objectifs fixés au début de ce travail ont été atteint, bien que ce genre de travail n'ait jamais de fin. Le résultat est une application qui est déjà utilisable et qui a été appréciée lors des expériences.
 
+  \item[Apport] En plus de proposer un plateforme d'apprenstissage de la programmation pour les jeunes francophones, un des apport principaux de ce travail est de montrer que tous les outils nécessaires à sa création sont déjà disponibles individuellements. En effet, la plupart de ces outils sont le fruit d'un besoin de la société de comprendre et maitriser les technologies qui nous entoure. Ce travail prouve que ces outils peuvent être rassemblé en une plateforme cohérente. Ce pas supplémentaire va dans le même sense que le rapport européen \cite{rapport-europeen} évoqué en introduction.
 
+  \item[Future de Rsnap] Comme dit précédament, \gls{rsnap} est une plateforme aboutie bien qu'il reste encore beaucoup d'améliorations possibles qui sont abordée dans le chapitre \ref{futur}. Deux futures probables s'ouvrent pour cette application. Soit, elle est reprise par une organisation pour fournir du contenu et du support pour les utilisateurs. Soit, une communauté se crée autour de \gls{rsnap} grâce aux besoins que comble cette application.
 
-
-
-objectif à quelle point on les a atteind
-	plateforme d'apprentissage
-	contenu
-	langue
-	
-validation 
-	point fort et faible qu'elle apporte
-
-future de l'application
+\end{description}
