@@ -16,7 +16,7 @@ Les concepts utiles pour développer l'application sont ceux présentés par les
  \end{center}
 \end{figure}
 
-\paragraph{\texttt{User}} Ce modèle contient les informations nécessaires pour identifier les utilisateurs (\texttt{firstname}, \texttt{email} \ldots) et pour les authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, \ldots). Les utilisateurs peuvent posséder plusieurs \glspl{role}, programmes et projets.
+\paragraph{\texttt{User}} Ce modèle contient les informations nécessaires pour identifier les utilisateurs (\texttt{firstname}, etc) et pour les authentifier (\texttt{encrypted\_password}, \texttt{current\_sign\_in\_ip}, etc). Les utilisateurs peuvent posséder plusieurs \glspl{role}, programmes et projets.
 
 \paragraph{\texttt{Role}} Les \glspl{role} permettent de donner des attributs aux utilisateurs. Ce modèle a été généré automatiquement par Rolify (section \ref{rolify}). Dans le cas de \gls{rsnap}, deux types d'utilisateurs ont été créés : \texttt{admin} et \texttt{teacher}. Ces deux \glspl{role} sont globaux et ne sont donc pas rattachés à une ressource spécifique.
 
@@ -26,14 +26,14 @@ Les \glspl{role} sont utiles en conjonction avec les autorités (section \ref{au
 
 \paragraph{\texttt{FileMission}} Les fichiers liés à une \gls{mission} sont les différentes images qui composent la description.
 
-\paragraph{\texttt{Program}} Les programmes contiennent la solution d'une \gls{mission}. Ils contiennent uniquement le code source de l'élève.
+\paragraph{\texttt{Program}} Les programmes contiennent la solution d'une \gls{mission} (uniquement le code source).
 
 \paragraph{\texttt{Project}} Les projets sont identiques aux programmes, mais ne sont pas liés à une \gls{mission}. Ils contiennent donc le nom du projet en plus du code source.
 
 \paragraph{Exemple} \texttt{Program} est un bon exemple de modèle \gls{rails} (code source \ref{lst:model-program}). Seules les fonctionnalités que Active Record (section \ref{active-record}) ne sait pas déduire de lui-même sont présentes. Le modèle contient donc uniquement :
 \begin{itemize}
   \item le nom des modèles avec qui il est associé et la cardinalité de la relation (\lstinline[language=Rails]{belongs_to} ligne 5-6) ;
-  \item la validation de certains attributs pour qu'ils respectent certaines contraintes (\lstinline[language=Rails]{validates} ligne 13-15) ;
+  \item la validation de certains attributs pour qu'ils respectent des contraintes (\lstinline[language=Rails]{validates} ligne 13-15) ;
   \item des méthodes de classes pour simplifier les requêtes au modèle (\lstinline[language=Rails]{scope},  \lstinline[language=Rails]{self.*} ligne 17-23).
 \end{itemize}
 
@@ -43,11 +43,11 @@ Comme c'est visible pour les \lstinline[language=Rails]{scope}'s à la ligne 17-
 \end{figure}
 
 \subsubsection{Contrôleurs}
-Les contrôleurs donnent accès à différentes ressources. La figure \ref{fig:controllers} montre la liste des contrôleurs implémentés pour cette application. La majorité de ceux-ci se rapporte directement à un modèle spécifique. Il existe néanmoins certaines ressources différentes telles que :
+Les contrôleurs donnent accès aux différentes ressources. La figure \ref{fig:controllers} montre la liste des contrôleurs implémentés pour cette application. La majorité de ceux-ci se rapporte directement à un modèle spécifique. Il existe néanmoins certaines ressources différentes telles que :
 \begin{itemize}
   \item les pages statiques (\texttt{HomeController}) ;
   \item l'ordonnancement des \glspl{mission} (\texttt{SortMissionsController}) ;
-  \item la création d'un programme depuis une \gls{mission} (\texttt{InitializationMissionController}) ;
+  \item la création d'un programme depuis une \gls{mission} (\texttt{Initialization} \texttt{MissionController}) ;
   \item les ressources utiles à l'affichage de \gls{snap} (\texttt{SnapAssetsController}).
 \end{itemize}
 
