@@ -18,8 +18,15 @@ Les trois pré-missions sont : "en voiture", "l'hélicoptère" et "soyons courto
 %
 % Pour introduire les concepts de manière douce, la mission finale \texttt{Chien et chat} est introduite par trois missions d'introduction : \texttt{la voiture}, \texttt{l'hélicoptère} et \texttt{Soyons courtois}. Dans la suite de cette partie, nous allons décrire les missions et faire une analyse des concepts introduits.
 
-\subsection{En voiture}
-\label{mission-voiture}
+\subsection{En voiture} \label{mission-voiture}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{content/7-solution/1-missions/images/voiture}
+    \caption{Mission de la voiture}
+    \label{fig:mission-voiture}
+  \end{center}
+\end{figure}
+
 Dans cette première \gls{mission}, voir figure \ref{fig:mission-voiture}, les participants sont mis dans un bolide qui doit atteindre la ligne d'arrivée en restant sur la route. Si la voiture sort de la route, elle explose. À chaque lancement du \gls{script} la voiture reprend sa position de départ.\\
 
 Cette \gls{mission} vise à ce que les participants puissent prendre en main l'interface de \gls{snap} et à introduire la notion de suite d'instructions. Ils doivent enchaîner des \glspl{bloc} de déplacement dans lesquelles, le nombre de pas et l'angle de virage sont à compléter. A la base les élèves n'ont rien en dessous des premiers blocs jaunes, La figure \ref{fig:mission-voiture} montre la solution de la mission.
@@ -28,17 +35,16 @@ Le fait de devoir prévoir les instructions n'est pas un concept facile pour le 
 
 Cette \gls{mission} réussie, l'élève peut passer à la \gls{mission} de l'hélicoptère.
 
-\begin{figure}
+
+\subsection{L'hélicoptère} \label{mission-helicoptere}
+\begin{figure}[H]
   \begin{center}
-    \includegraphics[width=\textwidth]{content/7-solution/1-missions/images/voiture}
-    \caption{Mission de la voiture}
-    \label{fig:mission-voiture}
+    \includegraphics[width=\textwidth]{content/7-solution/1-missions/images/helicoptere}
+    \caption{Mission de l'hélicoptère}
+    \label{fig:mission-hélicoptère}
   \end{center}
 \end{figure}
 
-
-\subsection{L'hélicoptère}
-\label{mission-helicoptere}
 Pour cette \gls{mission}, voir figure \ref{fig:mission-hélicoptère}, les élèves sont aux commandes d'un hélicoptère. Leur but est de faire le tour de la piste. La piste est un ellipsoïde bordé d'herbe. Cette forme ellipsoïde les force à utiliser des boucles et non un grand nombre de \glspl{bloc} créant une solution particulière. Si l'hélicoptère touche l'herbe, il explose. Sur le contour extérieur de la piste, une bande rouge et une bande bleue sont dessinées. Le but de cette \gls{mission} est de tourner dés qu'une de ces deux couleurs est touchée pour éviter l'explosion de l'hélicoptère. Comme pour la \gls{mission} précédente, à chaque lancement de \gls{script}, l'hélicoptère se repositionne à son point de départ. Au départ de la mission il n'y a que les blocs de tête qui sont présents.\\
 
 Les concepts introduits par cette \gls{mission} sont :
@@ -48,15 +54,15 @@ Les concepts introduits par cette \gls{mission} sont :
 \item la division en sous-processus (un pour avancer, un pour la collision rouge et un pour la bleue).
 \end{itemize}
 
-\begin{figure}è  \begin{center}
-    \includegraphics[width=\textwidth]{content/7-solution/1-missions/images/helicoptere}
-    \caption{Mission de l'hélicoptère}
-    \label{fig:mission-hélicoptère}
+\subsection{Soyons courtois} \label{mission-courtois}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{content/7-solution/1-missions/images/courtois}
+    \caption{Mission de soyons courtois}
+    \label{fig:courtois}
   \end{center}
 \end{figure}
 
-\subsection{Soyons courtois}
-\label{mission-courtois}
 Dans cette dernière \gls{mission} de préparation, voir figure \ref{fig:courtois}, le participant dirige un personnage qui croise d'autres personnages. Ces derniers disent bonjour à chaque fois qu'ils croisent quelqu'un. Le but de la \gls{mission} est que le personnage de l'élève réponde. Au départ de la mission il n'y a que les blocs de tête qui sont présents.
 
 Les concepts introduits par cette \gls{mission} sont :
@@ -67,13 +73,6 @@ Les concepts introduits par cette \gls{mission} sont :
 \item la gestion des dialogues et de l'affichage de texte.
 \end{itemize}
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=\textwidth]{content/7-solution/1-missions/images/courtois}
-    \caption{Mission de soyons courtois}
-    \label{fig:courtois}
-  \end{center}
-\end{figure}
 
 \subsection{Tu ne m'attraperas jamais}
 \label{chien-chat}

@@ -64,7 +64,7 @@ Comme il est expliqué dans la section \ref{controleur}, les méthodes accessibl
 \paragraph{Exemple}
 L'extrait du contrôleur \texttt{MissionsController} \ref{lst:controller-mission} montre l'usage classique d'un contrôleur.
 
-\begin{figure}
+\begin{figure}[H]
 \lstinputlisting[language=Rails, linerange={1-5,10-34,52-62}, caption={Extrait du controlleur \texttt{MissionsController}}, label=lst:controller-mission]{content/7-solution/3-rsnap/listings/missions_controller.rb} %TODO vérifier les ranges des lignes
 \end{figure}
 
@@ -83,13 +83,13 @@ Les vues sont écrites en haml (section \ref{haml}).
 
 L'exemple de code \ref{lst:vue-user-index} avec \ref{lst:vue-user-partial} montre comment la vue servant à lister tous les utilisateurs est représentée (figure \ref{fig:vue-users}).
 
-\begin{figure}
+\begin{figure}[p]
 \lstinputlisting[language=haml, caption={Vue \texttt{index} des utilisateurs}, label=lst:vue-user-index]{content/7-solution/3-rsnap/listings/index.html.haml}
 \end{figure}
 
 Le code source \ref{lst:vue-user-index} montre comment sont utilisées les variables d'instance créées par le contrôleur. Par exemple, la variable \texttt{@title} sert de titre 1.
 
-\begin{figure}
+\begin{figure}[p]
 \lstinputlisting[language=haml, caption={Vue d'une ligne \texttt{\_user} représentant un utilisateur}, label=lst:vue-user-partial]{content/7-solution/3-rsnap/listings/_user.html.haml}
 \end{figure}
 De plus, \gls{rails} permet de faire le rendu d'un autre fichier de manière élégante. La ligne 14 du code source \ref{lst:vue-user-index} exécute le rendu sur tous les éléments de la collection \texttt{users} grâce au fichier \ref{lst:vue-user-partial}
@@ -115,31 +115,12 @@ Si un professaur veut lui-même réaliser un cours de programmation, il doit pou
 
 \label{communaute}
 Les missions sont directement disponible à tous les professeurs pour viser à terme de créer un communauté de professeurs autour de la création de contenus adaptés aux élèves.
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=.9\textwidth]{mission-create}
-    \caption{Création d'une mission}
-    \label{fig:mission-create}
-  \end{center}
-\end{figure}
+
 
 \subparagraph{Ordonner les missions} Toutes les missions, fournie par l'ensemble des professeurs, peuvent servir à créer un cours. Pour ordonner les \glspl{mission} (figure \ref{fig:mission-order}) dans un ordre pédagogique, il suffit de les glisser dans la liste.
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=.9\textwidth]{mission-order}
-    \caption{Ordonner les missions}
-    \label{fig:mission-order}
-  \end{center}
-\end{figure}
+
 
 \subparagraph{Corriger les soumissions des élèves} Pour corriger les soumissions de ses élèves (figure \ref{fig:program-correction}), le professeur se rend sur la page des programmes. Il y sélectionne le programme qu'il désire corriger et qui s'ouvre dans l'interface \gls{snap}. Le professeur peut alors rajouter des commentaires.
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=.9\textwidth]{program-correction}
-    \caption{Correction d'un programme}
-    \label{fig:program-correction}
-  \end{center}
-\end{figure}
 
 \paragraph{Étudiant}
 Un élève doit pouvoir réaliser les opérations suivantes.
@@ -149,6 +130,37 @@ Un élève doit pouvoir réaliser les opérations suivantes.
 Deux possibilités s'offrent à lui. Soit le bouton est bleu, ce qui signifie que la \gls{mission} a déjà été commencée. L'élève la reprend là où elle s'était arrêtée. Soit, le bouton est vert et dans ce cas, une nouvelle \gls{mission} commence.
 
 Dans les deux cas, l'élève se retrouve sur l'interface de \gls{snap}.
+
+\subparagraph{Réaliser un projet libre} Si l'élève a envie de créer quelque chose (figure \ref{fig:project}), il va dans le menu "projet libre". Il utilise \gls{snap} à son plein potentiel et laisse libre cours à son imagination pour créer le programme de ses rêves.
+
+
+
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{mission-create}
+    \caption{Création d'une mission}
+    \label{fig:mission-create}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{mission-order}
+    \caption{Ordonner les missions}
+    \label{fig:mission-order}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{program-correction}
+    \caption{Correction d'un programme}
+    \label{fig:program-correction}
+  \end{center}
+\end{figure}
+
+
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{program-creation}
@@ -157,7 +169,6 @@ Dans les deux cas, l'élève se retrouve sur l'interface de \gls{snap}.
   \end{center}
 \end{figure}
 
-\subparagraph{Réaliser un projet libre} Si l'élève a envie de créer quelque chose (figure \ref{fig:project}), il va dans le menu "projet libre". Il utilise \gls{snap} à son plein potentiel et laisse libre cours à son imagination pour créer le programme de ses rêves.
 \begin{figure}
   \begin{center}
     \includegraphics[width=.9\textwidth]{project}
