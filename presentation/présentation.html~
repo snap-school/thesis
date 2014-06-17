@@ -1,0 +1,769 @@
+
+<!-- saved from url=(0058)http://strut.io/editor/preview_export/impress.html#/step-7 -->
+<html style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Deck Title</title>
+
+<meta name="description" content="TODO">
+<meta name="author" content="TODO">
+
+<style>
+.componentContainer {
+    position: absolute;
+    line-height: normal;
+    /*-webkit-transform-origin: 135% 135%;
+    -moz-transform-origin: 135% 135%;
+    transform-origin: 135% 135%;*/
+}
+
+.transformContainer {
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<link rel="stylesheet" href="http://strut.io/editor/preview_export/css/themes/default-reset.css">
+<link href="./présentation_files/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://strut.io/editor/preview_export/reveal/css/theme/default.css" id="theme">
+<link href="./présentation_files/web-fonts.css" rel="stylesheet" type="text/css">
+<link href="./présentation_files/backgroundClasses.css" rel="stylesheet" type="text/css">
+<link href="./présentation_files/surfaceClasses.css" rel="stylesheet" type="text/css">
+
+<link rel="shortcut icon" href="http://strut.io/editor/preview_export/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="http://strut.io/editor/preview_export/apple-touch-icon.png" type="image/png">
+
+<style>
+.reveal.themedArea {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<script async="" src="./présentation_files/analytics.js"></script><script type="text/javascript" src="./présentation_files/dataset-shim.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./présentation_files/impress.js"></script>
+
+<script src="./présentation_files/onready.js"></script>
+<script src="./présentation_files/loadPresentation.js"></script>
+<script>
+ready(function() {
+    if (document.getElementById('launched-placeholder'))
+        loadPresentation();
+
+    if (!window.presStarted) {
+        startPres(document, window);
+        impress().init();   
+    }
+
+    if ("ontouchstart" in document.documentElement) { 
+        document.querySelector(".hint").innerHTML = 
+            "<p>Tap on the left or right to navigate</p>";
+    }
+});
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42322531-1', 'strut.io');
+    ga('send', 'pageview');
+    </script>
+</head>
+<body class="impress-supported impress-enabled" style="height: 100%; overflow: hidden;">
+<style type="text/css">
+
+</style>
+<style>
+
+</style>
+<style>
+
+
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+</style>
+<!-- This is a work around / hack to get the user's browser to download the fonts 
+ if they decide to save the presentation. -->
+<div style="visibility: hidden; width: 0px; height: 0px">
+<img src="./présentation_files/Lato-Bold.woff">
+<img src="./présentation_files/HammersmithOne.woff">
+<img src="./présentation_files/Droid-Sans-Mono.woff">
+<img src="./présentation_files/Gorditas-Regular.woff">
+<img src="./présentation_files/FredokaOne-Regular.woff">
+<img src="./présentation_files/Ubuntu.woff">
+<img src="./présentation_files/Ubuntu-Bold.woff">
+<img src="./présentation_files/PressStart2P-Regular.woff">
+<img src="./présentation_files/Lato-BoldItalic.woff">
+<img src="./présentation_files/AbrilFatface-Regular.woff">
+<img src="./présentation_files/Lato-Regular.woff">
+</div>
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div class="bg  strut-surface">
+<div class="bg innerBg strut-slide-6">
+<div id="impress" style="position: absolute; -webkit-transform-origin: 0% 0%; transition: all 1000ms ease-in-out 500ms; -webkit-transition: all 1000ms ease-in-out 500ms; -webkit-transform-style: preserve-3d; top: 50%; left: 50%; -webkit-transform: perspective(3000px) scale(0.3333333333333333);"><div style="position: absolute; -webkit-transform-origin: 0% 0%; transition: all 1000ms ease-in-out 0ms; -webkit-transition: all 1000ms ease-in-out 0ms; -webkit-transform-style: preserve-3d; -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg) translate3d(-10485.76px, -10199.04px, 0px);">
+	
+		
+			<div class="step future" data-state="strut-slide-0" data-x="2430.2933333333335" data-y="6620.16" data-scale="3" id="step-1" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(2430.2933333333335px, 6620.16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-0" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 150px; left: 41px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<div style="text-align: center;">Plateforme web pour&nbsp;</div><div style="text-align: center;">accompagner
+&nbsp;l’apprentissage&nbsp;</div><div style="text-align: center;">de la programmation&nbsp;</div><div style="text-align: center;">par les 10 - 14 ans</div>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 535px; left: 246px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+Claessens Simon &amp; Collart Gaetan<br><div style="text-align: center;">2013-2014</div>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-1" data-x="6253.2266666666665" data-y="6620.16" data-rotate-z="-90.52733163067008" data-scale="3" id="step-2" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(6253.2266666666665px, 6620.16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(-90.52733163067008deg) scale(3); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-1" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 314px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font>Introduction</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 174px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+<ul><li><span style="line-height: normal;">Plateforme web</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 298px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+<ul><li><span style="line-height: normal;">Pour accompagner</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 421px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+<ul><li><span style="line-height: normal;">L'apprentissage de la&nbsp;</span></li></ul>programmation<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 628px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+<ul><li><span style="line-height: normal;">Par les 10-14 ans</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-2" data-x="7331.84" data-y="5514.24" data-rotate-z="-90.52733163067008" data-scale="1" id="step-3" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(7331.84px, 5514.24px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(-90.52733163067008deg) scale(1); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-2" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 365px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font>Contexte</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 205px; left: 89px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<i>... si nous voulons que nos jeunes passent de <br>simples usagers de l’internet, à acteurs de<br>&nbsp;la société [...] la compréhension de <br>l’informatique est la clé d’accès au monde <br>numérique ...</i><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 542px; left: 492px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+<font>Proposition de loi pour l'apprentissage<br>du codage informatique en France.<br>Par Corinne Erhel et Laure de la Raudière.<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-3" data-x="9175.04" data-y="2841.6" data-scale="3" id="step-4" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(9175.04px, 2841.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-3" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 190px; left: 557px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 341px; height: 96.42px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.18, 1.18);
+-moz-transform: scale(1.18, 1.18);
+transform: scale(1.18, 1.18)">
+<img src="./présentation_files/Y0Nw7uk.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 290px; left: 220px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 234px; height: 128.53px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.2, 0.2);
+-moz-transform: scale(0.2, 0.2);
+transform: scale(0.2, 0.2)">
+<img src="./présentation_files/WfIgX0h.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 141px; left: 515px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 4.85px; height: 524.04px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" preserveAspectRatio="none"><rect width="50" height="50"></rect></svg>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 88px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font>Languages d'apprentissage</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 161px; left: 85px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 217px; height: 66.43px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.48, 1.48);
+-moz-transform: scale(1.48, 1.48);
+transform: scale(1.48, 1.48)">
+<img src="./présentation_files/3j3HztQ.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 495px; left: 102px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 278px; height: 89.01px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.22, 1.22);
+-moz-transform: scale(1.22, 1.22);
+transform: scale(1.22, 1.22)">
+<img src="./présentation_files/Lp8lbnl.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 386px; left: 704px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 201px; height: 201px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.2, 0.2);
+-moz-transform: scale(0.2, 0.2);
+transform: scale(0.2, 0.2)">
+<img src="./présentation_files/iQCz5nE.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-4" data-x="12561.066666666668" data-y="5836.8" data-rotate-z="89.95437383553926" data-scale="3" id="step-5" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(12561.066666666668px, 5836.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(89.95437383553926deg) scale(3); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-4" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 318px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font>Les missions</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 162px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+Évolution<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 293px; left: 68.09px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 201px; height: 99.22px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.32, 0.32);
+-moz-transform: scale(0.32, 0.32);
+transform: scale(0.32, 0.32)">
+<img src="./présentation_files/ULORvhb.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 239px; left: 421px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 178px; height: 178px;">
+<div class="transformContainer" style="-webkit-transform: scale(2.78, 2.78);
+-moz-transform: scale(2.78, 2.78);
+transform: scale(2.78, 2.78)">
+<img src="./présentation_files/seGuEBq.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 522px; left: 130px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="./présentation_files/jo8qOxn.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 532px; left: 386px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 212px; height: 171.62px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.12, 1.12);
+-moz-transform: scale(1.12, 1.12);
+transform: scale(1.12, 1.12)">
+<img src="./présentation_files/uftxKz2.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 316px; left: 384px; -webkit-transform: rotate(1.57rad)  ; -moz-transform: rotate(1.57rad)  ; transform: rotate(1.57rad)  ; width: 30.79px; height: 49.6px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" preserveAspectRatio="none"><polygon points="25,0 50,50 0,50"></polygon></svg>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 332px; left: 340px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 38.28px; height: 10.62px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" preserveAspectRatio="none"><rect width="50" height="50"></rect></svg>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 362px; left: 675px; -webkit-transform: rotate(2.11rad)  ; -moz-transform: rotate(2.11rad)  ; transform: rotate(2.11rad)  ; width: 30.79px; height: 49.6px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" preserveAspectRatio="none"><polygon points="25,0 50,50 0,50"></polygon></svg>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 356px; left: 636px; -webkit-transform: rotate(0.54rad)  ; -moz-transform: rotate(0.54rad)  ; transform: rotate(0.54rad)  ; width: 38.28px; height: 10.62px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" preserveAspectRatio="none"><rect width="50" height="50"></rect></svg>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 513px; left: 662px; -webkit-transform: rotate(2.63rad)  ; -moz-transform: rotate(2.63rad)  ; transform: rotate(2.63rad)  ; width: 38.28px; height: 10.62px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" preserveAspectRatio="none"><rect width="50" height="50"></rect></svg>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 522px; left: 635px; -webkit-transform: rotate(-2.14rad)  ; -moz-transform: rotate(-2.14rad)  ; transform: rotate(-2.14rad)  ; width: 30.79px; height: 49.6px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" preserveAspectRatio="none"><polygon points="25,0 50,50 0,50"></polygon></svg>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 372px; left: 748px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 202px; height: 117.5px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.5, 0.5);
+-moz-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5)">
+<img src="./présentation_files/b8hr0Rj.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step past" data-state="strut-slide-5" data-x="10594.986666666666" data-y="6912" data-rotate-z="89.95437383553926" data-scale="2" id="step-6" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(10594.986666666666px, 6912px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(89.95437383553926deg) scale(2); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-5" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 318px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font>Les missions</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 174px; left: 69px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+Réalisation &nbsp; &nbsp; &nbsp; &nbsp; Correction<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 275px; left: 69px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="./présentation_files/hynNEoM.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step active present" data-state="strut-slide-6" data-x="10485.76" data-y="10199.04" data-scale="3" id="step-7" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(10485.76px, 10199.04px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-6" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 412px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+RSnap<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 170px; left: 122px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 827px; height: 517.39px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.38, 1.38);
+-moz-transform: scale(1.38, 1.38);
+transform: scale(1.38, 1.38)">
+<img src="./présentation_files/EBTbBHo.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 484px; left: 562px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 319px; height: 168.27px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.4, 0.4);
+-moz-transform: scale(0.4, 0.4);
+transform: scale(0.4, 0.4)">
+<img src="./présentation_files/QWTFoFY.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step past" data-state="strut-slide-7" data-x="15428.266666666666" data-y="10460.16" data-scale="3" id="step-8" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(15428.266666666666px, 10460.16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-7" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 336px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font>Expérience</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 112px; left: 32px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 352px; height: 469.33px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.14, 0.14);
+-moz-transform: scale(0.14, 0.14);
+transform: scale(0.14, 0.14)">
+<img src="./présentation_files/I2moRTk.jpg">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 118px; left: 592px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 375px; height: 281.25px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.11, 0.11);
+-moz-transform: scale(0.11, 0.11);
+transform: scale(0.11, 0.11)">
+<img src="./présentation_files/TSDAg7B.jpg">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 347px; left: 329px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 350px; height: 262.5px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.11, 0.11);
+-moz-transform: scale(0.11, 0.11);
+transform: scale(0.11, 0.11)">
+<img src="./présentation_files/zjewTxZ.jpg">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 463px; left: 655px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 331px; height: 248.25px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.1, 0.1);
+-moz-transform: scale(0.1, 0.1);
+transform: scale(0.1, 0.1)">
+<img src="./présentation_files/Zd2sSHr.jpg">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-8" data-x="14718.293333333333" data-y="12334.08" data-scale="2" id="step-9" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(14718.293333333333px, 12334.08px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(2); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-8" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 290px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font>Améliorations</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 155px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+<ul><li><span style="line-height: normal;">Gestion de classe</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 275px; left: 89.09px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+<ul><li><span style="line-height: normal;">Contenu</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 395px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+<ul><li><span style="line-height: normal;">Communautées</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-9" data-x="15291.733333333334" data-y="13286.4" data-scale="1" id="step-10" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(15291.733333333334px, 13286.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-9" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 30px; left: 281px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font>Avis personnel</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 197px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<ul><li><span style="line-height: normal;">SNAP!, travailler avec un grand projet</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 311px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<ul><li><span style="line-height: normal;">Créer une application pour les enfants</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 424px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<ul><li><span style="line-height: normal;">Travailler avec les enfants</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 537px; left: 90px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<ul><li><span style="line-height: normal;">Rédiger un grand rapport</span><br></li></ul>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div class="step future" data-state="strut-slide-10" data-x="18336.426666666666" data-y="13547.52" data-rotate-y="190.2219879834333" data-scale="3" id="step-11" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(18336.426666666666px, 13547.52px, 0px) rotateX(0deg) rotateY(190.2219879834333deg) rotateZ(0deg) scale(3); -webkit-transform-style: preserve-3d;">
+			<div class=" slideContainer strut-slide-10" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 298px; left: 146px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 144px;" class="antialias">
+Questions ?<br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+	<div id="overview" class="step future" data-state="strut-slide-overview" data-x="10383.36" data-y="8194.56" data-scale="9" style="position: absolute; -webkit-transform: translate(-50%, -50%) translate3d(10383.36px, 8194.56px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(9); -webkit-transform-style: preserve-3d;"></div>
+	
+</div></div>
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+</div>
+</div></body></html>
