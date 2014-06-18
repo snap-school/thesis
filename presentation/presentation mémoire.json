@@ -58,15 +58,54 @@
         },
         {
           "TextBox": {},
-          "x": 100,
-          "y": 188,
+          "x": 90,
+          "y": 174,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
           "size": 64,
-          "text": "<ul><li><span style=\"line-height: normal;\">Plateforme web</span><br></li><li><span style=\"line-height: normal;\">Pour accompagner</span></li><li><span style=\"line-height: normal;\">L'apprentissage de la</span></li></ul>programmation<br><ul><li>Par les 10-14 ans</li></ul>",
+          "text": "<ul><li><span style=\"line-height: normal;\">Plateforme web</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 298,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 64,
+          "text": "<ul><li><span style=\"line-height: normal;\">Pour accompagner</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 421,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 64,
+          "text": "<ul><li><span style=\"line-height: normal;\">L'apprentissage de la&nbsp;</span></li></ul>programmation<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 628,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 64,
+          "text": "<ul><li><span style=\"line-height: normal;\">Par les 10-14 ans</span><br></li></ul>",
           "selected": false
         }
       ],
@@ -480,7 +519,7 @@
       "components": [
         {
           "TextBox": {},
-          "x": 437,
+          "x": 412,
           "y": 30,
           "scale": {
             "x": 1,
@@ -488,7 +527,7 @@
           },
           "type": "TextBox",
           "size": 72,
-          "text": "<font>Rails</font>",
+          "text": "RSnap<br>",
           "selected": false
         },
         {
@@ -504,6 +543,20 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "src": "http://i.imgur.com/QWTFoFY.png",
+          "type": "Image",
+          "x": 562,
+          "y": 484,
+          "scale": {
+            "x": 0.39875000000000005,
+            "y": 0.39875000000000005,
+            "width": 319.00000000000006,
+            "height": 168.2725
+          },
+          "imageType": "PNG",
+          "selected": false
         }
       ],
       "z": 0,
@@ -512,7 +565,7 @@
       "rotateY": 0,
       "rotateZ": 0,
       "index": 6,
-      "selected": false,
+      "selected": true,
       "active": true,
       "x": 768,
       "y": 664
@@ -680,6 +733,58 @@
           "size": 72,
           "text": "<font>Avis personnel</font>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">SNAP!, travailler avec un grand projet</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 311,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">Créer une application pour les enfants</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 424,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">Travailler avec les enfants</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 537,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">Rédiger un grand rapport</span><br></li></ul>",
+          "selected": false
         }
       ],
       "z": 0,
@@ -692,13 +797,40 @@
       "active": false,
       "x": 1120,
       "y": 865
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 146,
+          "y": 298,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 144,
+          "text": "Questions ?<br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 3.32,
+      "rotateZ": 0,
+      "index": 10,
+      "selected": false,
+      "active": false,
+      "x": 1343,
+      "y": 882
     }
   ],
   "activeSlide": {
     "components": [
       {
         "TextBox": {},
-        "x": 437,
+        "x": 412,
         "y": 30,
         "scale": {
           "x": 1,
@@ -706,7 +838,7 @@
         },
         "type": "TextBox",
         "size": 72,
-        "text": "<font>Rails</font>",
+        "text": "RSnap<br>",
         "selected": false
       },
       {
@@ -722,6 +854,20 @@
         },
         "imageType": "PNG",
         "selected": false
+      },
+      {
+        "src": "http://i.imgur.com/QWTFoFY.png",
+        "type": "Image",
+        "x": 562,
+        "y": 484,
+        "scale": {
+          "x": 0.39875000000000005,
+          "y": 0.39875000000000005,
+          "width": 319.00000000000006,
+          "height": 168.2725
+        },
+        "imageType": "PNG",
+        "selected": false
       }
     ],
     "z": 0,
@@ -730,7 +876,7 @@
     "rotateY": 0,
     "rotateZ": 0,
     "index": 6,
-    "selected": false,
+    "selected": true,
     "active": true,
     "x": 768,
     "y": 664
@@ -739,7 +885,5 @@
   "deckVersion": "1.0",
   "customBackgrounds": {
     "bgs": []
-  },
-  "overviewX": 654,
-  "overviewY": 525
+  }
 }
