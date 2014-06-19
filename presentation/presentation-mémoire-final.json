@@ -27,6 +27,20 @@
           "text": "Claessens Simon &amp; Collart Gaetan<br><div style=\"text-align: center;\">2013-2014</div>",
           "size": 36,
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 7,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>1/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -107,6 +121,20 @@
           "size": 48,
           "text": "<ul><li><span style=\"line-height: normal;\">Par les 10-14 ans</span><br></li></ul>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>2/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -161,6 +189,20 @@
           "size": 24,
           "text": "<font>Proposition de loi pour l'apprentissage<br>du codage informatique en France.<br>Par Corinne Erhel et Laure de la Raudière.<br></font>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>3/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -270,6 +312,20 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>4/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -450,6 +506,20 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>5/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -502,6 +572,20 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>6/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -557,6 +641,20 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>7/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -640,6 +738,20 @@
           },
           "imageType": "JPG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>8/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -718,6 +830,20 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>9/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -797,6 +923,20 @@
           "size": 48,
           "text": "<ul><li><span style=\"line-height: normal;\">Rédiger un grand rapport</span><br></li></ul>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>10/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -824,6 +964,20 @@
           "size": 144,
           "text": "Démonstration<br>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>11/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -851,6 +1005,20 @@
           "size": 144,
           "text": "Questions ?<br>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>12/12</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -879,6 +1047,20 @@
         "size": 144,
         "text": "Questions ?<br>",
         "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 8,
+        "y": 711,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 24,
+        "text": "<font>12/12</font>",
+        "selected": false,
+        "customClasses": "pagination"
       }
     ],
     "z": 0,
