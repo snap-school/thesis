@@ -38,8 +38,8 @@
       "selected": false,
       "active": false,
       "markdown": "",
-      "x": 178,
-      "y": 431
+      "x": 146,
+      "y": 430
     },
     {
       "components": [
@@ -65,7 +65,7 @@
             "y": 1
           },
           "type": "TextBox",
-          "size": 64,
+          "size": 48,
           "text": "<ul><li><span style=\"line-height: normal;\">Plateforme web</span><br></li></ul>",
           "selected": false
         },
@@ -78,35 +78,49 @@
             "y": 1
           },
           "type": "TextBox",
-          "size": 64,
+          "size": 48,
           "text": "<ul><li><span style=\"line-height: normal;\">Pour accompagner</span><br></li></ul>",
           "selected": false
         },
         {
           "TextBox": {},
           "x": 90,
-          "y": 421,
+          "y": 422,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
-          "size": 64,
-          "text": "<ul><li><span style=\"line-height: normal;\">L'apprentissage de la&nbsp;</span></li></ul>programmation<br>",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">L'apprentissage de la programmation</span></li></ul><br>",
           "selected": false
         },
         {
           "TextBox": {},
           "x": 90,
-          "y": 628,
+          "y": 546,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
-          "size": 64,
+          "size": 48,
           "text": "<ul><li><span style=\"line-height: normal;\">Par les 10-14 ans</span><br></li></ul>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>1/9<br></font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -161,6 +175,20 @@
           "size": 24,
           "text": "<font>Proposition de loi pour l'apprentissage<br>du codage informatique en France.<br>Par Corinne Erhel et Laure de la Raudière.<br></font>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>2/9</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -194,7 +222,7 @@
           "src": "http://i.imgur.com/WfIgX0h.png",
           "type": "Image",
           "x": 220,
-          "y": 290,
+          "y": 290.83842794759823,
           "scale": {
             "x": 0.1971356360572873,
             "y": 0.1971356360572873,
@@ -270,6 +298,46 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>3/9</font>",
+          "selected": false,
+          "customClasses": "pagination"
+        },
+        {
+          "TextBox": {},
+          "x": 203,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font>Bloc<br></font>",
+          "size": 48,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 700,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<font>Texte</font>",
+          "selected": false
         }
       ],
       "z": 0,
@@ -278,11 +346,92 @@
       "rotateY": 0,
       "rotateZ": 0,
       "index": 3,
-      "selected": false,
-      "active": false,
+      "selected": true,
+      "active": true,
       "markdown": "",
       "x": 672,
       "y": 185
+    },
+    {
+      "components": [
+        {
+          "src": "http://i.imgur.com/WfIgX0h.png",
+          "type": "Image",
+          "x": 291,
+          "y": 149,
+          "scale": {
+            "x": 0.5973041280539174,
+            "y": 0.5973041280539174,
+            "width": 709,
+            "height": 389.44229149115415
+          },
+          "imageType": "PNG",
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 395,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">Libre</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 255,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">JavaScript</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 115,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">Web</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 535,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">Complet</span><br></li></ul>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 4,
+      "selected": false,
+      "active": false,
+      "x": 624,
+      "y": 182
     },
     {
       "components": [
@@ -300,23 +449,10 @@
           "selected": false
         },
         {
-          "TextBox": {},
-          "x": 90,
-          "y": 162,
-          "scale": {
-            "x": 1,
-            "y": 1
-          },
-          "type": "TextBox",
-          "size": 64,
-          "text": "Évolution<br>",
-          "selected": false
-        },
-        {
           "src": "http://i.imgur.com/ULORvhb.png",
           "type": "Image",
-          "x": 68.09004739336493,
-          "y": 293,
+          "x": 79,
+          "y": 203,
           "scale": {
             "x": 0.3210862619808307,
             "y": 0.3210862619808307,
@@ -329,8 +465,8 @@
         {
           "src": "http://i.imgur.com/seGuEBq.png",
           "type": "Image",
-          "x": 421,
-          "y": 239,
+          "x": 432,
+          "y": 149,
           "scale": {
             "x": 2.78125,
             "y": 2.78125,
@@ -343,8 +479,8 @@
         {
           "src": "http://i.imgur.com/jo8qOxn.png",
           "type": "Image",
-          "x": 130,
-          "y": 522,
+          "x": 155,
+          "y": 483,
           "scale": {
             "x": 1,
             "y": 1
@@ -355,8 +491,8 @@
         {
           "src": "http://i.imgur.com/uftxKz2.png",
           "type": "Image",
-          "x": 386,
-          "y": 532,
+          "x": 411,
+          "y": 493,
           "scale": {
             "x": 1.1216931216931216,
             "y": 1.1216931216931216,
@@ -369,8 +505,8 @@
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><polygon points=\"25,0 50,50 0,50\"/></svg>",
           "type": "Shape",
-          "x": 384,
-          "y": 316,
+          "x": 395,
+          "y": 226,
           "scale": {
             "width": 30.78615595379147,
             "height": 49.60047023104266
@@ -381,8 +517,8 @@
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
           "type": "Shape",
-          "x": 340,
-          "y": 332,
+          "x": 351,
+          "y": 242,
           "scale": {
             "width": 38.27849155805688,
             "height": 10.616104487559243
@@ -392,8 +528,8 @@
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><polygon points=\"25,0 50,50 0,50\"/></svg>",
           "type": "Shape",
-          "x": 675,
-          "y": 362,
+          "x": 681,
+          "y": 295,
           "scale": {
             "width": 30.78615595379147,
             "height": 49.60047023104266
@@ -404,8 +540,8 @@
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
           "type": "Shape",
-          "x": 636,
-          "y": 356,
+          "x": 642,
+          "y": 289,
           "scale": {
             "width": 38.27849155805688,
             "height": 10.616104487559243
@@ -416,8 +552,8 @@
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
           "type": "Shape",
-          "x": 662,
-          "y": 513,
+          "x": 687,
+          "y": 474,
           "scale": {
             "width": 38.27849155805688,
             "height": 10.616104487559243
@@ -428,8 +564,8 @@
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><polygon points=\"25,0 50,50 0,50\"/></svg>",
           "type": "Shape",
-          "x": 635,
-          "y": 522,
+          "x": 660,
+          "y": 483,
           "scale": {
             "width": 30.78615595379147,
             "height": 49.60047023104266
@@ -440,8 +576,8 @@
         {
           "src": "http://i.imgur.com/b8hr0Rj.png",
           "type": "Image",
-          "x": 748,
-          "y": 372,
+          "x": 754,
+          "y": 305,
           "scale": {
             "x": 0.5,
             "y": 0.5,
@@ -450,6 +586,72 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>4/9</font>",
+          "selected": false,
+          "customClasses": "pagination"
+        },
+        {
+          "TextBox": {},
+          "x": 93,
+          "y": 307,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<font>Imperatif</font>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 443,
+          "y": 279,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "Boucles<br>Conditions<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 790,
+          "y": 434,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<font>Capteurs</font>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 342,
+          "y": 654,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<font>Jeu</font>",
+          "selected": false
         }
       ],
       "z": 0,
@@ -457,7 +659,7 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 1.57,
-      "index": 4,
+      "index": 5,
       "selected": false,
       "active": false,
       "x": 920,
@@ -480,40 +682,54 @@
         },
         {
           "TextBox": {},
-          "x": 69,
-          "y": 174,
+          "x": 90,
+          "y": 581,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
-          "text": "Réalisation &nbsp; &nbsp; &nbsp; &nbsp; Correction<br>",
-          "size": 64,
+          "text": "Étudiants &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Professeurs<br>",
+          "size": 48,
           "selected": false
         },
         {
           "src": "http://i.imgur.com/hynNEoM.png",
           "type": "Image",
           "x": 69,
-          "y": 275,
+          "y": 136,
           "scale": {
             "x": 1,
             "y": 1
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>5/9</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
-      "impScale": 2,
+      "impScale": 1,
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 1.57,
-      "index": 5,
+      "index": 6,
       "selected": false,
       "active": false,
-      "x": 776,
-      "y": 450
+      "x": 839,
+      "y": 505
     },
     {
       "components": [
@@ -531,10 +747,50 @@
           "selected": false
         },
         {
+          "TextBox": {},
+          "x": 90,
+          "y": 140,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Ruby on Rails</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 220,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Responsive</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>6/9</font>",
+          "selected": false,
+          "customClasses": "pagination"
+        },
+        {
           "src": "http://i.imgur.com/EBTbBHo.png",
           "type": "Image",
-          "x": 122,
-          "y": 170,
+          "x": 98,
+          "y": 162,
           "scale": {
             "x": 1.3760399334442597,
             "y": 1.3760399334442597,
@@ -547,8 +803,8 @@
         {
           "src": "http://i.imgur.com/QWTFoFY.png",
           "type": "Image",
-          "x": 562,
-          "y": 484,
+          "x": 600,
+          "y": 530,
           "scale": {
             "x": 0.39875000000000005,
             "y": 0.39875000000000005,
@@ -564,11 +820,196 @@
       "rotateX": 0,
       "rotateY": 0,
       "rotateZ": 0,
-      "index": 6,
-      "selected": true,
-      "active": true,
-      "x": 768,
-      "y": 664
+      "index": 7,
+      "selected": false,
+      "active": false,
+      "x": 907,
+      "y": 663
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 180,
+          "y": 269,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">93% de couverture</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 209,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Tests d'intégration continue</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 180,
+          "y": 329,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">3,8/4 code climate</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 455,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Soumissions à Snap!</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 180,
+          "y": 515,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Traductions</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 180,
+          "y": 575,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Masquage des scriptes</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 412,
+          "y": 30,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 72,
+          "text": "RSnap<br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 8,
+      "selected": false,
+      "active": false,
+      "x": 1039,
+      "y": 746
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 336,
+          "y": 30,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 72,
+          "text": "<font>Expérience</font>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 218,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">10 élèves</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 308,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Interessés</span></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 90,
+          "y": 398,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Correction de la plateforme</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "src": "http://i.imgur.com/iKg50jr.png",
+          "type": "Image",
+          "x": 596,
+          "y": 229,
+          "scale": {
+            "x": 1.5291666666666666,
+            "y": 1.5291666666666666,
+            "width": 367,
+            "height": 354.76666666666665
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": -1.57,
+      "index": 9,
+      "selected": false,
+      "active": false,
+      "x": 1293,
+      "y": 661
     },
     {
       "components": [
@@ -588,8 +1029,8 @@
         {
           "src": "http://i.imgur.com/I2moRTk.jpg",
           "type": "Image",
-          "x": 32,
-          "y": 112,
+          "x": -192,
+          "y": 4,
           "scale": {
             "x": 0.14379084967320266,
             "y": 0.14379084967320266,
@@ -602,8 +1043,8 @@
         {
           "src": "http://i.imgur.com/TSDAg7B.jpg",
           "type": "Image",
-          "x": 592,
-          "y": 118,
+          "x": 742,
+          "y": 51,
           "scale": {
             "x": 0.11488970588235292,
             "y": 0.11488970588235292,
@@ -616,8 +1057,8 @@
         {
           "src": "http://i.imgur.com/zjewTxZ.jpg",
           "type": "Image",
-          "x": 329,
-          "y": 347,
+          "x": 690,
+          "y": 473,
           "scale": {
             "x": 0.10723039215686274,
             "y": 0.10723039215686274,
@@ -630,8 +1071,8 @@
         {
           "src": "http://i.imgur.com/Zd2sSHr.jpg",
           "type": "Image",
-          "x": 655,
-          "y": 463,
+          "x": 179,
+          "y": 526,
           "scale": {
             "x": 0.10140931372549013,
             "y": 0.10140931372549013,
@@ -640,18 +1081,85 @@
           },
           "imageType": "JPG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>7/9</font>",
+          "selected": false,
+          "customClasses": "pagination"
+        },
+        {
+          "TextBox": {},
+          "x": 249,
+          "y": 220,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">84 élèves en binômes</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 249,
+          "y": 300,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">4 séances de 1h30</span><br></li></ul>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 249,
+          "y": 380,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">5e primaire à 1ere humanité</span><br></li></ul>",
+          "selected": false,
+          "customClasses": "sup"
+        },
+        {
+          "TextBox": {},
+          "x": 250,
+          "y": 140,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<ul><li><span style=\"line-height: normal;\">Printemps des sciences</span><br></li></ul>",
+          "selected": false
         }
       ],
       "z": 0,
-      "impScale": 3,
+      "impScale": 1,
       "rotateX": 0,
       "rotateY": 0,
-      "rotateZ": 0,
-      "index": 7,
+      "rotateZ": -1.57,
+      "index": 10,
       "selected": false,
       "active": false,
-      "x": 1130,
-      "y": 681
+      "x": 1403,
+      "y": 555
     },
     {
       "components": [
@@ -671,53 +1179,79 @@
         {
           "TextBox": {},
           "x": 90,
-          "y": 155,
+          "y": 185,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
-          "size": 64,
+          "size": 48,
           "text": "<ul><li><span style=\"line-height: normal;\">Gestion de classe</span><br></li></ul>",
           "selected": false
         },
         {
           "TextBox": {},
-          "x": 89.09004739336493,
-          "y": 275,
+          "x": 89,
+          "y": 305,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
-          "size": 64,
+          "size": 48,
           "text": "<ul><li><span style=\"line-height: normal;\">Contenu</span><br></li></ul>",
           "selected": false
         },
         {
           "TextBox": {},
           "x": 90,
-          "y": 395,
+          "y": 425,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
-          "size": 64,
-          "text": "<ul><li><span style=\"line-height: normal;\">Communautées</span><br></li></ul>",
+          "size": 48,
+          "text": "<ul><li><span style=\"line-height: normal;\">Communautés</span><br></li></ul>",
           "selected": false
+        },
+        {
+          "src": "http://i.imgur.com/k2jN6Nf.png",
+          "type": "Image",
+          "x": 522,
+          "y": 310,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "imageType": "PNG",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>8/9</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
       "impScale": 2,
       "rotateX": 0,
       "rotateY": 0,
-      "rotateZ": 0,
-      "index": 8,
+      "rotateZ": -3.14,
+      "index": 11,
       "selected": false,
       "active": false,
-      "x": 1078,
-      "y": 803
+      "x": 1356,
+      "y": 288
     },
     {
       "components": [
@@ -785,18 +1319,59 @@
           "size": 48,
           "text": "<ul><li><span style=\"line-height: normal;\">Rédiger un grand rapport</span><br></li></ul>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>9/9</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
       "impScale": 1,
       "rotateX": 0,
       "rotateY": 0,
-      "rotateZ": 0,
-      "index": 9,
+      "rotateZ": -3.14,
+      "index": 12,
       "selected": false,
       "active": false,
-      "x": 1120,
-      "y": 865
+      "x": 1247,
+      "y": 221
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 298,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 144,
+          "text": "Démonstration<br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 1,
+      "rotateX": -3.14,
+      "rotateY": 0,
+      "rotateZ": -1.57,
+      "index": 13,
+      "selected": false,
+      "active": false,
+      "x": 1240,
+      "y": 93
     },
     {
       "components": [
@@ -815,22 +1390,62 @@
         }
       ],
       "z": 0,
-      "impScale": 3,
-      "rotateX": 0,
-      "rotateY": 3.32,
-      "rotateZ": 0,
-      "index": 10,
+      "impScale": 1,
+      "rotateX": -3.14,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 14,
       "selected": false,
       "active": false,
-      "x": 1343,
-      "y": 882
+      "x": 1244,
+      "y": -27
     }
   ],
   "activeSlide": {
     "components": [
       {
+        "src": "http://i.imgur.com/Y0Nw7uk.png",
+        "type": "Image",
+        "x": 557,
+        "y": 190,
+        "scale": {
+          "x": 1.1758620689655173,
+          "y": 1.1758620689655173,
+          "width": 341,
+          "height": 96.42068965517241
+        },
+        "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "src": "http://i.imgur.com/WfIgX0h.png",
+        "type": "Image",
+        "x": 220,
+        "y": 290.83842794759823,
+        "scale": {
+          "x": 0.1971356360572873,
+          "y": 0.1971356360572873,
+          "width": 234,
+          "height": 128.53243470935132
+        },
+        "imageType": "PNG",
+        "selected": false,
+        "skewY": 0
+      },
+      {
+        "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
+        "type": "Shape",
+        "x": 515,
+        "y": 141,
+        "scale": {
+          "width": 4.847971954161641,
+          "height": 524.0434163902293
+        },
+        "selected": false
+      },
+      {
         "TextBox": {},
-        "x": 412,
+        "x": 88,
         "y": 30,
         "scale": {
           "x": 1,
@@ -838,35 +1453,89 @@
         },
         "type": "TextBox",
         "size": 72,
-        "text": "RSnap<br>",
+        "text": "<font>Languages d'apprentissage</font>",
         "selected": false
       },
       {
-        "src": "http://i.imgur.com/EBTbBHo.png",
+        "src": "http://i.imgur.com/3j3HztQ.png",
         "type": "Image",
-        "x": 122,
-        "y": 170,
+        "x": 85,
+        "y": 161,
         "scale": {
-          "x": 1.3760399334442597,
-          "y": 1.3760399334442597,
-          "width": 827.0000000000001,
-          "height": 517.3910149750417
+          "x": 1.4761904761904763,
+          "y": 1.4761904761904763,
+          "width": 217,
+          "height": 66.42857142857143
         },
         "imageType": "PNG",
         "selected": false
       },
       {
-        "src": "http://i.imgur.com/QWTFoFY.png",
+        "src": "http://i.imgur.com/Lp8lbnl.png",
         "type": "Image",
-        "x": 562,
-        "y": 484,
+        "x": 102,
+        "y": 495,
         "scale": {
-          "x": 0.39875000000000005,
-          "y": 0.39875000000000005,
-          "width": 319.00000000000006,
-          "height": 168.2725
+          "x": 1.219298245614035,
+          "y": 1.219298245614035,
+          "width": 278,
+          "height": 89.00877192982456
         },
         "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "src": "http://i.imgur.com/iQCz5nE.png",
+        "type": "Image",
+        "x": 704,
+        "y": 386,
+        "scale": {
+          "x": 0.1962890625,
+          "y": 0.1962890625,
+          "width": 201,
+          "height": 201
+        },
+        "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 8,
+        "y": 711,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 24,
+        "text": "<font>3/9</font>",
+        "selected": false,
+        "customClasses": "pagination"
+      },
+      {
+        "TextBox": {},
+        "x": 203,
+        "y": 642,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "text": "<font>Bloc<br></font>",
+        "size": 48,
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 700,
+        "y": 642,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 48,
+        "text": "<font>Texte</font>",
         "selected": false
       }
     ],
@@ -875,15 +1544,18 @@
     "rotateX": 0,
     "rotateY": 0,
     "rotateZ": 0,
-    "index": 6,
+    "index": 3,
     "selected": true,
     "active": true,
-    "x": 768,
-    "y": 664
+    "markdown": "",
+    "x": 672,
+    "y": 185
   },
   "fileName": "presentation mémoire",
   "deckVersion": "1.0",
   "customBackgrounds": {
     "bgs": []
-  }
+  },
+  "overviewX": 774.5,
+  "overviewY": 359.5
 }
