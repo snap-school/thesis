@@ -118,7 +118,7 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>1/9<br></font>",
+          "text": "<font>1/11<br></font>",
           "selected": false,
           "customClasses": "pagination"
         }
@@ -186,7 +186,7 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>2/9</font>",
+          "text": "<font>2/11</font>",
           "selected": false,
           "customClasses": "pagination"
         }
@@ -309,7 +309,7 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>3/9</font>",
+          "text": "<font>3/11</font>",
           "selected": false,
           "customClasses": "pagination"
         },
@@ -346,8 +346,8 @@
       "rotateY": 0,
       "rotateZ": 0,
       "index": 3,
-      "selected": true,
-      "active": true,
+      "selected": false,
+      "active": false,
       "markdown": "",
       "x": 672,
       "y": 185
@@ -517,8 +517,8 @@
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
           "type": "Shape",
-          "x": 351,
-          "y": 242,
+          "x": 352,
+          "y": 245,
           "scale": {
             "width": 38.27849155805688,
             "height": 10.616104487559243
@@ -540,20 +540,20 @@
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
           "type": "Shape",
-          "x": 642,
-          "y": 289,
+          "x": 641,
+          "y": 292,
           "scale": {
             "width": 38.27849155805688,
             "height": 10.616104487559243
           },
-          "selected": false,
+          "selected": true,
           "rotate": 0.54
         },
         {
           "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
           "type": "Shape",
-          "x": 687,
-          "y": 474,
+          "x": 692,
+          "y": 481,
           "scale": {
             "width": 38.27849155805688,
             "height": 10.616104487559243
@@ -597,7 +597,7 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>4/9</font>",
+          "text": "<font>4/11</font>",
           "selected": false,
           "customClasses": "pagination"
         },
@@ -660,8 +660,8 @@
       "rotateY": 0,
       "rotateZ": 1.57,
       "index": 5,
-      "selected": false,
-      "active": false,
+      "selected": true,
+      "active": true,
       "x": 920,
       "y": 380
     },
@@ -715,7 +715,7 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>5/9</font>",
+          "text": "<font>5/11</font>",
           "selected": false,
           "customClasses": "pagination"
         }
@@ -782,7 +782,7 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>6/9</font>",
+          "text": "<font>6/11</font>",
           "selected": false,
           "customClasses": "pagination"
         },
@@ -918,6 +918,20 @@
           "size": 72,
           "text": "RSnap<br>",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>7/11</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -998,6 +1012,20 @@
           },
           "imageType": "PNG",
           "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 8,
+          "y": 711,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 24,
+          "text": "<font>8/11</font>",
+          "selected": false,
+          "customClasses": "pagination"
         }
       ],
       "z": 0,
@@ -1029,8 +1057,8 @@
         {
           "src": "http://i.imgur.com/I2moRTk.jpg",
           "type": "Image",
-          "x": -192,
-          "y": 4,
+          "x": -92,
+          "y": 13,
           "scale": {
             "x": 0.14379084967320266,
             "y": 0.14379084967320266,
@@ -1057,8 +1085,8 @@
         {
           "src": "http://i.imgur.com/zjewTxZ.jpg",
           "type": "Image",
-          "x": 690,
-          "y": 473,
+          "x": 566,
+          "y": 447,
           "scale": {
             "x": 0.10723039215686274,
             "y": 0.10723039215686274,
@@ -1092,14 +1120,14 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>7/9</font>",
+          "text": "<font>9/11</font>",
           "selected": false,
           "customClasses": "pagination"
         },
         {
           "TextBox": {},
-          "x": 249,
-          "y": 220,
+          "x": 310,
+          "y": 231,
           "scale": {
             "x": 1,
             "y": 1
@@ -1111,8 +1139,8 @@
         },
         {
           "TextBox": {},
-          "x": 249,
-          "y": 300,
+          "x": 310,
+          "y": 311,
           "scale": {
             "x": 1,
             "y": 1
@@ -1124,8 +1152,8 @@
         },
         {
           "TextBox": {},
-          "x": 249,
-          "y": 380,
+          "x": 310,
+          "y": 391,
           "scale": {
             "x": 1,
             "y": 1
@@ -1138,15 +1166,15 @@
         },
         {
           "TextBox": {},
-          "x": 250,
-          "y": 140,
+          "x": 311,
+          "y": 151,
           "scale": {
             "x": 1,
             "y": 1
           },
           "type": "TextBox",
           "size": 36,
-          "text": "<ul><li><span style=\"line-height: normal;\">Printemps des sciences</span><br></li></ul>",
+          "text": "<ul><li><span style=\"line-height: normal;\">Printemps des Sciences</span><br></li></ul>",
           "selected": false
         }
       ],
@@ -1237,7 +1265,7 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>8/9</font>",
+          "text": "<font>10/11</font>",
           "selected": false,
           "customClasses": "pagination"
         }
@@ -1330,7 +1358,7 @@
           },
           "type": "TextBox",
           "size": 24,
-          "text": "<font>9/9</font>",
+          "text": "<font>11/11</font>",
           "selected": false,
           "customClasses": "pagination"
         }
@@ -1345,6 +1373,34 @@
       "active": false,
       "x": 1247,
       "y": 221
+    },
+    {
+      "components": [
+        {
+          "src": "https://www.youtube.com/watch?v=rIT9h5TFNaw",
+          "type": "Video",
+          "x": 3,
+          "y": 50,
+          "scale": {
+            "width": 1021.703056768559,
+            "height": 640.8646309531932
+          },
+          "shortSrc": "rIT9h5TFNaw",
+          "videoType": "youtube",
+          "srcType": "yt",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 13,
+      "selected": false,
+      "active": false,
+      "x": 3820,
+      "y": 740
     },
     {
       "components": [
@@ -1367,7 +1423,7 @@
       "rotateX": -3.14,
       "rotateY": 0,
       "rotateZ": -1.57,
-      "index": 13,
+      "index": 14,
       "selected": false,
       "active": false,
       "x": 1240,
@@ -1394,7 +1450,7 @@
       "rotateX": -3.14,
       "rotateY": 0,
       "rotateZ": 1.57,
-      "index": 14,
+      "index": 15,
       "selected": false,
       "active": false,
       "x": 1244,
@@ -1404,48 +1460,8 @@
   "activeSlide": {
     "components": [
       {
-        "src": "http://i.imgur.com/Y0Nw7uk.png",
-        "type": "Image",
-        "x": 557,
-        "y": 190,
-        "scale": {
-          "x": 1.1758620689655173,
-          "y": 1.1758620689655173,
-          "width": 341,
-          "height": 96.42068965517241
-        },
-        "imageType": "PNG",
-        "selected": false
-      },
-      {
-        "src": "http://i.imgur.com/WfIgX0h.png",
-        "type": "Image",
-        "x": 220,
-        "y": 290.83842794759823,
-        "scale": {
-          "x": 0.1971356360572873,
-          "y": 0.1971356360572873,
-          "width": 234,
-          "height": 128.53243470935132
-        },
-        "imageType": "PNG",
-        "selected": false,
-        "skewY": 0
-      },
-      {
-        "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
-        "type": "Shape",
-        "x": 515,
-        "y": 141,
-        "scale": {
-          "width": 4.847971954161641,
-          "height": 524.0434163902293
-        },
-        "selected": false
-      },
-      {
         "TextBox": {},
-        "x": 88,
+        "x": 318,
         "y": 30,
         "scale": {
           "x": 1,
@@ -1453,47 +1469,144 @@
         },
         "type": "TextBox",
         "size": 72,
-        "text": "<font>Languages d'apprentissage</font>",
+        "text": "<font>Les missions</font>",
         "selected": false
       },
       {
-        "src": "http://i.imgur.com/3j3HztQ.png",
+        "src": "http://i.imgur.com/ULORvhb.png",
         "type": "Image",
-        "x": 85,
-        "y": 161,
+        "x": 79,
+        "y": 203,
         "scale": {
-          "x": 1.4761904761904763,
-          "y": 1.4761904761904763,
-          "width": 217,
-          "height": 66.42857142857143
-        },
-        "imageType": "PNG",
-        "selected": false
-      },
-      {
-        "src": "http://i.imgur.com/Lp8lbnl.png",
-        "type": "Image",
-        "x": 102,
-        "y": 495,
-        "scale": {
-          "x": 1.219298245614035,
-          "y": 1.219298245614035,
-          "width": 278,
-          "height": 89.00877192982456
-        },
-        "imageType": "PNG",
-        "selected": false
-      },
-      {
-        "src": "http://i.imgur.com/iQCz5nE.png",
-        "type": "Image",
-        "x": 704,
-        "y": 386,
-        "scale": {
-          "x": 0.1962890625,
-          "y": 0.1962890625,
+          "x": 0.3210862619808307,
+          "y": 0.3210862619808307,
           "width": 201,
-          "height": 201
+          "height": 99.21565495207668
+        },
+        "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "src": "http://i.imgur.com/seGuEBq.png",
+        "type": "Image",
+        "x": 432,
+        "y": 149,
+        "scale": {
+          "x": 2.78125,
+          "y": 2.78125,
+          "width": 178,
+          "height": 178
+        },
+        "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "src": "http://i.imgur.com/jo8qOxn.png",
+        "type": "Image",
+        "x": 155,
+        "y": 483,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "src": "http://i.imgur.com/uftxKz2.png",
+        "type": "Image",
+        "x": 411,
+        "y": 493,
+        "scale": {
+          "x": 1.1216931216931216,
+          "y": 1.1216931216931216,
+          "width": 212,
+          "height": 171.61904761904762
+        },
+        "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><polygon points=\"25,0 50,50 0,50\"/></svg>",
+        "type": "Shape",
+        "x": 395,
+        "y": 226,
+        "scale": {
+          "width": 30.78615595379147,
+          "height": 49.60047023104266
+        },
+        "selected": false,
+        "rotate": 1.57
+      },
+      {
+        "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
+        "type": "Shape",
+        "x": 352,
+        "y": 245,
+        "scale": {
+          "width": 38.27849155805688,
+          "height": 10.616104487559243
+        },
+        "selected": false
+      },
+      {
+        "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><polygon points=\"25,0 50,50 0,50\"/></svg>",
+        "type": "Shape",
+        "x": 681,
+        "y": 295,
+        "scale": {
+          "width": 30.78615595379147,
+          "height": 49.60047023104266
+        },
+        "selected": false,
+        "rotate": 2.11
+      },
+      {
+        "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
+        "type": "Shape",
+        "x": 641,
+        "y": 292,
+        "scale": {
+          "width": 38.27849155805688,
+          "height": 10.616104487559243
+        },
+        "selected": true,
+        "rotate": 0.54
+      },
+      {
+        "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><rect width=\"50\" height=\"50\"/></svg>",
+        "type": "Shape",
+        "x": 692,
+        "y": 481,
+        "scale": {
+          "width": 38.27849155805688,
+          "height": 10.616104487559243
+        },
+        "selected": false,
+        "rotate": 2.63
+      },
+      {
+        "markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 50 50\" preserveAspectRatio=\"none\"><polygon points=\"25,0 50,50 0,50\"/></svg>",
+        "type": "Shape",
+        "x": 660,
+        "y": 483,
+        "scale": {
+          "width": 30.78615595379147,
+          "height": 49.60047023104266
+        },
+        "selected": false,
+        "rotate": -2.14
+      },
+      {
+        "src": "http://i.imgur.com/b8hr0Rj.png",
+        "type": "Image",
+        "x": 754,
+        "y": 305,
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "width": 202,
+          "height": 117.5
         },
         "imageType": "PNG",
         "selected": false
@@ -1508,34 +1621,60 @@
         },
         "type": "TextBox",
         "size": 24,
-        "text": "<font>3/9</font>",
+        "text": "<font>4/11</font>",
         "selected": false,
         "customClasses": "pagination"
       },
       {
         "TextBox": {},
-        "x": 203,
-        "y": 642,
+        "x": 93,
+        "y": 307,
         "scale": {
           "x": 1,
           "y": 1
         },
         "type": "TextBox",
-        "text": "<font>Bloc<br></font>",
-        "size": 48,
+        "size": 36,
+        "text": "<font>Imperatif</font>",
         "selected": false
       },
       {
         "TextBox": {},
-        "x": 700,
-        "y": 642,
+        "x": 443,
+        "y": 279,
         "scale": {
           "x": 1,
           "y": 1
         },
         "type": "TextBox",
-        "size": 48,
-        "text": "<font>Texte</font>",
+        "size": 36,
+        "text": "Boucles<br>Conditions<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 790,
+        "y": 434,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 36,
+        "text": "<font>Capteurs</font>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 342,
+        "y": 654,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 36,
+        "text": "<font>Jeu</font>",
         "selected": false
       }
     ],
@@ -1543,19 +1682,18 @@
     "impScale": 3,
     "rotateX": 0,
     "rotateY": 0,
-    "rotateZ": 0,
-    "index": 3,
+    "rotateZ": 1.57,
+    "index": 5,
     "selected": true,
     "active": true,
-    "markdown": "",
-    "x": 672,
-    "y": 185
+    "x": 920,
+    "y": 380
   },
   "fileName": "presentation mémoire",
   "deckVersion": "1.0",
   "customBackgrounds": {
     "bgs": []
   },
-  "overviewX": 774.5,
+  "overviewX": 1983,
   "overviewY": 359.5
 }
