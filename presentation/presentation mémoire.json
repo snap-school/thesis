@@ -1132,7 +1132,7 @@
           },
           "type": "TextBox",
           "size": 36,
-          "text": "<ul><li><span style=\"line-height: normal;\">5e primaire à 1ere humanité</span><br></li></ul>",
+          "text": "<ul><li><span style=\"line-height: normal;\">5<sup>e</sup> primaire à 1<sup>ère</sup> humanité</span><br></li></ul>",
           "selected": false,
           "customClasses": "sup"
         },
